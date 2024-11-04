@@ -20,7 +20,66 @@
         "ip_revision": "9",
         "xci_name": "design_1_usp_rf_data_converter_0_0",
         "xci_path": "ip/design_1_usp_rf_data_converter_0_0/design_1_usp_rf_data_converter_0_0.xci",
-        "inst_hier_path": "usp_rf_data_converter_0"
+        "inst_hier_path": "usp_rf_data_converter_0",
+        "parameters": {
+          "ADC0_Clock_Dist": {
+            "value": "2"
+          },
+          "ADC0_Multi_Tile_Sync": {
+            "value": "true"
+          },
+          "ADC0_PLL_Enable": {
+            "value": "true"
+          },
+          "ADC0_Refclk_Freq": {
+            "value": "491.520"
+          },
+          "ADC0_Sampling_Rate": {
+            "value": "1.47456"
+          },
+          "ADC2_Clock_Dist": {
+            "value": "0"
+          },
+          "ADC2_PLL_Enable": {
+            "value": "false"
+          },
+          "ADC2_Sampling_Rate": {
+            "value": "1.47456"
+          },
+          "ADC_Data_Type00": {
+            "value": "1"
+          },
+          "ADC_Data_Type02": {
+            "value": "1"
+          },
+          "ADC_Data_Type20": {
+            "value": "1"
+          },
+          "ADC_Data_Type22": {
+            "value": "1"
+          },
+          "ADC_Mixer_Type00": {
+            "value": "2"
+          },
+          "ADC_Mixer_Type02": {
+            "value": "2"
+          },
+          "ADC_Mixer_Type20": {
+            "value": "2"
+          },
+          "ADC_Mixer_Type22": {
+            "value": "2"
+          },
+          "ADC_Slice02_Enable": {
+            "value": "true"
+          },
+          "ADC_Slice20_Enable": {
+            "value": "true"
+          },
+          "ADC_Slice22_Enable": {
+            "value": "true"
+          }
+        }
       },
       "zynq_ultra_ps_e_0": {
         "vlnv": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
