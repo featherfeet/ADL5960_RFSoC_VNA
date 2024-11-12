@@ -4,6 +4,7 @@
 Implementation and tests of the "Cal-Acquisition for 12-Term Models" described in 3.3 (page 139) of _Handbook of Microwave Component Measurements_ (2020) by Joel Dunsmore.
 
 Also based on https://coppermountaintech.com/webinar-vna-master-class-full-1-port-vna-calibration-math-with-python-code/
+Also see Keysight Application Note "Specifying Calibration Standards and Kits for Keysight Vector Network Analyzers"
 
 Terms:
     DUT - device under test
@@ -35,7 +36,7 @@ def generate_short_standard(offset_delay, offset_loss, l0, l1, l2, l3, frequenci
         inductor_impedance = 1j * omega * L
         reflection_coefficient = (inductor_impedance - 50) / (inductor_impedance + 50)
 
-        delay_phase_shift = 2 * math.pi * (offset_delay * 1e-12) * frequency
+        delay_phase_shift = omega * (offset_delay * 1e-12)
         reflection_coefficient *= math.e ** (-1j * delay_phase_shift)
 
         s11_values.append(reflection_coefficient)
@@ -45,7 +46,7 @@ def generate_short_standard(offset_delay, offset_loss, l0, l1, l2, l3, frequenci
 
 def generate_open_standard(offset_delay, offset_loss, c0, c1, c2, c3, frequencies):
     """
-    Generate S-parameters for a open standard using the standard polynomial approximation given in equation 3.27 of the book. A open standard is modeled as a short lossy transmission line before a small frequency-dependent capacitor.
+    Generate S-parameters for an open standard using the standard polynomial approximation given in equation 3.27 of the book. A open standard is modeled as a short lossy transmission line before a small frequency-dependent capacitor.
 
     Also see https://www.minicircuits.com/pdfs/SOL-63-NM+.pdf for the units.
 
@@ -65,13 +66,38 @@ def generate_open_standard(offset_delay, offset_loss, c0, c1, c2, c3, frequencie
         capacitor_impedance = 1/(1j * omega * C)
         reflection_coefficient = (capacitor_impedance - 50) / (capacitor_impedance + 50)
 
-        delay_phase_shift = 2 * math.pi * (offset_delay * 1e-12) * frequency
+        delay_phase_shift = omega * (offset_delay * 1e-12)
         reflection_coefficient *= math.e ** (-1j * delay_phase_shift)
 
         s11_values.append(reflection_coefficient)
 
     capacitor_network = rf.Network(f = frequencies.f, s = s11_values, z0 = 50)
     return capacitor_network
+
+def generate_load_standard(offset_delay, offset_loss, offset_impedance, frequencies):
+    """
+    Generate S-parameters for an open standard using the transmission line + resistor model of a load standard.
+
+    offset_delay - Delay of the transmission line in ps.
+    offset_loss - Loss of the transmission line in GOhm/s
+    offset_impedance - Impedance of the load standard (normally 50 Ohms).
+    """
+
+    s11_values = []
+    for frequency in frequencies.f:
+        if offset_impedance == 50:
+            s11_values.append(0)
+        else:
+            omega = 2 * math.pi * frequency
+            reflection_coefficient = (offset_impedance - 50) / (offset_impedance + 50)
+
+            delay_phase_shift = omega * (offset_delay * 1e-12)
+            reflection_coefficient *= math.e ** (-1j * delay_phase_shift)
+
+            s11_values.append(reflection_coefficient)
+
+    load_network = rf.Network(f = frequencies.f, s = s11_values, z0 = 50)
+    return load_network
 
 dut = rf.Network("VBF-8450+.S2P") # Example DUT, an 8.4 GHz bandpass filter from Mini-Circuits
 port1_test_fixture = rf.Network("EQY-0-24+_B1_25C.s2p") # Example test fixture from port 1 of VNA to DUT, equalizer from Mini-Circuits.
@@ -81,13 +107,22 @@ dut.interpolate_self(frequencies)
 port1_test_fixture.interpolate_self(frequencies)
 port2_test_fixture.interpolate_self(frequencies)
 
+# Example cal standard parameters from https://www.minicircuits.com/pdfs/SOL-63-NM+.pdf
 short_standard = generate_short_standard(59.44, 1, 0, 0, 0, 0, frequencies)
 open_standard = generate_open_standard(59.55, 1, -4, 200, 0, 1.1, frequencies)
+load_standard = generate_load_standard(0, 0, 50, frequencies)
+
+#===================Measure Cal Standards In-System===============================
+short_standard_s11 = (port1_test_fixture ** short_standard).s
+open_standard_s11 = (port1_test_fixture ** open_standard).s
+load_standard_s11 = (port1_test_fixture ** load_standard).s
 
 #===================Take Raw Measurements (Test Fixtures + DUT)===================
 full_system = port1_test_fixture ** dut ** port2_test_fixture
 
-if __name__ == "__main__":
-    short_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
-    open_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="green")
-    plt.show()
+#===================One-Port Calibration==========================================
+
+#if __name__ == "__main__":
+    #short_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
+    #open_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
+    #plt.show()

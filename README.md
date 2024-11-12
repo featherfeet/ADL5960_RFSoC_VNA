@@ -13,3 +13,5 @@ Final project for 6.S965 Digital Systems Laboratory II. By Oliver Trevor, Tiffan
 [All About Circuits: Understanding RF Calibration Using Short, Open, Load, and Through Terminations](https://www.allaboutcircuits.com/technical-articles/understanding-the-solt-calibration-method-and-the-behavior-of-open-and-short-standards-on-the-smith-chart/)
 
 [Handbook of Microwave Component Measurements: With Advanced VNA Techniques by Joel Dunsmore via MIT Libraries](https://mit.primo.exlibrisgroup.com/permalink/01MIT_INST/oeoe7i/alma9935181231106761)
+
+[Specifying Calibration Standards and Kits for Keysight Vector Network Analyzers](https://www.keysight.com/us/en/assets/7018-01375/application-notes/5989-4840.pdf)
