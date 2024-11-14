@@ -12,6 +12,7 @@ Terms:
 
 import math
 import skrf as rf
+import numpy as np
 import matplotlib.pyplot as plt
 
 def generate_short_standard(offset_delay, offset_loss, l0, l1, l2, l3, frequencies):
@@ -108,19 +109,27 @@ port1_test_fixture.interpolate_self(frequencies)
 port2_test_fixture.interpolate_self(frequencies)
 
 # Example cal standard parameters from https://www.minicircuits.com/pdfs/SOL-63-NM+.pdf
-short_standard = generate_short_standard(59.44, 1, 0, 0, 0, 0, frequencies)
-open_standard = generate_open_standard(59.55, 1, -4, 200, 0, 1.1, frequencies)
-load_standard = generate_load_standard(0, 0, 50, frequencies)
+short_standard_model = generate_short_standard(59.44, 1, 0, 0, 0, 0, frequencies)
+open_standard_model = generate_open_standard(59.55, 1, -4, 200, 0, 1.1, frequencies)
+load_standard_model = generate_load_standard(0, 0, 50, frequencies)
 
 #===================Measure Cal Standards In-System===============================
-short_standard_s11 = (port1_test_fixture ** short_standard).s
-open_standard_s11 = (port1_test_fixture ** open_standard).s
-load_standard_s11 = (port1_test_fixture ** load_standard).s
+short_standard_measured = port1_test_fixture ** short_standard_model
+open_standard_measured = port1_test_fixture ** open_standard_model
+load_standard_measured = port1_test_fixture ** load_standard_model
 
 #===================Take Raw Measurements (Test Fixtures + DUT)===================
 full_system = port1_test_fixture ** dut ** port2_test_fixture
 
 #===================One-Port Calibration==========================================
+for i in range(len(frequencies.f)):
+    A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured.s[i][0, 0]],
+                  [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured.s[i][0, 0]],
+                  [1, load_standard_model.s[i][0, 0], load_standard_model.s[i][0, 0] * load_standard_measured.s[i][0, 0]]], dtype = np.complex128)
+    B = np.array([[open_standard_measured.s[i][0, 0]],
+                  [short_standard_measured.s[i][0, 0]],
+                  [load_standard_measured.s[i][0, 0]]], dtype = np.complex128)
+    solution = np.linalg.solve(A, B)
 
 #if __name__ == "__main__":
     #short_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
