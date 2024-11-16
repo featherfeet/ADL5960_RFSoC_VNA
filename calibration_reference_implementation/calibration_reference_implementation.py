@@ -122,6 +122,9 @@ load_standard_measured = port1_test_fixture ** load_standard_model
 full_system = port1_test_fixture ** dut ** port2_test_fixture
 
 #===================One-Port Calibration==========================================
+ERF_values = []
+EDF_values = []
+ESF_values = []
 for i in range(len(frequencies.f)):
     A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured.s[i][0, 0]],
                   [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured.s[i][0, 0]],
@@ -130,6 +133,12 @@ for i in range(len(frequencies.f)):
                   [short_standard_measured.s[i][0, 0]],
                   [load_standard_measured.s[i][0, 0]]], dtype = np.complex128)
     solution = np.linalg.solve(A, B)
+    EDF = solution[0, 0]
+    ESF = solution[2, 0]
+    ERF = solution[1, 0] + EDF * ESF
+    ERF_values.append(ERF)
+    EDF_values.append(EDF)
+    ESF_values.append(ESF)
 
 #if __name__ == "__main__":
     #short_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
