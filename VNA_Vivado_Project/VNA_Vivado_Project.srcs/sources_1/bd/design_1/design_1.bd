@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4846986C17F351DD",
+      "boundary_crc": "0x4DBA37DC5A27E0B0",
       "device": "xczu48dr-ffvg1517-2-e",
       "gen_directory": "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -163,21 +163,6 @@
           "V_P": {
             "physical_name": "vin2_23_v_p",
             "direction": "I"
-          }
-        }
-      }
-    },
-    "ports": {
-      "reset_rtl": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_HIGH"
           }
         }
       }
@@ -1756,8 +1741,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_ds_2",
-                "xci_path": "ip/design_1_auto_ds_2/design_1_auto_ds_2.xci",
+                "xci_name": "design_1_auto_ds_0",
+                "xci_path": "ip/design_1_auto_ds_0/design_1_auto_ds_0.xci",
                 "inst_hier_path": "ps8_0_axi_periph/s00_couplers/auto_ds",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1780,8 +1765,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_pc_2",
-                "xci_path": "ip/design_1_auto_pc_2/design_1_auto_pc_2.xci",
+                "xci_name": "design_1_auto_pc_0",
+                "xci_path": "ip/design_1_auto_pc_0/design_1_auto_pc_0.xci",
                 "inst_hier_path": "ps8_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1890,8 +1875,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_ds_3",
-                "xci_path": "ip/design_1_auto_ds_3/design_1_auto_ds_3.xci",
+                "xci_name": "design_1_auto_ds_1",
+                "xci_path": "ip/design_1_auto_ds_1/design_1_auto_ds_1.xci",
                 "inst_hier_path": "ps8_0_axi_periph/s01_couplers/auto_ds",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1914,8 +1899,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "31",
-                "xci_name": "design_1_auto_pc_3",
-                "xci_path": "ip/design_1_auto_pc_3/design_1_auto_pc_3.xci",
+                "xci_name": "design_1_auto_pc_1",
+                "xci_path": "ip/design_1_auto_pc_1/design_1_auto_pc_1.xci",
                 "inst_hier_path": "ps8_0_axi_periph/s01_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -2741,8 +2726,7 @@
       },
       "reset_rtl_1": {
         "ports": [
-          "reset_rtl",
-          "clk_wiz_0/reset",
+          "rst_ps8_0_99M/interconnect_aresetn",
           "rst_clk_wiz_0_147M/ext_reset_in"
         ]
       },
@@ -2780,6 +2764,12 @@
           "usp_rf_data_converter_0/s_axi_aresetn",
           "ps8_0_axi_periph/M04_ARESETN",
           "ps8_0_axi_periph/S01_ARESETN"
+        ]
+      },
+      "rst_ps8_0_99M_peripheral_reset": {
+        "ports": [
+          "rst_ps8_0_99M/peripheral_reset",
+          "clk_wiz_0/reset"
         ]
       },
       "usp_rf_data_converter_0_clk_adc0": {

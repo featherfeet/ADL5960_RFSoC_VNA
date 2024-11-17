@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1731614461">
+<GenRun Id="impl_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1731881245">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="design_1_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="design_1_wrapper_routed.rqs"/>
@@ -25,12 +25,12 @@
   <File Type="BG-BIN" Name="design_1_wrapper.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="BG-BIT" Name="design_1_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="design_1_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="design_1_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="design_1_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_1_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_1_wrapper_postroute_physopt.dcp"/>
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
@@ -145,19 +145,14 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tlast_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_clk_wiz_0_147M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps8_0_99M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tlast_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tlast_0_1"/>

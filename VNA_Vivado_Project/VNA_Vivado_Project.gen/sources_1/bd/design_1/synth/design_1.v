@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Thu Nov 14 14:44:23 2024
+//Date        : Sun Nov 17 17:07:18 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -16,7 +16,6 @@ module design_1
     adc0_clk_clk_p,
     adc2_clk_clk_n,
     adc2_clk_clk_p,
-    reset_rtl,
     sysref_in_diff_n,
     sysref_in_diff_p,
     vin0_01_v_n,
@@ -31,7 +30,6 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 adc0_clk CLK_P" *) input adc0_clk_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 adc2_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME adc2_clk, CAN_DEBUG false, FREQ_HZ 491520000.0" *) input adc2_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 adc2_clk CLK_P" *) input adc2_clk_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input reset_rtl;
   (* X_INTERFACE_INFO = "xilinx.com:display_usp_rf_data_converter:diff_pins:1.0 sysref_in diff_n" *) input sysref_in_diff_n;
   (* X_INTERFACE_INFO = "xilinx.com:display_usp_rf_data_converter:diff_pins:1.0 sysref_in diff_p" *) input sysref_in_diff_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vin0_01 V_N" *) input vin0_01_v_n;
@@ -213,9 +211,10 @@ module design_1
   wire ps8_0_axi_periph_M04_AXI_WREADY;
   wire [3:0]ps8_0_axi_periph_M04_AXI_WSTRB;
   wire [0:0]ps8_0_axi_periph_M04_AXI_WVALID;
-  wire reset_rtl_1;
+  wire [0:0]reset_rtl_1;
   wire [0:0]rst_clk_wiz_0_147M_peripheral_aresetn;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
+  wire [0:0]rst_ps8_0_99M_peripheral_reset;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
   wire [31:0]tlast_0_M00_AXIS_TDATA;
@@ -347,7 +346,6 @@ module design_1
   assign adc0_clk_1_CLK_P = adc0_clk_clk_p;
   assign adc2_clk_1_CLK_N = adc2_clk_clk_n;
   assign adc2_clk_1_CLK_P = adc2_clk_clk_p;
-  assign reset_rtl_1 = reset_rtl;
   assign sysref_in_1_diff_n = sysref_in_diff_n;
   assign sysref_in_1_diff_p = sysref_in_diff_p;
   assign vin0_01_1_V_N = vin0_01_v_n;
@@ -620,7 +618,7 @@ module design_1
        (.clk_in1(usp_rf_data_converter_0_clk_adc0),
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked),
-        .reset(reset_rtl_1));
+        .reset(rst_ps8_0_99M_peripheral_reset));
   design_1_ps8_0_axi_periph_1 ps8_0_axi_periph
        (.ACLK(Net),
         .ARESETN(rst_ps8_0_99M_peripheral_aresetn),
@@ -804,8 +802,10 @@ module design_1
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
         .ext_reset_in(zynq_ultra_ps_e_0_pl_resetn0),
+        .interconnect_aresetn(reset_rtl_1),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps8_0_99M_peripheral_aresetn),
+        .peripheral_reset(rst_ps8_0_99M_peripheral_reset),
         .slowest_sync_clk(Net));
   design_1_tlast_0_1 tlast_0
        (.m00_axis_aclk(clk_wiz_0_clk_out1),
@@ -3107,7 +3107,7 @@ module s00_couplers_imp_1A7ZMW4
   assign s00_couplers_to_auto_ds_WLAST = S_AXI_wlast;
   assign s00_couplers_to_auto_ds_WSTRB = S_AXI_wstrb[15:0];
   assign s00_couplers_to_auto_ds_WVALID = S_AXI_wvalid;
-  design_1_auto_ds_2 auto_ds
+  design_1_auto_ds_0 auto_ds
        (.m_axi_araddr(auto_ds_to_auto_pc_ARADDR),
         .m_axi_arburst(auto_ds_to_auto_pc_ARBURST),
         .m_axi_arcache(auto_ds_to_auto_pc_ARCACHE),
@@ -3184,7 +3184,7 @@ module s00_couplers_imp_1A7ZMW4
         .s_axi_wready(s00_couplers_to_auto_ds_WREADY),
         .s_axi_wstrb(s00_couplers_to_auto_ds_WSTRB),
         .s_axi_wvalid(s00_couplers_to_auto_ds_WVALID));
-  design_1_auto_pc_2 auto_pc
+  design_1_auto_pc_0 auto_pc
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(auto_pc_to_s00_couplers_ARADDR),
@@ -3517,7 +3517,7 @@ module s01_couplers_imp_KGUFR9
   assign s01_couplers_to_auto_ds_WLAST = S_AXI_wlast;
   assign s01_couplers_to_auto_ds_WSTRB = S_AXI_wstrb[15:0];
   assign s01_couplers_to_auto_ds_WVALID = S_AXI_wvalid;
-  design_1_auto_ds_3 auto_ds
+  design_1_auto_ds_1 auto_ds
        (.m_axi_araddr(auto_ds_to_auto_pc_ARADDR),
         .m_axi_arburst(auto_ds_to_auto_pc_ARBURST),
         .m_axi_arcache(auto_ds_to_auto_pc_ARCACHE),
@@ -3594,7 +3594,7 @@ module s01_couplers_imp_KGUFR9
         .s_axi_wready(s01_couplers_to_auto_ds_WREADY),
         .s_axi_wstrb(s01_couplers_to_auto_ds_WSTRB),
         .s_axi_wvalid(s01_couplers_to_auto_ds_WVALID));
-  design_1_auto_pc_3 auto_pc
+  design_1_auto_pc_1 auto_pc
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(auto_pc_to_s01_couplers_ARADDR),

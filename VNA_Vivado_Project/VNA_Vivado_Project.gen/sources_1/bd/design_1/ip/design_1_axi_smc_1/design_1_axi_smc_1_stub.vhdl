@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Thu Nov 14 14:46:05 2024
+-- Date        : Thu Nov 14 14:46:04 2024
 -- Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_smc_1 -prefix
+--               design_1_axi_smc_1_ design_1_axi_smc_1_stub.vhdl
 -- Design      : design_1_axi_smc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu48dr-ffvg1517-2-e

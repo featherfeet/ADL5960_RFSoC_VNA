@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu Nov 14 15:01:25 2024
+| Date         : Sun Nov 17 17:08:21 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -97,7 +97,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |    1 |     0 |          0 |       347 |  0.29 |
+| Bonded IOB |    0 |     0 |          0 |       347 |  0.00 |
 | RF_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | RF_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -164,9 +164,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| INBUF    |    1 |                 I/O |
-| IBUFCTRL |    1 |              Others |
-+----------+------+---------------------+
 
 
 9. Black Boxes
@@ -190,10 +187,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | design_1_axi_dma_2_0               |    1 |
 | design_1_axi_dma_1_0               |    1 |
 | design_1_axi_dma_0_0               |    1 |
-| design_1_auto_pc_3                 |    1 |
-| design_1_auto_pc_2                 |    1 |
-| design_1_auto_ds_3                 |    1 |
-| design_1_auto_ds_2                 |    1 |
+| design_1_auto_pc_1                 |    1 |
+| design_1_auto_pc_0                 |    1 |
+| design_1_auto_ds_1                 |    1 |
+| design_1_auto_ds_0                 |    1 |
 +------------------------------------+------+
 
 

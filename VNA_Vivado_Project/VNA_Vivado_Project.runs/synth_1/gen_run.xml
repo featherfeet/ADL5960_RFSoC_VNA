@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1731614461" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xczu48dr-ffvg1517-2-e" LaunchTime="1731881244" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/design_1_wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
@@ -62,19 +62,14 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tlast_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_clk_wiz_0_147M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps8_0_99M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tlast_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tlast_0_1"/>

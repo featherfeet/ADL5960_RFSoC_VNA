@@ -105,7 +105,7 @@ ARCHITECTURE design_1_rst_clk_wiz_0_147M_0_arch OF design_1_rst_clk_wiz_0_147M_0
   ATTRIBUTE X_INTERFACE_INFO OF aux_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 aux_reset RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF bus_struct_reset: SIGNAL IS "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF bus_struct_reset: SIGNAL IS "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF ext_reset_in: SIGNAL IS "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ext_reset_in: SIGNAL IS "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF ext_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 ext_reset RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF interconnect_aresetn: SIGNAL IS "XIL_INTERFACENAME interconnect_low_rst, POLARITY ACTIVE_LOW, TYPE INTERCONNECT, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF interconnect_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";
@@ -125,7 +125,7 @@ BEGIN
       C_FAMILY => "zynquplus",
       C_EXT_RST_WIDTH => 4,
       C_AUX_RST_WIDTH => 4,
-      C_EXT_RESET_HIGH => '1',
+      C_EXT_RESET_HIGH => '0',
       C_AUX_RESET_HIGH => '0',
       C_NUM_BUS_RST => 1,
       C_NUM_PERP_RST => 1,

@@ -48,22 +48,22 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rs
 # IP: bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xbar_1 || ORIG_REF_NAME==design_1_xbar_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_2 || ORIG_REF_NAME==design_1_auto_ds_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_2 || ORIG_REF_NAME==design_1_auto_pc_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_3 || ORIG_REF_NAME==design_1_auto_ds_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_3 || ORIG_REF_NAME==design_1_auto_pc_3} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_ps8_0_axi_periph_1/design_1_ps8_0_axi_periph_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps8_0_axi_periph_1 || ORIG_REF_NAME==design_1_ps8_0_axi_periph_1} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_smc_1 || ORIG_REF_NAME==design_1_axi_smc_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_1 || ORIG_REF_NAME==design_1_auto_ds_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
 
 # XDC: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/design_1_ooc.xdc

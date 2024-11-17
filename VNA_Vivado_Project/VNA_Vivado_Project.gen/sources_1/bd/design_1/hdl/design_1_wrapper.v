@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Thu Nov 14 14:44:23 2024
+//Date        : Sun Nov 17 17:07:19 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -15,7 +15,6 @@ module design_1_wrapper
     adc0_clk_clk_p,
     adc2_clk_clk_n,
     adc2_clk_clk_p,
-    reset_rtl,
     sysref_in_diff_n,
     sysref_in_diff_p,
     vin0_01_v_n,
@@ -30,7 +29,6 @@ module design_1_wrapper
   input adc0_clk_clk_p;
   input adc2_clk_clk_n;
   input adc2_clk_clk_p;
-  input reset_rtl;
   input sysref_in_diff_n;
   input sysref_in_diff_p;
   input vin0_01_v_n;
@@ -46,7 +44,6 @@ module design_1_wrapper
   wire adc0_clk_clk_p;
   wire adc2_clk_clk_n;
   wire adc2_clk_clk_p;
-  wire reset_rtl;
   wire sysref_in_diff_n;
   wire sysref_in_diff_p;
   wire vin0_01_v_n;
@@ -63,7 +60,6 @@ module design_1_wrapper
         .adc0_clk_clk_p(adc0_clk_clk_p),
         .adc2_clk_clk_n(adc2_clk_clk_n),
         .adc2_clk_clk_p(adc2_clk_clk_p),
-        .reset_rtl(reset_rtl),
         .sysref_in_diff_n(sysref_in_diff_n),
         .sysref_in_diff_p(sysref_in_diff_p),
         .vin0_01_v_n(vin0_01_v_n),
