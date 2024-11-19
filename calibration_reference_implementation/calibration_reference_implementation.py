@@ -114,9 +114,12 @@ open_standard_model = generate_open_standard(59.55, 1, -4, 200, 0, 1.1, frequenc
 load_standard_model = generate_load_standard(0, 0, 50, frequencies)
 
 #===================Measure Cal Standards In-System===============================
-short_standard_measured = port1_test_fixture ** short_standard_model
-open_standard_measured = port1_test_fixture ** open_standard_model
-load_standard_measured = port1_test_fixture ** load_standard_model
+short_standard_measured_port1 = port1_test_fixture ** short_standard_model
+open_standard_measured_port1 = port1_test_fixture ** open_standard_model
+load_standard_measured_port1 = port1_test_fixture ** load_standard_model
+short_standard_measured_port2 = port2_test_fixture ** short_standard_model
+open_standard_measured_port2 = port2_test_fixture ** open_standard_model
+load_standard_measured_port2 = port2_test_fixture ** load_standard_model
 
 #===================Take Raw Measurements (Test Fixtures + DUT)===================
 full_system = port1_test_fixture ** dut ** port2_test_fixture
@@ -125,13 +128,17 @@ full_system = port1_test_fixture ** dut ** port2_test_fixture
 ERF_values = []
 EDF_values = []
 ESF_values = []
+ERR_values = []
+EDR_values = []
+ESR_values = []
 for i in range(len(frequencies.f)):
-    A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured.s[i][0, 0]],
-                  [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured.s[i][0, 0]],
-                  [1, load_standard_model.s[i][0, 0], load_standard_model.s[i][0, 0] * load_standard_measured.s[i][0, 0]]], dtype = np.complex128)
-    B = np.array([[open_standard_measured.s[i][0, 0]],
-                  [short_standard_measured.s[i][0, 0]],
-                  [load_standard_measured.s[i][0, 0]]], dtype = np.complex128)
+    # Port 1 cal
+    A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured_port1.s[i][0, 0]],
+                  [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured_port1.s[i][0, 0]],
+                  [1, load_standard_model.s[i][0, 0], load_standard_model.s[i][0, 0] * load_standard_measured_port1.s[i][0, 0]]], dtype = np.complex128)
+    B = np.array([[open_standard_measured_port1.s[i][0, 0]],
+                  [short_standard_measured_port1.s[i][0, 0]],
+                  [load_standard_measured_port1.s[i][0, 0]]], dtype = np.complex128)
     solution = np.linalg.solve(A, B)
     EDF = solution[0, 0]
     ESF = solution[2, 0]
@@ -139,6 +146,20 @@ for i in range(len(frequencies.f)):
     ERF_values.append(ERF)
     EDF_values.append(EDF)
     ESF_values.append(ESF)
+    # Port 2 cal
+    A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured_port2.s[i][0, 0]],
+                  [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured_port2.s[i][0, 0]],
+                  [1, load_standard_model.s[i][0, 0], load_standard_model.s[i][0, 0] * load_standard_measured_port2.s[i][0, 0]]], dtype = np.complex128)
+    B = np.array([[open_standard_measured_port2.s[i][0, 0]],
+                  [short_standard_measured_port2.s[i][0, 0]],
+                  [load_standard_measured_port2.s[i][0, 0]]], dtype = np.complex128)
+    solution = np.linalg.solve(A, B)
+    EDR = solution[0, 0]
+    ESR = solution[2, 0]
+    ERR = solution[1, 0] + EDR * ESR
+    ERR_values.append(ERR)
+    EDR_values.append(EDR)
+    ESR_values.append(ESR)
 
 #if __name__ == "__main__":
     #short_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
