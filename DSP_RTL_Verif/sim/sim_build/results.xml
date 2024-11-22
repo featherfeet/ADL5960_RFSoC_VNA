@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1732251174" />
+    <testcase name="test_random" classname="top_level" file="/home/alyssa/6.s965/final_project/sim/top_level.py" lineno="32" time="0.2481224536895752" sim_time_ns="4460.001" ratio_time="17974.999576539274" />
+    <testcase name="test_cornercase" classname="top_level" file="/home/alyssa/6.s965/final_project/sim/top_level.py" lineno="62" time="0.3128201961517334" sim_time_ns="3590.001" ratio_time="11476.24432234123" />
+  </testsuite>
+</testsuites>

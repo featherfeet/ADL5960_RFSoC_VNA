@@ -2,7 +2,7 @@
 # Takes in 16 bit input and produces 16 bit output. Internal calculation done with 32 bit fixed point (16 bits past decimal) in RTL. Doing 64 bit calcs here because it's python's default
 import math
 
-atan_table = [round(math.degrees(math.atan(2**-i))/360 * 65536) for i in range(15)]
+atan_table = [round(math.degrees(math.atan(2**-i))/360 * 65535) for i in range(15)]
 K = 1.64676 #This is the precision we'd have for 16 bit floating point
 
 def do_cordic(x, y):
@@ -35,8 +35,9 @@ def do_cordic(x, y):
         x = x_next
         y = y_next
         z = z_next
+        #print("z next : ", z_next, " y next: ", y_next*2**16, " x next: ", x_next*2**16)
 
-    r = int(x/K) % (2**16) #Mimic rollover here for radius
+    r = int(x/K) 
 
     if (not neg_x and not neg_y):
         theta = z
@@ -45,10 +46,10 @@ def do_cordic(x, y):
     elif(neg_x and neg_y):
         theta = 32768 + z
     else:
-        theta = 65536 - z
+        theta = 65535 - z
 
     return (r, theta)
 
 if __name__ == "__main__":
     print(atan_table)
-    print("-65537, -1000 ", do_cordic(-65536, -1000))  
+    print("-3, 4", do_cordic(-3, 4))  
