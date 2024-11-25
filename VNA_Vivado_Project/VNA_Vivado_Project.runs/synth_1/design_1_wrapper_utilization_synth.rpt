@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Sun Nov 17 17:08:21 2024
-| Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
+| Date         : Mon Nov 25 14:32:09 2024
+| Host         : eecs-digital-28 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : xczu48dr-ffvg1517-2-e
@@ -175,22 +175,16 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | design_1_zynq_ultra_ps_e_0_0       |    1 |
 | design_1_xbar_1                    |    1 |
 | design_1_usp_rf_data_converter_0_0 |    1 |
-| design_1_tlast_3_0                 |    1 |
-| design_1_tlast_2_0                 |    1 |
-| design_1_tlast_1_0                 |    1 |
-| design_1_tlast_0_1                 |    1 |
 | design_1_rst_ps8_0_99M_0           |    1 |
 | design_1_rst_clk_wiz_0_147M_0      |    1 |
 | design_1_clk_wiz_0_0               |    1 |
 | design_1_axi_smc_1                 |    1 |
-| design_1_axi_dma_3_0               |    1 |
-| design_1_axi_dma_2_0               |    1 |
-| design_1_axi_dma_1_0               |    1 |
 | design_1_axi_dma_0_0               |    1 |
 | design_1_auto_pc_1                 |    1 |
 | design_1_auto_pc_0                 |    1 |
 | design_1_auto_ds_1                 |    1 |
 | design_1_auto_ds_0                 |    1 |
+| design_1_adc_combiner_0_0          |    1 |
 +------------------------------------+------+
 
 

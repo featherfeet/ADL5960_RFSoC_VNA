@@ -95,8 +95,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_awqos;
   sc_core::sc_in< bool > S00_AXI_awvalid;
   sc_core::sc_out< bool > S00_AXI_awready;
-  sc_core::sc_in< sc_dt::sc_bv<32> > S00_AXI_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<128> > S00_AXI_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<16> > S00_AXI_wstrb;
   sc_core::sc_in< bool > S00_AXI_wlast;
   sc_core::sc_in< bool > S00_AXI_wvalid;
   sc_core::sc_out< bool > S00_AXI_wready;
@@ -185,7 +185,7 @@ protected:
 
 private:
 
-  xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
+  xtlm::xaximm_pin2xtlm_t<128,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
   xsc::common::vectorN2scalar_converter<1>* mp_S00_AXI_awlock_converter;
   sc_signal< bool > m_S00_AXI_awlock_converter_signal;
   xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S01_AXI_transactor;
@@ -237,8 +237,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_awqos;
   sc_core::sc_in< bool > S00_AXI_awvalid;
   sc_core::sc_out< bool > S00_AXI_awready;
-  sc_core::sc_in< sc_dt::sc_bv<32> > S00_AXI_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<128> > S00_AXI_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<16> > S00_AXI_wstrb;
   sc_core::sc_in< bool > S00_AXI_wlast;
   sc_core::sc_in< bool > S00_AXI_wvalid;
   sc_core::sc_out< bool > S00_AXI_wready;
@@ -327,7 +327,7 @@ protected:
 
 private:
 
-  xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
+  xtlm::xaximm_pin2xtlm_t<128,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
   xsc::common::vectorN2scalar_converter<1>* mp_S00_AXI_awlock_converter;
   sc_signal< bool > m_S00_AXI_awlock_converter_signal;
   xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S01_AXI_transactor;
@@ -379,8 +379,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_awqos;
   sc_core::sc_in< bool > S00_AXI_awvalid;
   sc_core::sc_out< bool > S00_AXI_awready;
-  sc_core::sc_in< sc_dt::sc_bv<32> > S00_AXI_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<128> > S00_AXI_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<16> > S00_AXI_wstrb;
   sc_core::sc_in< bool > S00_AXI_wlast;
   sc_core::sc_in< bool > S00_AXI_wvalid;
   sc_core::sc_out< bool > S00_AXI_wready;
@@ -469,7 +469,7 @@ protected:
 
 private:
 
-  xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
+  xtlm::xaximm_pin2xtlm_t<128,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
   xsc::common::vectorN2scalar_converter<1>* mp_S00_AXI_awlock_converter;
   sc_signal< bool > m_S00_AXI_awlock_converter_signal;
   xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S01_AXI_transactor;
@@ -523,8 +523,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_awqos;
   sc_core::sc_in< bool > S00_AXI_awvalid;
   sc_core::sc_out< bool > S00_AXI_awready;
-  sc_core::sc_in< sc_dt::sc_bv<32> > S00_AXI_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<128> > S00_AXI_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<16> > S00_AXI_wstrb;
   sc_core::sc_in< bool > S00_AXI_wlast;
   sc_core::sc_in< bool > S00_AXI_wvalid;
   sc_core::sc_out< bool > S00_AXI_wready;
@@ -613,7 +613,7 @@ protected:
 
 private:
 
-  xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
+  xtlm::xaximm_pin2xtlm_t<128,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
   xsc::common::vectorN2scalar_converter<1>* mp_S00_AXI_awlock_converter;
   sc_signal< bool > m_S00_AXI_awlock_converter_signal;
   xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S01_AXI_transactor;
@@ -676,8 +676,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_awqos;
   sc_core::sc_in< bool > S00_AXI_awvalid;
   sc_core::sc_out< bool > S00_AXI_awready;
-  sc_core::sc_in< sc_dt::sc_bv<32> > S00_AXI_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<4> > S00_AXI_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<128> > S00_AXI_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<16> > S00_AXI_wstrb;
   sc_core::sc_in< bool > S00_AXI_wlast;
   sc_core::sc_in< bool > S00_AXI_wvalid;
   sc_core::sc_out< bool > S00_AXI_wready;
@@ -766,7 +766,7 @@ protected:
 
 private:
 
-  xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
+  xtlm::xaximm_pin2xtlm_t<128,32,1,1,1,1,1,1>* mp_S00_AXI_transactor;
   xsc::common::vectorN2scalar_converter<1>* mp_S00_AXI_awlock_converter;
   sc_signal< bool > m_S00_AXI_awlock_converter_signal;
   xtlm::xaximm_pin2xtlm_t<32,32,1,1,1,1,1,1>* mp_S01_AXI_transactor;

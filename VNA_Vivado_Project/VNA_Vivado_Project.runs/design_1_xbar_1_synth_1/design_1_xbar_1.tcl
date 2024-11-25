@@ -56,7 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "design_1_xbar_1_synth_1" START { ROLLUP_AUTO }
-set_param bd.open.in_stealth_mode 1
+set_param chipscope.maxJobs 6
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -72,7 +72,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part realdigital.org:rfsoc4x2:part0:1.0 [current_project]
-set_property ip_repo_paths /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/ip_repo/tlast_1_0 [current_project]
+set_property ip_repo_paths {
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0
+  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/ip_repo/tlast_1_0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

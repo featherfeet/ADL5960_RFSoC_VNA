@@ -132,10 +132,10 @@ module bd_6f02_wrapper
   input S00_AXI_bready;
   output [1:0]S00_AXI_bresp;
   output S00_AXI_bvalid;
-  input [31:0]S00_AXI_wdata;
+  input [127:0]S00_AXI_wdata;
   input S00_AXI_wlast;
   output S00_AXI_wready;
-  input [3:0]S00_AXI_wstrb;
+  input [15:0]S00_AXI_wstrb;
   input S00_AXI_wvalid;
   input [31:0]S01_AXI_awaddr;
   input [1:0]S01_AXI_awburst;
@@ -226,10 +226,10 @@ module bd_6f02_wrapper
   wire S00_AXI_bready;
   wire [1:0]S00_AXI_bresp;
   wire S00_AXI_bvalid;
-  wire [31:0]S00_AXI_wdata;
+  wire [127:0]S00_AXI_wdata;
   wire S00_AXI_wlast;
   wire S00_AXI_wready;
-  wire [3:0]S00_AXI_wstrb;
+  wire [15:0]S00_AXI_wstrb;
   wire S00_AXI_wvalid;
   wire [31:0]S01_AXI_awaddr;
   wire [1:0]S01_AXI_awburst;

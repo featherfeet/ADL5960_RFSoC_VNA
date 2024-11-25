@@ -7,7 +7,8 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.1"
+      "tool_version": "2024.1",
+      "validated": "true"
     },
     "design_tree": {
       "usp_rf_data_converter_0": "",
@@ -1227,7 +1228,7 @@
             "value": "128"
           },
           "c_sg_length_width": {
-            "value": "23"
+            "value": "26"
           }
         },
         "interface_ports": {
@@ -2295,7 +2296,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "MAX_BURST_LENGTH": {
-                "value": "4"
+                "value": "256"
               },
               "NUM_READ_OUTSTANDING": {
                 "value": "2"
@@ -2500,7 +2501,8 @@
           "adc_combiner_0/s04_axis_aclk",
           "adc_combiner_0/s05_axis_aclk",
           "adc_combiner_0/s06_axis_aclk",
-          "adc_combiner_0/s07_axis_aclk"
+          "adc_combiner_0/s07_axis_aclk",
+          "adc_combiner_0/m00_axis_aclk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -2518,7 +2520,16 @@
       "rst_clk_wiz_0_147M_peripheral_aresetn": {
         "ports": [
           "rst_clk_wiz_0_147M/peripheral_aresetn",
-          "axi_smc/aresetn"
+          "axi_smc/aresetn",
+          "adc_combiner_0/m00_axis_aresetn",
+          "adc_combiner_0/s07_axis_aresetn",
+          "adc_combiner_0/s06_axis_aresetn",
+          "adc_combiner_0/s05_axis_aresetn",
+          "adc_combiner_0/s04_axis_aresetn",
+          "adc_combiner_0/s03_axis_aresetn",
+          "adc_combiner_0/s02_axis_aresetn",
+          "adc_combiner_0/s01_axis_aresetn",
+          "adc_combiner_0/s00_axis_aresetn"
         ]
       },
       "rst_ps8_0_99M_peripheral_aresetn": {

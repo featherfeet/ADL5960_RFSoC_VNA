@@ -18,27 +18,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_tlast_0_1/design_1_tlast_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tlast_0_1 || ORIG_REF_NAME==design_1_tlast_0_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_tlast_1_0/design_1_tlast_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tlast_1_0 || ORIG_REF_NAME==design_1_tlast_1_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_tlast_2_0/design_1_tlast_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tlast_2_0 || ORIG_REF_NAME==design_1_tlast_2_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_tlast_3_0/design_1_tlast_3_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tlast_3_0 || ORIG_REF_NAME==design_1_tlast_3_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_dma_1_0 || ORIG_REF_NAME==design_1_axi_dma_1_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_dma_2_0/design_1_axi_dma_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_dma_2_0 || ORIG_REF_NAME==design_1_axi_dma_2_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_dma_3_0/design_1_axi_dma_3_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_dma_3_0 || ORIG_REF_NAME==design_1_axi_dma_3_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rst_ps8_0_99M_0 || ORIG_REF_NAME==design_1_rst_ps8_0_99M_0} -quiet] -quiet
 
@@ -47,12 +26,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rs
 
 # IP: bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xbar_1 || ORIG_REF_NAME==design_1_xbar_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_ps8_0_axi_periph_1/design_1_ps8_0_axi_periph_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps8_0_axi_periph_1 || ORIG_REF_NAME==design_1_ps8_0_axi_periph_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_smc_1 || ORIG_REF_NAME==design_1_axi_smc_1} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] -quiet
@@ -65,5 +38,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 
 # IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ps8_0_axi_periph_1/design_1_ps8_0_axi_periph_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ps8_0_axi_periph_1 || ORIG_REF_NAME==design_1_ps8_0_axi_periph_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_smc_1 || ORIG_REF_NAME==design_1_axi_smc_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_adc_combiner_0_0/design_1_adc_combiner_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_adc_combiner_0_0 || ORIG_REF_NAME==design_1_adc_combiner_0_0} -quiet] -quiet
 
 # XDC: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/design_1_ooc.xdc

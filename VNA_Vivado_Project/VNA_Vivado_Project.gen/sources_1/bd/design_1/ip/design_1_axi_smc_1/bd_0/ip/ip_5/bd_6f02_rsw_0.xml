@@ -2660,7 +2660,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b9f898c</spirit:value>
+            <spirit:value>9:945e52ed</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2679,11 +2679,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 14 19:44:38 UTC 2024</spirit:value>
+            <spirit:value>Sun Nov 17 22:42:49 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07a48711</spirit:value>
+            <spirit:value>9:5430dc45</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2699,11 +2699,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 17 22:07:20 UTC 2024</spirit:value>
+            <spirit:value>Mon Nov 25 19:23:18 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07a48711</spirit:value>
+            <spirit:value>9:5430dc45</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2722,11 +2722,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 14 19:44:38 UTC 2024</spirit:value>
+            <spirit:value>Sun Nov 17 22:42:49 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b9f898c</spirit:value>
+            <spirit:value>9:945e52ed</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2742,11 +2742,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 17 22:07:20 UTC 2024</spirit:value>
+            <spirit:value>Mon Nov 25 19:23:18 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b9f898c</spirit:value>
+            <spirit:value>9:945e52ed</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2797,7 +2797,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CONNECTIVITY&apos;)))" spirit:bitStringLength="2">0b1111</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CONNECTIVITY&apos;)))" spirit:bitStringLength="2">0b0001</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -3022,7 +3022,7 @@
       <spirit:modelParameter spirit:dataType="bitstring">
         <spirit:name>C_CONNECTIVITY</spirit:name>
         <spirit:displayName>C_CONNECTIVITY</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONNECTIVITY" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))){&quot;1&quot;}}" spirit:bitStringLength="4">0b1111</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONNECTIVITY" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))){&quot;1&quot;}}" spirit:bitStringLength="4">0b0001</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -3272,7 +3272,7 @@
     <spirit:parameter>
       <spirit:name>M01_S00_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M01_S00_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_S00_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_S00_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M01_S01_CONNECTIVITY</spirit:name>
@@ -3352,7 +3352,7 @@
     <spirit:parameter>
       <spirit:name>M02_S00_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M02_S00_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_S00_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_S00_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M02_S01_CONNECTIVITY</spirit:name>
@@ -3432,7 +3432,7 @@
     <spirit:parameter>
       <spirit:name>M03_S00_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M03_S00_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_S00_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_S00_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M03_S01_CONNECTIVITY</spirit:name>

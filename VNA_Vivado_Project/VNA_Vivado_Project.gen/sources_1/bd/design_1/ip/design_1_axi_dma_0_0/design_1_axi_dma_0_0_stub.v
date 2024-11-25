@@ -2,11 +2,11 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-// Date        : Thu Nov 14 14:45:26 2024
-// Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_axi_dma_0_0 -prefix
-//               design_1_axi_dma_0_0_ design_1_axi_dma_3_0_stub.v
-// Design      : design_1_axi_dma_3_0
+// Date        : Mon Nov 25 14:31:27 2024
+// Host        : eecs-digital-28 running 64-bit Ubuntu 24.04.1 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_stub.v
+// Design      : design_1_axi_dma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu48dr-ffvg1517-2-e
 // --------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ module design_1_axi_dma_0_0(s_axi_lite_aclk, m_axi_s2mm_aclk, axi_resetn,
   m_axi_s2mm_wready, m_axi_s2mm_bresp, m_axi_s2mm_bvalid, m_axi_s2mm_bready, 
   s2mm_prmry_reset_out_n, s_axis_s2mm_tdata, s_axis_s2mm_tkeep, s_axis_s2mm_tvalid, 
   s_axis_s2mm_tready, s_axis_s2mm_tlast, s2mm_introut, axi_dma_tstvec)
-/* synthesis syn_black_box black_box_pad_pin="axi_resetn,s_axi_lite_awvalid,s_axi_lite_awready,s_axi_lite_awaddr[9:0],s_axi_lite_wvalid,s_axi_lite_wready,s_axi_lite_wdata[31:0],s_axi_lite_bresp[1:0],s_axi_lite_bvalid,s_axi_lite_bready,s_axi_lite_arvalid,s_axi_lite_arready,s_axi_lite_araddr[9:0],s_axi_lite_rvalid,s_axi_lite_rready,s_axi_lite_rdata[31:0],s_axi_lite_rresp[1:0],m_axi_s2mm_awaddr[31:0],m_axi_s2mm_awlen[7:0],m_axi_s2mm_awsize[2:0],m_axi_s2mm_awburst[1:0],m_axi_s2mm_awprot[2:0],m_axi_s2mm_awcache[3:0],m_axi_s2mm_awvalid,m_axi_s2mm_awready,m_axi_s2mm_wdata[31:0],m_axi_s2mm_wstrb[3:0],m_axi_s2mm_wlast,m_axi_s2mm_wvalid,m_axi_s2mm_wready,m_axi_s2mm_bresp[1:0],m_axi_s2mm_bvalid,m_axi_s2mm_bready,s2mm_prmry_reset_out_n,s_axis_s2mm_tdata[31:0],s_axis_s2mm_tkeep[3:0],s_axis_s2mm_tvalid,s_axis_s2mm_tready,s_axis_s2mm_tlast,s2mm_introut,axi_dma_tstvec[31:0]" */
+/* synthesis syn_black_box black_box_pad_pin="axi_resetn,s_axi_lite_awvalid,s_axi_lite_awready,s_axi_lite_awaddr[9:0],s_axi_lite_wvalid,s_axi_lite_wready,s_axi_lite_wdata[31:0],s_axi_lite_bresp[1:0],s_axi_lite_bvalid,s_axi_lite_bready,s_axi_lite_arvalid,s_axi_lite_arready,s_axi_lite_araddr[9:0],s_axi_lite_rvalid,s_axi_lite_rready,s_axi_lite_rdata[31:0],s_axi_lite_rresp[1:0],m_axi_s2mm_awaddr[31:0],m_axi_s2mm_awlen[7:0],m_axi_s2mm_awsize[2:0],m_axi_s2mm_awburst[1:0],m_axi_s2mm_awprot[2:0],m_axi_s2mm_awcache[3:0],m_axi_s2mm_awvalid,m_axi_s2mm_awready,m_axi_s2mm_wdata[127:0],m_axi_s2mm_wstrb[15:0],m_axi_s2mm_wlast,m_axi_s2mm_wvalid,m_axi_s2mm_wready,m_axi_s2mm_bresp[1:0],m_axi_s2mm_bvalid,m_axi_s2mm_bready,s2mm_prmry_reset_out_n,s_axis_s2mm_tdata[127:0],s_axis_s2mm_tkeep[15:0],s_axis_s2mm_tvalid,s_axis_s2mm_tready,s_axis_s2mm_tlast,s2mm_introut,axi_dma_tstvec[31:0]" */
 /* synthesis syn_force_seq_prim="s_axi_lite_aclk" */
 /* synthesis syn_force_seq_prim="m_axi_s2mm_aclk" */;
   input s_axi_lite_aclk /* synthesis syn_isclock = 1 */;
@@ -56,8 +56,8 @@ module design_1_axi_dma_0_0(s_axi_lite_aclk, m_axi_s2mm_aclk, axi_resetn,
   output [3:0]m_axi_s2mm_awcache;
   output m_axi_s2mm_awvalid;
   input m_axi_s2mm_awready;
-  output [31:0]m_axi_s2mm_wdata;
-  output [3:0]m_axi_s2mm_wstrb;
+  output [127:0]m_axi_s2mm_wdata;
+  output [15:0]m_axi_s2mm_wstrb;
   output m_axi_s2mm_wlast;
   output m_axi_s2mm_wvalid;
   input m_axi_s2mm_wready;
@@ -65,8 +65,8 @@ module design_1_axi_dma_0_0(s_axi_lite_aclk, m_axi_s2mm_aclk, axi_resetn,
   input m_axi_s2mm_bvalid;
   output m_axi_s2mm_bready;
   output s2mm_prmry_reset_out_n;
-  input [31:0]s_axis_s2mm_tdata;
-  input [3:0]s_axis_s2mm_tkeep;
+  input [127:0]s_axis_s2mm_tdata;
+  input [15:0]s_axis_s2mm_tkeep;
   input s_axis_s2mm_tvalid;
   output s_axis_s2mm_tready;
   input s_axis_s2mm_tlast;

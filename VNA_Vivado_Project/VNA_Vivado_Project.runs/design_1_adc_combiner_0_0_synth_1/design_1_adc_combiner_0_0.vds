@@ -1,0 +1,345 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov 25 14:30:55 2024
+# Process ID: 18709
+# Current directory: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/design_1_adc_combiner_0_0_synth_1
+# Command line: vivado -log design_1_adc_combiner_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_adc_combiner_0_0.tcl
+# Log file: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/design_1_adc_combiner_0_0_synth_1/design_1_adc_combiner_0_0.vds
+# Journal file: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/design_1_adc_combiner_0_0_synth_1/vivado.jou
+# Running On        :eecs-digital-28
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency     :4552.534 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :33324 MB
+# Swap memory       :8589 MB
+# Total Virtual     :41914 MB
+# Available Virtual :37621 MB
+#-----------------------------------------------------------
+source design_1_adc_combiner_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olt/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/ip_repo/tlast_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_adc_combiner_0_0
+Command: synth_design -top design_1_adc_combiner_0_0 -part xczu48dr-ffvg1517-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48dr'
+INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18821
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2782.398 ; gain = 352.801 ; free physical = 14760 ; free virtual = 27787
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_adc_combiner_0_0' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_adc_combiner_0_0/synth/design_1_adc_combiner_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'adc_combiner' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/b4b8/hdl/adc_combiner.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_combiner' (0#1) [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/b4b8/hdl/adc_combiner.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_combiner_0_0' (0#1) [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_adc_combiner_0_0/synth/design_1_adc_combiner_0_0.v:53]
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_aresetn in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tstrb[1] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tstrb[0] in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tlast in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tvalid in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aclk in module adc_combiner is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aresetn in module adc_combiner is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2844.367 ; gain = 414.770 ; free physical = 14571 ; free virtual = 27613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2862.180 ; gain = 432.582 ; free physical = 14567 ; free virtual = 27612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2862.180 ; gain = 432.582 ; free physical = 14567 ; free virtual = 27612
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2862.180 ; gain = 0.000 ; free physical = 14567 ; free virtual = 27612
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2978.055 ; gain = 0.000 ; free physical = 14304 ; free virtual = 27359
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2997.867 ; gain = 19.812 ; free physical = 14304 ; free virtual = 27359
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2997.867 ; gain = 568.270 ; free physical = 13906 ; free virtual = 26965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu48dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3005.871 ; gain = 576.273 ; free physical = 13906 ; free virtual = 26965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3005.871 ; gain = 576.273 ; free physical = 13906 ; free virtual = 26965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3005.871 ; gain = 576.273 ; free physical = 13890 ; free virtual = 26951
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   18 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[15] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[14] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[13] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[12] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[11] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[10] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[9] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[8] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[7] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[6] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[5] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[4] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design design_1_adc_combiner_0_0 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s01_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s02_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s03_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s04_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s05_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s06_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tstrb[1] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tstrb[0] in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tlast in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s07_axis_tvalid in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aclk in module design_1_adc_combiner_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aresetn in module design_1_adc_combiner_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3005.871 ; gain = 576.273 ; free physical = 13851 ; free virtual = 26914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3320.238 ; gain = 890.641 ; free physical = 13336 ; free virtual = 26428
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3320.238 ; gain = 890.641 ; free physical = 13336 ; free virtual = 26428
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3339.270 ; gain = 909.672 ; free physical = 13312 ; free virtual = 26404
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     3|
+|2     |LUT1   |     2|
+|3     |LUT2   |    18|
+|4     |LUT4   |     4|
+|5     |LUT5   |     1|
+|6     |LUT6   |     1|
+|7     |FDRE   |    19|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13282 ; free virtual = 26375
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3345.207 ; gain = 779.922 ; free physical = 13281 ; free virtual = 26374
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3345.207 ; gain = 915.609 ; free physical = 13281 ; free virtual = 26374
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3345.207 ; gain = 0.000 ; free physical = 13530 ; free virtual = 26623
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3354.938 ; gain = 0.000 ; free physical = 13532 ; free virtual = 26626
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 71d062ca
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 3354.938 ; gain = 1913.547 ; free physical = 13532 ; free virtual = 26626
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2674.103; main = 2346.511; forked = 327.592
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4382.688; main = 3354.941; forked = 1037.477
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3378.949 ; gain = 0.000 ; free physical = 13532 ; free virtual = 26626
+INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/design_1_adc_combiner_0_0_synth_1/design_1_adc_combiner_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_adc_combiner_0_0, cache-ID = 1ce760e307d62d08
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3378.949 ; gain = 0.000 ; free physical = 13523 ; free virtual = 26617
+INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/design_1_adc_combiner_0_0_synth_1/design_1_adc_combiner_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_adc_combiner_0_0_utilization_synth.rpt -pb design_1_adc_combiner_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 25 14:31:14 2024...
