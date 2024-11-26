@@ -112,6 +112,8 @@ port2_test_fixture.interpolate_self(frequencies)
 short_standard_model = generate_short_standard(59.44, 1, 0, 0, 0, 0, frequencies)
 open_standard_model = generate_open_standard(59.55, 1, -4, 200, 0, 1.1, frequencies)
 load_standard_model = generate_load_standard(0, 0, 50, frequencies)
+media = rf.media.DefinedGammaZ0(frequency = f, z0_port = 50)
+unknown_through_standard_model = media.attenuator(1, d = 10, units = "ps") # 1 dB attenuator as our unknown-thru standard.
 
 #===================Measure Cal Standards In-System===============================
 short_standard_measured_port1 = port1_test_fixture ** short_standard_model
@@ -120,6 +122,7 @@ load_standard_measured_port1 = port1_test_fixture ** load_standard_model
 short_standard_measured_port2 = port2_test_fixture ** short_standard_model
 open_standard_measured_port2 = port2_test_fixture ** open_standard_model
 load_standard_measured_port2 = port2_test_fixture ** load_standard_model
+unknown_thru_standard_measured_port1 = port1_test_fixture ** unknown_through_standard_model ** port2_test_fixture
 
 #===================Take Raw Measurements (Test Fixtures + DUT)===================
 full_system = port1_test_fixture ** dut ** port2_test_fixture
