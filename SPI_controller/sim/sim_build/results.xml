@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1732996181" />
+    <testcase name="test_spi_single" classname="test_spi_con" file="/Users/biancahanly/Documents/_MIT_/Classes/_24Fall_/6.S965/Project/sim/test_spi_con.py" lineno="159" time="0.08513212203979492" sim_time_ns="8040.001" ratio_time="94441.44944773855" />
+    <testcase name="test_spi_multiple" classname="test_spi_con" file="/Users/biancahanly/Documents/_MIT_/Classes/_24Fall_/6.S965/Project/sim/test_spi_con.py" lineno="200" time="0.25368213653564453" sim_time_ns="24180.001" ratio_time="95316.13589434786" />
+    <testcase name="test_spi_clock" classname="test_spi_con" file="/Users/biancahanly/Documents/_MIT_/Classes/_24Fall_/6.S965/Project/sim/test_spi_con.py" lineno="243" time="0.3388407230377197" sim_time_ns="24180.000999999997" ratio_time="71360.9650670834" />
+  </testsuite>
+</testsuites>
