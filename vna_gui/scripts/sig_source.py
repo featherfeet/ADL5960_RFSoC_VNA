@@ -120,7 +120,10 @@ class SigSource:
             raise ValueError("The number of points z must be greater than 1.")
         return np.linspace(self.start, self.stop, self.resolution).tolist()
 
-    
+    def set_frequency(self, freq):
+        #Write up additional code to set frequency in here!
+        print("setting_frequency to {freq}")
+   
     def get_parameters(self):
         '''
         Returns the start, stop, center, span parameters in a list
