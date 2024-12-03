@@ -1,0 +1,95 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_por_fsm_top.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_bgt_fsm.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_device_rom.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_por_fsm.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_por_fsm_disabled.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_tile_config.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_constants_config.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_drp_arbiter.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_drp_arbiter_adc.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_register_decode.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_address_decoder.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_axi_lite_ipif.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_counter_f.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_pselect_f.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_slave_attachment.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_rf_wrapper.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_drp_control_top.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_drp_control.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_drp_access_ctrl.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_irq_req_ack.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_irq_sync.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0bufg_gt_ctrl.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_overvol_irq.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_powerup_state_irq.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_mt_sysref_count.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_mt_mrk_count.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_mt_data_align.sv" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_mt_fifo_ctrl.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_rst_cnt.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clk_detection.v" \
+"../../../bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.v" \
+"../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/sim/bd_6f02.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_0/sim/bd_6f02_one_0.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_4/sim/bd_6f02_arsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_5/sim/bd_6f02_rsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_6/sim/bd_6f02_awsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_7/sim/bd_6f02_wsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_8/sim/bd_6f02_bsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_9/sim/bd_6f02_s00mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_10/sim/bd_6f02_s00tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_11/sim/bd_6f02_s00sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_12/sim/bd_6f02_s00a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_13/sim/bd_6f02_sawn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/sim/bd_6f02_swn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/sim/bd_6f02_sbn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_16/sim/bd_6f02_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/sim/bd_6f02_m00awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/sim/bd_6f02_m00wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/sim/bd_6f02_m00bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_20/sim/bd_6f02_m00e_0.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/sim/design_1_axi_smc_1.v" \
+"../../../bd/design_1/ipshared/b4b8/hdl/adc_combiner.v" \
+"../../../bd/design_1/ip/design_1_adc_combiner_0_0/sim/design_1_adc_combiner_0_0.v" \
+"../../../bd/design_1/ipshared/b460/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/b460/hdl/spi_adl.v" \
+"../../../bd/design_1/ip/design_1_spi_adl_0_0/sim/design_1_spi_adl_0_0.v" \
+"../../../bd/design_1/ip/design_1_spi_control_w_0_0/sim/design_1_spi_control_w_0_0.v" \
+"../../../bd/design_1/ip/design_1_spi_adl_1_0/sim/design_1_spi_adl_1_0.v" \
+"../../../bd/design_1/ip/design_1_spi_control_w_1_0/sim/design_1_spi_control_w_1_0.v" \
+"../../../bd/design_1/ipshared/7b63/hdl/spi_lmx_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/7b63/hdl/spi_lmx.v" \
+"../../../bd/design_1/ip/design_1_spi_lmx_0_0/sim/design_1_spi_lmx_0_0.v" \
+"../../../bd/design_1/ip/design_1_spi_lmx_control_w_0_0/sim/design_1_spi_lmx_control_w_0_0.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_1/sim/design_1_auto_ds_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

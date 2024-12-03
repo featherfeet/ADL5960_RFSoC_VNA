@@ -227,6 +227,60 @@
             },
             "V5": {
                 "VT": "AC",
+                "BA": "0x00A0010000",
+                "HA": "0x00A001FFFF",
+                "BP": "C_S00_AXI_BASEADDR",
+                "HP": "C_S00_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/zynq_ultra_ps_e_0",
+                "MI": "M_AXI_HPM0_FPD",
+                "MS": "SEG_spi_adl_1_S00_AXI_reg",
+                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
+                "SX": "/spi_adl_1",
+                "SI": "S00_AXI",
+                "SS": "S00_AXI_reg",
+                "SV": "user.org:user:spi_adl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V6": {
+                "VT": "AC",
+                "BA": "0x00A0020000",
+                "HA": "0x00A002FFFF",
+                "BP": "C_S00_AXI_BASEADDR",
+                "HP": "C_S00_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/zynq_ultra_ps_e_0",
+                "MI": "M_AXI_HPM0_FPD",
+                "MS": "SEG_spi_lmx_0_S00_AXI_reg",
+                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
+                "SX": "/spi_lmx_0",
+                "SI": "S00_AXI",
+                "SS": "S00_AXI_reg",
+                "SV": "user.org:user:spi_lmx:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V7": {
+                "VT": "AC",
+                "BA": "0x00A0030000",
+                "HA": "0x00A003FFFF",
+                "BP": "C_S00_AXI_BASEADDR",
+                "HP": "C_S00_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/zynq_ultra_ps_e_0",
+                "MI": "M_AXI_HPM0_FPD",
+                "MS": "SEG_spi_adl_0_S00_AXI_reg",
+                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
+                "SX": "/spi_adl_0",
+                "SI": "S00_AXI",
+                "SS": "S00_AXI_reg",
+                "SV": "user.org:user:spi_adl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V8": {
+                "VT": "AC",
                 "BA": "0x00A0040000",
                 "HA": "0x00A007FFFF",
                 "BP": "C_BASEADDR",
@@ -243,7 +297,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V6": {
+            "V9": {
                 "VT": "ACE",
                 "BA": "0xFF000000",
                 "HA": "0xFFFFFFFF",
@@ -262,7 +316,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V7": {
+            "V10": {
                 "VT": "ACE",
                 "BA": "0x800000000",
                 "HA": "0xFFFFFFFFF",
@@ -313,6 +367,21 @@
             },
             {
                 "src": "V7",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V8",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V9",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V10",
                 "trg": "V2",
                 "EH": "2"
             }

@@ -1,0 +1,54 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "design_1_spi_lmx_control_w_0_0",
+    "cell_name": "spi_lmx_control_w_0",
+    "component_reference": "xilinx.com:module_ref:spi_lmx_control_w:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_spi_lmx_control_w_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "design_1_spi_lmx_control_w_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynquplusRFSOC" } ],
+        "BASE_BOARD_PART": [ { "value": "realdigital.org:rfsoc4x2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xczu48dr" } ],
+        "NEXTGEN_VERSAL": [ { "value": "0" } ],
+        "PACKAGE": [ { "value": "ffvg1517" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_spi_lmx_control_w_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.1" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk_in": [ { "direction": "in" } ],
+        "rst_in": [ { "direction": "in" } ],
+        "data_in": [ { "direction": "in", "size_left": "23", "size_right": "0" } ],
+        "trigger_in": [ { "direction": "in" } ],
+        "busy_out": [ { "direction": "out" } ],
+        "chip_data_out": [ { "direction": "out" } ],
+        "chip_clk_out": [ { "direction": "out" } ],
+        "chip_sel_out": [ { "direction": "out" } ],
+        "chip_data_in": [ { "direction": "in" } ],
+        "data_valid_out": [ { "direction": "out" } ],
+        "data_out": [ { "direction": "out", "size_left": "23", "size_right": "0" } ]
+      }
+    }
+  }
+}

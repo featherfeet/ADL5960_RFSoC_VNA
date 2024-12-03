@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Mon Nov 25 14:32:09 2024
-| Host         : eecs-digital-28 running 64-bit Ubuntu 24.04.1 LTS
+| Date         : Mon Dec  2 22:08:32 2024
+| Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : xczu48dr-ffvg1517-2-e
@@ -29,20 +29,22 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |    0 |     0 |          0 |    425280 |  0.00 |
-|   LUT as Logic          |    0 |     0 |          0 |    425280 |  0.00 |
-|   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |    0 |     0 |          0 |    850560 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |          0 |    850560 |  0.00 |
-|   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |    0 |     0 |          0 |     53160 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
-| F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+-------+-------+------------+-----------+-------+
+|          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
++----------------------------+-------+-------+------------+-----------+-------+
+| CLB LUTs*                  | 12928 |     0 |          0 |    425280 |  3.04 |
+|   LUT as Logic             | 12275 |     0 |          0 |    425280 |  2.89 |
+|   LUT as Memory            |   653 |     0 |          0 |    213600 |  0.31 |
+|     LUT as Distributed RAM |   416 |     0 |            |           |       |
+|     LUT as Shift Register  |   237 |     0 |            |           |       |
+| CLB Registers              | 13756 |     0 |          0 |    850560 |  1.62 |
+|   Register as Flip Flop    | 13756 |     0 |          0 |    850560 |  1.62 |
+|   Register as Latch        |     0 |     0 |          0 |    850560 |  0.00 |
+| CARRY8                     |    83 |     0 |          0 |     53160 |  0.16 |
+| F7 Muxes                   |   118 |     0 |          0 |    212640 |  0.06 |
+| F8 Muxes                   |    28 |     0 |          0 |    106320 |  0.03 |
+| F9 Muxes                   |     0 |     0 |          0 |     53160 |  0.00 |
++----------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
@@ -60,24 +62,26 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 113   |          Yes |           - |          Set |
+| 397   |          Yes |           - |        Reset |
+| 714   |          Yes |         Set |            - |
+| 12532 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
 2. BLOCKRAM
 -----------
 
-+----------------+------+-------+------------+-----------+-------+
-|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
-+----------------+------+-------+------------+-----------+-------+
-| Block RAM Tile |    0 |     0 |          0 |      1080 |  0.00 |
-|   RAMB36/FIFO* |    0 |     0 |          0 |      1080 |  0.00 |
-|   RAMB18       |    0 |     0 |          0 |      2160 |  0.00 |
-| URAM           |    0 |     0 |          0 |        80 |  0.00 |
-+----------------+------+-------+------------+-----------+-------+
++-------------------+------+-------+------------+-----------+-------+
+|     Site Type     | Used | Fixed | Prohibited | Available | Util% |
++-------------------+------+-------+------------+-----------+-------+
+| Block RAM Tile    |   10 |     0 |          0 |      1080 |  0.93 |
+|   RAMB36/FIFO*    |    9 |     0 |          0 |      1080 |  0.83 |
+|     RAMB36E2 only |    9 |       |            |           |       |
+|   RAMB18          |    2 |     0 |          0 |      2160 |  0.09 |
+|     RAMB18E2 only |    2 |       |            |           |       |
+| URAM              |    0 |     0 |          0 |        80 |  0.00 |
++-------------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
 
@@ -97,7 +101,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |    0 |     0 |          0 |       347 |  0.00 |
+| Bonded IOB |   12 |     0 |          0 |       347 |  3.46 |
 | RF_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | RF_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -109,13 +113,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCE     |    0 |     0 |          0 |       216 |  0.00 |
+| BUFGCE     |    1 |     0 |          0 |       216 |  0.46 |
 | BUFGCE_DIV |    0 |     0 |          0 |        32 |  0.00 |
-| BUFG_GT    |    0 |     0 |          0 |       312 |  0.00 |
-| BUFG_PS    |    0 |     0 |          0 |        72 |  0.00 |
+| BUFG_GT    |    2 |     0 |          0 |       312 |  0.64 |
+| BUFG_PS    |    1 |     0 |          0 |        72 |  1.39 |
 | BUFGCTRL*  |    0 |     0 |          0 |        64 |  0.00 |
 | PLL        |    0 |     0 |          0 |        16 |  0.00 |
-| MMCM       |    0 |     0 |          0 |         8 |  0.00 |
+| MMCM       |    1 |     0 |          0 |         8 | 12.50 |
 +------------+------+-------+------------+-----------+-------+
 * Note: Each used BUFGCTRL counts as two GLOBAL CLOCK BUFFERs. This table does not include global clocking resources, only buffer cell usage. See the Clock Utilization Report (report_clock_utilization) for detailed accounting of global clocking resource availability.
 
@@ -123,23 +127,23 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 6. ADVANCED
 -----------
 
-+-----------------+------+-------+------------+-----------+-------+
-|    Site Type    | Used | Fixed | Prohibited | Available | Util% |
-+-----------------+------+-------+------------+-----------+-------+
-| CMACE4          |    0 |     0 |          0 |         2 |  0.00 |
-| FE              |    0 |     0 |          0 |         8 |  0.00 |
-| GTYE4_CHANNEL   |    0 |     0 |          0 |        16 |  0.00 |
-| GTYE4_COMMON    |    0 |     0 |          0 |         4 |  0.00 |
-| ILKNE4          |    0 |     0 |          0 |         1 |  0.00 |
-| OBUFDS_GTE4     |    0 |     0 |          0 |         8 |  0.00 |
-| OBUFDS_GTE4_ADV |    0 |     0 |          0 |         8 |  0.00 |
-| PCIE4CE4        |    0 |     0 |          0 |         2 |  0.00 |
-| PS8             |    0 |     0 |          0 |         1 |  0.00 |
-| RFADC           |    0 |     0 |          0 |         4 |  0.00 |
-| RFDAC           |    0 |     0 |          0 |         4 |  0.00 |
-| SYSMONE4        |    0 |     0 |          0 |         1 |  0.00 |
-| RFADC_13B4W_M0  |    0 |     0 |          0 |         4 |  0.00 |
-+-----------------+------+-------+------------+-----------+-------+
++-----------------+------+-------+------------+-----------+--------+
+|    Site Type    | Used | Fixed | Prohibited | Available |  Util% |
++-----------------+------+-------+------------+-----------+--------+
+| CMACE4          |    0 |     0 |          0 |         2 |   0.00 |
+| FE              |    0 |     0 |          0 |         8 |   0.00 |
+| GTYE4_CHANNEL   |    0 |     0 |          0 |        16 |   0.00 |
+| GTYE4_COMMON    |    0 |     0 |          0 |         4 |   0.00 |
+| ILKNE4          |    0 |     0 |          0 |         1 |   0.00 |
+| OBUFDS_GTE4     |    0 |     0 |          0 |         8 |   0.00 |
+| OBUFDS_GTE4_ADV |    0 |     0 |          0 |         8 |   0.00 |
+| PCIE4CE4        |    0 |     0 |          0 |         2 |   0.00 |
+| PS8             |    1 |     0 |          0 |         1 | 100.00 |
+| RFADC           |    4 |     0 |          0 |         4 | 100.00 |
+| RFDAC           |    4 |     0 |          0 |         4 | 100.00 |
+| SYSMONE4        |    0 |     0 |          0 |         1 |   0.00 |
+| RFADC_13B4W_M0  |    0 |     0 |          0 |         4 |   0.00 |
++-----------------+------+-------+------------+-----------+--------+
 
 
 7. CONFIGURATION
@@ -161,31 +165,48 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 8. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
++--------------+-------+---------------------+
+|   Ref Name   |  Used | Functional Category |
++--------------+-------+---------------------+
+| FDRE         | 12532 |            Register |
+| LUT6         |  5007 |                 CLB |
+| LUT5         |  2766 |                 CLB |
+| LUT3         |  2710 |                 CLB |
+| LUT4         |  2370 |                 CLB |
+| LUT2         |  1263 |                 CLB |
+| LUT1         |   753 |                 CLB |
+| RAMD32       |   716 |                 CLB |
+| FDSE         |   714 |            Register |
+| FDCE         |   397 |            Register |
+| SRL16E       |   167 |                 CLB |
+| MUXF7        |   118 |                 CLB |
+| FDPE         |   113 |            Register |
+| RAMS32       |   104 |                 CLB |
+| CARRY8       |    83 |                 CLB |
+| SRLC32E      |    70 |                 CLB |
+| MUXF8        |    28 |                 CLB |
+| RAMB36E2     |     9 |            BLOCKRAM |
+| OBUF         |     9 |                 I/O |
+| RFDAC        |     4 |            Advanced |
+| RFADC        |     4 |            Advanced |
+| INBUF        |     3 |                 I/O |
+| IBUFCTRL     |     3 |              Others |
+| RAMB18E2     |     2 |            BLOCKRAM |
+| BUFG_GT_SYNC |     2 |               Clock |
+| BUFG_GT      |     2 |               Clock |
+| PS8          |     1 |            Advanced |
+| MMCME4_ADV   |     1 |               Clock |
+| BUFG_PS      |     1 |               Clock |
+| BUFGCE       |     1 |               Clock |
++--------------+-------+---------------------+
 
 
 9. Black Boxes
 --------------
 
-+------------------------------------+------+
-|              Ref Name              | Used |
-+------------------------------------+------+
-| design_1_zynq_ultra_ps_e_0_0       |    1 |
-| design_1_xbar_1                    |    1 |
-| design_1_usp_rf_data_converter_0_0 |    1 |
-| design_1_rst_ps8_0_99M_0           |    1 |
-| design_1_rst_clk_wiz_0_147M_0      |    1 |
-| design_1_clk_wiz_0_0               |    1 |
-| design_1_axi_smc_1                 |    1 |
-| design_1_axi_dma_0_0               |    1 |
-| design_1_auto_pc_1                 |    1 |
-| design_1_auto_pc_0                 |    1 |
-| design_1_auto_ds_1                 |    1 |
-| design_1_auto_ds_0                 |    1 |
-| design_1_adc_combiner_0_0          |    1 |
-+------------------------------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 
 10. Instantiated Netlists

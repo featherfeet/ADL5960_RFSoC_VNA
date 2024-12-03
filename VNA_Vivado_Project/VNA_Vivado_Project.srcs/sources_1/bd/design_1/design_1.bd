@@ -1,12 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4DBA37DC5A27E0B0",
+      "boundary_crc": "0x44CC5AF39BCBA409",
       "device": "xczu48dr-ffvg1517-2-e",
       "gen_directory": "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2024.1",
       "validated": "true"
     },
@@ -34,7 +34,13 @@
         "m04_couplers": {}
       },
       "axi_smc": "",
-      "adc_combiner_0": ""
+      "adc_combiner_0": "",
+      "spi_adl_0": "",
+      "spi_control_w_0": "",
+      "spi_adl_1": "",
+      "spi_control_w_1": "",
+      "spi_lmx_0": "",
+      "spi_lmx_control_w_0": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -159,6 +165,44 @@
             "direction": "I"
           }
         }
+      }
+    },
+    "ports": {
+      "adl1_sck": {
+        "direction": "O"
+      },
+      "adl1_sdo": {
+        "direction": "O"
+      },
+      "adl1_cs": {
+        "direction": "O"
+      },
+      "adl1_sdi": {
+        "direction": "I"
+      },
+      "adl2_sdi": {
+        "direction": "I"
+      },
+      "adl2_sdo": {
+        "direction": "O"
+      },
+      "adl2_sck": {
+        "direction": "O"
+      },
+      "adl2_cs": {
+        "direction": "O"
+      },
+      "lmx_sdi": {
+        "direction": "I"
+      },
+      "lmx_sdo": {
+        "direction": "O"
+      },
+      "lmx_sck": {
+        "direction": "O"
+      },
+      "lmx_cs": {
+        "direction": "O"
       }
     },
     "components": {
@@ -2329,6 +2373,240 @@
         "xci_name": "design_1_adc_combiner_0_0",
         "xci_path": "ip/design_1_adc_combiner_0_0/design_1_adc_combiner_0_0.xci",
         "inst_hier_path": "adc_combiner_0"
+      },
+      "spi_adl_0": {
+        "vlnv": "user.org:user:spi_adl:1.0",
+        "ip_revision": "9",
+        "xci_name": "design_1_spi_adl_0_0",
+        "xci_path": "ip/design_1_spi_adl_0_0/design_1_spi_adl_0_0.xci",
+        "inst_hier_path": "spi_adl_0"
+      },
+      "spi_control_w_0": {
+        "vlnv": "xilinx.com:module_ref:spi_control_w:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_spi_control_w_0_0",
+        "xci_path": "ip/design_1_spi_control_w_0_0/design_1_spi_control_w_0_0.xci",
+        "inst_hier_path": "spi_control_w_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_control_w",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "99999985",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_in": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "trigger_in": {
+            "direction": "I"
+          },
+          "busy_out": {
+            "direction": "O"
+          },
+          "chip_data_out": {
+            "direction": "O"
+          },
+          "chip_clk_out": {
+            "direction": "O"
+          },
+          "chip_sel_out": {
+            "direction": "O"
+          },
+          "chip_data_in": {
+            "direction": "I"
+          },
+          "data_valid_out": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      },
+      "spi_adl_1": {
+        "vlnv": "user.org:user:spi_adl:1.0",
+        "ip_revision": "9",
+        "xci_name": "design_1_spi_adl_1_0",
+        "xci_path": "ip/design_1_spi_adl_1_0/design_1_spi_adl_1_0.xci",
+        "inst_hier_path": "spi_adl_1"
+      },
+      "spi_control_w_1": {
+        "vlnv": "xilinx.com:module_ref:spi_control_w:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_spi_control_w_1_0",
+        "xci_path": "ip/design_1_spi_control_w_1_0/design_1_spi_control_w_1_0.xci",
+        "inst_hier_path": "spi_control_w_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_control_w",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "99999985",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_in": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "trigger_in": {
+            "direction": "I"
+          },
+          "busy_out": {
+            "direction": "O"
+          },
+          "chip_data_out": {
+            "direction": "O"
+          },
+          "chip_clk_out": {
+            "direction": "O"
+          },
+          "chip_sel_out": {
+            "direction": "O"
+          },
+          "chip_data_in": {
+            "direction": "I"
+          },
+          "data_valid_out": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      },
+      "spi_lmx_0": {
+        "vlnv": "user.org:user:spi_lmx:1.0",
+        "ip_revision": "3",
+        "xci_name": "design_1_spi_lmx_0_0",
+        "xci_path": "ip/design_1_spi_lmx_0_0/design_1_spi_lmx_0_0.xci",
+        "inst_hier_path": "spi_lmx_0"
+      },
+      "spi_lmx_control_w_0": {
+        "vlnv": "xilinx.com:module_ref:spi_lmx_control_w:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_spi_lmx_control_w_0_0",
+        "xci_path": "ip/design_1_spi_lmx_control_w_0_0/design_1_spi_lmx_control_w_0_0.xci",
+        "inst_hier_path": "spi_lmx_control_w_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_lmx_control_w",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "99999985",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_in": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "trigger_in": {
+            "direction": "I"
+          },
+          "busy_out": {
+            "direction": "O"
+          },
+          "chip_data_out": {
+            "direction": "O"
+          },
+          "chip_clk_out": {
+            "direction": "O"
+          },
+          "chip_sel_out": {
+            "direction": "O"
+          },
+          "chip_data_in": {
+            "direction": "I"
+          },
+          "data_valid_out": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2366,6 +2644,24 @@
         "interface_ports": [
           "ps8_0_axi_periph/M00_AXI",
           "axi_dma_0/S_AXI_LITE"
+        ]
+      },
+      "ps8_0_axi_periph_M01_AXI": {
+        "interface_ports": [
+          "ps8_0_axi_periph/M01_AXI",
+          "spi_adl_0/S00_AXI"
+        ]
+      },
+      "ps8_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "ps8_0_axi_periph/M02_AXI",
+          "spi_adl_1/S00_AXI"
+        ]
+      },
+      "ps8_0_axi_periph_M03_AXI": {
+        "interface_ports": [
+          "ps8_0_axi_periph/M03_AXI",
+          "spi_lmx_0/S00_AXI"
         ]
       },
       "ps8_0_axi_periph_M04_AXI": {
@@ -2483,7 +2779,25 @@
           "zynq_ultra_ps_e_0/saxihp0_fpd_aclk",
           "axi_smc/aclk1",
           "zynq_ultra_ps_e_0/maxihpm1_fpd_aclk",
-          "ps8_0_axi_periph/S01_ACLK"
+          "ps8_0_axi_periph/S01_ACLK",
+          "spi_adl_0/s00_axi_aclk",
+          "spi_adl_1/s00_axi_aclk",
+          "spi_lmx_0/s00_axi_aclk",
+          "spi_control_w_0/clk_in",
+          "spi_control_w_1/clk_in",
+          "spi_lmx_control_w_0/clk_in"
+        ]
+      },
+      "adl1_sdi_1": {
+        "ports": [
+          "adl1_sdi",
+          "spi_control_w_0/chip_data_in"
+        ]
+      },
+      "adl2_sdi_1": {
+        "ports": [
+          "adl2_sdi",
+          "spi_control_w_1/chip_data_in"
         ]
       },
       "clk_wiz_0_clk_out1": {
@@ -2509,6 +2823,12 @@
         "ports": [
           "clk_wiz_0/locked",
           "rst_clk_wiz_0_147M/dcm_locked"
+        ]
+      },
+      "lmx_sdi_1": {
+        "ports": [
+          "lmx_sdi",
+          "spi_lmx_control_w_0/chip_data_in"
         ]
       },
       "reset_rtl_1": {
@@ -2544,13 +2864,163 @@
           "ps8_0_axi_periph/M03_ARESETN",
           "usp_rf_data_converter_0/s_axi_aresetn",
           "ps8_0_axi_periph/M04_ARESETN",
-          "ps8_0_axi_periph/S01_ARESETN"
+          "ps8_0_axi_periph/S01_ARESETN",
+          "spi_adl_0/s00_axi_aresetn",
+          "spi_adl_1/s00_axi_aresetn",
+          "spi_lmx_0/s00_axi_aresetn",
+          "spi_control_w_0/rst_in",
+          "spi_control_w_1/rst_in",
+          "spi_lmx_control_w_0/rst_in"
         ]
       },
       "rst_ps8_0_99M_peripheral_reset": {
         "ports": [
           "rst_ps8_0_99M/peripheral_reset",
           "clk_wiz_0/reset"
+        ]
+      },
+      "spi_adl_0_command_out": {
+        "ports": [
+          "spi_adl_0/command_out",
+          "spi_control_w_0/data_in"
+        ]
+      },
+      "spi_adl_0_trigger_out": {
+        "ports": [
+          "spi_adl_0/trigger_out",
+          "spi_control_w_0/trigger_in"
+        ]
+      },
+      "spi_adl_1_command_out": {
+        "ports": [
+          "spi_adl_1/command_out",
+          "spi_control_w_1/data_in"
+        ]
+      },
+      "spi_adl_1_trigger_out": {
+        "ports": [
+          "spi_adl_1/trigger_out",
+          "spi_control_w_1/trigger_in"
+        ]
+      },
+      "spi_control_w_0_busy_out": {
+        "ports": [
+          "spi_control_w_0/busy_out",
+          "spi_adl_0/m_ready_in"
+        ]
+      },
+      "spi_control_w_0_chip_clk_out": {
+        "ports": [
+          "spi_control_w_0/chip_clk_out",
+          "adl1_sck"
+        ]
+      },
+      "spi_control_w_0_chip_data_out": {
+        "ports": [
+          "spi_control_w_0/chip_data_out",
+          "adl1_sdo"
+        ]
+      },
+      "spi_control_w_0_chip_sel_out": {
+        "ports": [
+          "spi_control_w_0/chip_sel_out",
+          "adl1_cs"
+        ]
+      },
+      "spi_control_w_0_data_out": {
+        "ports": [
+          "spi_control_w_0/data_out",
+          "spi_adl_0/command_in"
+        ]
+      },
+      "spi_control_w_0_data_valid_out": {
+        "ports": [
+          "spi_control_w_0/data_valid_out",
+          "spi_adl_0/s_valid_in"
+        ]
+      },
+      "spi_control_w_1_busy_out": {
+        "ports": [
+          "spi_control_w_1/busy_out",
+          "spi_adl_1/m_ready_in"
+        ]
+      },
+      "spi_control_w_1_chip_clk_out": {
+        "ports": [
+          "spi_control_w_1/chip_clk_out",
+          "adl2_sck"
+        ]
+      },
+      "spi_control_w_1_chip_data_out": {
+        "ports": [
+          "spi_control_w_1/chip_data_out",
+          "adl2_sdo"
+        ]
+      },
+      "spi_control_w_1_chip_sel_out": {
+        "ports": [
+          "spi_control_w_1/chip_sel_out",
+          "adl2_cs"
+        ]
+      },
+      "spi_control_w_1_data_out": {
+        "ports": [
+          "spi_control_w_1/data_out",
+          "spi_adl_1/command_in"
+        ]
+      },
+      "spi_control_w_1_data_valid_out": {
+        "ports": [
+          "spi_control_w_1/data_valid_out",
+          "spi_adl_1/s_valid_in"
+        ]
+      },
+      "spi_lmx_0_command_out": {
+        "ports": [
+          "spi_lmx_0/command_out",
+          "spi_lmx_control_w_0/data_in"
+        ]
+      },
+      "spi_lmx_0_trigger_out": {
+        "ports": [
+          "spi_lmx_0/trigger_out",
+          "spi_lmx_control_w_0/trigger_in"
+        ]
+      },
+      "spi_lmx_control_w_0_busy_out": {
+        "ports": [
+          "spi_lmx_control_w_0/busy_out",
+          "spi_lmx_0/m_ready_in"
+        ]
+      },
+      "spi_lmx_control_w_0_chip_clk_out": {
+        "ports": [
+          "spi_lmx_control_w_0/chip_clk_out",
+          "lmx_sck"
+        ]
+      },
+      "spi_lmx_control_w_0_chip_data_out": {
+        "ports": [
+          "spi_lmx_control_w_0/chip_data_out",
+          "lmx_sdo"
+        ]
+      },
+      "spi_lmx_control_w_0_chip_sel_out": {
+        "ports": [
+          "spi_lmx_control_w_0/chip_sel_out",
+          "lmx_cs"
+        ]
+      },
+      "spi_lmx_control_w_0_data_out": {
+        "ports": [
+          "spi_lmx_control_w_0/data_out",
+          "spi_lmx_0/command_in"
+        ]
+      },
+      "spi_lmx_control_w_0_data_valid_out": {
+        "ports": [
+          "spi_lmx_control_w_0/data_valid_out",
+          "spi_lmx_0/s_valid_in"
         ]
       },
       "usp_rf_data_converter_0_clk_adc0": {
@@ -2575,6 +3045,27 @@
                 "address_block": "/axi_dma_0/S_AXI_LITE/Reg",
                 "offset": "0x00A0000000",
                 "range": "64K"
+              },
+              "SEG_spi_adl_0_S00_AXI_reg": {
+                "address_block": "/spi_adl_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x00A0030000",
+                "range": "64K",
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
+              },
+              "SEG_spi_adl_1_S00_AXI_reg": {
+                "address_block": "/spi_adl_1/S00_AXI/S00_AXI_reg",
+                "offset": "0x00A0010000",
+                "range": "64K",
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
+              },
+              "SEG_spi_lmx_0_S00_AXI_reg": {
+                "address_block": "/spi_lmx_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x00A0020000",
+                "range": "64K",
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
               },
               "SEG_usp_rf_data_converter_0_Reg": {
                 "address_block": "/usp_rf_data_converter_0/s_axi/Reg",
