@@ -56,5 +56,13 @@ phase_difference = forward_phase - reverse_phase
 phase_difference[phase_difference > math.pi] = phase_difference[phase_difference > math.pi] - 2 * math.pi
 gamma_phase = np.mean(phase_difference)
 
+plt.xlim(0, 1000)
+plt.plot(forward_phase, label = "Forward Signal Phase Angle")
+plt.plot(reverse_phase, label = "Reverse Signal Phase Angle")
+plt.xlabel("Samples")
+plt.ylabel("Radians")
+plt.legend()
+plt.show()
+
 print(f"Calculated reflection coefficient magnitude is {gamma_magnitude:.2f}.")
 print(f"Calculated reflection coefficient phase is {gamma_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
