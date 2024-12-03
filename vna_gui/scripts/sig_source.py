@@ -122,7 +122,8 @@ class SigSource:
 
     def set_frequency(self, freq):
         #Write up additional code to set frequency in here!
-        print("setting_frequency to {freq}")
+        #print(f"Setting frequency to {freq}")
+        return 1
    
     def get_parameters(self):
         '''
