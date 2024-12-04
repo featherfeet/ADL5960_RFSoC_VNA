@@ -105,10 +105,7 @@
 	localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32) + 1;
 	localparam integer OPT_MEM_ADDR_BITS = 2;
 	//----------------------------------------------
-	//-- Signals for use/ip/
-Directory actions
-Add file
-More optionsr logic register space example
+	//-- Signals for user logic register space example
 	//------------------------------------------------
 	//-- Number of Slave Registers 8
 	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg0;
@@ -177,10 +174,7 @@ More optionsr logic register space example
 	always @( posedge S_AXI_ACLK )
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )
-	    begin/ip/
-Directory actions
-Add file
-More options
+	    begin
 	      axi_awaddr <= 0;
 	    end
 	  else
@@ -450,26 +444,18 @@ More options
 	        begin
 	          axi_rdata <= reg_data_out;     // register read data
 	        end
-	     else if(s_valid_in) begin
-	           command_in_buffer <= command_in;
-	     end
 	    end
 	end
   ///------------------------
 	//joe added code:
 	reg [19:0] command_in_buffer;
 	reg [63:0] command;
-	assign command_out = slv_reg3[19:0]; //pretty sure you can just send out the slave reg and you dont need extra stuff below/ip/
-Directory actions
-Add file
-More options
-//	always @(*)begin
-//        if (slv_reg2==1)begin
-//	       command = {4'b0000, slv_reg4[3:0], slv_reg3[31:24], 4'b0000, slv_reg4[3:0], slv_reg3[23:16], 4'b0000, slv_reg4[3:0], slv_reg3[15:8], 4'b0000, slv_reg4[3:0], slv_reg3[7:0]}; //change me
-//	   end else begin
-//	       command = {slv_reg3, slv_reg3};
-//	   end
-//	end
+	assign command_out = slv_reg3[19:0]; //pretty sure you can just send out the slave reg and you dont need extra stuff below
+	always @(*)begin
+	    if(s_valid_in) begin
+		command_in_buffer<= command_in;
+	    end
+	end
     reg trigger;
     assign trigger_out = trigger;
     
