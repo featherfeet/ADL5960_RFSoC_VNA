@@ -417,7 +417,7 @@
 	      case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
 	        3'h0   : reg_data_out <= 32'hdeadbeef; //replace with deadbeef (joe)
 	        3'h1   : reg_data_out <= {32'h0}; //put button values into reg data
-	        3'h2   : reg_data_out <= {8'h0, command_in};
+		      3'h2   : reg_data_out <= {8'h0, command_in_buffer};
 	        3'h3   : reg_data_out <= slv_reg3;
 	        3'h4   : reg_data_out <= slv_reg4;
 	        3'h5   : reg_data_out <= slv_reg5;
@@ -448,25 +448,15 @@
   ///------------------------
 	//joe added code:
 	reg [63:0] command;
+	reg [23:0] command_in_buffer;
 	assign command_out = slv_reg3[23:0]; //pretty sure you can just send out the slave reg and you dont need extra stuff below
-//	always @(*)begin
-//        if (slv_reg2==1)begin
-//	       command = {4'b0000, slv_reg4[3:0], slv_reg3[31:24], 4'b0000, slv_reg4[3:0], slv_reg3[23:16], 4'b0000, slv_reg4[3:0], slv_reg3[15:8], 4'b0000, slv_reg4[3:0], slv_reg3[7:0]}; //change me
-//	   end else begin
-//	       command = {slv_reg3, slv_reg3};
-//	   end
-//	end
+	always @(*)begin
+		if(s_valid_in) begin
+			command_in_buffer<= command_in;
+		end
+	end
     reg trigger;
     assign trigger_out = trigger;
-    
-    ///-----------------------------------------
-//    //SET UP AXI BULLSHIT LOGIC HERE
-//    always @( posedge S_AXI_ACLK ) begin
-//	  if ( s_valid_in == 1'b1 )begin
-//	    axi_rdata  <= 0;
-//	  end
-//	end
-  ///
 	// Add user logic here
 
 	// User logic ends
