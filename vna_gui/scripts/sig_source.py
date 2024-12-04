@@ -29,7 +29,8 @@ class SigSource:
         
         At least either (start and stop) or (center and span) must be provided.
         """
-        lmx = LMX2595(mmio_spi_controller) #initilaize the source control object 
+        
+        self.lmx = LMX2595(mmio_spi_controller = mmio_spi_controller) #initilaize the source control object 
 
         # Validation to ensure either (start, stop) or (center, span) is provided
         if (start is not None and stop is not None):

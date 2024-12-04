@@ -8,6 +8,7 @@ class SignalSourceUI:
     def __init__(self, start=10000000, stop=20000000000, resolution=100.0, mmio_spi_controller = 1):
         # Initialize signal source
         # Passes the MMIO SPI Controller and resolutiosn down into the source
+        
         self.source = SigSource(start=start, stop=stop, resolution=resolution, mmio_spi_controller=mmio_spi_controller)
         
         # Create widgets

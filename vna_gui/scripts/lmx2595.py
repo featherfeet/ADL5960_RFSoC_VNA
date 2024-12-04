@@ -5,15 +5,15 @@ import bitstring
 MMIO_REGISTERS = {"TRIGGER": 0x14, "SPI_DATA_IN": 0x08, "SPI_DATA_OUT": 0x0C}
 
 class LMX2595:
-    def __init__(self, mmio_spi_controller, initial_register_file = "HexRegisterValues.txt"):
+    def __init__(self, mmio_spi_controller, initial_register_file = "../scripts/HexRegisterValues.txt"):
         """
         mmio_spi_controller is a Pynq handle for an MMIO going to our custom SPI controller.
         initial_register_file is a path to a register map file exported from TICS-PRO for the default setup of the chip.
         """
         self.mmio_spi_controller = mmio_spi_controller
         
-        # HexRegisterValues is a tab-separated file of register numbers like "R78" and hex values like 0xABCD. The hex values contain the register number, which we remove.
-        with open("HexRegisterValues.txt") as regmap_file:
+        # HexRegisterValues is a tab-separated file of register number---> 16 with open("HexRegisterValues.txt") as regmap_file:s like "R78" and hex values like 0xABCD. The hex values contain the register number, which we remove.
+        with open(initial_register_file) as regmap_file:
             regmap_text = regmap_file.read()
             regmap_lines = regmap_text.split('\n')
             regmap_lines.remove('')
@@ -30,6 +30,7 @@ class LMX2595:
         self._write_register(0, 0b0010010100011100) # Set FCAL_EN = 1 again
         
         self.Fosc_FREQ = 100 # 100 MHz reference
+        print("Initalized source")
     
     def _spi_transaction(self, command):
         self.mmio_spi_controller.write(MMIO_REGISTERS["SPI_DATA_OUT"], command)  
@@ -387,7 +388,7 @@ class LMX2595:
                     self.Fvco_FREQ = 7500
                     self._set_chdiv(17)
                     self.FoutA_FREQ = 7500.0/768
-                    raise f"Failed to set frequency {Fout} MHz, defaulting to 7.5 GHz."
+                    raise ValueError(f"Failed to set frequency {Fout} MHz, defaulting to 7.5 GHz.")
         elif self.outa_mux == 2:
             self.Fvco_FREQ = round(self.FoutA_FREQ / 2, 10)
         else:

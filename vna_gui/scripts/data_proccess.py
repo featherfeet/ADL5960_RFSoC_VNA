@@ -75,3 +75,12 @@ class VNAfunc:
         '''
 
         return S11_mag, S11_phase, S12_mag, S12_phase, S21_mag, S21_phase, S22_mag, S22_phase
+
+    def iq_break_data_np(in_data):
+        # Extract real part
+        val = in_data & 0xFFFF
+        real = np.where(val >= 32768, np.int32(0xFFFF0000 | val), val)
+
+        # Extract imaginary part
+        imag = in_data >> 16
+        return real, imag
