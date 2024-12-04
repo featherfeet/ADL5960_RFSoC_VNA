@@ -5,9 +5,10 @@ from sig_source import SigSource  # Assuming SigSource is in another module
 
 
 class SignalSourceUI:
-    def __init__(self, start=10_000_000, stop=20_000_000_000, resolution=100):
+    def __init__(self, start=10000000, stop=20000000000, resolution=100.0, mmio_spi_controller = 1):
         # Initialize signal source
-        self.source = SigSource(start=start, stop=stop, resolution=resolution)
+        # Passes the MMIO SPI Controller and resolutiosn down into the source
+        self.source = SigSource(start=start, stop=stop, resolution=resolution, mmio_spi_controller=mmio_spi_controller)
         
         # Create widgets
         self.start_stop_slider = widgets.FloatRangeSlider(

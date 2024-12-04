@@ -1,4 +1,5 @@
 import numpy as np
+from lmx2595 import LMX2595
 
 class SigSource:
     #System Specs
@@ -8,11 +9,11 @@ class SigSource:
     start = 0
     stop = 0
     center = 0
-    span = 0
-    resolution = 0
+    span = 100
+    resolution = 100.0
     active = 0
 
-    def __init__(self, start=lowest_freq, stop=highest_freq, center= center_freq, span=100, resolution=100.0, active=True):
+    def __init__(self, start=lowest_freq, stop=highest_freq, center= center_freq, mmio_spi_controller=0, span=span, resolution=resolution, active=True):
         """
         Initializes the FrequencyRange with either:
         - start and stop frequencies, or
@@ -28,6 +29,8 @@ class SigSource:
         
         At least either (start and stop) or (center and span) must be provided.
         """
+        lmx = LMX2595(mmio_spi_controller) #initilaize the source control object 
+
         # Validation to ensure either (start, stop) or (center, span) is provided
         if (start is not None and stop is not None):
             self.start = start
@@ -121,9 +124,10 @@ class SigSource:
         return np.linspace(self.start, self.stop, self.resolution).tolist()
 
     def set_frequency(self, freq):
-        #Write up additional code to set frequency in here!
-        #print(f"Setting frequency to {freq}")
-        return 1
+        '''
+        Calls the source signal object to set the frequency function
+        '''
+        self.lmx.setOutputFrequencyA((freq / 10**6))
    
     def get_parameters(self):
         '''
