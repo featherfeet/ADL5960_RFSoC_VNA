@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec  2 22:06:33 2024
-# Process ID: 185118
+# Start of session at: Tue Dec  3 19:25:12 2024
+# Process ID: 489429
 # Current directory: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/design_1_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
-# CPU Frequency     :1452.181 MHz
+# CPU Frequency     :2501.582 MHz
 # CPU Physical cores:16
 # CPU Logical cores :24
 # Host memory       :33325 MB
 # Swap memory       :8589 MB
 # Total Virtual     :41915 MB
-# Available Virtual :34539 MB
+# Available Virtual :38413 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -37,9 +37,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48d
 INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 185198
+INFO: [Synth 8-7075] Helper process launched with PID 489468
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2832.633 ; gain = 352.832 ; free physical = 15819 ; free virtual = 30907
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2832.273 ; gain = 351.832 ; free physical = 20869 ; free virtual = 34539
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'sysref_fbrc_edge', assumed default net type 'wire' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_mt_sysref_count.sv:142]
 WARNING: [Synth 8-6901] identifier 'trigger' is used before its declaration [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/b460/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:241]
@@ -1659,18 +1659,18 @@ WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_5_3_zy
 WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_5_3_zynq_ultra_ps_e is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3391.852 ; gain = 912.051 ; free physical = 15156 ; free virtual = 30254
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3391.492 ; gain = 911.051 ; free physical = 20256 ; free virtual = 33936
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3391.852 ; gain = 912.051 ; free physical = 15152 ; free virtual = 30254
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3391.492 ; gain = 911.051 ; free physical = 20287 ; free virtual = 33967
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3391.852 ; gain = 912.051 ; free physical = 15152 ; free virtual = 30254
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3391.492 ; gain = 911.051 ; free physical = 20287 ; free virtual = 33967
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.78 . Memory (MB): peak = 3391.852 ; gain = 0.000 ; free physical = 15153 ; free virtual = 30263
+Netlist sorting complete. Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 3391.492 ; gain = 0.000 ; free physical = 20296 ; free virtual = 33976
 INFO: [Netlist 29-17] Analyzing 686 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1781,7 +1781,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wra
 INFO: [Project 1-1714] 233 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3699.383 ; gain = 0.000 ; free physical = 15035 ; free virtual = 30134
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3698.055 ; gain = 0.000 ; free physical = 20162 ; free virtual = 33842
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 685 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -1789,9 +1789,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
   SRL16 => SRL16E: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3711.305 ; gain = 0.008 ; free physical = 15021 ; free virtual = 30121
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3709.977 ; gain = 0.008 ; free physical = 20149 ; free virtual = 33830
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 3711.305 ; gain = 1231.504 ; free physical = 14185 ; free virtual = 29285
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 3709.977 ; gain = 1229.535 ; free physical = 19324 ; free virtual = 33005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -1799,7 +1799,7 @@ Start Loading Part and Timing Information
 Loading part: xczu48dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 3719.309 ; gain = 1239.508 ; free physical = 14185 ; free virtual = 29285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 3717.980 ; gain = 1237.539 ; free physical = 19332 ; free virtual = 33013
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1811,9 +1811,9 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_0/U0. (constra
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 155).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps8_0_99M/U0. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 163).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_wiz_0_147M/U0. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 169).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 239).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 242).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 249).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 175).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 182).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst. (constraint file  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/dont_touch.xdc, line 253).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/usp_rf_data_converter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
@@ -2069,25 +2069,25 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/s00_nodes
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 3719.309 ; gain = 1239.508 ; free physical = 13939 ; free virtual = 29039
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 3717.980 ; gain = 1237.539 ; free physical = 19085 ; free virtual = 32766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 3719.309 ; gain = 1239.508 ; free physical = 12986 ; free virtual = 28096
+Finished Doing Graph Differ : Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 3717.980 ; gain = 1237.539 ; free physical = 18138 ; free virtual = 31830
 ---------------------------------------------------------------------------------
-design_1_usp_rf_data_converter_0_0_register_decode__GB1design_1_clk_wiz_0_0_clk_wiz__GCbd_6f02__GC0s00_entry_pipeline_imp_1PSXOAM__GC0sc_mmu_v1_0_13_top__GC0sc_exit_v1_0_15_top__GC0sc_util_v1_0_4_axi_reg_stall---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 3719.309 ; gain = 1239.508 ; free physical = 11887 ; free virtual = 26998
+sc_exit_v1_0_15_top__GC0design_1__GC0design_1_usp_rf_data_converter_0_0_block__GCB0design_1_clk_wiz_0_0_clk_wiz__GCsc_mmu_v1_0_13_top__GC0sc_util_v1_0_4_axi_reg_stalldesign_1_usp_rf_data_converter_0_0_block__GCB1bd_6f02__GC0design_1_usp_rf_data_converter_0_0_register_decode__GB1design_1_usp_rf_data_converter_0_0_block__GCB2s00_entry_pipeline_imp_1PSXOAM__GC0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 3717.980 ; gain = 1237.539 ; free physical = 16459 ; free virtual = 30150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 3719.309 ; gain = 1239.508 ; free physical = 11216 ; free virtual = 26326
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 3717.980 ; gain = 1237.539 ; free physical = 16113 ; free virtual = 29804
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Mimic Skeleton from Reference
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:35 ; elapsed = 00:00:33 . Memory (MB): peak = 3719.309 ; gain = 1239.508 ; free physical = 10129 ; free virtual = 25215
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 3717.980 ; gain = 1237.539 ; free physical = 15142 ; free virtual = 28833
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -2098,23 +2098,21 @@ Incremental Synthesis Report Summary:
 
 1. Incremental synthesis run: yes
 
-   Stitch points used : unchanged
+   Stitch points used : changed
 
 
 2. Change Summary
 
 Report Incremental Modules: 
-+------+------------------+------------+----------+----------+
-|      |Changed Modules   |Replication |Instances |Changed % |
-+------+------------------+------------+----------+----------+
-|1     |spi_control_w     |           2|       649|    0.2373|
-|2     |spi_lmx_control_w |           1|       709|    0.2592|
-+------+------------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
 
 
    Full Design Size (number of cells) : 273540
-   Resynthesis Design Size (number of cells) : 225973
-   Resynth % : 82.6106,  Reuse % : 17.3894
+   Resynthesis Design Size (number of cells) : 41214
+   Resynth % : 15.0669,  Reuse % : 84.9331
 
 3. Reference Checkpoint Information
 
@@ -2136,18 +2134,18 @@ Report RTL Partitions:
 +------+----------------------------------------------------------------+------------+----------+
 |      |RTL Partition                                                   |Replication |Instances |
 +------+----------------------------------------------------------------+------------+----------+
-|1     |design_1__GC0                                                   |           1|     35561|
-|2     |muxpart__718_design_1_usp_rf_data_converter_0_0_register_decode |           1|     41213|
-|3     |design_1_usp_rf_data_converter_0_0_block__GCB0                  |           1|     37163|
-|4     |design_1_usp_rf_data_converter_0_0_block__GCB2                  |           1|     17188|
-|5     |design_1_usp_rf_data_converter_0_0_block__GCB1                  |           1|     15527|
-|6     |sc_util_v1_0_4_axi_reg_stall                                    |          12|      6610|
-|7     |sc_exit_v1_0_15_top__GC0_#REUSE#                                |           1|         0|
-|8     |sc_mmu_v1_0_13_top__GC0_#REUSE#                                 |           1|         0|
-|9     |s00_entry_pipeline_imp_1PSXOAM__GC0_#REUSE#                     |           1|         0|
-|10    |bd_6f02__GC0_#REUSE#                                            |           1|         0|
-|11    |design_1_clk_wiz_0_0_clk_wiz__GC_#REUSE#                        |           1|         0|
-|12    |design_1_usp_rf_data_converter_0_0_register_decode__GB1_#REUSE# |           1|         0|
+|1     |muxpart__718_design_1_usp_rf_data_converter_0_0_register_decode |           1|     41213|
+|2     |sc_util_v1_0_4_axi_reg_stall_#REUSE#                            |          12|         0|
+|3     |sc_exit_v1_0_15_top__GC0_#REUSE#                                |           1|         0|
+|4     |sc_mmu_v1_0_13_top__GC0_#REUSE#                                 |           1|         0|
+|5     |s00_entry_pipeline_imp_1PSXOAM__GC0_#REUSE#                     |           1|         0|
+|6     |bd_6f02__GC0_#REUSE#                                            |           1|         0|
+|7     |design_1_clk_wiz_0_0_clk_wiz__GC_#REUSE#                        |           1|         0|
+|8     |design_1_usp_rf_data_converter_0_0_register_decode__GB1_#REUSE# |           1|         0|
+|9     |design_1_usp_rf_data_converter_0_0_block__GCB0_#REUSE#          |           1|         0|
+|10    |design_1_usp_rf_data_converter_0_0_block__GCB1_#REUSE#          |           1|         0|
+|11    |design_1_usp_rf_data_converter_0_0_block__GCB2_#REUSE#          |           1|         0|
+|12    |design_1__GC0_#REUSE#                                           |           1|         0|
 +------+----------------------------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2167,401 +2165,14 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_init_reg_reg' into 'I_WRESP_STATUS_FIFO/sig_init_reg_reg' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd:1934]
-INFO: [Synth 8-4471] merging register 'GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_init_reg2_reg' into 'I_WRESP_STATUS_FIFO/sig_init_reg2_reg' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd:1935]
-INFO: [Synth 8-4471] merging register 'sig_stop_request_reg' into 'sig_sready_stop_reg_reg' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd:19473]
-INFO: [Synth 8-6904] The RAM "axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER /\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SYNC_FIFO.I_SYNC_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=23) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
-INFO: [Synth 8-4471] merging register 'GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_reset_reg_reg' into 'I_DRE_CNTL_FIFO/sig_init_reg_reg' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd:44093]
-INFO: [Synth 8-4471] merging register 'GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_stop_request_reg' into 'GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_sready_stop_reg_reg' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd:44088]
-INFO: [Synth 8-5544] ROM "GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_SCATTER_STROBE_GEN/var_end_vector" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_SCATTER_STROBE_GEN/var_start_vector" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-6904] The RAM "axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /\I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=15) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
-INFO: [Synth 8-4471] merging register 'ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_stop_request_reg' into 'ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_sready_stop_reg_reg' [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/bf20/hdl/axi_datamover_v5_1_vh_rfs.vhd:19473]
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE.I_IBTTCC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE.I_IBTTCC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE_WDC.I_WDC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE_WDC.I_WDC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE.I_IBTTCC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE.I_IBTTCC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE_WDC.I_WDC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "SAME_WIDTH_NO_DRE_WDC.I_WDC_STBS_SET/lvar_num_set" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "GEN_INDET_BTT.I_STRT_STRB_GEN/var_end_vector" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "GEN_INDET_BTT.I_STRT_STRB_GEN/var_start_vector" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/8830/hdl/axi_dma_v7_1_vh_rfs.vhd:12161]
-INFO: [Synth 8-5544] ROM "split_addr_mask" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "split_addr_mask" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '70' to '62' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '70' to '62' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-5544] ROM "split_addr_mask" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "split_addr_mask" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '70' to '62' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/m_payload_i_reg' and it is trimmed from '3' to '2' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '70' to '62' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-7082] The signal gen_wr_a.gen_word_narrow.mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
-INFO: [Synth 8-6904] The RAM "axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SYNC_FIFO.I_SYNC_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=23) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
-INFO: [Synth 8-6904] The RAM "axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=15) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[5]' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[6]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[6]' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[7]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[7]' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[8]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[8]' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[9]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[9]' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[10]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[10]' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/dmacr_i_reg[15] )
-INFO: [Synth 8-3886] merging instance 'rst_ps8_0_99M/U0/SEQ/bsr_dec_reg[1]' (FD) to 'rst_ps8_0_99M/U0/SEQ/pr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/sg_interr_reg' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/sg_decerr_reg'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/sg_slverr_reg' (FDRE) to 'axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/sg_decerr_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/sg_decerr_reg )
-INFO: [Synth 8-3886] merging instance 'rst_ps8_0_99M/U0/SEQ/core_dec_reg[1]' (FD) to 'rst_ps8_0_99M/U0/SEQ/pr_dec_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_ps8_0_99M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to )
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_data_skid_reg_reg[133]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_data_skid_reg_reg[134]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_data_skid_reg_reg[134]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_data_skid_reg_reg[135]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_data_skid_reg_reg[135] )
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_sstrb_stop_mask_reg[16]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_sstrb_stop_mask_reg[0]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[74]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[27]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[73]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[27]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[72]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[27]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[71]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[27]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[27]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[28]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[29]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[30]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[31]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[32]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[33]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[34]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[67]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[68]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[69]' (FDE) to 'axi_dma_0/U0/INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_EQL_23.cmnd_data_reg[70] )
-INFO: [Synth 8-3886] merging instance 'rst_clk_wiz_0_147M/U0/SEQ/core_dec_reg[1]' (FD) to 'rst_clk_wiz_0_147M/U0/SEQ/pr_dec_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_clk_wiz_0_147M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to )
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[5]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[6]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[6]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[7]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[7]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[8]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[8]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[9]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[9]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[10]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[10]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[11]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[11]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[12]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[12]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[13]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[13]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[14]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[14]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[15]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[15]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[16]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[16]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[17]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[17]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[18]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[18]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[19]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[19]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[20]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[20]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[21]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[21]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[22]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[22]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[23]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[23]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[25]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[25]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[24]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_max_first_increment_reg[24] )
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[12]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[12]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[13]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[13]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[13]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[14]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[14]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[14]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[15]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[15]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[15]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[0]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[0]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[0]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[1]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[1]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[2]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[1]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[2]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[2]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[2]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[3]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[3]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[3]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[4]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[4]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[5]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[4]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[5]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[5]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[5]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[6]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[6]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[7]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[6]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[7]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[7]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[8]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[7]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[8]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[8]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[9]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[8]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[9]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[9]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[10]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[9]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[10]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[10]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_strb_skid_reg_reg[11]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[10]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[11]'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sstrb_stop_mask_reg[11]' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_sready_stop_reg_reg'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/I_DRE_CNTL_FIFO/sig_init_reg_reg' (FD) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_S2MM_MMAP_SKID_BUF/sig_reset_reg_reg'
-INFO: [Synth 8-3886] merging instance 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_sready_stop_reg_reg' (FDRE) to 'axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_sstrb_stop_mask_reg[0]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[0]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[1]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[0]' (FDRE) to 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[1]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[0]' (FDRE) to 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[1]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[1]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[2]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[1]' (FDRE) to 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[2]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[1]' (FDRE) to 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[2]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[2]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[3]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[2]' (FDRE) to 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[3]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[2]' (FDRE) to 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[3]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[3]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[4]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[3]' (FDRE) to 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[4]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[3]' (FDRE) to 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[4]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[4]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[5]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[4]' (FDRE) to 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[5]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[4]' (FDRE) to 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[5]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[5]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[6]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[5]' (FDRE) to 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[6]'
-INFO: [Synth 8-3886] merging instance 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[5]' (FDRE) to 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[6]'
-INFO: [Synth 8-3886] merging instance 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[6]' (FDRE) to 'spi_lmx_0/inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[7]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_lmx_0/\inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_adl_1/\inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_adl_0/\inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/slv_reg5_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_lmx_0/\inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_adl_1/\inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_adl_0/\inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_lmx_0/\inst/spi_lmx_slave_lite_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_adl_1/\inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_adl_0/\inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s01_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/num_transactions_q_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s01_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/num_transactions_q_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s00_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/num_transactions_q_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s00_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/num_transactions_q_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s00_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/next_mi_addr_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s00_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/next_mi_addr_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s01_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/next_mi_addr_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s01_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/next_mi_addr_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_sstrb_stop_mask_reg[15] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (spi_lmx_control_w_0/\inst/mspi/clk_prd_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_lmx_control_w_0/\inst/mspi/clk_prd_reg[11] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (spi_control_w_1/\inst/mspi/clk_prd_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_control_w_1/\inst/mspi/clk_prd_reg[11] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (spi_control_w_0/\inst/mspi/clk_prd_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (spi_control_w_0/\inst/mspi/clk_prd_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_ps8_0_99M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_data_reg_out_reg[135] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_clk_wiz_0_147M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_mvalid_stop_reg_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_dma_0/U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\I_ADDR_CNTL/sig_next_size_reg_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_ps8_0_99M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_clk_wiz_0_147M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s01_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst /i_0/\inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/gpr1.dout_i_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s00_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst /i_0/\inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/gpr1.dout_i_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_ps8_0_99M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_clk_wiz_0_147M/U0/\EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s01_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst /\inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ps8_0_axi_periph/\s00_couplers/auto_ds /inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst /\inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_ps8_0_99M/U0/\EXT_LPF/AUX_LPF[1].asr_lpf_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_clk_wiz_0_147M/U0/\EXT_LPF/AUX_LPF[1].asr_lpf_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_ps8_0_99M/U0/\EXT_LPF/lpf_asr_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (rst_clk_wiz_0_147M/U0/\EXT_LPF/lpf_asr_reg )
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.AWVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.AWVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.WVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.WVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[7].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[8].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[9].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[10].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[12].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5544] ROM "status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "instr_adc0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "instr_adc2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "instr_dac0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\por_timer_start_val_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/\const_operation_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\subdrp_index_adc2_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\data_stop_adc2_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/\const_operation_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\subdrp_index_adc0_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\data_stop_adc0_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/powerup_state_r_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /tile_config/\data_index_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\subdrp_addr_adc2_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/rts_drp_access_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /bgt_fsm_adc/\vbg_ctrl_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\subdrp_addr_adc0_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/rts_drp_access_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /bgt_fsm_dac/\vbg_ctrl_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/rts_drp_access_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\restart_fg_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\signal_lost_r_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/\signal_lost_r_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/\signal_lost_r_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_design_1_usp_rf_data_converter_0_0_powerup_state_irq/dac3_powerup_state_out_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_design_1_usp_rf_data_converter_0_0_powerup_state_irq/dac2_powerup_state_out_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_design_1_usp_rf_data_converter_0_0_powerup_state_irq/dac1_powerup_state_out_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_design_1_usp_rf_data_converter_0_0_powerup_state_irq/dac0_powerup_state_out_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_design_1_usp_rf_data_converter_0_0_powerup_state_irq/adc3_powerup_state_out_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\i_design_1_usp_rf_data_converter_0_0_powerup_state_irq/adc1_powerup_state_out_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_disabled_adc3/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/\pll_state_machine.drpwe_status_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/\pll_state_machine.drpdi_status_reg[15] )
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc2/\pll_state_machine.drpaddr_status_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_disabled_adc1/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/\pll_state_machine.drpwe_status_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /\mem_data_adc0_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/\pll_state_machine.drpdi_status_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /bgt_fsm_adc/\drp_addr_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_adc0/\pll_state_machine.drpaddr_status_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_disabled_dac3/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_disabled_dac2/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_disabled_dac1/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /tile_config/\ram/data_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\drp_addr_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /bgt_fsm_dac/\drp_addr_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\drpaddr_por_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\por_timer_start_val_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\cal_enables_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\mu_adc2_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\subdrp_addr_adc2_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\mu_adc0_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\design_1_usp_rf_data_converter_0_0_rf_wrapper_i/por_state_machine_i /constants_config/\subdrp_addr_adc0_reg[4] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3917] design design_1_usp_rf_data_converter_0_0_block__GCB1 has port p_2_in28_in[2] driven by constant 0
-INFO: [Synth 8-3917] design design_1_usp_rf_data_converter_0_0_block__GCB1 has port p_2_in31_in[2] driven by constant 0
-INFO: [Synth 8-3917] design design_1_usp_rf_data_converter_0_0_block__GCB1 has port p_2_in34_in[2] driven by constant 0
-INFO: [Synth 8-3917] design design_1_usp_rf_data_converter_0_0_block__GCB1 has port p_2_in37_in[2] driven by constant 0
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 3735.320 ; gain = 1255.520 ; free physical = 6870 ; free virtual = 22069
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 3733.992 ; gain = 1253.551 ; free physical = 12652 ; free virtual = 26474
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
 Start Stitch Unchanged AreaOpt Partitions
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 3735.320 ; gain = 1255.520 ; free physical = 6871 ; free virtual = 22070
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 3733.992 ; gain = 1253.551 ; free physical = 12654 ; free virtual = 26476
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -2616,37 +2227,35 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'i_mts_sysref_count_adc/sy
 INFO: [Synth 8-5578] Moved timing constraint from pin 'i_mts_sysref_count_adc/sysref_freq[9]' to pin '{i_mts_sysref_count_adc/sysref_freq_r_reg[9]/Q}'
 INFO: [Synth 8-5819] Moved 48 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 5017.000 ; gain = 2537.199 ; free physical = 5563 ; free virtual = 20845
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 5038.484 ; gain = 2558.043 ; free physical = 11336 ; free virtual = 25247
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 5316.883 ; gain = 2837.082 ; free physical = 5293 ; free virtual = 20577
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 5045.727 ; gain = 2565.285 ; free physical = 11334 ; free virtual = 25245
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKFBOUT'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKOUT0'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKFBOUT'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKOUT0'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKFBOUT'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKOUT0'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKFBOUT'  not found
-WARNING: [Synth 8-207] constrained pin 'design_1_i/clk_wiz_0/inst/i_0/mmcme4_adv_inst/CLKOUT0'  not found
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:33 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 3021 ; free virtual = 18326
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 5059.102 ; gain = 2578.660 ; free physical = 11288 ; free virtual = 25219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Stitch Unchanged Partitions
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
+WARNING: [Synth 8-6893] IncrSyn ConnManager: unexpected null instance found
 ---------------------------------------------------------------------------------
-Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:24 ; elapsed = 00:01:33 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 3020 ; free virtual = 18326
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 5166.164 ; gain = 2685.723 ; free physical = 11186 ; free virtual = 25118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2866,37 +2475,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:37 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2916 ; free virtual = 18352
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11013 ; free virtual = 25086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:37 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2916 ; free virtual = 18352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11013 ; free virtual = 25086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2914 ; free virtual = 18351
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11015 ; free virtual = 25088
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2915 ; free virtual = 18351
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11015 ; free virtual = 25088
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2915 ; free virtual = 18351
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11017 ; free virtual = 25090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2914 ; free virtual = 18351
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11017 ; free virtual = 25090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2931,28 +2540,28 @@ Report Cell Usage:
 |17    |RAM32M16   |    49|
 |18    |RAM32X1D   |     5|
 |19    |RAMB18E2   |     2|
-|21    |RAMB36E2   |     9|
-|24    |RFADC      |     4|
-|25    |RFDAC      |     4|
-|26    |SRL16      |     5|
-|27    |SRL16E     |   162|
-|28    |SRLC32E    |    70|
-|29    |FDCE       |   397|
-|30    |FDPE       |   113|
-|31    |FDR        |   289|
-|32    |FDRE       | 12243|
-|33    |FDSE       |   714|
-|34    |IBUF       |     4|
-|35    |OBUF       |     9|
+|20    |RAMB36E2   |     9|
+|21    |RFADC      |     4|
+|22    |RFDAC      |     4|
+|23    |SRL16      |     5|
+|24    |SRL16E     |   162|
+|25    |SRLC32E    |    70|
+|26    |FDCE       |   397|
+|27    |FDPE       |   113|
+|28    |FDR        |   289|
+|29    |FDRE       | 12243|
+|30    |FDSE       |   714|
+|31    |IBUF       |     4|
+|32    |OBUF       |     9|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 2914 ; free virtual = 18351
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 11017 ; free virtual = 25090
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4505 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:15 ; elapsed = 00:01:27 . Memory (MB): peak = 5328.809 ; gain = 2529.555 ; free physical = 13298 ; free virtual = 28734
-Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 5328.809 ; gain = 2849.008 ; free physical = 13353 ; free virtual = 28753
+Synthesis finished with 0 errors, 0 critical warnings and 4205 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 5202.258 ; gain = 2403.332 ; free physical = 18574 ; free virtual = 32647
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 5202.258 ; gain = 2721.816 ; free physical = 18606 ; free virtual = 32646
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.23 . Memory (MB): peak = 5328.809 ; gain = 0.000 ; free physical = 13360 ; free virtual = 28768
+Netlist sorting complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.24 . Memory (MB): peak = 5202.258 ; gain = 0.000 ; free physical = 18612 ; free virtual = 32651
 INFO: [Netlist 29-17] Analyzing 587 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -2962,7 +2571,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-441] Inserted BUFG_GT_SYNC design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/BUFG_GT_SYNC for BUFG_GT design_1_i/usp_rf_data_converter_0/inst/i_design_1_usp_rf_data_converter_0_0_bufg_gt_ctrl/adc0_bufg_gt
 INFO: [Opt 31-441] Inserted BUFG_GT_SYNC design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/BUFG_GT_SYNC_1 for BUFG_GT design_1_i/usp_rf_data_converter_0/inst/i_design_1_usp_rf_data_converter_0_0_bufg_gt_ctrl/adc2_bufg_gt
 INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance design_1_i/clk_wiz_0/inst/mmcme4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5328.809 ; gain = 0.000 ; free physical = 13384 ; free virtual = 28792
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5203.984 ; gain = 0.000 ; free physical = 18632 ; free virtual = 32671
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 356 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -2976,12 +2585,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete | Checksum: 1808167a
 INFO: [Common 17-83] Releasing license: Synthesis
-1030 Infos, 591 Warnings, 0 Critical Warnings and 0 Errors encountered.
+639 Infos, 593 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:48 . Memory (MB): peak = 5328.809 ; gain = 3871.434 ; free physical = 13385 ; free virtual = 28793
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 15015.516; main = 4427.126; forked = 10761.760
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 20577.363; main = 5326.617; forked = 15252.469
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5350.625 ; gain = 0.000 ; free physical = 13386 ; free virtual = 28797
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 5203.984 ; gain = 3746.141 ; free physical = 18633 ; free virtual = 32672
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 11999.871; main = 4315.124; forked = 7844.319
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 17437.230; main = 5203.988; forked = 12234.969
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5227.996 ; gain = 8.004 ; free physical = 18633 ; free virtual = 32674
 INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 22:08:32 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  3 19:26:26 2024...
