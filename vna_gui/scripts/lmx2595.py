@@ -1,3 +1,12 @@
+'''
+SPI Controller to talk with LMX2595
+
+VNA Project
+Fall 2024
+
+Most code copied from TI Source code for LMX2595
+'''
+
 import time
 import math
 import bitstring

@@ -1,3 +1,17 @@
+'''
+Initalize a signal source for VNA
+
+Stores the signal source settings:
+- Start Frequency
+- Stop Frequency
+- Resolution
+- Current frequency
+- Sweep State
+
+VNA Project
+Fall 2024
+'''
+
 import numpy as np
 from lmx2595 import LMX2595
 
@@ -11,9 +25,13 @@ class SigSource:
     center = 0
     span = 100
     resolution = 100.0
-    active = 0
+    active = False
 
-    def __init__(self, start=lowest_freq, stop=highest_freq, center= center_freq, mmio_spi_controller=0, span=span, resolution=resolution, active=True):
+    freq_points = []
+    current_freq_counter = 0
+    current_freq = 0
+
+    def __init__(self, start=lowest_freq, stop=highest_freq, center= center_freq, mmio_spi_controller=0, span=span, resolution=resolution, active=active):
         """
         Initializes the FrequencyRange with either:
         - start and stop frequencies, or
@@ -30,7 +48,8 @@ class SigSource:
         At least either (start and stop) or (center and span) must be provided.
         """
         
-        self.lmx = LMX2595(mmio_spi_controller = mmio_spi_controller) #initilaize the source control object 
+        #TEMP COMMENTING THIS OUT FOR NOW 
+        #self.lmx = LMX2595(mmio_spi_controller = mmio_spi_controller) #initilaize the source control object 
 
         # Validation to ensure either (start, stop) or (center, span) is provided
         if (start is not None and stop is not None):
@@ -61,7 +80,10 @@ class SigSource:
         self.resolution = resolution
         self.active = active
         
-        #print("Initializing a signal source with Start Frequency: {} Stop Frequency: {} Resolution: {}".format(self.start, self.stop, self.resolution))
+        #Generate the initial frequency points 
+        self.generate_freq_points(set_internal = True)
+
+        print("Initializing signal source with Start Frequency: {} Stop Frequency: {} Resolution: {}".format(self.start, self.stop, self.resolution))
 
     def update_parameters(self, start=None, stop=None, center=None, span=None, resolution = None):
         """
@@ -112,27 +134,64 @@ class SigSource:
 
         if (resolution is not None and resolution != self.resolution):
             self.resolution = resolution
+
+        #Generate the initial frequency points 
+        self.generate_freq_points(set_internal = True)
         
-        print("Generating a signal source with Start Frequency: {} Stop Frequency: {} Resolution: {}".format(self.start, self.stop, self.resolution))
+        print("Signal Source with Start Frequency: {} Stop Frequency: {} Resolution: {}".format(self.start, self.stop, self.resolution))
         
 
-    def generate_freq_points(self):
+    def generate_freq_points(self, set_internal = True):
         '''
         Generates a list of frequency points for the start/stop and depending on the number of points requested
         '''
         if self.resolution <= 1:
             raise ValueError("The number of points z must be greater than 1.")
-        return np.linspace(self.start, self.stop, self.resolution).tolist()
+        
+        if set_internal:
+            self.freq_points = np.linspace(self.start, self.stop, int(self.resolution)).tolist()
+            self.current_freq_counter = 0 #Reset the current frequency counter
 
+        return self.freq_points
+
+    def set_active(self):
+        #Will only push to set_frequency if active
+        self.active = True
+    
+    def set_inactive(self):
+        #Will not push to set_frequency
+        self.active = False
+    
     def set_frequency(self, freq):
         '''
         Calls the source signal object to set the frequency function
+        Only if active
         '''
-        self.lmx.setOutputFrequencyA((freq / 10**6))
+        if self.active:
+            self.current_freq = freq
+            #TEMP COMMENTING THIS OUT FOR TESTING
+            #self.lmx.setOutputFrequencyA(self.current_freq)
    
+    def set_next_freq(self, start = False):
+        #Handling the index, stored in current_freq_counter
+        if (start):
+            #If starting, then set the frequency the start frequency
+            self.current_freq_counter = 0
+        else:
+            #If not starting, then increment frequency counter 
+            self.current_freq_counter += 1 
+            if (self.current_freq_counter >= len(self.freq_points)): #wrap around function 
+                self.current_freq_counter = 0
+        #Setting the output frequency to that number
+        self.set_frequency(self.freq_points[self.current_freq_counter])
+            
+    def get_current_freq(self):
+        if self.active:
+            return self.freq_points[self.current_freq_counter] #Returns the current frequency that the class is outputting
+        else:
+            return 0 #Does not have a frqeuency 
+
     def get_parameters(self):
-        '''
-        Returns the start, stop, center, span parameters in a list
-        Done for ease of access, otherwise just access object.parameter 
-        '''
+        #Returns the start, stop, center, span parameters in a list
+        #Done for ease of access, otherwise just access object.parameter 
         return [self.start, self.stop, self.center, self.span]

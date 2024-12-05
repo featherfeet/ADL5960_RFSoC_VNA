@@ -1,3 +1,10 @@
+'''
+Functions to handle data and caculate S-parameters from the VNA
+
+VNA Project
+Fall 2024
+'''
+
 import numpy as np
 import math
 
