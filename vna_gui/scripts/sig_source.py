@@ -185,6 +185,9 @@ class SigSource:
         #Setting the output frequency to that number
         self.set_frequency(self.freq_points[self.current_freq_counter])
             
+    def get_current_index(self):
+        return self.current_freq_counter
+    
     def get_current_freq(self):
         if self.active:
             return self.freq_points[self.current_freq_counter] #Returns the current frequency that the class is outputting
