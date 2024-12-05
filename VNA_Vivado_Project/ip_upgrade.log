@@ -1,6 +1,74 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Dec  4 19:36:15 2024
+| Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu48dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_spi_adl_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_spi_adl_1_0 (user.org:user:spi_adl:1.0) from (Rev. 9) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_spi_adl_1_0'. These changes may impact your design.
+
+
+-Upgraded port 'command_in' width 24 differs from original width 20
+
+-Upgraded port 'command_out' width 24 differs from original width 20
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Wed Dec  4 19:36:15 2024
+| Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu48dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_spi_adl_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_spi_adl_0_0 (user.org:user:spi_adl:1.0) from (Rev. 9) to (Rev. 10)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_spi_adl_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'command_in' width 24 differs from original width 20
+
+-Upgraded port 'command_out' width 24 differs from original width 20
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 | Date         : Mon Dec  2 20:50:18 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : upgrade_ip

@@ -15,8 +15,8 @@
 	)
 	(
 		// Users to add ports here
-        output wire [19:0] command_out, //joe did for you
-        input wire [19:0] command_in,
+        output wire [23:0] command_out, //joe did for you
+        input wire [23:0] command_in,
         output wire trigger_out, //trigger spi controller
         input wire m_ready_in, // is spi controller busy 1 is busy 0 is ready
         input wire s_valid_in, // spi controller data_line is valid 
@@ -417,7 +417,7 @@
 	      case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
 	        3'h0   : reg_data_out <= 32'hdeadbeef; //replace with deadbeef (joe)
 	        3'h1   : reg_data_out <= {32'h0}; //put button values into reg data
-	        3'h2   : reg_data_out <= {12'h0, command_in_buffer};
+	        3'h2   : reg_data_out <= {8'h0, command_in_buffer};
 	        3'h3   : reg_data_out <= slv_reg3;
 	        3'h4   : reg_data_out <= slv_reg4;
 	        3'h5   : reg_data_out <= slv_reg5;
@@ -448,9 +448,9 @@
 	end
   ///------------------------
 	//joe added code:
-	reg [19:0] command_in_buffer;
+	reg [23:0] command_in_buffer;
 	reg [63:0] command;
-	assign command_out = slv_reg3[19:0]; //pretty sure you can just send out the slave reg and you dont need extra stuff below
+	assign command_out = slv_reg3[23:0]; //pretty sure you can just send out the slave reg and you dont need extra stuff below
 	always @(*)begin
 	    if(s_valid_in) begin
 		command_in_buffer<= command_in;

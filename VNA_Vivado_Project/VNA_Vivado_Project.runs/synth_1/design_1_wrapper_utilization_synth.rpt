@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Tue Dec  3 19:26:26 2024
+| Date         : Wed Dec  4 19:46:37 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -32,16 +32,16 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 12928 |     0 |          0 |    425280 |  3.04 |
-|   LUT as Logic             | 12275 |     0 |          0 |    425280 |  2.89 |
+| CLB LUTs*                  | 12912 |     0 |          0 |    425280 |  3.04 |
+|   LUT as Logic             | 12259 |     0 |          0 |    425280 |  2.88 |
 |   LUT as Memory            |   653 |     0 |          0 |    213600 |  0.31 |
 |     LUT as Distributed RAM |   416 |     0 |            |           |       |
 |     LUT as Shift Register  |   237 |     0 |            |           |       |
-| CLB Registers              | 13756 |     0 |          0 |    850560 |  1.62 |
-|   Register as Flip Flop    | 13756 |     0 |          0 |    850560 |  1.62 |
+| CLB Registers              | 13722 |     0 |          0 |    850560 |  1.61 |
+|   Register as Flip Flop    | 13722 |     0 |          0 |    850560 |  1.61 |
 |   Register as Latch        |     0 |     0 |          0 |    850560 |  0.00 |
 | CARRY8                     |    83 |     0 |          0 |     53160 |  0.16 |
-| F7 Muxes                   |   118 |     0 |          0 |    212640 |  0.06 |
+| F7 Muxes                   |   143 |     0 |          0 |    212640 |  0.07 |
 | F8 Muxes                   |    28 |     0 |          0 |    106320 |  0.03 |
 | F9 Muxes                   |     0 |     0 |          0 |     53160 |  0.00 |
 +----------------------------+-------+-------+------------+-----------+-------+
@@ -64,8 +64,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |            - |
 | 113   |          Yes |           - |          Set |
 | 397   |          Yes |           - |        Reset |
-| 714   |          Yes |         Set |            - |
-| 12532 |          Yes |       Reset |            - |
+| 716   |          Yes |         Set |            - |
+| 12496 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -101,7 +101,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   12 |     0 |          0 |       347 |  3.46 |
+| Bonded IOB |   10 |     0 |          0 |       347 |  2.88 |
 | RF_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | RF_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -168,18 +168,18 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +--------------+-------+---------------------+
 |   Ref Name   |  Used | Functional Category |
 +--------------+-------+---------------------+
-| FDRE         | 12532 |            Register |
-| LUT6         |  5007 |                 CLB |
-| LUT5         |  2766 |                 CLB |
-| LUT3         |  2710 |                 CLB |
-| LUT4         |  2370 |                 CLB |
-| LUT2         |  1263 |                 CLB |
+| FDRE         | 12496 |            Register |
+| LUT6         |  4970 |                 CLB |
+| LUT5         |  2800 |                 CLB |
+| LUT3         |  2683 |                 CLB |
+| LUT4         |  2354 |                 CLB |
+| LUT2         |  1270 |                 CLB |
 | LUT1         |   753 |                 CLB |
 | RAMD32       |   716 |                 CLB |
-| FDSE         |   714 |            Register |
+| FDSE         |   716 |            Register |
 | FDCE         |   397 |            Register |
 | SRL16E       |   167 |                 CLB |
-| MUXF7        |   118 |                 CLB |
+| MUXF7        |   143 |                 CLB |
 | FDPE         |   113 |            Register |
 | RAMS32       |   104 |                 CLB |
 | CARRY8       |    83 |                 CLB |
@@ -189,13 +189,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | OBUF         |     9 |                 I/O |
 | RFDAC        |     4 |            Advanced |
 | RFADC        |     4 |            Advanced |
-| INBUF        |     3 |                 I/O |
-| IBUFCTRL     |     3 |              Others |
 | RAMB18E2     |     2 |            BLOCKRAM |
 | BUFG_GT_SYNC |     2 |               Clock |
 | BUFG_GT      |     2 |               Clock |
 | PS8          |     1 |            Advanced |
 | MMCME4_ADV   |     1 |               Clock |
+| INBUF        |     1 |                 I/O |
+| IBUFCTRL     |     1 |              Others |
 | BUFG_PS      |     1 |               Clock |
 | BUFGCE       |     1 |               Clock |
 +--------------+-------+---------------------+

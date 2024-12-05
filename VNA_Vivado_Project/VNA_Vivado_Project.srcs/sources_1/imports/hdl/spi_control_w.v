@@ -25,7 +25,7 @@ module spi_control_w(
 
      input wire clk_in,
      input wire rst_in,
-     input wire [19:0] data_in, //controller data to transmit through spi
+     input wire [23:0] data_in, //controller data to transmit through spi
      input wire trigger_in, //trigger data transmit
      output wire busy_out, //essentially ready
      output wire chip_data_out, //output spi data line
@@ -33,9 +33,9 @@ module spi_control_w(
      output wire chip_sel_out, //chip select
      input wire chip_data_in, //peripheral spi data in
      output wire data_valid_out, //peripheral data is valid to read
-     output wire [19:0] data_out //output peripheral data 
+     output wire [23:0] data_out //output peripheral data 
     );
-    spi_control  #(.DATA_WIDTH(20), .DATA_CLK_PERIOD(10000))
+    spi_control  #(.DATA_WIDTH(24), .DATA_CLK_PERIOD(10000))
     mspi
     (   .clk_in(clk_in),
         .rst_in(~rst_in), //IMPOTANT!!!

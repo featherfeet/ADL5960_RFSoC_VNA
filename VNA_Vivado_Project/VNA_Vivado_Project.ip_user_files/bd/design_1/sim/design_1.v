@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Mon Dec  2 22:06:03 2024
+//Date        : Wed Dec  4 19:36:22 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -207,21 +207,21 @@ module design_1
   wire [0:0]rst_clk_wiz_0_147M_peripheral_aresetn;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
   wire [0:0]rst_ps8_0_99M_peripheral_reset;
-  wire [19:0]spi_adl_0_command_out;
+  wire [23:0]spi_adl_0_command_out;
   wire spi_adl_0_trigger_out;
-  wire [19:0]spi_adl_1_command_out;
+  wire [23:0]spi_adl_1_command_out;
   wire spi_adl_1_trigger_out;
   wire spi_control_w_0_busy_out;
   wire spi_control_w_0_chip_clk_out;
   wire spi_control_w_0_chip_data_out;
   wire spi_control_w_0_chip_sel_out;
-  wire [19:0]spi_control_w_0_data_out;
+  wire [23:0]spi_control_w_0_data_out;
   wire spi_control_w_0_data_valid_out;
   wire spi_control_w_1_busy_out;
   wire spi_control_w_1_chip_clk_out;
   wire spi_control_w_1_chip_data_out;
   wire spi_control_w_1_chip_sel_out;
-  wire [19:0]spi_control_w_1_data_out;
+  wire [23:0]spi_control_w_1_data_out;
   wire spi_control_w_1_data_valid_out;
   wire [23:0]spi_lmx_0_command_out;
   wire spi_lmx_0_trigger_out;

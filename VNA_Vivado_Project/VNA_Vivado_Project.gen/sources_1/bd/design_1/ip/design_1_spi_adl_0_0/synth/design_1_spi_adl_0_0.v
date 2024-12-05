@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:spi_adl:1.0
-// IP Revision: 9
+// IP Revision: 10
 
 (* X_CORE_INFO = "spi_adl,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_spi_adl_0_0,spi_adl,{}" *)
@@ -82,8 +82,8 @@ module design_1_spi_adl_0_0 (
   s00_axi_rready
 );
 
-output wire [19 : 0] command_out;
-input wire [19 : 0] command_in;
+output wire [23 : 0] command_out;
+input wire [23 : 0] command_in;
 output wire trigger_out;
 input wire m_ready_in;
 input wire s_valid_in;

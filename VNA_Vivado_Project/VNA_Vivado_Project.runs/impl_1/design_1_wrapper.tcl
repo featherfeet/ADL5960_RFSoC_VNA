@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper.tcl"
+  variable script "/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,6 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -105,6 +106,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 6
+  set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu48dr-ffvg1517-2-e
@@ -113,26 +115,26 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/wt [current_project]
-  set_property parent.project_path /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr [current_project]
+  set_property webtalk.parent_dir /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/wt [current_project]
+  set_property parent.project_path /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr [current_project]
   set_property ip_repo_paths {
-  /home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0
-  /home/olt/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0
-  /home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0
+  /home/bhanly/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0
+  /home/bhanly/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0
+  /home/bhanly/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/ip [current_project]
+  set_property ip_output_repo /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd
+  add_files /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc
+  read_xdc /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

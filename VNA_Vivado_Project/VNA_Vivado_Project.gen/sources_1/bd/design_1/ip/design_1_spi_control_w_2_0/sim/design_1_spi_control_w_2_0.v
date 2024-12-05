@@ -47,14 +47,14 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:spi_lmx_control_w:1.0
+// IP VLNV: xilinx.com:module_ref:spi_control_w:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_spi_lmx_control_w_0_0 (
+module design_1_spi_control_w_2_0 (
   clk_in,
   rst_in,
   data_in,
@@ -80,7 +80,7 @@ input wire chip_data_in;
 output wire data_valid_out;
 output wire [23 : 0] data_out;
 
-  spi_lmx_control_w inst (
+  spi_control_w inst (
     .clk_in(clk_in),
     .rst_in(rst_in),
     .data_in(data_in),

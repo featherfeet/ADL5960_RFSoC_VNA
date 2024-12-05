@@ -47,15 +47,15 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:spi_lmx_control_w:1.0
+// IP VLNV: xilinx.com:module_ref:spi_control_w:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "spi_lmx_control_w,Vivado 2024.1" *)
-(* CHECK_LICENSE_TYPE = "design_1_spi_lmx_control_w_0_0,spi_lmx_control_w,{}" *)
-(* CORE_GENERATION_INFO = "design_1_spi_lmx_control_w_0_0,spi_lmx_control_w,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=spi_lmx_control_w,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* X_CORE_INFO = "spi_control_w,Vivado 2024.1" *)
+(* CHECK_LICENSE_TYPE = "design_1_spi_control_w_2_0,spi_control_w,{}" *)
+(* CORE_GENERATION_INFO = "design_1_spi_control_w_2_0,spi_control_w,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=spi_control_w,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_spi_lmx_control_w_0_0 (
+module design_1_spi_control_w_2_0 (
   clk_in,
   rst_in,
   data_in,
@@ -81,7 +81,7 @@ input wire chip_data_in;
 output wire data_valid_out;
 output wire [23 : 0] data_out;
 
-  spi_lmx_control_w inst (
+  spi_control_w inst (
     .clk_in(clk_in),
     .rst_in(rst_in),
     .data_in(data_in),

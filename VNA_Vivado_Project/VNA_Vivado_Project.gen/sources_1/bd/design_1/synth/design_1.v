@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Mon Dec  2 22:06:03 2024
+//Date        : Wed Dec  4 19:44:17 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -207,30 +207,30 @@ module design_1
   wire [0:0]rst_clk_wiz_0_147M_peripheral_aresetn;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
   wire [0:0]rst_ps8_0_99M_peripheral_reset;
-  wire [19:0]spi_adl_0_command_out;
+  wire [23:0]spi_adl_0_command_out;
   wire spi_adl_0_trigger_out;
-  wire [19:0]spi_adl_1_command_out;
+  wire [23:0]spi_adl_1_command_out;
   wire spi_adl_1_trigger_out;
   wire spi_control_w_0_busy_out;
   wire spi_control_w_0_chip_clk_out;
   wire spi_control_w_0_chip_data_out;
   wire spi_control_w_0_chip_sel_out;
-  wire [19:0]spi_control_w_0_data_out;
+  wire [23:0]spi_control_w_0_data_out;
   wire spi_control_w_0_data_valid_out;
   wire spi_control_w_1_busy_out;
   wire spi_control_w_1_chip_clk_out;
   wire spi_control_w_1_chip_data_out;
   wire spi_control_w_1_chip_sel_out;
-  wire [19:0]spi_control_w_1_data_out;
+  wire [23:0]spi_control_w_1_data_out;
   wire spi_control_w_1_data_valid_out;
+  wire spi_control_w_2_busy_out;
+  wire spi_control_w_2_chip_clk_out;
+  wire spi_control_w_2_chip_data_out;
+  wire spi_control_w_2_chip_sel_out;
+  wire [23:0]spi_control_w_2_data_out;
+  wire spi_control_w_2_data_valid_out;
   wire [23:0]spi_lmx_0_command_out;
   wire spi_lmx_0_trigger_out;
-  wire spi_lmx_control_w_0_busy_out;
-  wire spi_lmx_control_w_0_chip_clk_out;
-  wire spi_lmx_control_w_0_chip_data_out;
-  wire spi_lmx_control_w_0_chip_sel_out;
-  wire [23:0]spi_lmx_control_w_0_data_out;
-  wire spi_lmx_control_w_0_data_valid_out;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
   wire usp_rf_data_converter_0_clk_adc0;
@@ -354,10 +354,10 @@ module design_1
   assign adl2_sck = spi_control_w_1_chip_clk_out;
   assign adl2_sdi_1 = adl2_sdi;
   assign adl2_sdo = spi_control_w_1_chip_data_out;
-  assign lmx_cs = spi_lmx_control_w_0_chip_sel_out;
-  assign lmx_sck = spi_lmx_control_w_0_chip_clk_out;
+  assign lmx_cs = spi_control_w_2_chip_sel_out;
+  assign lmx_sck = spi_control_w_2_chip_clk_out;
   assign lmx_sdi_1 = lmx_sdi;
-  assign lmx_sdo = spi_lmx_control_w_0_chip_data_out;
+  assign lmx_sdo = spi_control_w_2_chip_data_out;
   assign sysref_in_1_diff_n = sysref_in_diff_n;
   assign sysref_in_1_diff_p = sysref_in_diff_p;
   assign vin0_01_1_V_N = vin0_01_v_n;
@@ -834,10 +834,22 @@ module design_1
         .data_valid_out(spi_control_w_1_data_valid_out),
         .rst_in(rst_ps8_0_99M_peripheral_aresetn),
         .trigger_in(spi_adl_1_trigger_out));
+  design_1_spi_control_w_2_0 spi_control_w_2
+       (.busy_out(spi_control_w_2_busy_out),
+        .chip_clk_out(spi_control_w_2_chip_clk_out),
+        .chip_data_in(lmx_sdi_1),
+        .chip_data_out(spi_control_w_2_chip_data_out),
+        .chip_sel_out(spi_control_w_2_chip_sel_out),
+        .clk_in(Net),
+        .data_in(spi_lmx_0_command_out),
+        .data_out(spi_control_w_2_data_out),
+        .data_valid_out(spi_control_w_2_data_valid_out),
+        .rst_in(rst_ps8_0_99M_peripheral_aresetn),
+        .trigger_in(spi_lmx_0_trigger_out));
   design_1_spi_lmx_0_0 spi_lmx_0
-       (.command_in(spi_lmx_control_w_0_data_out),
+       (.command_in(spi_control_w_2_data_out),
         .command_out(spi_lmx_0_command_out),
-        .m_ready_in(spi_lmx_control_w_0_busy_out),
+        .m_ready_in(spi_control_w_2_busy_out),
         .s00_axi_aclk(Net),
         .s00_axi_araddr(ps8_0_axi_periph_M03_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(rst_ps8_0_99M_peripheral_aresetn),
@@ -859,20 +871,8 @@ module design_1
         .s00_axi_wready(ps8_0_axi_periph_M03_AXI_WREADY),
         .s00_axi_wstrb(ps8_0_axi_periph_M03_AXI_WSTRB),
         .s00_axi_wvalid(ps8_0_axi_periph_M03_AXI_WVALID),
-        .s_valid_in(spi_lmx_control_w_0_data_valid_out),
+        .s_valid_in(spi_control_w_2_data_valid_out),
         .trigger_out(spi_lmx_0_trigger_out));
-  design_1_spi_lmx_control_w_0_0 spi_lmx_control_w_0
-       (.busy_out(spi_lmx_control_w_0_busy_out),
-        .chip_clk_out(spi_lmx_control_w_0_chip_clk_out),
-        .chip_data_in(lmx_sdi_1),
-        .chip_data_out(spi_lmx_control_w_0_chip_data_out),
-        .chip_sel_out(spi_lmx_control_w_0_chip_sel_out),
-        .clk_in(Net),
-        .data_in(spi_lmx_0_command_out),
-        .data_out(spi_lmx_control_w_0_data_out),
-        .data_valid_out(spi_lmx_control_w_0_data_valid_out),
-        .rst_in(rst_ps8_0_99M_peripheral_aresetn),
-        .trigger_in(spi_lmx_0_trigger_out));
   design_1_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.adc0_clk_n(adc0_clk_1_CLK_N),
         .adc0_clk_p(adc0_clk_1_CLK_P),

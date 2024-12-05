@@ -266,8 +266,8 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../VNA_Vivado_Project.gen/sou
 "../../../bd/design_1/ip/design_1_axi_smc_1/sim/design_1_axi_smc_1.v" \
 "../../../bd/design_1/ipshared/b4b8/hdl/adc_combiner.v" \
 "../../../bd/design_1/ip/design_1_adc_combiner_0_0/sim/design_1_adc_combiner_0_0.v" \
-"../../../bd/design_1/ipshared/b460/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/b460/hdl/spi_adl.v" \
+"../../../bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/5760/hdl/spi_adl.v" \
 "../../../bd/design_1/ip/design_1_spi_adl_0_0/sim/design_1_spi_adl_0_0.v" \
 "../../../bd/design_1/ip/design_1_spi_control_w_0_0/sim/design_1_spi_control_w_0_0.v" \
 "../../../bd/design_1/ip/design_1_spi_adl_1_0/sim/design_1_spi_adl_1_0.v" \

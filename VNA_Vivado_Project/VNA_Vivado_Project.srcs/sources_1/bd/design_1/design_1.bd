@@ -40,7 +40,7 @@
       "spi_adl_1": "",
       "spi_control_w_1": "",
       "spi_lmx_0": "",
-      "spi_lmx_control_w_0": ""
+      "spi_control_w_2": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -2376,7 +2376,7 @@
       },
       "spi_adl_0": {
         "vlnv": "user.org:user:spi_adl:1.0",
-        "ip_revision": "9",
+        "ip_revision": "10",
         "xci_name": "design_1_spi_adl_0_0",
         "xci_path": "ip/design_1_spi_adl_0_0/design_1_spi_adl_0_0.xci",
         "inst_hier_path": "spi_adl_0"
@@ -2421,7 +2421,7 @@
           },
           "data_in": {
             "direction": "I",
-            "left": "19",
+            "left": "23",
             "right": "0"
           },
           "trigger_in": {
@@ -2447,14 +2447,14 @@
           },
           "data_out": {
             "direction": "O",
-            "left": "19",
+            "left": "23",
             "right": "0"
           }
         }
       },
       "spi_adl_1": {
         "vlnv": "user.org:user:spi_adl:1.0",
-        "ip_revision": "9",
+        "ip_revision": "10",
         "xci_name": "design_1_spi_adl_1_0",
         "xci_path": "ip/design_1_spi_adl_1_0/design_1_spi_adl_1_0.xci",
         "inst_hier_path": "spi_adl_1"
@@ -2499,7 +2499,7 @@
           },
           "data_in": {
             "direction": "I",
-            "left": "19",
+            "left": "23",
             "right": "0"
           },
           "trigger_in": {
@@ -2525,7 +2525,7 @@
           },
           "data_out": {
             "direction": "O",
-            "left": "19",
+            "left": "23",
             "right": "0"
           }
         }
@@ -2537,15 +2537,15 @@
         "xci_path": "ip/design_1_spi_lmx_0_0/design_1_spi_lmx_0_0.xci",
         "inst_hier_path": "spi_lmx_0"
       },
-      "spi_lmx_control_w_0": {
-        "vlnv": "xilinx.com:module_ref:spi_lmx_control_w:1.0",
+      "spi_control_w_2": {
+        "vlnv": "xilinx.com:module_ref:spi_control_w:1.0",
         "ip_revision": "1",
-        "xci_name": "design_1_spi_lmx_control_w_0_0",
-        "xci_path": "ip/design_1_spi_lmx_control_w_0_0/design_1_spi_lmx_control_w_0_0.xci",
-        "inst_hier_path": "spi_lmx_control_w_0",
+        "xci_name": "design_1_spi_control_w_2_0",
+        "xci_path": "ip/design_1_spi_control_w_2_0/design_1_spi_control_w_2_0.xci",
+        "inst_hier_path": "spi_control_w_2",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "spi_lmx_control_w",
+          "ref_name": "spi_control_w",
           "boundary_crc": "0x0"
         },
         "ports": {
@@ -2780,12 +2780,12 @@
           "axi_smc/aclk1",
           "zynq_ultra_ps_e_0/maxihpm1_fpd_aclk",
           "ps8_0_axi_periph/S01_ACLK",
-          "spi_adl_0/s00_axi_aclk",
-          "spi_adl_1/s00_axi_aclk",
           "spi_lmx_0/s00_axi_aclk",
           "spi_control_w_0/clk_in",
           "spi_control_w_1/clk_in",
-          "spi_lmx_control_w_0/clk_in"
+          "spi_adl_0/s00_axi_aclk",
+          "spi_adl_1/s00_axi_aclk",
+          "spi_control_w_2/clk_in"
         ]
       },
       "adl1_sdi_1": {
@@ -2828,7 +2828,7 @@
       "lmx_sdi_1": {
         "ports": [
           "lmx_sdi",
-          "spi_lmx_control_w_0/chip_data_in"
+          "spi_control_w_2/chip_data_in"
         ]
       },
       "reset_rtl_1": {
@@ -2865,12 +2865,12 @@
           "usp_rf_data_converter_0/s_axi_aresetn",
           "ps8_0_axi_periph/M04_ARESETN",
           "ps8_0_axi_periph/S01_ARESETN",
-          "spi_adl_0/s00_axi_aresetn",
-          "spi_adl_1/s00_axi_aresetn",
           "spi_lmx_0/s00_axi_aresetn",
           "spi_control_w_0/rst_in",
           "spi_control_w_1/rst_in",
-          "spi_lmx_control_w_0/rst_in"
+          "spi_adl_0/s00_axi_aresetn",
+          "spi_adl_1/s00_axi_aresetn",
+          "spi_control_w_2/rst_in"
         ]
       },
       "rst_ps8_0_99M_peripheral_reset": {
@@ -2975,52 +2975,52 @@
           "spi_adl_1/s_valid_in"
         ]
       },
+      "spi_control_w_2_busy_out": {
+        "ports": [
+          "spi_control_w_2/busy_out",
+          "spi_lmx_0/m_ready_in"
+        ]
+      },
+      "spi_control_w_2_chip_clk_out": {
+        "ports": [
+          "spi_control_w_2/chip_clk_out",
+          "lmx_sck"
+        ]
+      },
+      "spi_control_w_2_chip_data_out": {
+        "ports": [
+          "spi_control_w_2/chip_data_out",
+          "lmx_sdo"
+        ]
+      },
+      "spi_control_w_2_chip_sel_out": {
+        "ports": [
+          "spi_control_w_2/chip_sel_out",
+          "lmx_cs"
+        ]
+      },
+      "spi_control_w_2_data_out": {
+        "ports": [
+          "spi_control_w_2/data_out",
+          "spi_lmx_0/command_in"
+        ]
+      },
+      "spi_control_w_2_data_valid_out": {
+        "ports": [
+          "spi_control_w_2/data_valid_out",
+          "spi_lmx_0/s_valid_in"
+        ]
+      },
       "spi_lmx_0_command_out": {
         "ports": [
           "spi_lmx_0/command_out",
-          "spi_lmx_control_w_0/data_in"
+          "spi_control_w_2/data_in"
         ]
       },
       "spi_lmx_0_trigger_out": {
         "ports": [
           "spi_lmx_0/trigger_out",
-          "spi_lmx_control_w_0/trigger_in"
-        ]
-      },
-      "spi_lmx_control_w_0_busy_out": {
-        "ports": [
-          "spi_lmx_control_w_0/busy_out",
-          "spi_lmx_0/m_ready_in"
-        ]
-      },
-      "spi_lmx_control_w_0_chip_clk_out": {
-        "ports": [
-          "spi_lmx_control_w_0/chip_clk_out",
-          "lmx_sck"
-        ]
-      },
-      "spi_lmx_control_w_0_chip_data_out": {
-        "ports": [
-          "spi_lmx_control_w_0/chip_data_out",
-          "lmx_sdo"
-        ]
-      },
-      "spi_lmx_control_w_0_chip_sel_out": {
-        "ports": [
-          "spi_lmx_control_w_0/chip_sel_out",
-          "lmx_cs"
-        ]
-      },
-      "spi_lmx_control_w_0_data_out": {
-        "ports": [
-          "spi_lmx_control_w_0/data_out",
-          "spi_lmx_0/command_in"
-        ]
-      },
-      "spi_lmx_control_w_0_data_valid_out": {
-        "ports": [
-          "spi_lmx_control_w_0/data_valid_out",
-          "spi_lmx_0/s_valid_in"
+          "spi_control_w_2/trigger_in"
         ]
       },
       "usp_rf_data_converter_0_clk_adc0": {

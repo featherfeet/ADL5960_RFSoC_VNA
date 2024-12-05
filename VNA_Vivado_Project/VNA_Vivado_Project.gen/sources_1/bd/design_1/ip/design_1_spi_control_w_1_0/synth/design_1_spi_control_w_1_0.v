@@ -71,7 +71,7 @@ module design_1_spi_control_w_1_0 (
 
 input wire clk_in;
 input wire rst_in;
-input wire [19 : 0] data_in;
+input wire [23 : 0] data_in;
 input wire trigger_in;
 output wire busy_out;
 output wire chip_data_out;
@@ -79,7 +79,7 @@ output wire chip_clk_out;
 output wire chip_sel_out;
 input wire chip_data_in;
 output wire data_valid_out;
-output wire [19 : 0] data_out;
+output wire [23 : 0] data_out;
 
   spi_control_w inst (
     .clk_in(clk_in),

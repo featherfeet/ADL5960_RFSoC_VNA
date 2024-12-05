@@ -1,14 +1,14 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "design_1_spi_lmx_control_w_0_0",
-    "cell_name": "spi_lmx_control_w_0",
-    "component_reference": "xilinx.com:module_ref:spi_lmx_control_w:1.0",
+    "xci_name": "design_1_spi_control_w_2_0",
+    "cell_name": "spi_control_w_2",
+    "component_reference": "xilinx.com:module_ref:spi_control_w:1.0",
     "ip_revision": "1",
-    "gen_directory": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_spi_lmx_control_w_0_0",
+    "gen_directory": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_spi_control_w_2_0",
     "parameters": {
       "component_parameters": {
-        "Component_Name": [ { "value": "design_1_spi_lmx_control_w_0_0", "resolve_type": "user", "usage": "all" } ]
+        "Component_Name": [ { "value": "design_1_spi_control_w_2_0", "resolve_type": "user", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplusRFSOC" } ],
@@ -28,7 +28,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "1" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_spi_lmx_control_w_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_spi_control_w_2_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2024.1" } ],

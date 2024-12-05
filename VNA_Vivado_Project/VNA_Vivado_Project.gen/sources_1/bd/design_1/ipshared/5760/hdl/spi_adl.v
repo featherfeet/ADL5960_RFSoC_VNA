@@ -15,8 +15,8 @@
 	)
 	(
 		// Users to add ports here
-        output wire [19:0] command_out, //joe did for you
-        input wire [19:0] command_in,
+        output wire [23:0] command_out, //joe did for you
+        input wire [23:0] command_in,
         output wire trigger_out, //trigger spi controller
         input wire m_ready_in, // is spi controller busy 1 is busy 0 is ready
         input wire s_valid_in, // spi controller data_line is valid 

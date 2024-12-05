@@ -7,199 +7,199 @@
   **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Tue Dec  3 19:26:37 2024
+  **** Start of session at: Wed Dec  4 19:46:48 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olt/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhanly/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhanly/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhanly/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'.
 Command: link_design -top design_1_wrapper -part xczu48dr-ffvg1517-2-e
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
-Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2513.898 ; gain = 0.000 ; free physical = 21768 ; free virtual = 35174
-INFO: [Netlist 29-17] Analyzing 291 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2513.898 ; gain = 0.000 ; free physical = 17157 ; free virtual = 31944
+INFO: [Netlist 29-17] Analyzing 314 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
-WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:1]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:2]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:3]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:4]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:5]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:6]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:7]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:8]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:9]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:10]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:49]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:52]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:55]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:59]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:63]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:66]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:70]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:73]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:76]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:79]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:85]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:88]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:91]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:94]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:97]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:100]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:104]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:107]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:110]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:113]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:116]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:119]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:122]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:125]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:128]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:131]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:134]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:137]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:140]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:143]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:146]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:149]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:152]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:155]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:161]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:164]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:167]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:171]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:174]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:178]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:181]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:184]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:49]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:52]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:55]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:59]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:63]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:66]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:70]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:73]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:76]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:79]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:82]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:85]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:88]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:91]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:94]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:97]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:100]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:104]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:107]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:110]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:113]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:116]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:119]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:122]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:125]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:128]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:131]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:134]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:137]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:140]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:143]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:146]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:149]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:152]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:155]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:158]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:161]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:164]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:167]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:171]
-INFO: [Common 17-14] Message 'Vivado 12-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:174]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:174]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:178]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:181]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:184]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:49]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:52]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:55]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:59]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:63]
-INFO: [Common 17-14] Message 'Vivado_Tcl 4-921' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:63]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/bd_6f02_sbn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/bd_6f02_sbn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/bd_6f02_swn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/bd_6f02_swn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_13/bd_6f02_sawn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_13/bd_6f02_sawn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc:66]
-INFO: [Timing 38-2] Deriving generated clocks [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc:66]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Timing 38-2] Deriving generated clocks [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:54]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
-WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:61]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc]
-WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc:64]
-WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc:64]
-WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc:82]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc]
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
-WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc:286]
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
-Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst'
-Finished Parsing XDC File [/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:1]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:2]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:3]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:4]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:5]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:6]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc:10]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:85]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:94]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:107]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:110]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:119]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:122]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:131]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:134]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:137]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:143]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:146]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:155]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:167]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:171]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:174]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:178]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:181]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc:184]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:82]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:85]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:94]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:107]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:110]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:119]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:122]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:131]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:134]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:137]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:143]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:146]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:155]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:158]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:167]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:171]
+INFO: [Common 17-14] Message 'Vivado 12-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:174]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:174]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:178]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:181]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc:184]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:63]
+INFO: [Common 17-14] Message 'Vivado_Tcl 4-921' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc:63]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/bd_6f02_sbn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/bd_6f02_sbn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/bd_6f02_swn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/bd_6f02_swn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_13/bd_6f02_sawn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_13/bd_6f02_sawn_0_clocks.xdc] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_3/bd_6f02_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_2/bd_6f02_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc:66]
+INFO: [Timing 38-2] Deriving generated clocks [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc:66]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_clocks.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr0_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr0/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_147M_0/design_1_rst_clk_wiz_0_147M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_0_147M/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_rst_ps8_0_99M_0/design_1_rst_ps8_0_99M_0_board.xdc] for cell 'design_1_i/rst_ps8_0_99M/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:54]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:61]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc:64]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc:64]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc:82]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/constrs_1/new/base.xdc]
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc:286]
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc] for cell 'design_1_i/usp_rf_data_converter_0/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst'
+Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst'
 WARNING: [Constraints 18-401] set_max_delay: 'design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst/gen_rd_b.gen_rd_b_synth_template.gen_rf_narrow_reg.doutb_reg[1]_i_1' is not a valid endpoint. [/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:56]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 INFO: [Project 1-1714] 228 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-1687] 320 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3745.293 ; gain = 0.000 ; free physical = 20871 ; free virtual = 34252
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3744.262 ; gain = 0.000 ; free physical = 16206 ; free virtual = 30990
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 61 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  A total of 59 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
   RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 49 instances
@@ -207,7 +207,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 19 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3745.293 ; gain = 2287.551 ; free physical = 20871 ; free virtual = 34252
+link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3744.262 ; gain = 2286.488 ; free physical = 16206 ; free virtual = 30990
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
@@ -218,117 +218,117 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.6 . Memory (MB): peak = 3745.293 ; gain = 0.000 ; free physical = 20866 ; free virtual = 34248
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.62 . Memory (MB): peak = 3744.262 ; gain = 0.000 ; free physical = 16191 ; free virtual = 30981
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 15957df29
+Ending Cache Timing Information Task | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.57 . Memory (MB): peak = 3745.293 ; gain = 0.000 ; free physical = 20859 ; free virtual = 34242
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.51 . Memory (MB): peak = 3744.262 ; gain = 0.000 ; free physical = 16199 ; free virtual = 30989
 
 Starting Logic Optimization Task
 
 Phase 1 Initialization
 
 Phase 1.1 Core Generation And Design Setup
-Phase 1.1 Core Generation And Design Setup | Checksum: 15957df29
+Phase 1.1 Core Generation And Design Setup | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20592 ; free virtual = 33975
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15946 ; free virtual = 30731
 
 Phase 1.2 Setup Constraints And Sort Netlist
-Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 15957df29
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20592 ; free virtual = 33975
-Phase 1 Initialization | Checksum: 15957df29
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15946 ; free virtual = 30731
+Phase 1 Initialization | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20592 ; free virtual = 33975
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15946 ; free virtual = 30731
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Timer Update
-Phase 2.1 Timer Update | Checksum: 15957df29
+Phase 2.1 Timer Update | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20592 ; free virtual = 33975
+Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15946 ; free virtual = 30731
 
 Phase 2.2 Timing Data Collection
-Phase 2.2 Timing Data Collection | Checksum: 15957df29
+Phase 2.2 Timing Data Collection | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20592 ; free virtual = 33975
-Phase 2 Timer Update And Timing Data Collection | Checksum: 15957df29
+Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15938 ; free virtual = 30724
+Phase 2 Timer Update And Timing Data Collection | Checksum: 115b189ee
 
-Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20592 ; free virtual = 33975
+Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15938 ; free virtual = 30724
 
 Phase 3 Retarget
 INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
 INFO: [Opt 31-1566] Pulled 9 inverters resulting in an inversion of 69 pins
-INFO: [Opt 31-138] Pushed 63 inverter(s) to 3938 load pin(s).
+INFO: [Opt 31-138] Pushed 63 inverter(s) to 3896 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 173404fb5
+Phase 3 Retarget | Checksum: 1afdc7ad6
 
-Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.49 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20605 ; free virtual = 33987
-Retarget | Checksum: 173404fb5
+Time (s): cpu = 00:00:00.91 ; elapsed = 00:00:00.47 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15938 ; free virtual = 30723
+Retarget | Checksum: 1afdc7ad6
 INFO: [Opt 31-389] Phase Retarget created 28 cells and removed 393 cells
 INFO: [Opt 31-1021] In phase Retarget, 89 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 4 Constant propagation | Checksum: 1a65f6fb3
+Phase 4 Constant propagation | Checksum: 1ed29de98
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.56 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20605 ; free virtual = 33987
-Constant propagation | Checksum: 1a65f6fb3
+Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.54 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15940 ; free virtual = 30725
+Constant propagation | Checksum: 1ed29de98
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 89 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 Sweep
-Phase 5 Sweep | Checksum: 1a3f4a336
+Phase 5 Sweep | Checksum: 1e6f063a2
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.93 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20605 ; free virtual = 33987
-Sweep | Checksum: 1a3f4a336
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.91 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15942 ; free virtual = 30727
+Sweep | Checksum: 1e6f063a2
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 392 cells
 INFO: [Opt 31-1021] In phase Sweep, 244 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 6 BUFG optimization
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
-Phase 6 BUFG optimization | Checksum: 1a3f4a336
+Phase 6 BUFG optimization | Checksum: 1e6f063a2
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20605 ; free virtual = 33987
-BUFG optimization | Checksum: 1a3f4a336
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15942 ; free virtual = 30727
+BUFG optimization | Checksum: 1e6f063a2
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 7 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 7 Shift Register Optimization | Checksum: 1a3f4a336
+Phase 7 Shift Register Optimization | Checksum: 1e6f063a2
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20605 ; free virtual = 33987
-Shift Register Optimization | Checksum: 1a3f4a336
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15942 ; free virtual = 30727
+Shift Register Optimization | Checksum: 1e6f063a2
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 1a3f4a336
+Phase 8 Post Processing Netlist | Checksum: 1e6f063a2
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20605 ; free virtual = 33987
-Post Processing Netlist | Checksum: 1a3f4a336
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15942 ; free virtual = 30727
+Post Processing Netlist | Checksum: 1e6f063a2
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 101 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 9 Finalization
 
 Phase 9.1 Finalizing Design Cores and Updating Shapes
-Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: f621d4b6
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 1ec5e001d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20604 ; free virtual = 33986
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15941 ; free virtual = 30727
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20604 ; free virtual = 33986
-Phase 9.2 Verifying Netlist Connectivity | Checksum: f621d4b6
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15941 ; free virtual = 30727
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 1ec5e001d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20604 ; free virtual = 33986
-Phase 9 Finalization | Checksum: f621d4b6
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15941 ; free virtual = 30727
+Phase 9 Finalization | Checksum: 1ec5e001d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20604 ; free virtual = 33986
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15941 ; free virtual = 30727
 Opt_design Change Summary
 =========================
 
@@ -345,9 +345,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 
 
-Ending Logic Optimization Task | Checksum: f621d4b6
+Ending Logic Optimization Task | Checksum: 1ec5e001d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.102 ; gain = 0.000 ; free physical = 20604 ; free virtual = 33986
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3851.070 ; gain = 0.000 ; free physical = 15941 ; free virtual = 30727
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -363,46 +363,46 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 11 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 5 WE to EN ports
 Number of BRAM Ports augmented: 3 newly gated: 5 Total Ports: 22
-Ending PowerOpt Patch Enables Task | Checksum: 16206c0b9
+Ending PowerOpt Patch Enables Task | Checksum: 1876646c7
 
-Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20360 ; free virtual = 33742
-Ending Power Optimization Task | Checksum: 16206c0b9
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15702 ; free virtual = 30493
+Ending Power Optimization Task | Checksum: 1876646c7
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4226.016 ; gain = 374.914 ; free physical = 20360 ; free virtual = 33742
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 4224.008 ; gain = 372.938 ; free physical = 15702 ; free virtual = 30493
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 16206c0b9
+Ending Final Cleanup Task | Checksum: 1876646c7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20360 ; free virtual = 33742
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15702 ; free virtual = 30493
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20360 ; free virtual = 33742
-Ending Netlist Obfuscation Task | Checksum: 19e8ec1df
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15702 ; free virtual = 30493
+Ending Netlist Obfuscation Task | Checksum: 13aa30122
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20360 ; free virtual = 33742
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15702 ; free virtual = 30493
 INFO: [Common 17-83] Releasing license: Implementation
 48 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 4226.016 ; gain = 480.723 ; free physical = 20360 ; free virtual = 33742
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 4224.008 ; gain = 479.746 ; free physical = 15702 ; free virtual = 30493
 INFO: [Vivado 12-24828] Executing command : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Wrote PlaceDB: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20350 ; free virtual = 33734
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20350 ; free virtual = 33734
+Wrote PlaceDB: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15698 ; free virtual = 30491
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15698 ; free virtual = 30492
 Writing XDEF routing.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20350 ; free virtual = 33735
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15698 ; free virtual = 30492
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20348 ; free virtual = 33737
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20348 ; free virtual = 33737
-Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20346 ; free virtual = 33738
-Write Physdb Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20346 ; free virtual = 33739
-INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15698 ; free virtual = 30495
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15698 ; free virtual = 30495
+Wrote Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15696 ; free virtual = 30497
+Write Physdb Complete: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15696 ; free virtual = 30497
+INFO: [Common 17-1381] The checkpoint '/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
@@ -421,11 +421,11 @@ Starting Placer Task
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20317 ; free virtual = 33707
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: cb0efd43
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15684 ; free virtual = 30478
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: be30ef8b
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20317 ; free virtual = 33707
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4226.016 ; gain = 0.000 ; free physical = 20317 ; free virtual = 33707
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15684 ; free virtual = 30478
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4224.008 ; gain = 0.000 ; free physical = 15684 ; free virtual = 30478
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_VDISTR
@@ -434,22 +434,22 @@ WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_G
 WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_HDISTR
 WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_BUFG
 WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_LEAF
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 97124b20
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1a4d294ec
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 4721.770 ; gain = 495.754 ; free physical = 19702 ; free virtual = 33093
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 4728.762 ; gain = 504.754 ; free physical = 14936 ; free virtual = 29889
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 152ca6b66
+Phase 1.3 Build Placer Netlist Model | Checksum: 1bb1ffb37
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 4753.785 ; gain = 527.770 ; free physical = 19717 ; free virtual = 33108
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 4760.777 ; gain = 536.770 ; free physical = 14946 ; free virtual = 29900
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 152ca6b66
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1bb1ffb37
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 4753.785 ; gain = 527.770 ; free physical = 19718 ; free virtual = 33110
-Phase 1 Placer Initialization | Checksum: 152ca6b66
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 4760.777 ; gain = 536.770 ; free physical = 14946 ; free virtual = 29900
+Phase 1 Placer Initialization | Checksum: 1bb1ffb37
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 4753.785 ; gain = 527.770 ; free physical = 19719 ; free virtual = 33110
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 4760.777 ; gain = 536.770 ; free physical = 14946 ; free virtual = 29900
 
 Phase 2 Global Placement
 
@@ -458,62 +458,62 @@ Phase 2.1 Floorplanning
 Phase 2.1.1 Partition Driven Placement
 
 Phase 2.1.1.1 PBP: Partition Driven Placement
-Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 149e738f9
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 260262511
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 4753.785 ; gain = 527.770 ; free physical = 19733 ; free virtual = 33123
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 4760.777 ; gain = 536.770 ; free physical = 14935 ; free virtual = 29890
 
 Phase 2.1.1.2 PBP: Clock Region Placement
 INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
-Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 149e738f9
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 260262511
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 4753.785 ; gain = 527.770 ; free physical = 19733 ; free virtual = 33124
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 4760.777 ; gain = 536.770 ; free physical = 14935 ; free virtual = 29891
 
 Phase 2.1.1.3 PBP: Compute Congestion
-Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 149e738f9
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 260262511
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 5220.770 ; gain = 994.754 ; free physical = 19284 ; free virtual = 32675
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 5221.762 ; gain = 997.754 ; free physical = 14012 ; free virtual = 29396
 
 Phase 2.1.1.4 PBP: UpdateTiming
-Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 170c7754d
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1e64a4a72
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5252.785 ; gain = 1026.770 ; free physical = 19285 ; free virtual = 32678
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5253.777 ; gain = 1029.770 ; free physical = 14013 ; free virtual = 29397
 
 Phase 2.1.1.5 PBP: Add part constraints
-Phase 2.1.1.5 PBP: Add part constraints | Checksum: 170c7754d
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1e64a4a72
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5252.785 ; gain = 1026.770 ; free physical = 19285 ; free virtual = 32678
-Phase 2.1.1 Partition Driven Placement | Checksum: 170c7754d
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5253.777 ; gain = 1029.770 ; free physical = 14013 ; free virtual = 29397
+Phase 2.1.1 Partition Driven Placement | Checksum: 1e64a4a72
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5252.785 ; gain = 1026.770 ; free physical = 19285 ; free virtual = 32678
-Phase 2.1 Floorplanning | Checksum: 167666fea
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5253.777 ; gain = 1029.770 ; free physical = 14013 ; free virtual = 29397
+Phase 2.1 Floorplanning | Checksum: 1ed69504d
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5252.785 ; gain = 1026.770 ; free physical = 19285 ; free virtual = 32678
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5253.777 ; gain = 1029.770 ; free physical = 14013 ; free virtual = 29397
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 167666fea
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1ed69504d
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5252.785 ; gain = 1026.770 ; free physical = 19285 ; free virtual = 32678
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5253.777 ; gain = 1029.770 ; free physical = 14013 ; free virtual = 29397
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 167666fea
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1ed69504d
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5252.785 ; gain = 1026.770 ; free physical = 19285 ; free virtual = 32678
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 5253.777 ; gain = 1029.770 ; free physical = 14013 ; free virtual = 29397
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 133d00938
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 2adb5adfa
 
-Time (s): cpu = 00:01:12 ; elapsed = 00:00:29 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19202 ; free virtual = 32593
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:28 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13744 ; free virtual = 29187
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 599 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 625 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 224 nets or LUTs. Breaked 0 LUT, combined 224 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 233 nets or LUTs. Breaked 0 LUT, combined 233 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-1030] Pass 1. Identified 13 candidate driver sets for equivalent driver rewiring.
-INFO: [Physopt 32-661] Optimized 4 nets.  Re-placed 14 instances.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 0 new cell, deleted 1 existing cell and moved 14 existing cells
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5398.789 ; gain = 0.000 ; free physical = 19203 ; free virtual = 32594
+INFO: [Physopt 32-661] Optimized 4 nets.  Re-placed 12 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 0 new cell, deleted 2 existing cells and moved 12 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5402.781 ; gain = 0.000 ; free physical = 13752 ; free virtual = 29195
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -524,7 +524,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5398.789 ; gain = 0.000 ; free physical = 19203 ; free virtual = 32594
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5402.781 ; gain = 0.000 ; free physical = 13728 ; free virtual = 29172
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -533,9 +533,9 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            224  |                   224  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            233  |                   233  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Equivalent Driver Rewiring                       |            0  |              1  |                     4  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              2  |                     4  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -543,64 +543,64 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            225  |                   228  |           0  |           5  |  00:00:00  |
+|  Total                                            |            0  |            235  |                   237  |           0  |           5  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1ab60fa98
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 29429618c
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:30 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19202 ; free virtual = 32593
-Phase 2.4 Global Placement Core | Checksum: 1d7a7abc8
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:29 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13747 ; free virtual = 29191
+Phase 2.4 Global Placement Core | Checksum: 20f164433
 
-Time (s): cpu = 00:01:24 ; elapsed = 00:00:33 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19201 ; free virtual = 32592
-Phase 2 Global Placement | Checksum: 1d7a7abc8
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:32 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13735 ; free virtual = 29177
+Phase 2 Global Placement | Checksum: 20f164433
 
-Time (s): cpu = 00:01:24 ; elapsed = 00:00:33 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19201 ; free virtual = 32592
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:32 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13735 ; free virtual = 29177
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 10bad1412
+Phase 3.1 Commit Multi Column Macros | Checksum: 2191c91c7
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:00:36 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19230 ; free virtual = 32621
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:35 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13742 ; free virtual = 29207
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c1d87ac1
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 21c874cd8
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:00:36 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19240 ; free virtual = 32631
+Time (s): cpu = 00:01:35 ; elapsed = 00:00:36 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13745 ; free virtual = 29209
 
 Phase 3.3 Small Shape DP
 
 Phase 3.3.1 Small Shape Clustering
-Phase 3.3.1 Small Shape Clustering | Checksum: 2716e61a1
+Phase 3.3.1 Small Shape Clustering | Checksum: 24fcb6da2
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:00:39 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19179 ; free virtual = 32571
+Time (s): cpu = 00:01:45 ; elapsed = 00:00:38 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13763 ; free virtual = 29210
 
 Phase 3.3.2 Slice Area Swap
 
 Phase 3.3.2.1 Slice Area Swap Initial
-Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 1f5eebb14
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 1ff726f9c
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:00:40 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19179 ; free virtual = 32571
-Phase 3.3.2 Slice Area Swap | Checksum: 1f5eebb14
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:39 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13763 ; free virtual = 29209
+Phase 3.3.2 Slice Area Swap | Checksum: 1ff726f9c
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:00:40 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19179 ; free virtual = 32571
-Phase 3.3 Small Shape DP | Checksum: 198ea393f
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:39 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13762 ; free virtual = 29208
+Phase 3.3 Small Shape DP | Checksum: 1b5b2b70e
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:40 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19180 ; free virtual = 32571
+Time (s): cpu = 00:01:48 ; elapsed = 00:00:40 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13764 ; free virtual = 29211
 
 Phase 3.4 Re-assign LUT pins
-Phase 3.4 Re-assign LUT pins | Checksum: e932ec7e
+Phase 3.4 Re-assign LUT pins | Checksum: 23504e9bb
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:41 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19180 ; free virtual = 32571
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:40 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13770 ; free virtual = 29217
 
 Phase 3.5 Pipeline Register Optimization
-Phase 3.5 Pipeline Register Optimization | Checksum: 26067eeab
+Phase 3.5 Pipeline Register Optimization | Checksum: 28599b1b0
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:41 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19180 ; free virtual = 32571
-Phase 3 Detail Placement | Checksum: 26067eeab
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:40 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13770 ; free virtual = 29218
+Phase 3 Detail Placement | Checksum: 28599b1b0
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:00:41 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19180 ; free virtual = 32571
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:40 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13780 ; free virtual = 29227
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -608,7 +608,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1e6ce4db3
+Post Placement Optimization Initialization | Checksum: 2e524428c
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -616,34 +616,34 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.965 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: ef28cb2d
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.630 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1d40c9253
 
-Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.12 . Memory (MB): peak = 5398.789 ; gain = 0.000 ; free physical = 19130 ; free virtual = 32521
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.14 . Memory (MB): peak = 5402.781 ; gain = 0.000 ; free physical = 13791 ; free virtual = 29236
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: 16236a18c
+Ending Physical Synthesis Task | Checksum: 21d77c441
 
-Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.22 . Memory (MB): peak = 5398.789 ; gain = 0.000 ; free physical = 19130 ; free virtual = 32521
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1e6ce4db3
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.24 . Memory (MB): peak = 5402.781 ; gain = 0.000 ; free physical = 13795 ; free virtual = 29240
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2e524428c
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:00:46 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19132 ; free virtual = 32523
+Time (s): cpu = 00:02:04 ; elapsed = 00:00:45 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13795 ; free virtual = 29241
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=2.965. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 2367f17dc
+INFO: [Place 30-746] Post Placement Timing Summary WNS=2.630. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 297a0d0d8
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:00:46 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19132 ; free virtual = 32523
+Time (s): cpu = 00:02:04 ; elapsed = 00:00:45 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13795 ; free virtual = 29241
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:00:46 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19132 ; free virtual = 32523
-Phase 4.1 Post Commit Optimization | Checksum: 2367f17dc
+Time (s): cpu = 00:02:04 ; elapsed = 00:00:45 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13795 ; free virtual = 29241
+Phase 4.1 Post Commit Optimization | Checksum: 297a0d0d8
 
-Time (s): cpu = 00:02:05 ; elapsed = 00:00:46 . Memory (MB): peak = 5398.789 ; gain = 1172.773 ; free physical = 19133 ; free virtual = 32524
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19081 ; free virtual = 32472
+Time (s): cpu = 00:02:04 ; elapsed = 00:00:45 . Memory (MB): peak = 5402.781 ; gain = 1178.773 ; free physical = 13794 ; free virtual = 29240
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13726 ; free virtual = 29171
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 2b39ec18a
+Phase 4.2 Post Placement Cleanup | Checksum: 2c157af6f
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:00:53 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19081 ; free virtual = 32472
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:52 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
 
 Phase 4.3 Placer Reporting
 
@@ -653,79 +653,79 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Long Congestion   | Short Congestion  |
 | Direction | Region Size       | Region Size       | Region Size       |
 |___________|___________________|___________________|___________________|
-|      North|                1x1|                1x1|                2x2|
+|      North|                1x1|              16x16|                4x4|
 |___________|___________________|___________________|___________________|
-|      South|                1x1|                1x1|                1x1|
+|      South|                1x1|                1x1|                2x2|
 |___________|___________________|___________________|___________________|
 |       East|                1x1|                1x1|                2x2|
 |___________|___________________|___________________|___________________|
 |       West|                1x1|                1x1|                1x1|
 |___________|___________________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 2b39ec18a
+Phase 4.3.1 Print Estimated Congestion | Checksum: 2c157af6f
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:00:53 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19081 ; free virtual = 32472
-Phase 4.3 Placer Reporting | Checksum: 2b39ec18a
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:52 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
+Phase 4.3 Placer Reporting | Checksum: 2c157af6f
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:00:53 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19081 ; free virtual = 32472
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:52 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19081 ; free virtual = 32472
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13726 ; free virtual = 29171
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:00:53 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19081 ; free virtual = 32472
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2c6fc5ed2
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:52 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2a9985cd3
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:00:53 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19080 ; free virtual = 32471
-Ending Placer Task | Checksum: 1d27bc3e8
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:52 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
+Ending Placer Task | Checksum: 21fea0353
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:00:53 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19080 ; free virtual = 32471
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:52 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
 87 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:02:21 ; elapsed = 00:00:54 . Memory (MB): peak = 5470.051 ; gain = 1244.035 ; free physical = 19080 ; free virtual = 32471
+place_design: Time (s): cpu = 00:02:21 ; elapsed = 00:00:53 . Memory (MB): peak = 5438.418 ; gain = 1214.410 ; free physical = 13726 ; free virtual = 29171
 INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
 Running report generation with 3 threads.
 INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.11 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32466
+report_control_sets: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.1 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13706 ; free virtual = 29151
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [Vivado 12-24828] Executing command : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.26 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19051 ; free virtual = 32443
+report_io: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.25 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13687 ; free virtual = 29133
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19047 ; free virtual = 32444
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.48 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19020 ; free virtual = 32439
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19020 ; free virtual = 32439
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13683 ; free virtual = 29133
+Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.48 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13671 ; free virtual = 29144
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13671 ; free virtual = 29144
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19020 ; free virtual = 32440
-Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19020 ; free virtual = 32442
-Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19020 ; free virtual = 32444
-Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.55 . Memory (MB): peak = 5470.051 ; gain = 0.000 ; free physical = 19020 ; free virtual = 32444
-INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13671 ; free virtual = 29144
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13662 ; free virtual = 29139
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13662 ; free virtual = 29142
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.55 . Memory (MB): peak = 5438.418 ; gain = 0.000 ; free physical = 13662 ; free virtual = 29142
+INFO: [Common 17-1381] The checkpoint '/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19019 ; free virtual = 32421
-INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 2.967 | TNS= 0.000 | 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13689 ; free virtual = 29145
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 2.628 | TNS= 0.000 | 
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
 98 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19015 ; free virtual = 32423
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.46 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19013 ; free virtual = 32444
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19013 ; free virtual = 32444
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13684 ; free virtual = 29145
+Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.47 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13667 ; free virtual = 29151
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13667 ; free virtual = 29151
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19013 ; free virtual = 32444
-Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19006 ; free virtual = 32439
-Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19006 ; free virtual = 32441
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.52 . Memory (MB): peak = 5494.062 ; gain = 0.000 ; free physical = 19006 ; free virtual = 32441
-INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13667 ; free virtual = 29151
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13667 ; free virtual = 29153
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13667 ; free virtual = 29156
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.53 . Memory (MB): peak = 5455.414 ; gain = 0.000 ; free physical = 13667 ; free virtual = 29156
+INFO: [Common 17-1381] The checkpoint '/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu48dr'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu48dr'
@@ -739,49 +739,49 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: bcd95c26 ConstDB: 0 ShapeSum: 3d7e731a RouteDB: d823f4a8
-Nodegraph reading from file.  Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.58 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19008 ; free virtual = 32421
-Post Restoration Checksum: NetGraph: e3ad0877 | NumContArr: 59c1e506 | Constraints: c0bd8e8f | Timing: c2a8fa9d
-Phase 1 Build RT Design | Checksum: 2c0d576a9
+Checksum: PlaceDB: c598b228 ConstDB: 0 ShapeSum: d596279a RouteDB: 84bb2991
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.56 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13652 ; free virtual = 29124
+Post Restoration Checksum: NetGraph: fdcd1db2 | NumContArr: 5b97ea98 | Constraints: 6a15af5 | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 222af5ddc
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19022 ; free virtual = 32435
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13662 ; free virtual = 29145
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 2c0d576a9
+Phase 2.1 Fix Topology Constraints | Checksum: 222af5ddc
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19023 ; free virtual = 32435
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13662 ; free virtual = 29145
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 2c0d576a9
+Phase 2.2 Pre Route Cleanup | Checksum: 222af5ddc
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19023 ; free virtual = 32435
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13662 ; free virtual = 29145
 
 Phase 2.3 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.3 Global Clock Net Routing | Checksum: 2e637b8ea
+Phase 2.3 Global Clock Net Routing | Checksum: 13e389a8b
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19032 ; free virtual = 32444
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13650 ; free virtual = 29121
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 28b9bea7e
+Phase 2.4 Update Timing | Checksum: 1455ff8f9
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19036 ; free virtual = 32448
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.070  | TNS=0.000  | WHS=-0.064 | THS=-10.433|
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13686 ; free virtual = 29119
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.755  | TNS=0.000  | WHS=-0.066 | THS=-9.714 |
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 2488359db
+Phase 2.5.1 Update Timing | Checksum: ed5f8295
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:09 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19041 ; free virtual = 32453
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.070  | TNS=0.000  | WHS=-0.100 | THS=-6.996 |
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:09 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13698 ; free virtual = 29130
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.755  | TNS=0.000  | WHS=-0.106 | THS=-4.048 |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 27abd828f
+Phase 2.5 Update Timing for Bus Skew | Checksum: 139653071
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:09 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19049 ; free virtual = 32462
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:09 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13698 ; free virtual = 29131
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -789,87 +789,87 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 24543
+  Number of Failed Nets               = 24495
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 18595
-  Number of Partially Routed Nets     = 5948
+  Number of Unrouted Nets             = 18548
+  Number of Partially Routed Nets     = 5947
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 2cd73a3fd
+Phase 2 Router Initialization | Checksum: f2b94592
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19051 ; free virtual = 32463
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13706 ; free virtual = 29139
 
 Phase 3 Global Routing
-Phase 3 Global Routing | Checksum: 2cd73a3fd
+Phase 3 Global Routing | Checksum: f2b94592
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19052 ; free virtual = 32465
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13706 ; free virtual = 29139
 
 Phase 4 Initial Routing
 
 Phase 4.1 Initial Net Routing Pass
-Phase 4.1 Initial Net Routing Pass | Checksum: 1ec8613ae
+Phase 4.1 Initial Net Routing Pass | Checksum: 2106bbdc7
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19065 ; free virtual = 32477
-Phase 4 Initial Routing | Checksum: 21388d079
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13722 ; free virtual = 29154
+Phase 4 Initial Routing | Checksum: 22562d016
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19065 ; free virtual = 32477
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13722 ; free virtual = 29154
 
 Phase 5 Rip-up And Reroute
 
 Phase 5.1 Global Iteration 0
- Number of Nodes with overlaps = 5055
- Number of Nodes with overlaps = 410
- Number of Nodes with overlaps = 44
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 5020
+ Number of Nodes with overlaps = 475
+ Number of Nodes with overlaps = 45
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.144  | TNS=0.000  | WHS=0.008  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.232  | TNS=0.000  | WHS=-0.010 | THS=-0.012 |
 
-Phase 5.1 Global Iteration 0 | Checksum: 254943e65
+Phase 5.1 Global Iteration 0 | Checksum: 1f6853386
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:19 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19077 ; free virtual = 32490
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29183
 
-Phase 5.2 Additional Iteration for Hold
-Phase 5.2 Additional Iteration for Hold | Checksum: 1fb857e8e
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.232  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19077 ; free virtual = 32490
-Phase 5 Rip-up And Reroute | Checksum: 1fb857e8e
+Phase 5.2 Global Iteration 1 | Checksum: 1e0443b21
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19077 ; free virtual = 32490
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29183
+Phase 5 Rip-up And Reroute | Checksum: 1e0443b21
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29183
 
 Phase 6 Delay and Skew Optimization
 
 Phase 6.1 Delay CleanUp
-Phase 6.1 Delay CleanUp | Checksum: 2227a438b
+Phase 6.1 Delay CleanUp | Checksum: 12aa2452d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19077 ; free virtual = 32490
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29183
 
 Phase 6.2 Clock Skew Optimization
-Phase 6.2 Clock Skew Optimization | Checksum: 2227a438b
+Phase 6.2 Clock Skew Optimization | Checksum: 12aa2452d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19077 ; free virtual = 32490
-Phase 6 Delay and Skew Optimization | Checksum: 2227a438b
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29183
+Phase 6 Delay and Skew Optimization | Checksum: 12aa2452d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19077 ; free virtual = 32490
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29183
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Hold Fix Iter
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.144  | TNS=0.000  | WHS=0.008  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.232  | TNS=0.000  | WHS=0.010  | THS=0.000  |
 
-Phase 7.1 Hold Fix Iter | Checksum: 1e82e391d
+Phase 7.1 Hold Fix Iter | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:20 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
-Phase 7 Post Hold Fix | Checksum: 1e82e391d
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29184
+Phase 7 Post Hold Fix | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:20 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:17 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29184
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.42978 %
-  Global Horizontal Routing Utilization  = 0.851987 %
+  Global Vertical Routing Utilization    = 1.46119 %
+  Global Horizontal Routing Utilization  = 0.867166 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -879,66 +879,66 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 1e82e391d
+Phase 8 Route finalize | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:20 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13749 ; free virtual = 29182
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 1e82e391d
+Phase 9 Verifying routed nets | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:20 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32488
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13749 ; free virtual = 29181
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 1e82e391d
+Phase 10 Depositing Routes | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13747 ; free virtual = 29181
 
 Phase 11 Resolve XTalk
-Phase 11 Resolve XTalk | Checksum: 1e82e391d
+Phase 11 Resolve XTalk | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29185
 
 Phase 12 Post Process Routing
-Phase 12 Post Process Routing | Checksum: 1e82e391d
+Phase 12 Post Process Routing | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13752 ; free virtual = 29185
 
 Phase 13 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=2.144  | TNS=0.000  | WHS=0.008  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.232  | TNS=0.000  | WHS=0.010  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 13 Post Router Timing | Checksum: 1e82e391d
+Phase 13 Post Router Timing | Checksum: 13f14afd5
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19074 ; free virtual = 32489
-Total Elapsed time in route_design: 20.69 secs
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13754 ; free virtual = 29188
+Total Elapsed time in route_design: 18.37 secs
 
 Phase 14 Post-Route Event Processing
-Phase 14 Post-Route Event Processing | Checksum: 19b0d0d9d
+Phase 14 Post-Route Event Processing | Checksum: 28d67f62f
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19076 ; free virtual = 32488
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:18 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13754 ; free virtual = 29188
 INFO: [Route 35-16] Router Completed Successfully
-Ending Routing Task | Checksum: 19b0d0d9d
+Ending Routing Task | Checksum: 28d67f62f
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:21 . Memory (MB): peak = 5502.066 ; gain = 0.000 ; free physical = 19075 ; free virtual = 32488
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:19 . Memory (MB): peak = 5463.418 ; gain = 0.000 ; free physical = 13754 ; free virtual = 29188
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-113 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
+114 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 5502.066 ; gain = 8.004 ; free physical = 19075 ; free virtual = 32488
+route_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:19 . Memory (MB): peak = 5463.418 ; gain = 8.004 ; free physical = 13754 ; free virtual = 29188
 INFO: [Vivado 12-24828] Executing command : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
 INFO: [Vivado 12-24828] Executing command : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
-INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -960,25 +960,25 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-133 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19053 ; free virtual = 32482
+report_power: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13701 ; free virtual = 29157
 INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
 WARNING: [Device 21-9320] Failed to find the Oracle tile group with name 'HSR_BOUNDARY_TOP'. This is required for Clock regions and Virtual grid.
 WARNING: [Device 21-2174] Failed to initialize Virtual grid.
-generate_parallel_reports: Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 5558.094 ; gain = 56.027 ; free physical = 19053 ; free virtual = 32482
+generate_parallel_reports: Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 5519.445 ; gain = 56.027 ; free physical = 13760 ; free virtual = 29214
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19045 ; free virtual = 32480
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.46 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19023 ; free virtual = 32480
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19023 ; free virtual = 32480
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13751 ; free virtual = 29214
+Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.47 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13720 ; free virtual = 29202
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13720 ; free virtual = 29202
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.12 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19016 ; free virtual = 32478
-Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19014 ; free virtual = 32478
-Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19010 ; free virtual = 32477
-Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.6 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 19010 ; free virtual = 32477
-INFO: [Common 17-1381] The checkpoint '/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.11 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13716 ; free virtual = 29203
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13715 ; free virtual = 29204
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13712 ; free virtual = 29204
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.6 . Memory (MB): peak = 5519.445 ; gain = 0.000 ; free physical = 13712 ; free virtual = 29204
+INFO: [Common 17-1381] The checkpoint '/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
 INFO: [Memdata 28-167] Found XPM memory block design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
@@ -999,12 +999,12 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A2)+((~A2)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A4)+((~A4)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A5)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A5' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A2)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A5' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A2)+((~A2)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A5)+((~A5)*(~A2)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A5)+((~A5)*(~A2)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A5)+((~A5)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A4)+((~A4)*(~A2)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A5' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A5' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 WARNING: [DRC RTSTAT-10] No routable loads: 120 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC0[1], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC0[4], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC0[5], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC0[6], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC0[7], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC0[13], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC1[1], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC1[4], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC1[5], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC1[6], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC1[7], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC1[13], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC2[1], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC2[4], design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/STATUS_ADC2[5]... and (the first 15 of 96 listed).
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 7 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
@@ -1015,11 +1015,11 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 179843104 bits.
+Bitstream compression saved 181521600 bits.
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-158 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
+159 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 5558.094 ; gain = 0.000 ; free physical = 18995 ; free virtual = 32447
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  3 19:29:15 2024...
+write_bitstream: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 5553.871 ; gain = 34.426 ; free physical = 13647 ; free virtual = 29128
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 19:49:20 2024...
