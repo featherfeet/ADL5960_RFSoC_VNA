@@ -2,6 +2,14 @@
 
 Final project for 6.S965 Digital Systems Laboratory II. By Oliver Trevor, Tiffany Louie, Bianca Hanly, and Alyssa Keirn for class taught by Joe Steinmeyer.
 
+## Files
+
+VNA_Vivado_Project: Xilinx project file for RFSoC 
+
+vna_gui: Python and juypter notebook code for running VNA
+
+test_code: Test benches and code demonstrations of subsystems
+
 ## Resources on VNA Design and Calibration
 
 [Mini-Circuits Application Note AN49-016: Error Correction](https://www.minicircuits.com/app/AN49-016.pdf)
