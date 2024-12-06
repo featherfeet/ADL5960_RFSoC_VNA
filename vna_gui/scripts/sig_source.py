@@ -48,8 +48,7 @@ class SigSource:
         At least either (start and stop) or (center and span) must be provided.
         """
         
-        #TEMP COMMENTING THIS OUT FOR NOW 
-        #self.lmx = LMX2595(mmio_spi_controller = mmio_spi_controller) #initilaize the source control object 
+        self.lmx = LMX2595(mmio_spi_controller = mmio_spi_controller) #initilaize the source control object 
 
         # Validation to ensure either (start, stop) or (center, span) is provided
         if (start is not None and stop is not None):
@@ -169,8 +168,7 @@ class SigSource:
         '''
         if self.active:
             self.current_freq = freq
-            #TEMP COMMENTING THIS OUT FOR TESTING
-            #self.lmx.setOutputFrequencyA(self.current_freq)
+            self.lmx.setOutputFrequencyA(self.current_freq / 10**6)
    
     def set_next_freq(self, start = False):
         #Handling the index, stored in current_freq_counter

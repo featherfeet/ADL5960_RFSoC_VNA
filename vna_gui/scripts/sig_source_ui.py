@@ -105,7 +105,7 @@ class SignalSourceUI:
             widgets.HBox([self.user_freq_input, self.set_freq_button]),
             self.generate_freq_button,
             self.out
-        ], layout=widgets.Layout(padding='20px 0'))
+        ], layout=widgets.Layout(padding='5px 0', margin='0', width = '90%'))
 
         return source_setup_layout
 
@@ -118,6 +118,7 @@ class SignalSourceUI:
             try:
                 if self.mode_toggle.value == "User Input Frequency":
                     frequency = self.user_freq_input.value
+                    self.source.set_active()
                     self.source.set_frequency(frequency)
                     print(f"Set frequency to {frequency} Hz.")
                 else:
@@ -133,13 +134,28 @@ class SignalSourceUI:
             clear_output()
             try:
                 if self.mode_toggle.value == "Sweep Freq":
-                    print("On Sweep operation")
-                    #TO DO: Need to design the rest of the function loop!!
+                    frequency_list = self.source.generate_freq_points()
+
+                    def freq_update_loop():
+                        while True:
+                            if not self.running:
+                                break
+                            self.source.set_next_freq()
+                            #with self.out:
+                                #clear_output(wait=True)
+                            print(f"Setting frequency to {self.source.get_current_freq():.2f} Hz")
+                            time.sleep(0.3)
+
+                    # Start the loop in a new thread
+                    self.running = True
+                    thread = threading.Thread(target=freq_update_loop, daemon=True)
+                    thread.start()
                 else:
                     print("Wrong Mode. Follow user input frequency.")
             except Exception as e:
                 print(f"Error generating frequency points: {e}")
 
+    
     def on_mode_toggle_change(self, change):
         """
         Handle mode changes to stop running threads and adjust visibility.
