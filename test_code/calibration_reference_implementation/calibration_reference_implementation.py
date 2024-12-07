@@ -112,7 +112,7 @@ port2_test_fixture.interpolate_self(frequencies)
 short_standard_model = generate_short_standard(59.44, 1, 0, 0, 0, 0, frequencies)
 open_standard_model = generate_open_standard(59.55, 1, -4, 200, 0, 1.1, frequencies)
 load_standard_model = generate_load_standard(0, 0, 50, frequencies)
-media = rf.media.DefinedGammaZ0(frequency = f, z0_port = 50)
+media = rf.media.DefinedGammaZ0(frequency = frequencies, z0_port = 50)
 unknown_through_standard_model = media.attenuator(1, d = 10, units = "ps") # 1 dB attenuator as our unknown-thru standard.
 
 #===================Measure Cal Standards In-System===============================
@@ -122,20 +122,23 @@ load_standard_measured_port1 = port1_test_fixture ** load_standard_model
 short_standard_measured_port2 = port2_test_fixture ** short_standard_model
 open_standard_measured_port2 = port2_test_fixture ** open_standard_model
 load_standard_measured_port2 = port2_test_fixture ** load_standard_model
-unknown_thru_standard_measured_port1 = port1_test_fixture ** unknown_through_standard_model ** port2_test_fixture
+unknown_through_standard_measured_port1 = port1_test_fixture ** unknown_through_standard_model ** port2_test_fixture
+unknown_through_standard_measured_port2 = unknown_through_standard_measured_port1.flipped()
 
 #===================Take Raw Measurements (Test Fixtures + DUT)===================
-full_system = port1_test_fixture ** dut ** port2_test_fixture
+full_system_measured = port1_test_fixture ** dut ** port2_test_fixture
 
-#===================One-Port Calibration==========================================
-ERF_values = []
-EDF_values = []
-ESF_values = []
-ERR_values = []
-EDR_values = []
-ESR_values = []
+#===========================Calibration==========================================
+ERF_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+EDF_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+ESF_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+ERR_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+EDR_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+ESR_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+ELF_values = np.zeros(len(frequencies.f), dtype = np.complex128)
+ELR_values = np.zeros(len(frequencies.f), dtype = np.complex128)
 for i in range(len(frequencies.f)):
-    # Port 1 cal
+    # Port 1 single-port cal (open, short, load)
     A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured_port1.s[i][0, 0]],
                   [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured_port1.s[i][0, 0]],
                   [1, load_standard_model.s[i][0, 0], load_standard_model.s[i][0, 0] * load_standard_measured_port1.s[i][0, 0]]], dtype = np.complex128)
@@ -146,10 +149,10 @@ for i in range(len(frequencies.f)):
     EDF = solution[0, 0]
     ESF = solution[2, 0]
     ERF = solution[1, 0] + EDF * ESF
-    ERF_values.append(ERF)
-    EDF_values.append(EDF)
-    ESF_values.append(ESF)
-    # Port 2 cal
+    ERF_values[i] = ERF
+    EDF_values[i] = EDF
+    ESF_values[i] = ESF
+    # Port 2 single-port cal (open, short, load)
     A = np.array([[1, open_standard_model.s[i][0, 0], open_standard_model.s[i][0, 0] * open_standard_measured_port2.s[i][0, 0]],
                   [1, short_standard_model.s[i][0, 0], short_standard_model.s[i][0, 0] * short_standard_measured_port2.s[i][0, 0]],
                   [1, load_standard_model.s[i][0, 0], load_standard_model.s[i][0, 0] * load_standard_measured_port2.s[i][0, 0]]], dtype = np.complex128)
@@ -160,9 +163,27 @@ for i in range(len(frequencies.f)):
     EDR = solution[0, 0]
     ESR = solution[2, 0]
     ERR = solution[1, 0] + EDR * ESR
-    ERR_values.append(ERR)
-    EDR_values.append(EDR)
-    ESR_values.append(ESR)
+    ERR_values[i] = ERR
+    EDR_values[i] = EDR
+    ESR_values[i] = ESR
+    # 2-port calibration (unknown-through standard, see 3.4.3.1)
+    E22 = ESR # Equation 3.12 for converting 12-term to 8-term model
+    E11 = ESF # Equation 3.12 for converting 12-term to 8-term model
+    gamma_F = unknown_through_standard_measured_port2.s[i][0, 0] # Fake "switch terms" using S-parameters (we don't actually have a model of an unideal switch in the system right now). Actual FPGA implementation should be able to get these directly by computing gamma_F = a2/b2 with port 1 active and gamma_R = a1/b1 with port 2 active. (see 3.4.1.1)
+    gamma_R = unknown_through_standard_measured_port1.s[i][0, 0]
+    ELF = E22 + (ERR * gamma_F) / (1 - EDR * gamma_F) # Equation 3.40
+    ELR = E11 + (ERF * gamma_R) / (1 - EDF * gamma_R) # Equation 3.40
+    ELF_values[i] = ELF
+    ELR_values[i] = ELR
+
+#=======================Apply Calibration to Measurements==================
+# See 3.2.1.
+calibrated_measurement = rf.Network(f = frequencies.f, z0 = 50, s = np.zeros_like(full_system_measured.s))
+S11N = (full_system_measured.s[:, 0, 0] - EDF_values) / ERF_values
+S21N = full_system_measured.s[:, 1, 0] / ETF_values # Assume EXF crosstalk is zero.
+S12N = full_system_measured.s[:, 0, 1] / ETR_values # Assume EXR crosstalk is zero.
+S22N = (full_system_measured.s[:, 1, 1] - EDR_values) / ERR_values
+calibrated_measurement.s[:, 0, 0] = (S11N * (1 + S22N * ESR_values) - ELF_values * S21N * S12N) / ((1 + S11N * ESF_values) * (1 + S22N * ESR_values) - ELF_values * ELR_values * S21N * S12N)
 
 #if __name__ == "__main__":
     #short_standard.plot_s_smith(m=0,n=0,draw_labels=True,color="red")
