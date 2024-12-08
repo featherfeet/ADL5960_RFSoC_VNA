@@ -65,13 +65,68 @@ module cordic #
     //Re-add the quadrant info and take from z. Then truncate x/k so amplitude is 16 bit integer.
     assign m00_axis_tdata_reg = {final_angle, final_radius[15:0]};
 
-    //Split into i and q (x and y in cordic). Convert to abs for use. Pad by 16 on tail and 2 on top for 34 bit fixed point (decimal after 16 bits), additional 2 bits for rollover during calculation
+    //Split into i and q (x and y in cordic). Convert to abs for use. Pad by 16 for 32 bit fixed point (decimal after 16 bits)
     assign abs_x = s00_axis_tdata[15] ? ~s00_axis_tdata[C_S00_AXIS_TDATA_WIDTH/2-1:0]+1 : s00_axis_tdata[C_S00_AXIS_TDATA_WIDTH/2-1:0];
     assign abs_y = s00_axis_tdata[31] ? ~s00_axis_tdata[C_S00_AXIS_TDATA_WIDTH-1:C_S00_AXIS_TDATA_WIDTH/2]+1 : s00_axis_tdata[C_S00_AXIS_TDATA_WIDTH-1:C_S00_AXIS_TDATA_WIDTH/2];
     assign x_dat = {2'b00, abs_x, 16'b0};
     assign y_dat = {2'b00, abs_y, 16'b0};
     assign x_true = $signed(s00_axis_tdata[C_S00_AXIS_TDATA_WIDTH/2-1:0]);
     assign y_true = $signed(s00_axis_tdata[C_S00_AXIS_TDATA_WIDTH-1:C_S00_AXIS_TDATA_WIDTH/2]);
+
+    logic signed [C_S00_AXIS_TDATA_WIDTH/2-1 : 0] zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen;
+    logic signed [C_S00_AXIS_TDATA_WIDTH+1 : 0] zero_y, one_y, two_y, three_y, four_y, five_y, six_y, seven_y, eight_y, nine_y, ten_y, eleven_y, twelve_y, thirteen_y, fourteen_y;
+    logic signed [C_S00_AXIS_TDATA_WIDTH+1 : 0] x_zero, x_one, x_two, x_three, x_four, x_five, x_six, x_seven, x_eight, x_nine, x_ten, x_eleven, x_twelve, x_thirteen, x_fourteen;
+    logic [1:0] q_fin;
+    assign q_fin = quadrant[NUM_ITERS-1];
+    // Doing this so I can see the values in GTKwave for debugging
+    assign zero = z_regs[0];
+    assign one = z_regs[1];
+    assign two = z_regs[2];
+    assign three = z_regs[3];
+    assign four = z_regs[4];
+    assign five= z_regs[5];
+    assign six = z_regs[6];
+    assign seven = z_regs[7];
+    assign eight = z_regs[8];
+    assign nine = z_regs[9];
+    assign ten = z_regs[10];
+    assign eleven = z_regs[11];
+    assign twelve = z_regs[12];
+    assign thirteen = z_regs[13];
+    assign fourteen = z_regs[14];
+
+    assign x_zero = x_regs[0];
+    assign x_one = x_regs[1];
+    assign x_two = x_regs[2];
+    assign x_three = x_regs[3];
+    assign x_four = x_regs[4];
+    assign x_five= x_regs[5];
+    assign x_six = x_regs[6];
+    assign x_seven = x_regs[7];
+    assign x_eight = x_regs[8];
+    assign x_nine = x_regs[9];
+    assign x_ten = x_regs[10];
+    assign x_eleven = x_regs[11];
+    assign x_twelve = x_regs[12];
+    assign x_thirteen = x_regs[13];
+    assign x_fourteen = x_regs[14];
+
+    assign zero_y = y_regs[0];
+    assign one_y = y_regs[1];
+    assign two_y = y_regs[2];
+    assign three_y = y_regs[3];
+    assign four_y = y_regs[4];
+    assign five_y= y_regs[5];
+    assign six_y = y_regs[6];
+    assign seven_y = y_regs[7];
+    assign eight_y = y_regs[8];
+    assign nine_y = y_regs[9];
+    assign ten_y = y_regs[10];
+    assign eleven_y = y_regs[11];
+    assign twelve_y = y_regs[12];
+    assign thirteen_y = y_regs[13];
+    assign fourteen_y = y_regs[14];
+
 
     //initializing values
     initial begin // atan(2^-i) angle values
@@ -90,9 +145,6 @@ module cordic #
         atan_table[12] = 16'd3;
         atan_table[13] = 16'd1;
         atan_table[14] = 16'd1;
-
-        final_angle = 0;
-        final_radius = 0;
         for(int i=0; i<NUM_ITERS; i++)begin
             x_regs[i] = 0;
             y_regs[i] = 0;

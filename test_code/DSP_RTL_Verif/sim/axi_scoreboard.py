@@ -32,11 +32,7 @@ class AXISscoreboard(Scoreboard):
             assert got["last"] == exp["last"], f"Last does not match! Expected {exp['last']} got {got['last']}"  
             assert got["count"] == exp["count"], f"Count does not match! Expected {exp['count']} got {got['count']}" 
 
-        elif(self.test_type == "coeffs"):
-            for key in exp.keys():
-                print("Expected " + str(key) + " " + exp[key] + " Got: " + got[key])
-                assert got[key] == exp[key], f"{key} does not match! Expected {exp[key]} got {got[key]}"
-        else:
+        elif(self.test_type != "coeff"):
             for key in exp.keys():
                 print("Expected " + str(key) + " " + exp[key] + " Got: " + got[key])
                 assert got[key] == exp[key], f"{key} does not match! Expected {exp[key]} got {got[key]}"

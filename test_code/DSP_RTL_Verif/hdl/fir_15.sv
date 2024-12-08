@@ -23,14 +23,14 @@ module fir_15 #
     );
  
     localparam NUM_COEFFS = 15;
-    logic signed [7:0] coeffs [NUM_COEFFS-1 : 0];
+    logic signed [16:0] coeffs [NUM_COEFFS-1 : 0];
     enum {PROCESSING, TLAST, WAITING, TLAST_WAIT} state;
-    logic signed [C_S00_AXIS_TDATA_WIDTH-1 : 0] fir_regs [15];
+    logic signed [C_S00_AXIS_TDATA_WIDTH-1+16 : 0] fir_regs [15];
     logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] fir_tstrb [15];
     logic [4:0] tlast_count;
     logic [3:0] txn_count;
     logic past_fifteen_flag;
-    logic signed [C_S00_AXIS_TDATA_WIDTH-1 : 0] zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen;
+    logic signed [C_S00_AXIS_TDATA_WIDTH-1+16 : 0] zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen;
 
     logic m00_axis_tvalid_reg, m00_axis_tlast_reg;
     logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata_reg;
@@ -42,7 +42,7 @@ module fir_15 #
     assign m00_axis_tstrb = m00_axis_tstrb_reg;
 
     assign s00_axis_tready = m00_axis_tready & (state == PROCESSING);
-    assign m00_axis_tdata_reg = fir_regs[14];
+    assign m00_axis_tdata_reg = fir_regs[14] >> 16; //convert back to integer from 48 bit fixed pt
     assign m00_axis_tstrb_reg = fir_tstrb[14];
 
     // Doing this so I can see the values in GTKwave for debugging
@@ -64,22 +64,22 @@ module fir_15 #
 
 
     //initializing values
-    initial begin //updated you coefficients
-        coeffs[0] = -8'd2;
-        coeffs[1] = -8'd3;
-        coeffs[2] = -8'd4;
-        coeffs[3] = 8'd0;
-        coeffs[4] = 8'd9;
-        coeffs[5] = 8'd21;
-        coeffs[6] = 8'd32;
-        coeffs[7] = 8'd36;
-        coeffs[8] = 8'd32;
-        coeffs[9] = 8'd21;
-        coeffs[10] = 8'd9;
-        coeffs[11] = 8'd0;
-        coeffs[12] = -8'd4;
-        coeffs[13] = -8'd3;
-        coeffs[14] = -8'd2;
+    initial begin //updated coefficients
+        coeffs[0] = 16'd666;
+        coeffs[1] = 16'd1058;
+        coeffs[2] = 16'd2155;
+        coeffs[3] = 16'd3756;
+        coeffs[4] = 16'd5548;
+        coeffs[5] = 16'd7174;
+        coeffs[6] = 16'd8304;
+        coeffs[7] = 16'd8708;
+        coeffs[8] = 16'd8304;
+        coeffs[9] = 16'd7174;
+        coeffs[10] = 16'd5548;
+        coeffs[11] = 16'd3756;
+        coeffs[12] = 16'd2155;
+        coeffs[13] = 16'd1058;
+        coeffs[14] = 16'd666;
         for(int i=0; i<NUM_COEFFS; i++)begin
             fir_regs[i] = 0;
             fir_tstrb[i] = 16'hF;

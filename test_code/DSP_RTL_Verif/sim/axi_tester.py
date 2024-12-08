@@ -25,7 +25,15 @@ class SSSTester:
         self.log.setLevel(logging.DEBUG)
         self.input_mon = AXISMonitor(self.dut,'s00',self.dut.s00_axis_aclk, callback=self.model)
         self.output_mon = AXISMonitor(self.dut,'m00',self.dut.s00_axis_aclk)
-        self.input_driver = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
+
+        if(test_type == 'coeff'):
+            self.input_driver0 = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
+            self.input_driver1 = AXISDriver(self.dut,'s01',self.dut.s01_axis_aclk)
+            self.input_driver2 = AXISDriver(self.dut,'s02',self.dut.s02_axis_aclk)
+            self.input_driver3 = AXISDriver(self.dut,'s03',self.dut.s03_axis_aclk)
+        else:
+            self.input_driver = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
+
         self._checker = None
         self.calcs_sent = 0
         # Create a scoreboard on the stream_out bus
@@ -39,7 +47,13 @@ class SSSTester:
             raise RuntimeError("Monitor never started")
         self.input_mon.stop()
         self.output_mon.stop()
-        self.input_driver.stop()
+        if(self.test_type == 'coeff'):
+            self.input_driver0.stop()
+            self.input_driver1.stop()
+            self.input_driver2.stop()
+            self.input_driver3.stop()
+        else:
+            self.input_driver.stop()
  
     def model(self, transaction):
         """Calls python modules to get the expected output for input data"""
