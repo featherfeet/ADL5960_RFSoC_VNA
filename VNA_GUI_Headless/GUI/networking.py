@@ -1,67 +1,36 @@
 import io
-import socket
 import pickle
 import threading
 import numpy as np
-import queue
+from websockets.sync.server import serve
 
 class RemoteConnection:
     def __init__(self, host, port):
         self.host = host
         self.port = port
+        self.server = serve(self.handle_message, host, port)
+        self.websocket_server_thread_handle = threading.Thread(target = self.websocket_server_thread, args = ())
+        self.websocket_server_thread_handle.start()
+        self.client_connections = []
         self.data = {}
-        self.queue = queue.Queue()
-        self.thread_handle = threading.Thread(target = self.socket_thread, args = ())
-        self.thread_handle.start()
+
+    def websocket_server_thread(self):
+        self.server.serve_forever()
 
     def send_parameters(self, parameters):
-        self.queue.put(parameters)
+        message_pickled = pickle.dumps(parameters)
+        for client in self.client_connections:
+            print("Sending")
+            client.send(message_pickled)
 
-    def socket_thread(self):
-        packet_length = None
-        buffer = io.BytesIO()
+    def handle_message(self, websocket):
+        self.client_connections.append(websocket)
 
-        self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.s.bind((self.host, self.port))
-        self.s.listen()
-
-        while True:
-            print("Awaiting connection...")
-            conn, addr = self.s.accept()
-            print(f"Accepted connection from {addr}.")
-
-            while True:
-                # Send any enqueued messages to the FPGA.
-                if not self.queue.empty():
-                    message = self.queue.get()
-                    message_pickled = pickle.dumps(message)
-                    conn.sendall(len(message_pickled).to_bytes(4, "little"))
-                    conn.sendall(message_pickled)
-                # Receive incoming messages from the FPGA.
-                if packet_length == None:
-                    received = conn.recv(4)
-                    if len(received) == 0:
-                        break
-                    packet_length = int.from_bytes(received, byteorder = "little")
-                else:
-                    received = conn.recv(4096)
-                    if len(received) == 0:
-                        break
-                    buffer.write(received)
-                    if buffer.getbuffer().nbytes == packet_length:
-                        buffer.seek(0)
-                        data_unpickled = pickle.load(buffer)
-                        data_tmp = {}
-                        data_tmp["filtered_port1_forward"] = np.frombuffer(data_unpickled["filtered_port1_forward"], dtype = np.float64)
-                        data_tmp["filtered_port2_forward"] = np.frombuffer(data_unpickled["filtered_port2_forward"], dtype = np.float64)
-                        data_tmp["filtered_port1_reverse"] = np.frombuffer(data_unpickled["filtered_port1_reverse"], dtype = np.float64)
-                        data_tmp["filtered_port2_reverse"] = np.frombuffer(data_unpickled["filtered_port2_reverse"], dtype = np.float64)
-                        self.data = data_tmp
-
-                        buffer = io.BytesIO()
-                        packet_length = None
-
-            print(f"Connection from {addr} closed.")
-            packet_length = None
-            buffer = io.BytesIO()
+        for message in websocket:
+            data_unpickled = pickle.loads(message)
+            data_tmp = {}
+            data_tmp["filtered_port1_forward"] = np.frombuffer(data_unpickled["filtered_port1_forward"], dtype = np.float64)
+            data_tmp["filtered_port2_forward"] = np.frombuffer(data_unpickled["filtered_port2_forward"], dtype = np.float64)
+            data_tmp["filtered_port1_reverse"] = np.frombuffer(data_unpickled["filtered_port1_reverse"], dtype = np.float64)
+            data_tmp["filtered_port2_reverse"] = np.frombuffer(data_unpickled["filtered_port2_reverse"], dtype = np.float64)
+            self.data = data_tmp
