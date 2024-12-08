@@ -5,8 +5,8 @@ import time
 import math
 import numpy as np
 import zlib
-import pickle
 
+from networking import GuiRemoteConnection
 from sig_source import SigSource
 from data_process import DSP
 from adl5960 import ADL5960
@@ -20,8 +20,7 @@ import socket
 
 # Connect to GUI over network.
 print("Connecting to GUI on remote computer...")
-gui_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-gui_socket.connect(("192.168.0.105", 1234))
+remote_connection = GuiRemoteConnection()
 
 # Upload Code to RFSoC
 print("Uploading overlay to RFSoC...")
@@ -49,8 +48,6 @@ source.set_frequency(100e6) # TODO actually sweep
 dsp = DSP()
 
 #Main capture and processing loop.
-filename = "both_ports_open"
-
 while True:
     freq = source.get_current_freq()
 
@@ -65,7 +62,7 @@ while True:
     port1_forward = dsp.binary_to_complex(port1_forward_buffer)
     port1_reverse = dsp.binary_to_complex(port1_reverse_buffer)
 
-    np.savez(f"{filename}_port1_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
+    #np.savez(f"{filename}_port1_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
 
     # Filter out LO spike.
     filtered_port2_forward = dsp.filter(port2_forward)
@@ -88,7 +85,7 @@ while True:
     port1_forward = dsp.binary_to_complex(port1_forward_buffer)
     port1_reverse = dsp.binary_to_complex(port1_reverse_buffer)
 
-    np.savez(f"{filename}_port2_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
+    #np.savez(f"{filename}_port2_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
 
     # Filter out LO spike.
     filtered_port2_forward = dsp.filter(port2_forward)
@@ -101,20 +98,12 @@ while True:
     S22_mag, S22_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port2_reverse)
 
     # Send data to network GUI.
-    start = time.time()
     message = {}
     message["filtered_port1_forward"] = filtered_port1_forward[:500].real.tobytes()
     message["filtered_port2_forward"] = filtered_port2_forward[:500].real.tobytes()
     message["filtered_port1_reverse"] = filtered_port1_reverse[:500].real.tobytes()
     message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
-    bytes_to_send = pickle.dumps(message)
-    end = time.time()
-    print(f"Saving takes {end - start} s")
-    start = time.time()
-    gui_socket.sendall(len(bytes_to_send).to_bytes(4, "little"))
-    gui_socket.sendall(bytes_to_send)
-    end = time.time()
-    print(f"Sending takes {end - start} s for {len(bytes_to_send)} bytes.")
+    remote_connection.send_message(message)
 
     print(f"Frequency: {freq / 1e6:.3f} MHz")
     print(f"Calculated S11 magnitude is {S11_mag:.2f}.")
@@ -126,8 +115,8 @@ while True:
     print(f"Calculated S22 magnitude is {S22_mag:.2f}.")
     print(f"Calculated S22 phase is {S22_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
 
-    np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
+    #np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
 
-    break
+    #break
     #data_out_file.write(f"{freq},{S11_mag},{S12_mag},{S21_mag},{S22_mag}\n")
     #data_out_file.flush()

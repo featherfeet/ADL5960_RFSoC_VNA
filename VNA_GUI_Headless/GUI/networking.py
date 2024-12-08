@@ -1,5 +1,6 @@
 import io
 import socket
+import pickle
 import threading
 import numpy as np
 import queue
@@ -32,8 +33,8 @@ class RemoteConnection:
 
             while True:
                 # Send any enqueued messages to the FPGA.
-                if not queue.empty():
-                    message = queue.get()
+                if not self.queue.empty():
+                    message = self.queue.get()
                     message_pickled = pickle.dumps(message)
                     conn.sendall(len(message_pickled).to_bytes(4, "little"))
                     conn.sendall(message_pickled)
