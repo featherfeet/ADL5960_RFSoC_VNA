@@ -62,6 +62,27 @@ class SignalSourceUI:
             value=100,
             layout=widgets.Layout(width='300px')
         )
+
+        '''
+        Adding these for easier use
+        '''
+        self.set_start_freq = widgets.FloatText(
+            description='Freq (MHz):',
+            value=100,
+            layout=widgets.Layout(width='300px')
+        )
+        self.set_stop_freq = widgets.FloatText(
+            description='Freq (MHz):',
+            value=2000,
+            layout=widgets.Layout(width='300px')
+        )
+        self.set_resolution = widgets.FloatText(
+            description='Freq (MHz):',
+            value=100,
+            layout=widgets.Layout(width='300px')
+        )
+
+
         self.set_freq_button = widgets.Button(
             description="Set Frequency",
             layout=widgets.Layout(width='150px')
@@ -75,6 +96,10 @@ class SignalSourceUI:
         # Initial widget visibility
         self.user_freq_input.layout.visibility = "visible"
         self.set_freq_button.layout.visibility = "visible"
+        
+        # self.set_start_freq.layout.visibility = "hidden"
+        # self.set_stop_freq.layout.visibility = "hidden"
+        # self.set_resolution.layout.visibility = "hidden"
         self.generate_freq_button.layout.visibility = "hidden"
 
         # Add event listeners
@@ -91,18 +116,12 @@ class SignalSourceUI:
         Creates the layout for the UI components.
         """
         source_setup_layout = widgets.VBox([
-            self.general_header,
-            widgets.VBox([widgets.Label(value="Start Stop Slider (MHz)"), self.start_stop_slider]),
-            widgets.HBox([
-                widgets.VBox([widgets.Label(value="Center Slider (MHz)"), self.center_slider]),
-                widgets.VBox([widgets.Label("Span Slider (Hz)"), self.span_slider])
-            ]),
-            widgets.VBox([widgets.Label(value="Points per Sweep"), self.resolution_slider]),
-            self.calc_selection,
-            self.update_button,
             self.mode_header,
             self.mode_toggle,
             widgets.HBox([self.user_freq_input, self.set_freq_button]),
+            widgets.VBox([widgets.Label(value="Set Start (MHz)"), self.set_start_freq]),
+            widgets.VBox([widgets.Label(value="Set Stop (MHz)"), self.set_stop_freq]),
+            widgets.VBox([widgets.Label(value="Points per Sweep"), self.set_resolution]),
             self.generate_freq_button,
             self.out
         ], layout=widgets.Layout(padding='5px 0', margin='0', width = '90%'))
@@ -134,16 +153,16 @@ class SignalSourceUI:
             clear_output()
             try:
                 if self.mode_toggle.value == "Sweep Freq":
-                    frequency_list = self.source.generate_freq_points()
+                    self.source.generate_freq_points()
 
                     def freq_update_loop():
                         while True:
                             if not self.running:
                                 break
                             self.source.set_next_freq()
-                            #with self.out:
-                                #clear_output(wait=True)
-                            print(f"Setting frequency to {self.source.get_current_freq():.2f} Hz")
+                            with self.out:
+                                clear_output(wait=True)
+                                print(f"Setting frequency to {self.source.get_current_freq():.2f} Hz")
                             #time.sleep(0.3)
 
                     # Start the loop in a new thread
@@ -165,12 +184,18 @@ class SignalSourceUI:
             self.user_freq_input.layout.visibility = "visible"
             self.set_freq_button.layout.visibility = "visible"
             self.generate_freq_button.layout.visibility = "hidden"
+            self.set_start_freq.layout.visibility = "hidden"
+            self.set_stop_freq.layout.visibility = "hidden"
+            self.set_resolution.layout.visibility = "hidden"
             with self.out:
                 clear_output()
                 print("Mode changed to User Input Frequency.")
         else:
             self.user_freq_input.layout.visibility = "hidden"
             self.set_freq_button.layout.visibility = "hidden"
+            self.set_start_freq.layout.visibility = "visible"
+            self.set_stop_freq.layout.visibility = "visible"
+            self.set_resolution.layout.visibility = "visible"
             self.generate_freq_button.layout.visibility = "visible"
             with self.out:
                 clear_output()
@@ -183,21 +208,26 @@ class SignalSourceUI:
         with self.out:
             clear_output()
             try:
-                if self.calc_selection.value == "Start-Stop":
-                    self.source.update_parameters(
-                        start=self.start_stop_slider.value[0] * 10**6,
-                        stop=self.start_stop_slider.value[1] * 10**6,
-                        resolution=self.resolution_slider.value
-                    )
-                elif self.calc_selection.value == "Center-Span":
-                    self.source.update_parameters(
-                        center=self.center_slider.value * 10**6,
-                        span=self.span_slider.value * 10**6,
-                        resolution=self.resolution_slider.value
-                    )
-                self.start_stop_slider.value = (self.source.start / 10**6, self.source.stop / 10**6)
-                self.center_slider.value = self.source.center / 10**6
-                self.span_slider.value = self.source.span / 10**6
+                self.source.update_parameters(
+                    start = self.set_start_freq.value * 10**6,
+                    stop = self.set_stop_freq.value * 10**6,
+                    
+                )
+                # if self.calc_selection.value == "Start-Stop":
+                #     self.source.update_parameters(
+                #         start=self.start_stop_slider.value[0] * 10**6,
+                #         stop=self.start_stop_slider.value[1] * 10**6,
+                #         resolution=self.resolution_slider.value
+                #     )
+                # elif self.calc_selection.value == "Center-Span":
+                #     self.source.update_parameters(
+                #         center=self.center_slider.value * 10**6,
+                #         span=self.span_slider.value * 10**6,
+                #         resolution=self.resolution_slider.value
+                #     )
+                # self.start_stop_slider.value = (self.source.start / 10**6, self.source.stop / 10**6)
+                # self.center_slider.value = self.source.center / 10**6
+                # self.span_slider.value = self.source.span / 10**6
             except Exception as e:
                 print(f"Error: {e}")
 
