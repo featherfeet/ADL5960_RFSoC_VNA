@@ -48,12 +48,13 @@
 
 
 // IP VLNV: user.org:user:coeff_calc:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 (* X_CORE_INFO = "coeff_calc,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_coeff_calc_0_1,coeff_calc,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_coeff_calc_0_1 (
+  num_samples,
   s00_axis_aclk,
   s00_axis_aresetn,
   s00_axis_tready,
@@ -91,6 +92,7 @@ module design_1_coeff_calc_0_1 (
   m00_axis_tready
 );
 
+input wire [15 : 0] num_samples;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 147456000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *)
 input wire s00_axis_aclk;
@@ -185,6 +187,7 @@ input wire m00_axis_tready;
     .C_M00_AXIS_START_COUNT(32),  // Start count is the number of clock cycles the master will wait before initiating/issuing any transaction.
     .C_S00_AXIS_TDATA_WIDTH(32)  // AXI4Stream sink: Data Width
   ) inst (
+    .num_samples(num_samples),
     .s00_axis_aclk(s00_axis_aclk),
     .s00_axis_aresetn(s00_axis_aresetn),
     .s00_axis_tready(s00_axis_tready),

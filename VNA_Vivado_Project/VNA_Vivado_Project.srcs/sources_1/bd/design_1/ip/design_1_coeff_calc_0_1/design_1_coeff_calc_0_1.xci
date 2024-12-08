@@ -4,7 +4,7 @@
     "xci_name": "design_1_coeff_calc_0_1",
     "cell_name": "coeff_calc_0",
     "component_reference": "user.org:user:coeff_calc:1.0",
-    "ip_revision": "2",
+    "ip_revision": "3",
     "gen_directory": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_coeff_calc_0_1",
     "parameters": {
       "component_parameters": {
@@ -40,7 +40,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2" } ],
+        "IPREVISION": [ { "value": "3" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_coeff_calc_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -51,6 +51,7 @@
     },
     "boundary": {
       "ports": {
+        "num_samples": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
         "s00_axis_aclk": [ { "direction": "in" } ],
         "s00_axis_aresetn": [ { "direction": "in" } ],
         "s00_axis_tready": [ { "direction": "out" } ],

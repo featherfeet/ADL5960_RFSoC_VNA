@@ -97,10 +97,10 @@ verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/in
 "../../../bd/design_1/ip/design_1_cordic_0_0/sim/design_1_cordic_0_0.v" \
 
 sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
-"../../../bd/design_1/ipshared/fc9e/a11d/compute_coeff_averaging.sv" \
+"../../../bd/design_1/ipshared/6fcd/a11d/compute_coeff_averaging.sv" \
 
 verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" \
-"../../../bd/design_1/ipshared/fc9e/hdl/coeff_calc.v" \
+"../../../bd/design_1/ipshared/6fcd/hdl/coeff_calc.v" \
 "../../../bd/design_1/ip/design_1_coeff_calc_0_1/sim/design_1_coeff_calc_0_1.v" \
 "../../../bd/design_1/ip/design_1_fir_1_0/sim/design_1_fir_1_0.v" \
 "../../../bd/design_1/ip/design_1_fir_2_0/sim/design_1_fir_2_0.v" \
@@ -108,11 +108,12 @@ verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/in
 "../../../bd/design_1/ip/design_1_cordic_1_0/sim/design_1_cordic_1_0.v" \
 "../../../bd/design_1/ip/design_1_cordic_2_0/sim/design_1_cordic_2_0.v" \
 "../../../bd/design_1/ip/design_1_cordic_3_0/sim/design_1_cordic_3_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
 "../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_auto_ds_1/sim/design_1_auto_ds_1.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
-"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 

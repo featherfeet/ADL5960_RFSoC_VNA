@@ -290,10 +290,10 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../VNA_Vivado_Project.g
 "../../../bd/design_1/ip/design_1_cordic_0_0/sim/design_1_cordic_0_0.v" \
 
 vlog -work xil_defaultlib  -incr "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_17 -l zynq_ultra_ps_e_vip_v1_0_17 -l lib_pkg_v1_0_4 -l fifo_generator_v13_2_10 -l lib_fifo_v1_0_19 -l lib_srl_fifo_v1_0_4 -l lib_cdc_v1_0_3 -l axi_datamover_v5_1_33 -l axi_sg_v4_1_18 -l axi_dma_v7_1_32 -l proc_sys_reset_v5_0_15 -l generic_baseblocks_v2_1_2 -l axi_register_slice_v2_1_31 -l axi_data_fifo_v2_1_30 -l axi_crossbar_v2_1_32 -l xlconstant_v1_1_9 -l smartconnect_v1_0 -l axi_protocol_converter_v2_1_31 -l axi_clock_converter_v2_1_30 -l blk_mem_gen_v8_4_8 -l axi_dwidth_converter_v2_1_31 \
-"../../../bd/design_1/ipshared/fc9e/a11d/compute_coeff_averaging.sv" \
+"../../../bd/design_1/ipshared/6fcd/a11d/compute_coeff_averaging.sv" \
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_17 -l zynq_ultra_ps_e_vip_v1_0_17 -l lib_pkg_v1_0_4 -l fifo_generator_v13_2_10 -l lib_fifo_v1_0_19 -l lib_srl_fifo_v1_0_4 -l lib_cdc_v1_0_3 -l axi_datamover_v5_1_33 -l axi_sg_v4_1_18 -l axi_dma_v7_1_32 -l proc_sys_reset_v5_0_15 -l generic_baseblocks_v2_1_2 -l axi_register_slice_v2_1_31 -l axi_data_fifo_v2_1_30 -l axi_crossbar_v2_1_32 -l xlconstant_v1_1_9 -l smartconnect_v1_0 -l axi_protocol_converter_v2_1_31 -l axi_clock_converter_v2_1_30 -l blk_mem_gen_v8_4_8 -l axi_dwidth_converter_v2_1_31 \
-"../../../bd/design_1/ipshared/fc9e/hdl/coeff_calc.v" \
+"../../../bd/design_1/ipshared/6fcd/hdl/coeff_calc.v" \
 "../../../bd/design_1/ip/design_1_coeff_calc_0_1/sim/design_1_coeff_calc_0_1.v" \
 "../../../bd/design_1/ip/design_1_fir_1_0/sim/design_1_fir_1_0.v" \
 "../../../bd/design_1/ip/design_1_fir_2_0/sim/design_1_fir_2_0.v" \
@@ -301,6 +301,7 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../VNA_Vivado_Project.g
 "../../../bd/design_1/ip/design_1_cordic_1_0/sim/design_1_cordic_1_0.v" \
 "../../../bd/design_1/ip/design_1_cordic_2_0/sim/design_1_cordic_2_0.v" \
 "../../../bd/design_1/ip/design_1_cordic_3_0/sim/design_1_cordic_3_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
 
 vlog -work axi_protocol_converter_v2_1_31  -incr -v2k5 "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_17 -l zynq_ultra_ps_e_vip_v1_0_17 -l lib_pkg_v1_0_4 -l fifo_generator_v13_2_10 -l lib_fifo_v1_0_19 -l lib_srl_fifo_v1_0_4 -l lib_cdc_v1_0_3 -l axi_datamover_v5_1_33 -l axi_sg_v4_1_18 -l axi_dma_v7_1_32 -l proc_sys_reset_v5_0_15 -l generic_baseblocks_v2_1_2 -l axi_register_slice_v2_1_31 -l axi_data_fifo_v2_1_30 -l axi_crossbar_v2_1_32 -l xlconstant_v1_1_9 -l smartconnect_v1_0 -l axi_protocol_converter_v2_1_31 -l axi_clock_converter_v2_1_30 -l blk_mem_gen_v8_4_8 -l axi_dwidth_converter_v2_1_31 \
 "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
@@ -319,7 +320,7 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../VNA_Vivado_Project.g
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_auto_ds_1/sim/design_1_auto_ds_1.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
-"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

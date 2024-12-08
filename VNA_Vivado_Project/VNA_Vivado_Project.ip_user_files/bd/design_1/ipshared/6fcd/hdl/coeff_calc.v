@@ -27,7 +27,7 @@
 	)
 	(
 		// Users to add ports here
-
+        input wire [15:0] num_samples,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -81,7 +81,10 @@
 	wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] m00_out, m01_out, m02_out, m03_out;
 	assign m00_axis_tdata = {m00_out, m01_out, m02_out, m03_out};
 	
-    compute_coeff_averaging (  .s00_axis_aclk(s00_axis_aclk),
+    compute_coeff_averaging (  
+        .num_samples(num_samples),
+        
+        .s00_axis_aclk(s00_axis_aclk),
         .s00_axis_aresetn(s00_axis_aresetn),
         .s00_axis_tready(s00_axis_tready),
         .s00_axis_tdata(s00_axis_tdata),

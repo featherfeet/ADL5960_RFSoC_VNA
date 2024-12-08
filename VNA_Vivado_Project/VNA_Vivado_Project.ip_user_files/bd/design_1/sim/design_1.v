@@ -2,15 +2,15 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Sun Dec  8 11:35:38 2024
-//Host        : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
+//Date        : Sun Dec  8 16:47:18 2024
+//Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=27,numNonXlnxBlks=12,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_board_cnt=1,da_clkrst_cnt=70,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=28,numNonXlnxBlks=12,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_board_cnt=1,da_clkrst_cnt=70,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc0_clk_clk_n,
     adc0_clk_clk_p,
@@ -306,6 +306,7 @@ module design_1
   wire vin2_01_1_V_P;
   wire vin2_23_1_V_N;
   wire vin2_23_1_V_P;
+  wire [15:0]xlconstant_0_dout;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE;
@@ -543,6 +544,7 @@ module design_1
         .m00_axis_tlast(coeff_calc_0_M00_AXIS_TLAST),
         .m00_axis_tready(coeff_calc_0_M00_AXIS_TREADY),
         .m00_axis_tvalid(coeff_calc_0_M00_AXIS_TVALID),
+        .num_samples(xlconstant_0_dout),
         .s00_axis_aclk(clk_wiz_0_clk_out1),
         .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
         .s00_axis_tdata(cordic_0_M00_AXIS_TDATA),
@@ -1097,6 +1099,8 @@ module design_1
         .vin2_01_p(vin2_01_1_V_P),
         .vin2_23_n(vin2_23_1_V_N),
         .vin2_23_p(vin2_23_1_V_P));
+  design_1_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
   design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.emio_gpio_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),

@@ -48,7 +48,8 @@
       "fir_3": "",
       "cordic_1": "",
       "cordic_2": "",
-      "cordic_3": ""
+      "cordic_3": "",
+      "xlconstant_0": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -2625,7 +2626,7 @@
       },
       "coeff_calc_0": {
         "vlnv": "user.org:user:coeff_calc:1.0",
-        "ip_revision": "2",
+        "ip_revision": "3",
         "xci_name": "design_1_coeff_calc_0_1",
         "xci_path": "ip/design_1_coeff_calc_0_1/design_1_coeff_calc_0_1.xci",
         "inst_hier_path": "coeff_calc_0"
@@ -2671,6 +2672,21 @@
         "xci_name": "design_1_cordic_3_0",
         "xci_path": "ip/design_1_cordic_3_0/design_1_cordic_3_0.xci",
         "inst_hier_path": "cordic_3"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "65535"
+          },
+          "CONST_WIDTH": {
+            "value": "16"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2940,11 +2956,11 @@
           "cordic_2/m00_axis_aclk",
           "cordic_3/s00_axis_aclk",
           "cordic_3/m00_axis_aclk",
-          "coeff_calc_0/m00_axis_aclk",
-          "coeff_calc_0/s03_axis_aclk",
-          "coeff_calc_0/s02_axis_aclk",
+          "coeff_calc_0/s00_axis_aclk",
           "coeff_calc_0/s01_axis_aclk",
-          "coeff_calc_0/s00_axis_aclk"
+          "coeff_calc_0/s02_axis_aclk",
+          "coeff_calc_0/s03_axis_aclk",
+          "coeff_calc_0/m00_axis_aclk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -3171,6 +3187,12 @@
         "ports": [
           "usp_rf_data_converter_0/clk_adc0",
           "clk_wiz_0/clk_in1"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "coeff_calc_0/num_samples"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {

@@ -1,4 +1,4 @@
- module compute_coeff_averaging #   
+module compute_coeff_averaging #   
     (
         parameter integer C_S00_AXIS_TDATA_WIDTH  = 32,
         parameter integer C_M00_AXIS_TDATA_WIDTH  = 32
@@ -65,7 +65,7 @@
     );
 
     //Averaging count state machine
-    enum {ACCUMULATE, AVERAGE, CALCULATE, SEND, WAITING} state;
+    enum {ACCUMULATE, AVERAGE, DIVIDE, CALCULATE, SEND, WAITING} state;
     logic [15:0] count;
     logic [31:0] phase_s11_accumulator;
     logic [31:0] phase_s12_accumulator;
@@ -75,6 +75,10 @@
     logic [31:0] mag_b1_accumulator;
     logic [31:0] mag_a2_accumulator;
     logic [31:0] mag_b2_accumulator;
+    logic [16:0] mag_a1_accumulator_av;
+    logic [16:0] mag_b1_accumulator_av;
+    logic [16:0] mag_a2_accumulator_av;
+    logic [16:0] mag_b2_accumulator_av;
     logic [16:0] gamma_mag_s11;
     logic [16:0] gamma_mag_s12;
     logic [16:0] gamma_mag_s21;
@@ -199,25 +203,25 @@
                     phase_s12_accumulator <= phase_s12_accumulator / num_samples;
                     phase_s21_accumulator <= phase_s21_accumulator / num_samples;
                     phase_s22_accumulator <= phase_s22_accumulator / num_samples;
-                    mag_a1_accumulator <= mag_a1_accumulator / num_samples;
-                    mag_b1_accumulator <= mag_b1_accumulator / num_samples;
-                    mag_a2_accumulator <= mag_a2_accumulator / num_samples;
-                    mag_b2_accumulator <= mag_b2_accumulator / num_samples;
+                    mag_a1_accumulator_av <= mag_a1_accumulator / num_samples;
+                    mag_b1_accumulator_av <= mag_b1_accumulator / num_samples;
+                    mag_a2_accumulator_av <= mag_a2_accumulator / num_samples;
+                    mag_b2_accumulator_av <= mag_b2_accumulator / num_samples;
                     state <= CALCULATE;
                 end
                 CALCULATE: begin
                     // Once again lets give the divides a chance
                     if(mag_a1_accumulator != 0) begin
-                        gamma_mag_s11 <= mag_b1_accumulator/mag_a1_accumulator;
-                        gamma_mag_s12 <= mag_b2_accumulator/mag_a1_accumulator;
+                        gamma_mag_s11 <= mag_b1_accumulator_av/mag_a1_accumulator_av;
+                        gamma_mag_s12 <= mag_b2_accumulator_av/mag_a1_accumulator_av;
                     end else begin
                         gamma_mag_s11 <= 0;
                         gamma_mag_s12 <= 0;
                     end
 
                     if(mag_a2_accumulator != 0) begin 
-                        gamma_mag_s21 <= mag_b1_accumulator/mag_a2_accumulator;
-                        gamma_mag_s22 <= mag_b2_accumulator/mag_a2_accumulator;
+                        gamma_mag_s21 <= mag_b1_accumulator_av/mag_a2_accumulator_av;
+                        gamma_mag_s22 <= mag_b2_accumulator_av/mag_a2_accumulator_av;
                     end else begin
                         gamma_mag_s21 <= 0;
                         gamma_mag_s22 <= 0;

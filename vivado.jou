@@ -3,67 +3,32 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Dec  8 09:55:35 2024
-# Process ID: 10385
+# Start of session at: Sun Dec  8 16:36:39 2024
+# Process ID: 38441
 # Current directory: /home/akeirn/Documents/ADL5960_RFSoC_VNA
 # Command line: vivado
 # Log file: /home/akeirn/Documents/ADL5960_RFSoC_VNA/vivado.log
 # Journal file: /home/akeirn/Documents/ADL5960_RFSoC_VNA/vivado.jou
-# Running On        :eecs-digital-26
+# Running On        :eecs-digital-27
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
-# CPU Frequency     :800.933 MHz
+# CPU Frequency     :2949.142 MHz
 # CPU Physical cores:16
 # CPU Logical cores :24
 # Host memory       :33325 MB
 # Swap memory       :8589 MB
 # Total Virtual     :41915 MB
-# Available Virtual :39708 MB
+# Available Virtual :37228 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr
 open_bd_design {/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd}
 update_compile_order -fileset sources_1
-ipx::edit_ip_in_project -upgrade true -name adc_combiner_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/adc_combiner_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0/component.xml
+ipx::edit_ip_in_project -upgrade true -name coeff_calc_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/coeff_calc_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0/component.xml
 update_compile_order -fileset sources_1
-close_project
-create_peripheral user.org user fir 1.0 -dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo
-add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:fir:1.0]
-add_peripheral_interface S01_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:fir:1.0]
-add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:fir:1.0]
-generate_peripheral -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:fir:1.0]
-write_peripheral [ipx::find_open_core user.org:user:fir:1.0]
-set_property  ip_repo_paths  {/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0} [current_project]
-update_ip_catalog -rebuild
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:fir:1.0 fir_0
-endgroup
-ipx::edit_ip_in_project -upgrade true -name fir_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/fir_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0/component.xml
-update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
 ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S00_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-set_property value_validation_type none [ipx::get_user_parameters C_S00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S01_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-set_property value_validation_type none [ipx::get_user_parameters C_S01_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
-set_property core_revision 2 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::check_integrity [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0
-set_property location {2 979 -37} [get_bd_cells fir_0]
-ipx::edit_ip_in_project -upgrade true -name adc_combiner_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/adc_combiner_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0/component.xml
-update_compile_order -fileset sources_1
-ipx::unload_core /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0/component.xml
-close_project
-ipx::edit_ip_in_project -upgrade true -name fir_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/fir_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0/component.xml
-update_compile_order -fileset sources_1
-add_files -norecurse /home/akeirn/Documents/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/fir_15.sv
-update_compile_order -fileset sources_1
 set_property core_revision 3 [ipx::current_core]
 ipx::update_source_project_archive -component [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
@@ -72,280 +37,26 @@ ipx::check_integrity [ipx::current_core]
 ipx::save_core [ipx::current_core]
 ipx::move_temp_component_back -component [ipx::current_core]
 close_project -delete
-update_ip_catalog -rebuild -repo_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0
-delete_bd_objs [get_bd_cells fir_0]
-create_peripheral user.org user fir 1.0 -dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo
-add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:fir:1.0]
-add_peripheral_interface S01_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:fir:1.0]
-add_peripheral_interface M00_AXIS -interface_mode master -axi_type stream [ipx::find_open_core user.org:user:fir:1.0]
-generate_peripheral -force [ipx::find_open_core user.org:user:fir:1.0]
-write_peripheral [ipx::find_open_core user.org:user:fir:1.0]
-set_property  ip_repo_paths  {/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0} [current_project]
-update_ip_catalog -rebuild
-update_ip_catalog -rebuild -scan_changes
-report_ip_status -name ip_status
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:fir:1.0 fir_0
-endgroup
-ipx::edit_ip_in_project -upgrade true -name fir_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/fir_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0/component.xml
-update_compile_order -fileset sources_1
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S01_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-set_property value_validation_type none [ipx::get_user_parameters C_S01_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S00_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-set_property value_validation_type none [ipx::get_user_parameters C_S00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
-ipx::merge_project_changes files [ipx::current_core]
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S01_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S00_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-add_files -norecurse /home/akeirn/Documents/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/fir_15.sv
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-ipx::merge_project_changes files [ipx::current_core]
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property core_revision 2 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::check_integrity [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0
-report_ip_status -name ip_status 
-upgrade_ip [get_ips  design_1_fir_0_1] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_1_fir_0_1] -no_script -sync -force -quiet
-create_peripheral user.org user cordic 1.0 -dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo
-add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:cordic:1.0]
-add_peripheral_interface M00_AXIS -interface_mode master -axi_type stream [ipx::find_open_core user.org:user:cordic:1.0]
-generate_peripheral [ipx::find_open_core user.org:user:cordic:1.0]
-write_peripheral [ipx::find_open_core user.org:user:cordic:1.0]
-set_property  ip_repo_paths  {/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0} [current_project]
-update_ip_catalog -rebuild
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:cordic:1.0 cordic_0
-endgroup
-set_property location {5 1876 -313} [get_bd_cells cordic_0]
-set_property location {3 1720 -292} [get_bd_cells cordic_0]
-set_property location {3 1647 -253} [get_bd_cells cordic_0]
-ipx::edit_ip_in_project -upgrade true -name cordic_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/cordic_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0/component.xml
-update_compile_order -fileset sources_1
-add_files -norecurse /home/akeirn/Documents/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/cordic.sv
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-ipx::merge_project_changes files [ipx::current_core]
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property core_revision 2 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::check_integrity [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0
-report_ip_status -name ip_status 
-upgrade_ip [get_ips  design_1_cordic_0_0] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_1_cordic_0_0] -no_script -sync -force -quiet
-create_peripheral user.org user coeff_calc 1.0 -dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo
-add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface S01_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface S02_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface S03_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface M00_AXI -interface_mode master -axi_type lite [ipx::find_open_core user.org:user:coeff_calc:1.0]
-generate_peripheral -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:coeff_calc:1.0]
-write_peripheral [ipx::find_open_core user.org:user:coeff_calc:1.0]
-set_property  ip_repo_paths  {/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0} [current_project]
-update_ip_catalog -rebuild
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:coeff_calc:1.0 coeff_calc_0
-endgroup
-ipx::edit_ip_in_project -upgrade true -name coeff_calc_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/coeff_calc_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0/component.xml
-update_compile_order -fileset sources_1
-set_property core_revision 2 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::check_integrity [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
-delete_bd_objs [get_bd_cells coeff_calc_0]
-create_peripheral user.org user coeff_calc 1.0 -dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo
-add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface S01_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface S02_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface S03_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-add_peripheral_interface M00_AXIS -interface_mode master -axi_type stream [ipx::find_open_core user.org:user:coeff_calc:1.0]
-generate_peripheral -force [ipx::find_open_core user.org:user:coeff_calc:1.0]
-write_peripheral [ipx::find_open_core user.org:user:coeff_calc:1.0]
-set_property  ip_repo_paths  {/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/fir_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0 /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0} [current_project]
-update_ip_catalog -rebuild
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:coeff_calc:1.0 coeff_calc_0
-endgroup
-ipx::edit_ip_in_project -upgrade true -name coeff_calc_v1_0_project -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.tmp/coeff_calc_v1_0_project /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0/component.xml
-update_compile_order -fileset sources_1
-add_files -norecurse /home/akeirn/Documents/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/compute_coeff_averaging.sv
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-ipx::merge_project_changes files [ipx::current_core]
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_M00_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
-set_property value_validation_type none [ipx::get_user_parameters C_M00_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
-set_property core_revision 2 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::check_integrity [ipx::current_core]
-ipx::save_core [ipx::current_core]
-ipx::move_temp_component_back -component [ipx::current_core]
-close_project -delete
 update_ip_catalog -rebuild -repo_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
 report_ip_status -name ip_status 
-upgrade_ip [get_ips  design_1_coeff_calc_0_1] -log ip_upgrade.log
+upgrade_ip -vlnv user.org:user:coeff_calc:1.0 [get_ips  design_1_coeff_calc_0_1] -log ip_upgrade.log
 export_ip_user_files -of_objects [get_ips design_1_coeff_calc_0_1] -no_script -sync -force -quiet
 generate_target all [get_files  /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd]
-delete_bd_objs [get_bd_intf_nets usp_rf_data_converter_0_m21_axis] [get_bd_intf_nets usp_rf_data_converter_0_m00_axis] [get_bd_intf_nets usp_rf_data_converter_0_m01_axis] [get_bd_intf_nets usp_rf_data_converter_0_m02_axis] [get_bd_intf_nets usp_rf_data_converter_0_m03_axis] [get_bd_intf_nets usp_rf_data_converter_0_m20_axis] [get_bd_intf_nets usp_rf_data_converter_0_m22_axis] [get_bd_intf_nets usp_rf_data_converter_0_m23_axis] [get_bd_intf_nets adc_combiner_0_M00_AXIS] [get_bd_cells adc_combiner_0]
-set_property location {1.5 1116 106} [get_bd_cells fir_0]
-set_property location {2 1118 81} [get_bd_cells fir_0]
+export_ip_user_files -of_objects [get_files /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.ip_user_files/sim_scripts -ip_user_files_dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.ip_user_files -ipstatic_source_dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/modelsim} {questa=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/questa} {xcelium=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/xcelium} {vcs=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/vcs} {riviera=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
 startgroup
-create_bd_cell -type ip -vlnv user.org:user:fir:1.0 fir_1
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
 endgroup
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:fir:1.0 fir_2
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:fir:1.0 fir_3
-endgroup
-set_property location {2 1135 522} [get_bd_cells fir_0]
-set_property location {2 1114 199} [get_bd_cells fir_2]
-set_property location {2 1178 -7} [get_bd_cells fir_3]
-set_property location {2 1082 -203} [get_bd_cells fir_1]
-set_property location {3 1526 -221} [get_bd_cells cordic_0]
-set_property location {4 1963 -409} [get_bd_cells coeff_calc_0]
-set_property location {3 1578 -192} [get_bd_cells cordic_0]
-set_property location {3 1579 -221} [get_bd_cells cordic_0]
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:cordic:1.0 cordic_1
-endgroup
-set_property location {3 1591 -26} [get_bd_cells cordic_1]
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:cordic:1.0 cordic_2
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:cordic:1.0 cordic_3
-endgroup
-set_property location {3 1370 -2} [get_bd_cells cordic_0]
-set_property location {3 1411 180} [get_bd_cells cordic_1]
-set_property location {3 1363 378} [get_bd_cells cordic_2]
-set_property location {3 1456 498} [get_bd_cells cordic_3]
-set_property location {3.5 1821 186} [get_bd_cells coeff_calc_0]
-connect_bd_intf_net [get_bd_intf_pins cordic_0/M00_AXIS] [get_bd_intf_pins coeff_calc_0/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins cordic_1/M00_AXIS] [get_bd_intf_pins coeff_calc_0/S01_AXIS]
-connect_bd_intf_net [get_bd_intf_pins cordic_2/M00_AXIS] [get_bd_intf_pins coeff_calc_0/S02_AXIS]
-connect_bd_intf_net [get_bd_intf_pins cordic_3/M00_AXIS] [get_bd_intf_pins coeff_calc_0/S03_AXIS]
-connect_bd_intf_net [get_bd_intf_pins fir_1/M00_AXIS] [get_bd_intf_pins cordic_0/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins fir_3/M00_AXIS] [get_bd_intf_pins cordic_1/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins fir_2/M00_AXIS] [get_bd_intf_pins cordic_2/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins fir_0/M00_AXIS] [get_bd_intf_pins cordic_3/S00_AXIS]
-set_property location {3 1460 -38} [get_bd_cells cordic_0]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m00_axis] [get_bd_intf_pins fir_3/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m01_axis] [get_bd_intf_pins fir_3/S01_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m02_axis] [get_bd_intf_pins fir_2/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m03_axis] [get_bd_intf_pins fir_2/S01_AXIS]
-delete_bd_objs [get_bd_intf_nets usp_rf_data_converter_0_m00_axis]
-delete_bd_objs [get_bd_intf_nets usp_rf_data_converter_0_m01_axis]
-delete_bd_objs [get_bd_intf_nets usp_rf_data_converter_0_m02_axis]
-delete_bd_objs [get_bd_intf_nets usp_rf_data_converter_0_m03_axis]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m00_axis] [get_bd_intf_pins fir_1/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m01_axis] [get_bd_intf_pins fir_1/S01_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m02_axis] [get_bd_intf_pins fir_3/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m03_axis] [get_bd_intf_pins fir_3/S01_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m20_axis] [get_bd_intf_pins fir_2/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m21_axis] [get_bd_intf_pins fir_2/S01_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m22_axis] [get_bd_intf_pins fir_0/S00_AXIS]
-connect_bd_intf_net [get_bd_intf_pins usp_rf_data_converter_0/m23_axis] [get_bd_intf_pins fir_0/S01_AXIS]
-connect_bd_intf_net [get_bd_intf_pins coeff_calc_0/M00_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins coeff_calc_0/m00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins coeff_calc_0/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins coeff_calc_0/s01_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins coeff_calc_0/s02_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins coeff_calc_0/s03_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins cordic_0/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins cordic_1/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins cordic_2/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Freq {99} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins cordic_3/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_0/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_0/s01_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_1/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_1/s01_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_2/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_2/s01_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_3/s00_axis_aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (147 MHz)} Freq {147} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins fir_3/s01_axis_aclk]
-endgroup
-undo
-connect_bd_net [get_bd_pins fir_0/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_0/s01_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_0/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_2/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_2/s01_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_2/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_3/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_3/s01_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_3/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_1/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_1/s01_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins fir_1/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_0/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_0/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_1/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_1/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_2/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_2/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_3/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins cordic_3/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins coeff_calc_0/m00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins coeff_calc_0/s03_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins coeff_calc_0/s02_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins coeff_calc_0/s01_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_pins coeff_calc_0/s00_axis_aclk] [get_bd_pins clk_wiz_0/clk_out1]
-save_bd_design
-connect_bd_net [get_bd_pins cordic_3/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_3/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_2/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_2/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_1/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_1/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_0/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins cordic_0/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_1/s01_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_1/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_1/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_3/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_3/s01_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_3/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_2/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_2/s01_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_2/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_0/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_0/s01_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins fir_0/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins coeff_calc_0/s00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins coeff_calc_0/s01_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins coeff_calc_0/s02_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins coeff_calc_0/s03_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-connect_bd_net [get_bd_pins coeff_calc_0/m00_axis_aresetn] [get_bd_pins rst_clk_wiz_0_147M/peripheral_aresetn]
-validate_bd_design
+set_property -dict [list \
+  CONFIG.CONST_VAL {65535} \
+  CONFIG.CONST_WIDTH {16} \
+] [get_bd_cells xlconstant_0]
+set_property location {4 1796 -81} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins coeff_calc_0/num_samples]
 report_ip_status -name ip_status 
 generate_target all [get_files  /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd]
 export_ip_user_files -of_objects [get_files /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
 export_simulation -of_objects [get_files /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.ip_user_files/sim_scripts -ip_user_files_dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.ip_user_files -ipstatic_source_dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/modelsim} {questa=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/questa} {xcelium=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/xcelium} {vcs=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/vcs} {riviera=/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
