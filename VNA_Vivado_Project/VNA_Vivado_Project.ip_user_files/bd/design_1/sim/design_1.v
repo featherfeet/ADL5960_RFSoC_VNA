@@ -2,15 +2,15 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Wed Dec  4 19:36:22 2024
-//Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
+//Date        : Sun Dec  8 11:35:38 2024
+//Host        : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=19,numNonXlnxBlks=4,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_board_cnt=1,da_clkrst_cnt=53,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=27,numNonXlnxBlks=12,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_board_cnt=1,da_clkrst_cnt=70,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc0_clk_clk_n,
     adc0_clk_clk_p,
@@ -70,10 +70,6 @@ module design_1
   wire adc0_clk_1_CLK_P;
   wire adc2_clk_1_CLK_N;
   wire adc2_clk_1_CLK_P;
-  wire [127:0]adc_combiner_0_M00_AXIS_TDATA;
-  wire adc_combiner_0_M00_AXIS_TLAST;
-  wire adc_combiner_0_M00_AXIS_TREADY;
-  wire adc_combiner_0_M00_AXIS_TVALID;
   wire adl1_sdi_1;
   wire adl2_sdi_1;
   wire [31:0]axi_dma_0_M_AXI_S2MM_AWADDR;
@@ -112,6 +108,50 @@ module design_1
   wire axi_smc_M00_AXI_WVALID;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_locked;
+  wire [127:0]coeff_calc_0_M00_AXIS_TDATA;
+  wire coeff_calc_0_M00_AXIS_TLAST;
+  wire coeff_calc_0_M00_AXIS_TREADY;
+  wire coeff_calc_0_M00_AXIS_TVALID;
+  wire [31:0]cordic_0_M00_AXIS_TDATA;
+  wire cordic_0_M00_AXIS_TLAST;
+  wire cordic_0_M00_AXIS_TREADY;
+  wire [3:0]cordic_0_M00_AXIS_TSTRB;
+  wire cordic_0_M00_AXIS_TVALID;
+  wire [31:0]cordic_1_M00_AXIS_TDATA;
+  wire cordic_1_M00_AXIS_TLAST;
+  wire cordic_1_M00_AXIS_TREADY;
+  wire [3:0]cordic_1_M00_AXIS_TSTRB;
+  wire cordic_1_M00_AXIS_TVALID;
+  wire [31:0]cordic_2_M00_AXIS_TDATA;
+  wire cordic_2_M00_AXIS_TLAST;
+  wire cordic_2_M00_AXIS_TREADY;
+  wire [3:0]cordic_2_M00_AXIS_TSTRB;
+  wire cordic_2_M00_AXIS_TVALID;
+  wire [31:0]cordic_3_M00_AXIS_TDATA;
+  wire cordic_3_M00_AXIS_TLAST;
+  wire cordic_3_M00_AXIS_TREADY;
+  wire [3:0]cordic_3_M00_AXIS_TSTRB;
+  wire cordic_3_M00_AXIS_TVALID;
+  wire [31:0]fir_0_M00_AXIS_TDATA;
+  wire fir_0_M00_AXIS_TLAST;
+  wire fir_0_M00_AXIS_TREADY;
+  wire [3:0]fir_0_M00_AXIS_TSTRB;
+  wire fir_0_M00_AXIS_TVALID;
+  wire [31:0]fir_1_M00_AXIS_TDATA;
+  wire fir_1_M00_AXIS_TLAST;
+  wire fir_1_M00_AXIS_TREADY;
+  wire [3:0]fir_1_M00_AXIS_TSTRB;
+  wire fir_1_M00_AXIS_TVALID;
+  wire [31:0]fir_2_M00_AXIS_TDATA;
+  wire fir_2_M00_AXIS_TLAST;
+  wire fir_2_M00_AXIS_TREADY;
+  wire [3:0]fir_2_M00_AXIS_TSTRB;
+  wire fir_2_M00_AXIS_TVALID;
+  wire [31:0]fir_3_M00_AXIS_TDATA;
+  wire fir_3_M00_AXIS_TLAST;
+  wire fir_3_M00_AXIS_TREADY;
+  wire [3:0]fir_3_M00_AXIS_TSTRB;
+  wire fir_3_M00_AXIS_TVALID;
   wire lmx_sdi_1;
   wire [39:0]ps8_0_axi_periph_M00_AXI_ARADDR;
   wire ps8_0_axi_periph_M00_AXI_ARREADY;
@@ -223,14 +263,14 @@ module design_1
   wire spi_control_w_1_chip_sel_out;
   wire [23:0]spi_control_w_1_data_out;
   wire spi_control_w_1_data_valid_out;
+  wire spi_control_w_2_busy_out;
+  wire spi_control_w_2_chip_clk_out;
+  wire spi_control_w_2_chip_data_out;
+  wire spi_control_w_2_chip_sel_out;
+  wire [23:0]spi_control_w_2_data_out;
+  wire spi_control_w_2_data_valid_out;
   wire [23:0]spi_lmx_0_command_out;
   wire spi_lmx_0_trigger_out;
-  wire spi_lmx_control_w_0_busy_out;
-  wire spi_lmx_control_w_0_chip_clk_out;
-  wire spi_lmx_control_w_0_chip_data_out;
-  wire spi_lmx_control_w_0_chip_sel_out;
-  wire [23:0]spi_lmx_control_w_0_data_out;
-  wire spi_lmx_control_w_0_data_valid_out;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
   wire usp_rf_data_converter_0_clk_adc0;
@@ -354,10 +394,10 @@ module design_1
   assign adl2_sck = spi_control_w_1_chip_clk_out;
   assign adl2_sdi_1 = adl2_sdi;
   assign adl2_sdo = spi_control_w_1_chip_data_out;
-  assign lmx_cs = spi_lmx_control_w_0_chip_sel_out;
-  assign lmx_sck = spi_lmx_control_w_0_chip_clk_out;
+  assign lmx_cs = spi_control_w_2_chip_sel_out;
+  assign lmx_sck = spi_control_w_2_chip_clk_out;
   assign lmx_sdi_1 = lmx_sdi;
-  assign lmx_sdo = spi_lmx_control_w_0_chip_data_out;
+  assign lmx_sdo = spi_control_w_2_chip_data_out;
   assign sysref_in_1_diff_n = sysref_in_diff_n;
   assign sysref_in_1_diff_p = sysref_in_diff_p;
   assign vin0_01_1_V_N = vin0_01_v_n;
@@ -368,69 +408,6 @@ module design_1
   assign vin2_01_1_V_P = vin2_01_v_p;
   assign vin2_23_1_V_N = vin2_23_v_n;
   assign vin2_23_1_V_P = vin2_23_v_p;
-  design_1_adc_combiner_0_0 adc_combiner_0
-       (.m00_axis_aclk(clk_wiz_0_clk_out1),
-        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .m00_axis_tdata(adc_combiner_0_M00_AXIS_TDATA),
-        .m00_axis_tlast(adc_combiner_0_M00_AXIS_TLAST),
-        .m00_axis_tready(adc_combiner_0_M00_AXIS_TREADY),
-        .m00_axis_tvalid(adc_combiner_0_M00_AXIS_TVALID),
-        .s00_axis_aclk(clk_wiz_0_clk_out1),
-        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s00_axis_tdata(usp_rf_data_converter_0_m00_axis_TDATA),
-        .s00_axis_tlast(1'b0),
-        .s00_axis_tready(usp_rf_data_converter_0_m00_axis_TREADY),
-        .s00_axis_tstrb({1'b1,1'b1}),
-        .s00_axis_tvalid(usp_rf_data_converter_0_m00_axis_TVALID),
-        .s01_axis_aclk(clk_wiz_0_clk_out1),
-        .s01_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s01_axis_tdata(usp_rf_data_converter_0_m01_axis_TDATA),
-        .s01_axis_tlast(1'b0),
-        .s01_axis_tready(usp_rf_data_converter_0_m01_axis_TREADY),
-        .s01_axis_tstrb({1'b1,1'b1}),
-        .s01_axis_tvalid(usp_rf_data_converter_0_m01_axis_TVALID),
-        .s02_axis_aclk(clk_wiz_0_clk_out1),
-        .s02_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s02_axis_tdata(usp_rf_data_converter_0_m02_axis_TDATA),
-        .s02_axis_tlast(1'b0),
-        .s02_axis_tready(usp_rf_data_converter_0_m02_axis_TREADY),
-        .s02_axis_tstrb({1'b1,1'b1}),
-        .s02_axis_tvalid(usp_rf_data_converter_0_m02_axis_TVALID),
-        .s03_axis_aclk(clk_wiz_0_clk_out1),
-        .s03_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s03_axis_tdata(usp_rf_data_converter_0_m03_axis_TDATA),
-        .s03_axis_tlast(1'b0),
-        .s03_axis_tready(usp_rf_data_converter_0_m03_axis_TREADY),
-        .s03_axis_tstrb({1'b1,1'b1}),
-        .s03_axis_tvalid(usp_rf_data_converter_0_m03_axis_TVALID),
-        .s04_axis_aclk(clk_wiz_0_clk_out1),
-        .s04_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s04_axis_tdata(usp_rf_data_converter_0_m20_axis_TDATA),
-        .s04_axis_tlast(1'b0),
-        .s04_axis_tready(usp_rf_data_converter_0_m20_axis_TREADY),
-        .s04_axis_tstrb({1'b1,1'b1}),
-        .s04_axis_tvalid(usp_rf_data_converter_0_m20_axis_TVALID),
-        .s05_axis_aclk(clk_wiz_0_clk_out1),
-        .s05_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s05_axis_tdata(usp_rf_data_converter_0_m21_axis_TDATA),
-        .s05_axis_tlast(1'b0),
-        .s05_axis_tready(usp_rf_data_converter_0_m21_axis_TREADY),
-        .s05_axis_tstrb({1'b1,1'b1}),
-        .s05_axis_tvalid(usp_rf_data_converter_0_m21_axis_TVALID),
-        .s06_axis_aclk(clk_wiz_0_clk_out1),
-        .s06_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s06_axis_tdata(usp_rf_data_converter_0_m22_axis_TDATA),
-        .s06_axis_tlast(1'b0),
-        .s06_axis_tready(usp_rf_data_converter_0_m22_axis_TREADY),
-        .s06_axis_tstrb({1'b1,1'b1}),
-        .s06_axis_tvalid(usp_rf_data_converter_0_m22_axis_TVALID),
-        .s07_axis_aclk(clk_wiz_0_clk_out1),
-        .s07_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
-        .s07_axis_tdata(usp_rf_data_converter_0_m23_axis_TDATA),
-        .s07_axis_tlast(1'b0),
-        .s07_axis_tready(usp_rf_data_converter_0_m23_axis_TREADY),
-        .s07_axis_tstrb({1'b1,1'b1}),
-        .s07_axis_tvalid(usp_rf_data_converter_0_m23_axis_TVALID));
   design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_ps8_0_99M_peripheral_aresetn),
         .m_axi_s2mm_aclk(clk_wiz_0_clk_out1),
@@ -467,11 +444,11 @@ module design_1
         .s_axi_lite_wdata(ps8_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps8_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata(adc_combiner_0_M00_AXIS_TDATA),
+        .s_axis_s2mm_tdata(coeff_calc_0_M00_AXIS_TDATA),
         .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(adc_combiner_0_M00_AXIS_TLAST),
-        .s_axis_s2mm_tready(adc_combiner_0_M00_AXIS_TREADY),
-        .s_axis_s2mm_tvalid(adc_combiner_0_M00_AXIS_TVALID));
+        .s_axis_s2mm_tlast(coeff_calc_0_M00_AXIS_TLAST),
+        .s_axis_s2mm_tready(coeff_calc_0_M00_AXIS_TREADY),
+        .s_axis_s2mm_tvalid(coeff_calc_0_M00_AXIS_TVALID));
   design_1_axi_smc_1 axi_smc
        (.M00_AXI_awaddr(axi_smc_M00_AXI_AWADDR),
         .M00_AXI_awburst(axi_smc_M00_AXI_AWBURST),
@@ -559,6 +536,189 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked),
         .reset(rst_ps8_0_99M_peripheral_reset));
+  design_1_coeff_calc_0_1 coeff_calc_0
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(coeff_calc_0_M00_AXIS_TDATA),
+        .m00_axis_tlast(coeff_calc_0_M00_AXIS_TLAST),
+        .m00_axis_tready(coeff_calc_0_M00_AXIS_TREADY),
+        .m00_axis_tvalid(coeff_calc_0_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(cordic_0_M00_AXIS_TDATA),
+        .s00_axis_tlast(cordic_0_M00_AXIS_TLAST),
+        .s00_axis_tready(cordic_0_M00_AXIS_TREADY),
+        .s00_axis_tstrb(cordic_0_M00_AXIS_TSTRB),
+        .s00_axis_tvalid(cordic_0_M00_AXIS_TVALID),
+        .s01_axis_aclk(clk_wiz_0_clk_out1),
+        .s01_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s01_axis_tdata(cordic_1_M00_AXIS_TDATA),
+        .s01_axis_tlast(cordic_1_M00_AXIS_TLAST),
+        .s01_axis_tready(cordic_1_M00_AXIS_TREADY),
+        .s01_axis_tstrb(cordic_1_M00_AXIS_TSTRB),
+        .s01_axis_tvalid(cordic_1_M00_AXIS_TVALID),
+        .s02_axis_aclk(clk_wiz_0_clk_out1),
+        .s02_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s02_axis_tdata(cordic_2_M00_AXIS_TDATA),
+        .s02_axis_tlast(cordic_2_M00_AXIS_TLAST),
+        .s02_axis_tready(cordic_2_M00_AXIS_TREADY),
+        .s02_axis_tstrb(cordic_2_M00_AXIS_TSTRB),
+        .s02_axis_tvalid(cordic_2_M00_AXIS_TVALID),
+        .s03_axis_aclk(clk_wiz_0_clk_out1),
+        .s03_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s03_axis_tdata(cordic_3_M00_AXIS_TDATA),
+        .s03_axis_tlast(cordic_3_M00_AXIS_TLAST),
+        .s03_axis_tready(cordic_3_M00_AXIS_TREADY),
+        .s03_axis_tstrb(cordic_3_M00_AXIS_TSTRB),
+        .s03_axis_tvalid(cordic_3_M00_AXIS_TVALID));
+  design_1_cordic_0_0 cordic_0
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(cordic_0_M00_AXIS_TDATA),
+        .m00_axis_tlast(cordic_0_M00_AXIS_TLAST),
+        .m00_axis_tready(cordic_0_M00_AXIS_TREADY),
+        .m00_axis_tstrb(cordic_0_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(cordic_0_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(fir_1_M00_AXIS_TDATA),
+        .s00_axis_tlast(fir_1_M00_AXIS_TLAST),
+        .s00_axis_tready(fir_1_M00_AXIS_TREADY),
+        .s00_axis_tstrb(fir_1_M00_AXIS_TSTRB),
+        .s00_axis_tvalid(fir_1_M00_AXIS_TVALID));
+  design_1_cordic_1_0 cordic_1
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(cordic_1_M00_AXIS_TDATA),
+        .m00_axis_tlast(cordic_1_M00_AXIS_TLAST),
+        .m00_axis_tready(cordic_1_M00_AXIS_TREADY),
+        .m00_axis_tstrb(cordic_1_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(cordic_1_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(fir_3_M00_AXIS_TDATA),
+        .s00_axis_tlast(fir_3_M00_AXIS_TLAST),
+        .s00_axis_tready(fir_3_M00_AXIS_TREADY),
+        .s00_axis_tstrb(fir_3_M00_AXIS_TSTRB),
+        .s00_axis_tvalid(fir_3_M00_AXIS_TVALID));
+  design_1_cordic_2_0 cordic_2
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(cordic_2_M00_AXIS_TDATA),
+        .m00_axis_tlast(cordic_2_M00_AXIS_TLAST),
+        .m00_axis_tready(cordic_2_M00_AXIS_TREADY),
+        .m00_axis_tstrb(cordic_2_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(cordic_2_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(fir_2_M00_AXIS_TDATA),
+        .s00_axis_tlast(fir_2_M00_AXIS_TLAST),
+        .s00_axis_tready(fir_2_M00_AXIS_TREADY),
+        .s00_axis_tstrb(fir_2_M00_AXIS_TSTRB),
+        .s00_axis_tvalid(fir_2_M00_AXIS_TVALID));
+  design_1_cordic_3_0 cordic_3
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(cordic_3_M00_AXIS_TDATA),
+        .m00_axis_tlast(cordic_3_M00_AXIS_TLAST),
+        .m00_axis_tready(cordic_3_M00_AXIS_TREADY),
+        .m00_axis_tstrb(cordic_3_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(cordic_3_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(fir_0_M00_AXIS_TDATA),
+        .s00_axis_tlast(fir_0_M00_AXIS_TLAST),
+        .s00_axis_tready(fir_0_M00_AXIS_TREADY),
+        .s00_axis_tstrb(fir_0_M00_AXIS_TSTRB),
+        .s00_axis_tvalid(fir_0_M00_AXIS_TVALID));
+  design_1_fir_0_1 fir_0
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(fir_0_M00_AXIS_TDATA),
+        .m00_axis_tlast(fir_0_M00_AXIS_TLAST),
+        .m00_axis_tready(fir_0_M00_AXIS_TREADY),
+        .m00_axis_tstrb(fir_0_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(fir_0_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(usp_rf_data_converter_0_m22_axis_TDATA),
+        .s00_axis_tlast(1'b0),
+        .s00_axis_tready(usp_rf_data_converter_0_m22_axis_TREADY),
+        .s00_axis_tstrb({1'b1,1'b1}),
+        .s00_axis_tvalid(usp_rf_data_converter_0_m22_axis_TVALID),
+        .s01_axis_aclk(clk_wiz_0_clk_out1),
+        .s01_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s01_axis_tdata(usp_rf_data_converter_0_m23_axis_TDATA),
+        .s01_axis_tlast(1'b0),
+        .s01_axis_tready(usp_rf_data_converter_0_m23_axis_TREADY),
+        .s01_axis_tstrb({1'b1,1'b1}),
+        .s01_axis_tvalid(usp_rf_data_converter_0_m23_axis_TVALID));
+  design_1_fir_1_0 fir_1
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(fir_1_M00_AXIS_TDATA),
+        .m00_axis_tlast(fir_1_M00_AXIS_TLAST),
+        .m00_axis_tready(fir_1_M00_AXIS_TREADY),
+        .m00_axis_tstrb(fir_1_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(fir_1_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(usp_rf_data_converter_0_m00_axis_TDATA),
+        .s00_axis_tlast(1'b0),
+        .s00_axis_tready(usp_rf_data_converter_0_m00_axis_TREADY),
+        .s00_axis_tstrb({1'b1,1'b1}),
+        .s00_axis_tvalid(usp_rf_data_converter_0_m00_axis_TVALID),
+        .s01_axis_aclk(clk_wiz_0_clk_out1),
+        .s01_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s01_axis_tdata(usp_rf_data_converter_0_m01_axis_TDATA),
+        .s01_axis_tlast(1'b0),
+        .s01_axis_tready(usp_rf_data_converter_0_m01_axis_TREADY),
+        .s01_axis_tstrb({1'b1,1'b1}),
+        .s01_axis_tvalid(usp_rf_data_converter_0_m01_axis_TVALID));
+  design_1_fir_2_0 fir_2
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(fir_2_M00_AXIS_TDATA),
+        .m00_axis_tlast(fir_2_M00_AXIS_TLAST),
+        .m00_axis_tready(fir_2_M00_AXIS_TREADY),
+        .m00_axis_tstrb(fir_2_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(fir_2_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(usp_rf_data_converter_0_m20_axis_TDATA),
+        .s00_axis_tlast(1'b0),
+        .s00_axis_tready(usp_rf_data_converter_0_m20_axis_TREADY),
+        .s00_axis_tstrb({1'b1,1'b1}),
+        .s00_axis_tvalid(usp_rf_data_converter_0_m20_axis_TVALID),
+        .s01_axis_aclk(clk_wiz_0_clk_out1),
+        .s01_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s01_axis_tdata(usp_rf_data_converter_0_m21_axis_TDATA),
+        .s01_axis_tlast(1'b0),
+        .s01_axis_tready(usp_rf_data_converter_0_m21_axis_TREADY),
+        .s01_axis_tstrb({1'b1,1'b1}),
+        .s01_axis_tvalid(usp_rf_data_converter_0_m21_axis_TVALID));
+  design_1_fir_3_0 fir_3
+       (.m00_axis_aclk(clk_wiz_0_clk_out1),
+        .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .m00_axis_tdata(fir_3_M00_AXIS_TDATA),
+        .m00_axis_tlast(fir_3_M00_AXIS_TLAST),
+        .m00_axis_tready(fir_3_M00_AXIS_TREADY),
+        .m00_axis_tstrb(fir_3_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(fir_3_M00_AXIS_TVALID),
+        .s00_axis_aclk(clk_wiz_0_clk_out1),
+        .s00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s00_axis_tdata(usp_rf_data_converter_0_m02_axis_TDATA),
+        .s00_axis_tlast(1'b0),
+        .s00_axis_tready(usp_rf_data_converter_0_m02_axis_TREADY),
+        .s00_axis_tstrb({1'b1,1'b1}),
+        .s00_axis_tvalid(usp_rf_data_converter_0_m02_axis_TVALID),
+        .s01_axis_aclk(clk_wiz_0_clk_out1),
+        .s01_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
+        .s01_axis_tdata(usp_rf_data_converter_0_m03_axis_TDATA),
+        .s01_axis_tlast(1'b0),
+        .s01_axis_tready(usp_rf_data_converter_0_m03_axis_TREADY),
+        .s01_axis_tstrb({1'b1,1'b1}),
+        .s01_axis_tvalid(usp_rf_data_converter_0_m03_axis_TVALID));
   design_1_ps8_0_axi_periph_1 ps8_0_axi_periph
        (.ACLK(Net),
         .ARESETN(rst_ps8_0_99M_peripheral_aresetn),
@@ -834,10 +994,22 @@ module design_1
         .data_valid_out(spi_control_w_1_data_valid_out),
         .rst_in(rst_ps8_0_99M_peripheral_aresetn),
         .trigger_in(spi_adl_1_trigger_out));
+  design_1_spi_control_w_2_0 spi_control_w_2
+       (.busy_out(spi_control_w_2_busy_out),
+        .chip_clk_out(spi_control_w_2_chip_clk_out),
+        .chip_data_in(lmx_sdi_1),
+        .chip_data_out(spi_control_w_2_chip_data_out),
+        .chip_sel_out(spi_control_w_2_chip_sel_out),
+        .clk_in(Net),
+        .data_in(spi_lmx_0_command_out),
+        .data_out(spi_control_w_2_data_out),
+        .data_valid_out(spi_control_w_2_data_valid_out),
+        .rst_in(rst_ps8_0_99M_peripheral_aresetn),
+        .trigger_in(spi_lmx_0_trigger_out));
   design_1_spi_lmx_0_0 spi_lmx_0
-       (.command_in(spi_lmx_control_w_0_data_out),
+       (.command_in(spi_control_w_2_data_out),
         .command_out(spi_lmx_0_command_out),
-        .m_ready_in(spi_lmx_control_w_0_busy_out),
+        .m_ready_in(spi_control_w_2_busy_out),
         .s00_axi_aclk(Net),
         .s00_axi_araddr(ps8_0_axi_periph_M03_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(rst_ps8_0_99M_peripheral_aresetn),
@@ -859,20 +1031,8 @@ module design_1
         .s00_axi_wready(ps8_0_axi_periph_M03_AXI_WREADY),
         .s00_axi_wstrb(ps8_0_axi_periph_M03_AXI_WSTRB),
         .s00_axi_wvalid(ps8_0_axi_periph_M03_AXI_WVALID),
-        .s_valid_in(spi_lmx_control_w_0_data_valid_out),
+        .s_valid_in(spi_control_w_2_data_valid_out),
         .trigger_out(spi_lmx_0_trigger_out));
-  design_1_spi_lmx_control_w_0_0 spi_lmx_control_w_0
-       (.busy_out(spi_lmx_control_w_0_busy_out),
-        .chip_clk_out(spi_lmx_control_w_0_chip_clk_out),
-        .chip_data_in(lmx_sdi_1),
-        .chip_data_out(spi_lmx_control_w_0_chip_data_out),
-        .chip_sel_out(spi_lmx_control_w_0_chip_sel_out),
-        .clk_in(Net),
-        .data_in(spi_lmx_0_command_out),
-        .data_out(spi_lmx_control_w_0_data_out),
-        .data_valid_out(spi_lmx_control_w_0_data_valid_out),
-        .rst_in(rst_ps8_0_99M_peripheral_aresetn),
-        .trigger_in(spi_lmx_0_trigger_out));
   design_1_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.adc0_clk_n(adc0_clk_1_CLK_N),
         .adc0_clk_p(adc0_clk_1_CLK_P),

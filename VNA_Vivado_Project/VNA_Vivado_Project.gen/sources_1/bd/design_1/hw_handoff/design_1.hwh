@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec  4 19:44:19 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  8 11:35:41 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -186,447 +186,6 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2" FULLNAME="/adc_combiner_0" HWVERSION="1.0" INSTANCE="adc_combiner_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="adc_combiner" VLNV="user.org:user:adc_combiner:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
-        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S02_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S03_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S04_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S05_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S06_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="C_S07_AXIS_TDATA_WIDTH" VALUE="16"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_adc_combiner_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="127" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s00_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s00_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s00_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s01_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s01_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s01_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m01_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s01_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s01_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m01_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s01_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s01_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m01_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s02_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s02_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s02_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s02_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m02_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s02_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s02_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m02_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s02_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s02_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m02_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s03_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s03_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s03_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s03_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m03_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s03_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s03_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m03_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s03_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s03_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m03_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s04_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s04_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s04_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s04_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m20_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s04_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s04_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m20_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s04_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s04_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m20_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s05_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s05_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s05_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s05_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m21_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s05_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s05_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m21_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s05_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s05_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m21_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s06_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s06_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s06_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s06_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m22_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s06_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s06_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m22_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s06_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s06_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m22_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s07_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s07_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s07_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s07_axis_tdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m23_axis_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s07_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s07_axis_tready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m23_axis_tready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s07_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s07_axis_tvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m23_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m00_axis" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m01_axis" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s01_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s01_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m02_axis" NAME="S02_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s02_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s02_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s02_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m03_axis" NAME="S03_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s03_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s03_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s03_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m20_axis" NAME="S04_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s04_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s04_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s04_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m21_axis" NAME="S05_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s05_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s05_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s05_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m22_axis" NAME="S06_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s06_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s06_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s06_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m23_axis" NAME="S07_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="s07_axis_tdata"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="s07_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="s07_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="adc_combiner_0_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
-            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
-    </MODULE>
     <MODULE COREREVISION="32" FULLNAME="/axi_dma_0" HWVERSION="7.1" INSTANCE="axi_dma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dma" VLNV="xilinx.com:ip:axi_dma:7.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_dma;v=v7_1;d=pg021_axi_dma.pdf"/>
@@ -1688,24 +1247,24 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M00_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tdata">
+        <PORT DIR="I" LEFT="127" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_tdata"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tlast">
+        <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_tlast"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tready">
+        <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_tready"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_m00_axis_tvalid">
+        <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_tvalid"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1812,7 +1371,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_s2mm_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="adc_combiner_0_M00_AXIS" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="coeff_calc_0_M00_AXIS" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
@@ -2955,15 +2514,31 @@
             <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_aclk"/>
             <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s00_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_aclk"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s01_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s01_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s01_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s01_axis_aclk"/>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_aclk"/>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_aclk"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_aclk"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_aclk"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -2978,6 +2553,1487 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/coeff_calc_0" HWVERSION="1.0" INSTANCE="coeff_calc_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="coeff_calc" VLNV="user.org:user:coeff_calc:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S02_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S03_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_coeff_calc_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="axi_dma_0_s_axis_s2mm_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axis_s2mm_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s01_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s01_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s01_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s02_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s02_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s02_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s02_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s02_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s02_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s02_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s03_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s03_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s03_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s03_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s03_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s03_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s03_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="cordic_0_M00_AXIS" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_1_M00_AXIS" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s01_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s01_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s01_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s01_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_2_M00_AXIS" NAME="S02_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s02_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s02_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s02_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s02_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s02_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_3_M00_AXIS" NAME="S03_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s03_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s03_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s03_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s03_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s03_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="coeff_calc_0_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/cordic_0" HWVERSION="1.0" INSTANCE="cordic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cordic" VLNV="user.org:user:cordic:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_cordic_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tlast" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="fir_1_M00_AXIS" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_0_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/cordic_1" HWVERSION="1.0" INSTANCE="cordic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cordic" VLNV="user.org:user:cordic:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_cordic_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s01_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tlast" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="fir_3_M00_AXIS" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_1_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/cordic_2" HWVERSION="1.0" INSTANCE="cordic_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cordic" VLNV="user.org:user:cordic:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_cordic_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s02_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tlast" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="fir_2_M00_AXIS" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_2_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/cordic_3" HWVERSION="1.0" INSTANCE="cordic_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cordic" VLNV="user.org:user:cordic:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_cordic_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="coeff_calc_0_s03_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tlast" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="fir_0_M00_AXIS" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="s00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_3_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/fir_0" HWVERSION="1.0" INSTANCE="fir_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fir" VLNV="user.org:user:fir:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fir_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_3_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_0_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m22_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="fir_0_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m22_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="fir_0_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m22_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s01_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_0_s01_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m23_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s01_axis_tready" SIGIS="undef" SIGNAME="fir_0_s01_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m23_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_tvalid" SIGIS="undef" SIGNAME="fir_0_s01_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m23_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m22_axis" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m23_axis" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s01_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s01_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="fir_0_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/fir_1" HWVERSION="1.0" INSTANCE="fir_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fir" VLNV="user.org:user:fir:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fir_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_0_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_1_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="fir_1_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="fir_1_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s01_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_1_s01_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m01_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s01_axis_tready" SIGIS="undef" SIGNAME="fir_1_s01_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m01_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_tvalid" SIGIS="undef" SIGNAME="fir_1_s01_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m01_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m00_axis" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m01_axis" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s01_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s01_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="fir_1_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/fir_2" HWVERSION="1.0" INSTANCE="fir_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fir" VLNV="user.org:user:fir:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fir_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_2_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_2_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m20_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="fir_2_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m20_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="fir_2_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m20_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s01_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_2_s01_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m21_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s01_axis_tready" SIGIS="undef" SIGNAME="fir_2_s01_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m21_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_tvalid" SIGIS="undef" SIGNAME="fir_2_s01_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m21_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m20_axis" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m21_axis" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s01_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s01_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="fir_2_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/fir_3" HWVERSION="1.0" INSTANCE="fir_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fir" VLNV="user.org:user:fir:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
+        <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fir_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tlast" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m00_axis_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_tstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="cordic_1_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s00_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_3_s00_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m02_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axis_tready" SIGIS="undef" SIGNAME="fir_3_s00_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m02_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axis_tvalid" SIGIS="undef" SIGNAME="fir_3_s00_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m02_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="147456000" DIR="I" NAME="s01_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_147M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_3_s01_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m03_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s01_axis_tready" SIGIS="undef" SIGNAME="fir_3_s01_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m03_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s01_axis_tvalid" SIGIS="undef" SIGNAME="fir_3_s01_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m03_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m02_axis" NAME="S00_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s00_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s00_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m03_axis" NAME="S01_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s01_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s01_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s01_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="fir_3_M00_AXIS" NAME="M00_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_clk_wiz_0_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="147456000"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m00_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="m00_axis_tstrb"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
     </MODULE>
     <MODULE COREREVISION="32" FULLNAME="/ps8_0_axi_periph" HWVERSION="2.1" INSTANCE="ps8_0_axi_periph" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
       <DOCUMENTS>
@@ -4436,15 +5492,31 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_2" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_2" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_1" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_1" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_0" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="cordic_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_1" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_3" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_2" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="fir_0" PORT="m00_axis_aresetn"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_aresetn"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_aresetn"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -7007,64 +8079,64 @@
         </PORT>
         <PORT CLKFREQUENCY="11520000" DIR="O" NAME="clk_adc2" SIGIS="clk"/>
         <PORT DIR="O" NAME="irq" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT"/>
-        <PORT DIR="O" LEFT="15" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s00_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_1_s00_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s00_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s00_axis_tready">
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="fir_1_s00_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s00_axis_tready"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s00_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s00_axis_tvalid">
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="fir_1_s00_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s00_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s01_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m01_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_1_s01_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s01_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m01_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s01_axis_tready">
+        <PORT DIR="I" NAME="m01_axis_tready" SIGIS="undef" SIGNAME="fir_1_s01_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_tready"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s01_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m01_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s01_axis_tvalid">
+        <PORT DIR="O" NAME="m01_axis_tvalid" SIGIS="undef" SIGNAME="fir_1_s01_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_1" PORT="s01_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m02_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s02_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m02_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_3_s00_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m02_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s02_axis_tready">
+        <PORT DIR="I" NAME="m02_axis_tready" SIGIS="undef" SIGNAME="fir_3_s00_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_tready"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s00_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m02_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s02_axis_tvalid">
+        <PORT DIR="O" NAME="m02_axis_tvalid" SIGIS="undef" SIGNAME="fir_3_s00_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m03_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s03_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m03_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_3_s01_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s01_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m03_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s03_axis_tready">
+        <PORT DIR="I" NAME="m03_axis_tready" SIGIS="undef" SIGNAME="fir_3_s01_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_tready"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s01_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m03_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s03_axis_tvalid">
+        <PORT DIR="O" NAME="m03_axis_tvalid" SIGIS="undef" SIGNAME="fir_3_s01_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_3" PORT="s01_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m0_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
@@ -7073,64 +8145,64 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m0_axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="15" NAME="m20_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s04_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m20_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_2_s00_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m20_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s04_axis_tready">
+        <PORT DIR="I" NAME="m20_axis_tready" SIGIS="undef" SIGNAME="fir_2_s00_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_tready"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s00_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m20_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s04_axis_tvalid">
+        <PORT DIR="O" NAME="m20_axis_tvalid" SIGIS="undef" SIGNAME="fir_2_s00_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m21_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s05_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m21_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_2_s01_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s01_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m21_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s05_axis_tready">
+        <PORT DIR="I" NAME="m21_axis_tready" SIGIS="undef" SIGNAME="fir_2_s01_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_tready"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s01_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m21_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s05_axis_tvalid">
+        <PORT DIR="O" NAME="m21_axis_tvalid" SIGIS="undef" SIGNAME="fir_2_s01_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_2" PORT="s01_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m22_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s06_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m22_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_0_s00_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s00_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m22_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s06_axis_tready">
+        <PORT DIR="I" NAME="m22_axis_tready" SIGIS="undef" SIGNAME="fir_0_s00_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_tready"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s00_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m22_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s06_axis_tvalid">
+        <PORT DIR="O" NAME="m22_axis_tvalid" SIGIS="undef" SIGNAME="fir_0_s00_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s00_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m23_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_combiner_0_s07_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m23_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="fir_0_s01_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_tdata"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s01_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m23_axis_tready" SIGIS="undef" SIGNAME="adc_combiner_0_s07_axis_tready">
+        <PORT DIR="I" NAME="m23_axis_tready" SIGIS="undef" SIGNAME="fir_0_s01_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_tready"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s01_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m23_axis_tvalid" SIGIS="undef" SIGNAME="adc_combiner_0_s07_axis_tvalid">
+        <PORT DIR="O" NAME="m23_axis_tvalid" SIGIS="undef" SIGNAME="fir_0_s01_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_tvalid"/>
+            <CONNECTION INSTANCE="fir_0" PORT="s01_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="147456000" DIR="I" NAME="m2_axis_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">

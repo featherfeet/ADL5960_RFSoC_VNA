@@ -34,13 +34,21 @@
         "m04_couplers": {}
       },
       "axi_smc": "",
-      "adc_combiner_0": "",
       "spi_adl_0": "",
       "spi_control_w_0": "",
       "spi_adl_1": "",
       "spi_control_w_1": "",
       "spi_lmx_0": "",
-      "spi_control_w_2": ""
+      "spi_control_w_2": "",
+      "fir_0": "",
+      "cordic_0": "",
+      "coeff_calc_0": "",
+      "fir_1": "",
+      "fir_2": "",
+      "fir_3": "",
+      "cordic_1": "",
+      "cordic_2": "",
+      "cordic_3": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -2367,13 +2375,6 @@
           }
         }
       },
-      "adc_combiner_0": {
-        "vlnv": "user.org:user:adc_combiner:1.0",
-        "ip_revision": "2",
-        "xci_name": "design_1_adc_combiner_0_0",
-        "xci_path": "ip/design_1_adc_combiner_0_0/design_1_adc_combiner_0_0.xci",
-        "inst_hier_path": "adc_combiner_0"
-      },
       "spi_adl_0": {
         "vlnv": "user.org:user:spi_adl:1.0",
         "ip_revision": "10",
@@ -2607,6 +2608,69 @@
             "right": "0"
           }
         }
+      },
+      "fir_0": {
+        "vlnv": "user.org:user:fir:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_fir_0_1",
+        "xci_path": "ip/design_1_fir_0_1/design_1_fir_0_1.xci",
+        "inst_hier_path": "fir_0"
+      },
+      "cordic_0": {
+        "vlnv": "user.org:user:cordic:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_cordic_0_0",
+        "xci_path": "ip/design_1_cordic_0_0/design_1_cordic_0_0.xci",
+        "inst_hier_path": "cordic_0"
+      },
+      "coeff_calc_0": {
+        "vlnv": "user.org:user:coeff_calc:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_coeff_calc_0_1",
+        "xci_path": "ip/design_1_coeff_calc_0_1/design_1_coeff_calc_0_1.xci",
+        "inst_hier_path": "coeff_calc_0"
+      },
+      "fir_1": {
+        "vlnv": "user.org:user:fir:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_fir_1_0",
+        "xci_path": "ip/design_1_fir_1_0/design_1_fir_1_0.xci",
+        "inst_hier_path": "fir_1"
+      },
+      "fir_2": {
+        "vlnv": "user.org:user:fir:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_fir_2_0",
+        "xci_path": "ip/design_1_fir_2_0/design_1_fir_2_0.xci",
+        "inst_hier_path": "fir_2"
+      },
+      "fir_3": {
+        "vlnv": "user.org:user:fir:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_fir_3_0",
+        "xci_path": "ip/design_1_fir_3_0/design_1_fir_3_0.xci",
+        "inst_hier_path": "fir_3"
+      },
+      "cordic_1": {
+        "vlnv": "user.org:user:cordic:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_cordic_1_0",
+        "xci_path": "ip/design_1_cordic_1_0/design_1_cordic_1_0.xci",
+        "inst_hier_path": "cordic_1"
+      },
+      "cordic_2": {
+        "vlnv": "user.org:user:cordic:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_cordic_2_0",
+        "xci_path": "ip/design_1_cordic_2_0/design_1_cordic_2_0.xci",
+        "inst_hier_path": "cordic_2"
+      },
+      "cordic_3": {
+        "vlnv": "user.org:user:cordic:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_cordic_3_0",
+        "xci_path": "ip/design_1_cordic_3_0/design_1_cordic_3_0.xci",
+        "inst_hier_path": "cordic_3"
       }
     },
     "interface_nets": {
@@ -2622,12 +2686,6 @@
           "usp_rf_data_converter_0/adc2_clk"
         ]
       },
-      "adc_combiner_0_M00_AXIS": {
-        "interface_ports": [
-          "adc_combiner_0/M00_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
-        ]
-      },
       "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
           "axi_dma_0/M_AXI_S2MM",
@@ -2638,6 +2696,60 @@
         "interface_ports": [
           "axi_smc/M00_AXI",
           "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
+        ]
+      },
+      "coeff_calc_0_M00_AXIS": {
+        "interface_ports": [
+          "coeff_calc_0/M00_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
+        ]
+      },
+      "cordic_0_M00_AXIS": {
+        "interface_ports": [
+          "cordic_0/M00_AXIS",
+          "coeff_calc_0/S00_AXIS"
+        ]
+      },
+      "cordic_1_M00_AXIS": {
+        "interface_ports": [
+          "cordic_1/M00_AXIS",
+          "coeff_calc_0/S01_AXIS"
+        ]
+      },
+      "cordic_2_M00_AXIS": {
+        "interface_ports": [
+          "cordic_2/M00_AXIS",
+          "coeff_calc_0/S02_AXIS"
+        ]
+      },
+      "cordic_3_M00_AXIS": {
+        "interface_ports": [
+          "cordic_3/M00_AXIS",
+          "coeff_calc_0/S03_AXIS"
+        ]
+      },
+      "fir_0_M00_AXIS": {
+        "interface_ports": [
+          "fir_0/M00_AXIS",
+          "cordic_3/S00_AXIS"
+        ]
+      },
+      "fir_1_M00_AXIS": {
+        "interface_ports": [
+          "fir_1/M00_AXIS",
+          "cordic_0/S00_AXIS"
+        ]
+      },
+      "fir_2_M00_AXIS": {
+        "interface_ports": [
+          "fir_2/M00_AXIS",
+          "cordic_2/S00_AXIS"
+        ]
+      },
+      "fir_3_M00_AXIS": {
+        "interface_ports": [
+          "fir_3/M00_AXIS",
+          "cordic_1/S00_AXIS"
         ]
       },
       "ps8_0_axi_periph_M00_AXI": {
@@ -2679,49 +2791,49 @@
       "usp_rf_data_converter_0_m00_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m00_axis",
-          "adc_combiner_0/S00_AXIS"
+          "fir_1/S00_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m01_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m01_axis",
-          "adc_combiner_0/S01_AXIS"
+          "fir_1/S01_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m02_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m02_axis",
-          "adc_combiner_0/S02_AXIS"
+          "fir_3/S00_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m03_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m03_axis",
-          "adc_combiner_0/S03_AXIS"
+          "fir_3/S01_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m20_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m20_axis",
-          "adc_combiner_0/S04_AXIS"
+          "fir_2/S00_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m21_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m21_axis",
-          "adc_combiner_0/S05_AXIS"
+          "fir_2/S01_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m22_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m22_axis",
-          "adc_combiner_0/S06_AXIS"
+          "fir_0/S00_AXIS"
         ]
       },
       "usp_rf_data_converter_0_m23_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/m23_axis",
-          "adc_combiner_0/S07_AXIS"
+          "fir_0/S01_AXIS"
         ]
       },
       "vin0_01_1": {
@@ -2808,15 +2920,31 @@
           "rst_clk_wiz_0_147M/slowest_sync_clk",
           "axi_dma_0/m_axi_s2mm_aclk",
           "axi_smc/aclk",
-          "adc_combiner_0/s00_axis_aclk",
-          "adc_combiner_0/s01_axis_aclk",
-          "adc_combiner_0/s02_axis_aclk",
-          "adc_combiner_0/s03_axis_aclk",
-          "adc_combiner_0/s04_axis_aclk",
-          "adc_combiner_0/s05_axis_aclk",
-          "adc_combiner_0/s06_axis_aclk",
-          "adc_combiner_0/s07_axis_aclk",
-          "adc_combiner_0/m00_axis_aclk"
+          "fir_0/s00_axis_aclk",
+          "fir_0/s01_axis_aclk",
+          "fir_0/m00_axis_aclk",
+          "fir_2/s00_axis_aclk",
+          "fir_2/s01_axis_aclk",
+          "fir_2/m00_axis_aclk",
+          "fir_3/s00_axis_aclk",
+          "fir_3/s01_axis_aclk",
+          "fir_3/m00_axis_aclk",
+          "fir_1/s00_axis_aclk",
+          "fir_1/s01_axis_aclk",
+          "fir_1/m00_axis_aclk",
+          "cordic_0/s00_axis_aclk",
+          "cordic_0/m00_axis_aclk",
+          "cordic_1/s00_axis_aclk",
+          "cordic_1/m00_axis_aclk",
+          "cordic_2/s00_axis_aclk",
+          "cordic_2/m00_axis_aclk",
+          "cordic_3/s00_axis_aclk",
+          "cordic_3/m00_axis_aclk",
+          "coeff_calc_0/m00_axis_aclk",
+          "coeff_calc_0/s03_axis_aclk",
+          "coeff_calc_0/s02_axis_aclk",
+          "coeff_calc_0/s01_axis_aclk",
+          "coeff_calc_0/s00_axis_aclk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -2841,15 +2969,31 @@
         "ports": [
           "rst_clk_wiz_0_147M/peripheral_aresetn",
           "axi_smc/aresetn",
-          "adc_combiner_0/m00_axis_aresetn",
-          "adc_combiner_0/s07_axis_aresetn",
-          "adc_combiner_0/s06_axis_aresetn",
-          "adc_combiner_0/s05_axis_aresetn",
-          "adc_combiner_0/s04_axis_aresetn",
-          "adc_combiner_0/s03_axis_aresetn",
-          "adc_combiner_0/s02_axis_aresetn",
-          "adc_combiner_0/s01_axis_aresetn",
-          "adc_combiner_0/s00_axis_aresetn"
+          "cordic_3/m00_axis_aresetn",
+          "cordic_3/s00_axis_aresetn",
+          "cordic_2/m00_axis_aresetn",
+          "cordic_2/s00_axis_aresetn",
+          "cordic_1/m00_axis_aresetn",
+          "cordic_1/s00_axis_aresetn",
+          "cordic_0/m00_axis_aresetn",
+          "cordic_0/s00_axis_aresetn",
+          "fir_1/s01_axis_aresetn",
+          "fir_1/s00_axis_aresetn",
+          "fir_1/m00_axis_aresetn",
+          "fir_3/s00_axis_aresetn",
+          "fir_3/s01_axis_aresetn",
+          "fir_3/m00_axis_aresetn",
+          "fir_2/s00_axis_aresetn",
+          "fir_2/s01_axis_aresetn",
+          "fir_2/m00_axis_aresetn",
+          "fir_0/s00_axis_aresetn",
+          "fir_0/s01_axis_aresetn",
+          "fir_0/m00_axis_aresetn",
+          "coeff_calc_0/s00_axis_aresetn",
+          "coeff_calc_0/s01_axis_aresetn",
+          "coeff_calc_0/s02_axis_aresetn",
+          "coeff_calc_0/s03_axis_aresetn",
+          "coeff_calc_0/m00_axis_aresetn"
         ]
       },
       "rst_ps8_0_99M_peripheral_aresetn": {

@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9c0d91ebd3384b95882246c3398d90cf"/>
@@ -47,6 +47,11 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/coeff_calc_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/coeff_calc_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/cordic_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/fir_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/fir_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/spi_lmx_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/adc_combiner_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/spi_adl_1_0"/>
@@ -69,13 +74,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="4"/>
-    <Option Name="WTModelSimExportSim" Val="4"/>
-    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTXSimExportSim" Val="5"/>
+    <Option Name="WTModelSimExportSim" Val="5"/>
+    <Option Name="WTQuestaExportSim" Val="5"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="4"/>
-    <Option Name="WTRivieraExportSim" Val="4"/>
-    <Option Name="WTActivehdlExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="5"/>
+    <Option Name="WTRivieraExportSim" Val="5"/>
+    <Option Name="WTActivehdlExportSim" Val="5"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>

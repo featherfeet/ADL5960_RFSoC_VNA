@@ -1,6 +1,354 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Sun Dec  8 11:03:47 2024
+| Host         : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu48dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_coeff_calc_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_coeff_calc_0_1 (user.org:user:coeff_calc:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_coeff_calc_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'm00_axis_tdata' width 128 differs from original width 32
+
+-Upgraded port 'm00_axis_tstrb' width 16 differs from original width 4
+
+
+3. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'C_M00_AXIS_TDATA_WIDTH' from '128' to '32' has been ignored for IP 'design_1_coeff_calc_0_1'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv user.org:user:coeff_calc:1.0 -user_name design_1_coeff_calc_0_1
+set_property -dict "\
+  CONFIG.C_M00_AXIS_START_COUNT {32} \
+  CONFIG.C_M00_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S00_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S01_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S02_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S03_AXIS_TDATA_WIDTH {32} \
+  CONFIG.Component_Name {design_1_coeff_calc_0_1} \
+  CONFIG.M00_AXIS.CLK_DOMAIN {} \
+  CONFIG.M00_AXIS.FREQ_HZ {100000000} \
+  CONFIG.M00_AXIS.HAS_TKEEP {0} \
+  CONFIG.M00_AXIS.HAS_TLAST {1} \
+  CONFIG.M00_AXIS.HAS_TREADY {1} \
+  CONFIG.M00_AXIS.HAS_TSTRB {1} \
+  CONFIG.M00_AXIS.INSERT_VIP {0} \
+  CONFIG.M00_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.M00_AXIS.PHASE {0.0} \
+  CONFIG.M00_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.M00_AXIS.TDEST_WIDTH {0} \
+  CONFIG.M00_AXIS.TID_WIDTH {0} \
+  CONFIG.M00_AXIS.TUSER_WIDTH {0} \
+  CONFIG.M00_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_BUSIF {M00_AXIS} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_RESET {m00_axis_aresetn} \
+  CONFIG.M00_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.M00_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.M00_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.M00_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.M00_AXIS_CLK.PHASE {0.0} \
+  CONFIG.M00_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.M00_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S00_AXIS.CLK_DOMAIN {} \
+  CONFIG.S00_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S00_AXIS.HAS_TKEEP {0} \
+  CONFIG.S00_AXIS.HAS_TLAST {1} \
+  CONFIG.S00_AXIS.HAS_TREADY {1} \
+  CONFIG.S00_AXIS.HAS_TSTRB {1} \
+  CONFIG.S00_AXIS.INSERT_VIP {0} \
+  CONFIG.S00_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S00_AXIS.PHASE {0.0} \
+  CONFIG.S00_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S00_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S00_AXIS.TID_WIDTH {0} \
+  CONFIG.S00_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S00_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_BUSIF {S00_AXIS} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_RESET {s00_axis_aresetn} \
+  CONFIG.S00_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.S00_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S00_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXIS_CLK.PHASE {0.0} \
+  CONFIG.S00_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S01_AXIS.CLK_DOMAIN {} \
+  CONFIG.S01_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S01_AXIS.HAS_TKEEP {0} \
+  CONFIG.S01_AXIS.HAS_TLAST {1} \
+  CONFIG.S01_AXIS.HAS_TREADY {1} \
+  CONFIG.S01_AXIS.HAS_TSTRB {1} \
+  CONFIG.S01_AXIS.INSERT_VIP {0} \
+  CONFIG.S01_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S01_AXIS.PHASE {0.0} \
+  CONFIG.S01_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S01_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S01_AXIS.TID_WIDTH {0} \
+  CONFIG.S01_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S01_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S01_AXIS_CLK.ASSOCIATED_BUSIF {S01_AXIS} \
+  CONFIG.S01_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S01_AXIS_CLK.ASSOCIATED_RESET {s01_axis_aresetn} \
+  CONFIG.S01_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.S01_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S01_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S01_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S01_AXIS_CLK.PHASE {0.0} \
+  CONFIG.S01_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S01_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S02_AXIS.CLK_DOMAIN {} \
+  CONFIG.S02_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S02_AXIS.HAS_TKEEP {0} \
+  CONFIG.S02_AXIS.HAS_TLAST {1} \
+  CONFIG.S02_AXIS.HAS_TREADY {1} \
+  CONFIG.S02_AXIS.HAS_TSTRB {1} \
+  CONFIG.S02_AXIS.INSERT_VIP {0} \
+  CONFIG.S02_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S02_AXIS.PHASE {0.0} \
+  CONFIG.S02_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S02_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S02_AXIS.TID_WIDTH {0} \
+  CONFIG.S02_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S02_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S02_AXIS_CLK.ASSOCIATED_BUSIF {S02_AXIS} \
+  CONFIG.S02_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S02_AXIS_CLK.ASSOCIATED_RESET {s02_axis_aresetn} \
+  CONFIG.S02_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.S02_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S02_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S02_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S02_AXIS_CLK.PHASE {0.0} \
+  CONFIG.S02_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S02_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S03_AXIS.CLK_DOMAIN {} \
+  CONFIG.S03_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S03_AXIS.HAS_TKEEP {0} \
+  CONFIG.S03_AXIS.HAS_TLAST {1} \
+  CONFIG.S03_AXIS.HAS_TREADY {1} \
+  CONFIG.S03_AXIS.HAS_TSTRB {1} \
+  CONFIG.S03_AXIS.INSERT_VIP {0} \
+  CONFIG.S03_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S03_AXIS.PHASE {0.0} \
+  CONFIG.S03_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S03_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S03_AXIS.TID_WIDTH {0} \
+  CONFIG.S03_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S03_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S03_AXIS_CLK.ASSOCIATED_BUSIF {S03_AXIS} \
+  CONFIG.S03_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S03_AXIS_CLK.ASSOCIATED_RESET {s03_axis_aresetn} \
+  CONFIG.S03_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.S03_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S03_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S03_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S03_AXIS_CLK.PHASE {0.0} \
+  CONFIG.S03_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S03_AXIS_RST.POLARITY {ACTIVE_LOW} " [get_ips design_1_coeff_calc_0_1]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Sun Dec  8 10:31:35 2024
+| Host         : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu48dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_cordic_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_cordic_0_0 (user.org:user:cordic:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_cordic_0_0'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 's00_axis_aclk'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Sun Dec  8 10:26:47 2024
+| Host         : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu48dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_fir_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_fir_0_1 (user.org:user:fir:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_fir_0_1'. These changes may impact your design.
+
+
+-Upgraded port 's00_axis_tdata' width 16 differs from original width 32
+
+-Upgraded port 's00_axis_tstrb' width 2 differs from original width 4
+
+-Upgraded port 's01_axis_tdata' width 16 differs from original width 32
+
+-Upgraded port 's01_axis_tstrb' width 2 differs from original width 4
+
+
+3. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'C_S01_AXIS_TDATA_WIDTH' from '16' to '32' has been ignored for IP 'design_1_fir_0_1'
+
+An attempt to modify the value of disabled parameter 'C_S00_AXIS_TDATA_WIDTH' from '16' to '32' has been ignored for IP 'design_1_fir_0_1'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv user.org:user:fir:1.0 -user_name design_1_fir_0_1
+set_property -dict "\
+  CONFIG.C_M00_AXIS_START_COUNT {32} \
+  CONFIG.C_M00_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S00_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S01_AXIS_TDATA_WIDTH {32} \
+  CONFIG.Component_Name {design_1_fir_0_1} \
+  CONFIG.M00_AXIS.CLK_DOMAIN {} \
+  CONFIG.M00_AXIS.FREQ_HZ {100000000} \
+  CONFIG.M00_AXIS.HAS_TKEEP {0} \
+  CONFIG.M00_AXIS.HAS_TLAST {1} \
+  CONFIG.M00_AXIS.HAS_TREADY {1} \
+  CONFIG.M00_AXIS.HAS_TSTRB {1} \
+  CONFIG.M00_AXIS.INSERT_VIP {0} \
+  CONFIG.M00_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.M00_AXIS.PHASE {0.0} \
+  CONFIG.M00_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.M00_AXIS.TDEST_WIDTH {0} \
+  CONFIG.M00_AXIS.TID_WIDTH {0} \
+  CONFIG.M00_AXIS.TUSER_WIDTH {0} \
+  CONFIG.M00_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_BUSIF {M00_AXIS} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_RESET {m00_axis_aresetn} \
+  CONFIG.M00_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.M00_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.M00_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.M00_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.M00_AXIS_CLK.PHASE {0.0} \
+  CONFIG.M00_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.M00_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S00_AXIS.CLK_DOMAIN {} \
+  CONFIG.S00_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S00_AXIS.HAS_TKEEP {0} \
+  CONFIG.S00_AXIS.HAS_TLAST {1} \
+  CONFIG.S00_AXIS.HAS_TREADY {1} \
+  CONFIG.S00_AXIS.HAS_TSTRB {1} \
+  CONFIG.S00_AXIS.INSERT_VIP {0} \
+  CONFIG.S00_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S00_AXIS.PHASE {0.0} \
+  CONFIG.S00_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S00_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S00_AXIS.TID_WIDTH {0} \
+  CONFIG.S00_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S00_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_BUSIF {S00_AXIS} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_RESET {s00_axis_aresetn} \
+  CONFIG.S00_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.S00_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S00_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXIS_CLK.PHASE {0.0} \
+  CONFIG.S00_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S01_AXIS.CLK_DOMAIN {} \
+  CONFIG.S01_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S01_AXIS.HAS_TKEEP {0} \
+  CONFIG.S01_AXIS.HAS_TLAST {1} \
+  CONFIG.S01_AXIS.HAS_TREADY {1} \
+  CONFIG.S01_AXIS.HAS_TSTRB {1} \
+  CONFIG.S01_AXIS.INSERT_VIP {0} \
+  CONFIG.S01_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S01_AXIS.PHASE {0.0} \
+  CONFIG.S01_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S01_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S01_AXIS.TID_WIDTH {0} \
+  CONFIG.S01_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S01_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S01_AXIS_CLK.ASSOCIATED_BUSIF {S01_AXIS} \
+  CONFIG.S01_AXIS_CLK.ASSOCIATED_PORT {} \
+  CONFIG.S01_AXIS_CLK.ASSOCIATED_RESET {s01_axis_aresetn} \
+  CONFIG.S01_AXIS_CLK.CLK_DOMAIN {} \
+  CONFIG.S01_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S01_AXIS_CLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.S01_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S01_AXIS_CLK.PHASE {0.0} \
+  CONFIG.S01_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S01_AXIS_RST.POLARITY {ACTIVE_LOW} " [get_ips design_1_fir_0_1]
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 | Date         : Wed Dec  4 19:36:15 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : upgrade_ip

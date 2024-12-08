@@ -261,8 +261,6 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnec
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_1/sim/design_1_axi_smc_1.v" \
-"../../../bd/design_1/ipshared/b4b8/hdl/adc_combiner.v" \
-"../../../bd/design_1/ip/design_1_adc_combiner_0_0/sim/design_1_adc_combiner_0_0.v" \
 "../../../bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/5760/hdl/spi_adl.v" \
 "../../../bd/design_1/ip/design_1_spi_adl_0_0/sim/design_1_spi_adl_0_0.v" \
@@ -272,7 +270,34 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Proje
 "../../../bd/design_1/ipshared/7b63/hdl/spi_lmx_slave_lite_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/7b63/hdl/spi_lmx.v" \
 "../../../bd/design_1/ip/design_1_spi_lmx_0_0/sim/design_1_spi_lmx_0_0.v" \
-"../../../bd/design_1/ip/design_1_spi_lmx_control_w_0_0/sim/design_1_spi_lmx_control_w_0_0.v" \
+"../../../bd/design_1/ip/design_1_spi_control_w_2_0/sim/design_1_spi_control_w_2_0.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/97ad/a11d/fir_15.sv" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/97ad/hdl/fir.v" \
+"../../../bd/design_1/ip/design_1_fir_0_1/sim/design_1_fir_0_1.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/539f/a11d/cordic.sv" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/539f/hdl/cordic.v" \
+"../../../bd/design_1/ip/design_1_cordic_0_0/sim/design_1_cordic_0_0.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/fc9e/a11d/compute_coeff_averaging.sv" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/fc9e/hdl/coeff_calc.v" \
+"../../../bd/design_1/ip/design_1_coeff_calc_0_1/sim/design_1_coeff_calc_0_1.v" \
+"../../../bd/design_1/ip/design_1_fir_1_0/sim/design_1_fir_1_0.v" \
+"../../../bd/design_1/ip/design_1_fir_2_0/sim/design_1_fir_2_0.v" \
+"../../../bd/design_1/ip/design_1_fir_3_0/sim/design_1_fir_3_0.v" \
+"../../../bd/design_1/ip/design_1_cordic_1_0/sim/design_1_cordic_1_0.v" \
+"../../../bd/design_1/ip/design_1_cordic_2_0/sim/design_1_cordic_2_0.v" \
+"../../../bd/design_1/ip/design_1_cordic_3_0/sim/design_1_cordic_3_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_31 -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

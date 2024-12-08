@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date             : Wed Dec  4 19:48:44 2024
-| Host             : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
+| Date             : Sun Dec  8 11:46:39 2024
+| Host             : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xczu48dr-ffvg1517-2-e
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 5.670        |
+| Total On-Chip Power (W)  | 6.106        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.380        |
-| Device Static (W)        | 1.291        |
+| Dynamic (W)              | 4.811        |
+| Device Static (W)        | 1.296        |
 | Effective TJA (C/W)      | 0.8          |
-| Max Ambient (C)          | 95.2         |
-| Junction Temperature (C) | 29.8         |
+| Max Ambient (C)          | 94.9         |
+| Junction Temperature (C) | 30.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,27 +52,28 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.059 |       13 |       --- |             --- |
-| CLB Logic                |     0.029 |    30113 |       --- |             --- |
+| Clocks                   |     0.086 |       13 |       --- |             --- |
+| CLB Logic                |     0.261 |    66989 |       --- |             --- |
+|   LUT as Logic           |     0.208 |    34401 |    425280 |            8.09 |
+|   CARRY8                 |     0.034 |     3396 |     53160 |            6.39 |
 |   LUT as Distributed RAM |     0.014 |      416 |    213600 |            0.19 |
-|   LUT as Logic           |     0.013 |    11536 |    425280 |            2.71 |
-|   Register               |     0.001 |    13479 |    850560 |            1.58 |
-|   LUT as Shift Register  |    <0.001 |      187 |    213600 |            0.09 |
-|   CARRY8                 |    <0.001 |       83 |     53160 |            0.16 |
-|   Others                 |     0.000 |      979 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      171 |    425280 |            0.04 |
-| Signals                  |     0.027 |    24500 |       --- |             --- |
-| Block RAM                |     0.010 |       10 |      1080 |            0.93 |
+|   Register               |     0.005 |    21112 |    850560 |            2.48 |
+|   LUT as Shift Register  |    <0.001 |      208 |    213600 |            0.10 |
+|   BUFG                   |    <0.001 |        2 |        64 |            3.13 |
+|   Others                 |     0.000 |     1015 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      170 |    425280 |            0.04 |
+| Signals                  |     0.196 |    51198 |       --- |             --- |
+| Block RAM                |     0.011 |       10 |      1080 |            0.93 |
 | RFAMS                    |     1.870 |        8 |       --- |             --- |
 |   RFADC                  |     1.870 |        4 |         4 |          100.00 |
 |   RFDAC                  |     0.000 |        4 |         4 |          100.00 |
 | MMCM                     |     0.000 |        0 |       --- |             --- |
 | I/O                      |     0.003 |       10 |       347 |            2.88 |
 | PS8                      |     2.382 |        1 |       --- |             --- |
-| Static Power             |     1.291 |          |           |                 |
+| Static Power             |     1.296 |          |           |                 |
 |   PS Static              |     0.099 |          |           |                 |
-|   PL Static              |     1.192 |          |           |                 |
-| Total                    |     5.670 |          |           |                 |
+|   PL Static              |     1.196 |          |           |                 |
+| Total                    |     6.106 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -82,7 +83,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.467 |       0.146 |      0.321 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.979 |       0.653 |      0.326 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.071 |       0.000 |      0.071 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.278 |       0.000 |      0.278 |       NA    | Unspecified | NA         |
@@ -98,7 +99,7 @@ Table of Contents
 | VCC_PSINTFP     |       0.850 |     0.515 |       0.480 |      0.035 |       NA    | Unspecified | NA         |
 | VCC_PSINTLP     |       0.850 |     0.271 |       0.264 |      0.007 |       NA    | Unspecified | NA         |
 | VPS_MGTRAVCC    |       0.850 |     0.135 |       0.134 |      0.001 |       NA    | Unspecified | NA         |
-| VCC_PSINTFP_DDR |       0.850 |     0.821 |       0.816 |      0.004 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.821 |       0.816 |      0.005 |       NA    | Unspecified | NA         |
 | VCC_PSPLL       |       1.200 |     0.073 |       0.071 |      0.002 |       NA    | Unspecified | NA         |
 | VPS_MGTRAVTT    |       1.800 |     0.034 |       0.033 |      0.001 |       NA    | Unspecified | NA         |
 | VCCO_PSDDR_504  |       1.200 |     0.677 |       0.643 |      0.034 |       NA    | Unspecified | NA         |
@@ -110,13 +111,13 @@ Table of Contents
 | VCCO_PSIO2_502  |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | VCCO_PSIO3_503  |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
-| VCCINT_AMS      |       0.850 |     0.453 |       0.429 |      0.025 |       NA    | Unspecified | NA         |
+| VCCINT_AMS      |       0.850 |     0.454 |       0.429 |      0.025 |       NA    | Unspecified | NA         |
 | DACAVCC         |       0.925 |     0.011 |       0.000 |      0.011 |       NA    | Unspecified | NA         |
 | DACAVCCAUX      |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | DACAVTT         |       2.500 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
-| ADCAVCC         |       0.925 |     0.646 |       0.535 |      0.112 |       NA    | Unspecified | NA         |
+| ADCAVCC         |       0.925 |     0.647 |       0.535 |      0.112 |       NA    | Unspecified | NA         |
 | ADCAVCCAUX      |       1.800 |     0.588 |       0.562 |      0.027 |       NA    | Unspecified | NA         |
-| VCCSDFEC        |       0.850 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
+| VCCSDFEC        |       0.850 |     0.032 |       0.000 |      0.032 |       NA    | Unspecified | NA         |
 | MGTYAVcc        |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTYAVtt        |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTYVccaux      |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -178,20 +179,38 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| design_1_wrapper            |     4.380 |
-|   design_1_i                |     4.377 |
-|     axi_dma_0               |     0.025 |
-|       U0                    |     0.025 |
-|     axi_smc                 |     0.034 |
-|       inst                  |     0.034 |
+| design_1_wrapper            |     4.811 |
+|   design_1_i                |     4.808 |
+|     axi_dma_0               |     0.027 |
+|       U0                    |     0.027 |
+|     axi_smc                 |     0.033 |
+|       inst                  |     0.033 |
+|     coeff_calc_0            |     0.190 |
+|       inst                  |     0.190 |
+|     cordic_0                |     0.027 |
+|       inst                  |     0.021 |
+|     cordic_1                |     0.028 |
+|       inst                  |     0.022 |
+|     cordic_2                |     0.027 |
+|       inst                  |     0.022 |
+|     cordic_3                |     0.027 |
+|       inst                  |     0.022 |
+|     fir_0                   |     0.031 |
+|       inst                  |     0.031 |
+|     fir_1                   |     0.032 |
+|       inst                  |     0.032 |
+|     fir_2                   |     0.030 |
+|       inst                  |     0.030 |
+|     fir_3                   |     0.031 |
+|       inst                  |     0.031 |
 |     ps8_0_axi_periph        |     0.022 |
-|       s00_couplers          |     0.008 |
+|       s00_couplers          |     0.009 |
 |       s01_couplers          |     0.009 |
-|       xbar                  |     0.005 |
-|     usp_rf_data_converter_0 |     1.908 |
-|       inst                  |     1.908 |
-|     zynq_ultra_ps_e_0       |     2.384 |
-|       inst                  |     2.384 |
+|       xbar                  |     0.004 |
+|     usp_rf_data_converter_0 |     1.914 |
+|       inst                  |     1.914 |
+|     zynq_ultra_ps_e_0       |     2.385 |
+|       inst                  |     2.385 |
 +-----------------------------+-----------+
 
 
