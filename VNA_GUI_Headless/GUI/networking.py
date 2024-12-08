@@ -2,14 +2,19 @@ import io
 import socket
 import threading
 import numpy as np
+import queue
 
 class RemoteConnection:
     def __init__(self, host, port):
         self.host = host
         self.port = port
         self.data = {}
+        self.queue = queue.Queue()
         self.thread_handle = threading.Thread(target = self.socket_thread, args = ())
         self.thread_handle.start()
+
+    def send_parameters(self, parameters):
+        self.queue.put(parameters)
 
     def socket_thread(self):
         packet_length = None
@@ -26,6 +31,13 @@ class RemoteConnection:
             print(f"Accepted connection from {addr}.")
 
             while True:
+                # Send any enqueued messages to the FPGA.
+                if not queue.empty():
+                    message = queue.get()
+                    message_pickled = pickle.dumps(message)
+                    conn.sendall(len(message_pickled).to_bytes(4, "little"))
+                    conn.sendall(message_pickled)
+                # Receive incoming messages from the FPGA.
                 if packet_length == None:
                     received = conn.recv(4)
                     if len(received) == 0:
