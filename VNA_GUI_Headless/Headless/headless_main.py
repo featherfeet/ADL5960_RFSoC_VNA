@@ -43,13 +43,14 @@ adl2 = ADL5960(ol.spi_adl_1)
 print("Setting up source...")
 source = SigSource(mmio_spi_controller = ol.spi_lmx_0)
 source.set_active()
-source.set_frequency(100e6) # TODO remove
+source.set_frequency(100e6) # TODO actually sweep
 
 # Set up Python DSP.
 dsp = DSP()
 
 #Main capture and processing loop.
-first = True
+filename = "both_ports_open"
+
 while True:
     freq = source.get_current_freq()
 
@@ -63,6 +64,8 @@ while True:
     port2_reverse = dsp.binary_to_complex(port2_reverse_buffer)
     port1_forward = dsp.binary_to_complex(port1_forward_buffer)
     port1_reverse = dsp.binary_to_complex(port1_reverse_buffer)
+
+    np.savez(f"{filename}_port1_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
 
     # Filter out LO spike.
     filtered_port2_forward = dsp.filter(port2_forward)
@@ -84,6 +87,8 @@ while True:
     port2_reverse = dsp.binary_to_complex(port2_reverse_buffer)
     port1_forward = dsp.binary_to_complex(port1_forward_buffer)
     port1_reverse = dsp.binary_to_complex(port1_reverse_buffer)
+
+    np.savez(f"{filename}_port2_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
 
     # Filter out LO spike.
     filtered_port2_forward = dsp.filter(port2_forward)
@@ -120,5 +125,9 @@ while True:
     print(f"Calculated S21 phase is {S21_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
     print(f"Calculated S22 magnitude is {S22_mag:.2f}.")
     print(f"Calculated S22 phase is {S22_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
+
+    np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
+
+    break
     #data_out_file.write(f"{freq},{S11_mag},{S12_mag},{S21_mag},{S22_mag}\n")
     #data_out_file.flush()
