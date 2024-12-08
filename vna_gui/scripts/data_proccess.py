@@ -25,7 +25,7 @@ class VNAfunc:
     Caculates the S-parameters of the two given signals
     This caculation must be done to each of the 4 signals to find S11, S12, S21, S22
     '''
-    def caculate_S_param (forward_signal, reverse_signal):
+    def calculate_S_param(forward_signal, reverse_signal):
         # Convert signals to polar. This is done by a CORDIC on the FPGA.
         forward_magnitude = np.abs(forward_signal)
         forward_phase = np.angle(forward_signal)
@@ -40,8 +40,10 @@ class VNAfunc:
         phase_difference = forward_phase - reverse_phase
         phase_difference[phase_difference > math.pi] = phase_difference[phase_difference > math.pi] - 2 * math.pi
         gamma_phase = np.mean(phase_difference)
+        
+        gamma_magnitude_db = 20*math.log(gamma_magnitude, 10)
 
-        return gamma_magnitude, gamma_phase
+        return gamma_magnitude_db, gamma_phase
     
     def extract_S_param(self, out_buffer):
         # Convert the entire out_buffer into a NumPy array
@@ -65,10 +67,10 @@ class VNAfunc:
         array2 = real2 + 1j*imag2 
         array3 = real3 + 1j*imag3 
 
-        S11_mag, S11_phase = self.caculate_S_param(array0, array1)
-        S12_mag, S12_phase = self.caculate_S_param(array0, array2)
-        S21_mag, S21_phase = self.caculate_S_param(array1, array3)
-        S22_mag, S22_phase = self.caculate_S_param(array2, array3)
+        S11_mag, S11_phase = self.calculate_S_param(array0, array1)
+        S12_mag, S12_phase = self.calculate_S_param(array0, array2)
+        S21_mag, S21_phase = self.calculate_S_param(array1, array3)
+        S22_mag, S22_phase = self.calculate_S_param(array2, array3)
         
         ''' 
         print(f"Calculated S11 magnitude is {S11_mag:.2f}.")

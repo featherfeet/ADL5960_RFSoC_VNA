@@ -58,8 +58,8 @@ class SignalSourceUI:
             layout=widgets.Layout(min_width='400px', max_width='1000px')
         )
         self.user_freq_input = widgets.FloatText(
-            description='Freq (Hz):',
-            value=10e6,
+            description='Freq (MHz):',
+            value=100,
             layout=widgets.Layout(width='300px')
         )
         self.set_freq_button = widgets.Button(
@@ -119,8 +119,8 @@ class SignalSourceUI:
                 if self.mode_toggle.value == "User Input Frequency":
                     frequency = self.user_freq_input.value
                     self.source.set_active()
-                    self.source.set_frequency(frequency)
-                    print(f"Set frequency to {frequency} Hz.")
+                    self.source.set_frequency(frequency * 10**6)
+                    print(f"Set frequency to {frequency} MHz.")
                 else:
                     print(f"Wrong Mode. Follow automatic frequency.")
             except Exception as e:
@@ -144,7 +144,7 @@ class SignalSourceUI:
                             #with self.out:
                                 #clear_output(wait=True)
                             print(f"Setting frequency to {self.source.get_current_freq():.2f} Hz")
-                            time.sleep(0.3)
+                            #time.sleep(0.3)
 
                     # Start the loop in a new thread
                     self.running = True

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec  2 22:06:05 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec  6 11:07:20 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -64,24 +64,29 @@
         <CONNECTION INSTANCE="spi_control_w_1" PORT="chip_data_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="lmx_cs" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_chip_sel_out">
+    <PORT DIR="O" NAME="lmx_cs" SIGIS="undef" SIGNAME="spi_control_w_2_chip_sel_out">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="chip_sel_out"/>
+        <CONNECTION INSTANCE="spi_control_w_2" PORT="chip_sel_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="lmx_sck" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_chip_clk_out">
+    <PORT DIR="O" NAME="lmx_sck" SIGIS="undef" SIGNAME="spi_control_w_2_chip_clk_out">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="chip_clk_out"/>
+        <CONNECTION INSTANCE="spi_control_w_2" PORT="chip_clk_out"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="lmx_sdi" SIGIS="undef" SIGNAME="External_Ports_lmx_sdi">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="chip_data_in"/>
+        <CONNECTION INSTANCE="spi_control_w_2" PORT="chip_data_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="lmx_sdo" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_chip_data_out">
+    <PORT DIR="O" NAME="lmx_sdo" SIGIS="undef" SIGNAME="spi_control_w_2_chip_data_out">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="chip_data_out"/>
+        <CONNECTION INSTANCE="spi_control_w_2" PORT="chip_data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="rfswitch" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="sysref_in_diff_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_n">
@@ -4503,12 +4508,12 @@
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S01_ARESETN"/>
-            <CONNECTION INSTANCE="spi_adl_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="spi_adl_1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="spi_lmx_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="spi_control_w_0" PORT="rst_in"/>
             <CONNECTION INSTANCE="spi_control_w_1" PORT="rst_in"/>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="rst_in"/>
+            <CONNECTION INSTANCE="spi_adl_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="spi_adl_1" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="rst_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps8_0_99M_peripheral_reset">
@@ -4524,7 +4529,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/spi_adl_0" HWVERSION="1.0" INSTANCE="spi_adl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_adl" VLNV="user.org:user:spi_adl:1.0">
+    <MODULE COREREVISION="10" FULLNAME="/spi_adl_0" HWVERSION="1.0" INSTANCE="spi_adl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_adl" VLNV="user.org:user:spi_adl:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -4538,12 +4543,12 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0xA003FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="19" NAME="command_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_0_data_out">
+        <PORT DIR="I" LEFT="23" NAME="command_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_control_w_0" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="19" NAME="command_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_0_command_out">
+        <PORT DIR="O" LEFT="23" NAME="command_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_0_command_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_control_w_0" PORT="data_in"/>
           </CONNECTIONS>
@@ -4728,7 +4733,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/spi_adl_1" HWVERSION="1.0" INSTANCE="spi_adl_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_adl" VLNV="user.org:user:spi_adl:1.0">
+    <MODULE COREREVISION="10" FULLNAME="/spi_adl_1" HWVERSION="1.0" INSTANCE="spi_adl_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_adl" VLNV="user.org:user:spi_adl:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -4742,12 +4747,12 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0xA001FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="19" NAME="command_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_1_data_out">
+        <PORT DIR="I" LEFT="23" NAME="command_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_1_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_control_w_1" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="19" NAME="command_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_1_command_out">
+        <PORT DIR="O" LEFT="23" NAME="command_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_1_command_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_control_w_1" PORT="data_in"/>
           </CONNECTIONS>
@@ -4969,12 +4974,12 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="19" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_0_command_out">
+        <PORT DIR="I" LEFT="23" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_0_command_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_adl_0" PORT="command_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="19" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_0_data_out">
+        <PORT DIR="O" LEFT="23" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_adl_0" PORT="command_in"/>
           </CONNECTIONS>
@@ -5034,12 +5039,12 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="19" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_1_command_out">
+        <PORT DIR="I" LEFT="23" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_adl_1_command_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_adl_1" PORT="command_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="19" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_1_data_out">
+        <PORT DIR="O" LEFT="23" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_1_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_adl_1" PORT="command_in"/>
           </CONNECTIONS>
@@ -5062,6 +5067,71 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/spi_control_w_2" HWVERSION="1.0" INSTANCE="spi_control_w_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_control_w" VLNV="xilinx.com:module_ref:spi_control_w:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_spi_control_w_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="busy_out" SIGIS="undef" SIGNAME="spi_control_w_2_busy_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_lmx_0" PORT="m_ready_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="chip_clk_out" SIGIS="undef" SIGNAME="spi_control_w_2_chip_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="lmx_sck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="chip_data_in" SIGIS="undef" SIGNAME="External_Ports_lmx_sdi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="lmx_sdi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="chip_data_out" SIGIS="undef" SIGNAME="spi_control_w_2_chip_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="lmx_sdo"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="chip_sel_out" SIGIS="undef" SIGNAME="spi_control_w_2_chip_sel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="lmx_cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_lmx_0_command_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_lmx_0" PORT="command_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_2_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_lmx_0" PORT="command_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="data_valid_out" SIGIS="undef" SIGNAME="spi_control_w_2_data_valid_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_lmx_0" PORT="s_valid_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_in" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="rst_ps8_0_99M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_99M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="trigger_in" SIGIS="undef" SIGNAME="spi_lmx_0_trigger_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_lmx_0" PORT="trigger_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="3" FULLNAME="/spi_lmx_0" HWVERSION="1.0" INSTANCE="spi_lmx_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_lmx" VLNV="user.org:user:spi_lmx:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
@@ -5076,19 +5146,19 @@
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0xA002FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="command_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_data_out">
+        <PORT DIR="I" LEFT="23" NAME="command_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_control_w_2_data_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="data_out"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="command_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_lmx_0_command_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="data_in"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_ready_in" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_busy_out">
+        <PORT DIR="I" NAME="m_ready_in" SIGIS="undef" SIGNAME="spi_control_w_2_busy_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="busy_out"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="busy_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="99999985" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
@@ -5196,14 +5266,14 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M03_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_valid_in" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_data_valid_out">
+        <PORT DIR="I" NAME="s_valid_in" SIGIS="undef" SIGNAME="spi_control_w_2_data_valid_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="data_valid_out"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="data_valid_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="trigger_out" SIGIS="undef" SIGNAME="spi_lmx_0_trigger_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="trigger_in"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="trigger_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5265,71 +5335,6 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/spi_lmx_control_w_0" HWVERSION="1.0" INSTANCE="spi_lmx_control_w_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_lmx_control_w" VLNV="xilinx.com:module_ref:spi_lmx_control_w:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_spi_lmx_control_w_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" NAME="busy_out" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_busy_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_0" PORT="m_ready_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="chip_clk_out" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_chip_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="lmx_sck"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="chip_data_in" SIGIS="undef" SIGNAME="External_Ports_lmx_sdi">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="lmx_sdi"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="chip_data_out" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_chip_data_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="lmx_sdo"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="chip_sel_out" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_chip_sel_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="lmx_cs"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="23" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="spi_lmx_0_command_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_0" PORT="command_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="23" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_data_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_0" PORT="command_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_valid_out" SIGIS="undef" SIGNAME="spi_lmx_control_w_0_data_valid_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_0" PORT="s_valid_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst_in" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="rst_ps8_0_99M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps8_0_99M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="trigger_in" SIGIS="undef" SIGNAME="spi_lmx_0_trigger_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_lmx_0" PORT="trigger_out"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
     <MODULE COREREVISION="9" FULLNAME="/usp_rf_data_converter_0" HWVERSION="2.6" INSTANCE="usp_rf_data_converter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="usp_rf_data_converter" VLNV="xilinx.com:ip:usp_rf_data_converter:2.6">
       <DOCUMENTS>
@@ -7547,6 +7552,30 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="41"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="40" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="zynq_ultra_ps_e_0_emio_gpio_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="emio_gpio_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rfswitch"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE CONFIGURABLE="TRUE" COREREVISION="3" FULLNAME="/zynq_ultra_ps_e_0" HWVERSION="3.5" INSTANCE="zynq_ultra_ps_e_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="zynq_ultra_ps_e" VLNV="xilinx.com:ip:zynq_ultra_ps_e:3.5">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=zynq_ultra_ps_e;v=v3_5;d=pg201-zynq-ultrascale-plus-processing-system.pdf"/>
@@ -9294,7 +9323,11 @@
       </PARAMETERS>
       <PORTS>
         <PORT DIR="I" LEFT="40" NAME="emio_gpio_i" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="40" NAME="emio_gpio_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="40" NAME="emio_gpio_o" RIGHT="0" SIGIS="undef" SIGNAME="zynq_ultra_ps_e_0_emio_gpio_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="40" NAME="emio_gpio_t" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="39" NAME="maxigp0_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_araddr">
           <CONNECTIONS>
@@ -9693,12 +9726,12 @@
             <CONNECTION INSTANCE="axi_smc" PORT="aclk1"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm1_fpd_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S01_ACLK"/>
-            <CONNECTION INSTANCE="spi_adl_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="spi_adl_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="spi_lmx_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="spi_control_w_0" PORT="clk_in"/>
             <CONNECTION INSTANCE="spi_control_w_1" PORT="clk_in"/>
-            <CONNECTION INSTANCE="spi_lmx_control_w_0" PORT="clk_in"/>
+            <CONNECTION INSTANCE="spi_adl_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="spi_adl_1" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="spi_control_w_2" PORT="clk_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="pl_ps_irq0" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>

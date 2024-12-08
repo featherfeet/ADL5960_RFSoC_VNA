@@ -15,8 +15,8 @@ class ADL5960:
     un_device_shutdown = 0x0002_00
     lo_config = 0x0020_01
     set_IF_filter = 0x0025_00
-    set_rgain = 0x0023_00
-    set_fgain = 0x0024_00
+    set_rgain = 0x0023_0C
+    set_fgain = 0x0024_0C
     
     def __init__(self, mmio_spi_controller):
         """
