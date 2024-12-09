@@ -23,7 +23,7 @@
 
 		// Parameters of Axi Master Bus Interface M00_AXIS
 		parameter integer C_M00_AXIS_TDATA_WIDTH	= 128,
-		parameter integer C_M00_AXIS_START_COUNT	= 32
+		parameter integer C_M00_AXIS_START_COUNT	= 128
 	)
 	(
 		// Users to add ports here

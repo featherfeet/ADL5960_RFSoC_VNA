@@ -48,12 +48,12 @@
 
 
 // IP VLNV: user.org:user:coeff_calc:1.0
-// IP Revision: 3
+// IP Revision: 2
 
-`timescale 1ns/1ps
-
+(* X_CORE_INFO = "coeff_calc,Vivado 2024.1" *)
+(* CHECK_LICENSE_TYPE = "design_1_coeff_calc_0_2,coeff_calc,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_coeff_calc_0_1 (
+module design_1_coeff_calc_0_2 (
   num_samples,
   s00_axis_aclk,
   s00_axis_aresetn,
@@ -180,9 +180,9 @@ output wire m00_axis_tlast;
 input wire m00_axis_tready;
 
   coeff_calc #(
-    .C_S01_AXIS_TDATA_WIDTH(32),  // AXI4Stream sink: Data Width
-    .C_S03_AXIS_TDATA_WIDTH(32),  // AXI4Stream sink: Data Width
     .C_S02_AXIS_TDATA_WIDTH(32),  // AXI4Stream sink: Data Width
+    .C_S03_AXIS_TDATA_WIDTH(32),  // AXI4Stream sink: Data Width
+    .C_S01_AXIS_TDATA_WIDTH(32),  // AXI4Stream sink: Data Width
     .C_M00_AXIS_TDATA_WIDTH(128),  // Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.
     .C_M00_AXIS_START_COUNT(32),  // Start count is the number of clock cycles the master will wait before initiating/issuing any transaction.
     .C_S00_AXIS_TDATA_WIDTH(32)  // AXI4Stream sink: Data Width

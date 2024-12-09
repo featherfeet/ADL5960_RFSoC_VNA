@@ -56,8 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 6
 set_param bd.open.in_stealth_mode 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu48dr-ffvg1517-2-e
@@ -73,6 +77,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part realdigital.org:rfsoc4x2:part0:1.0 [current_project]
 set_property ip_repo_paths {
+  /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
   /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
   /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
   /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0

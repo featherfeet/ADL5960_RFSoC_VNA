@@ -49,6 +49,7 @@
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/coeff_calc_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/coeff_calc_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/coeff_calc_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/cordic_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/fir_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/fir_1_0"/>
@@ -74,13 +75,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="7"/>
-    <Option Name="WTModelSimExportSim" Val="7"/>
-    <Option Name="WTQuestaExportSim" Val="7"/>
+    <Option Name="WTXSimExportSim" Val="11"/>
+    <Option Name="WTModelSimExportSim" Val="11"/>
+    <Option Name="WTQuestaExportSim" Val="11"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="7"/>
-    <Option Name="WTRivieraExportSim" Val="7"/>
-    <Option Name="WTActivehdlExportSim" Val="7"/>
+    <Option Name="WTVcsExportSim" Val="11"/>
+    <Option Name="WTRivieraExportSim" Val="11"/>
+    <Option Name="WTActivehdlExportSim" Val="11"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  8 16:47:20 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  8 21:00:40 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -2535,10 +2535,10 @@
             <CONNECTION INSTANCE="cordic_3" PORT="s00_axis_aclk"/>
             <CONNECTION INSTANCE="cordic_3" PORT="m00_axis_aclk"/>
             <CONNECTION INSTANCE="coeff_calc_0" PORT="s00_axis_aclk"/>
-            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_aclk"/>
             <CONNECTION INSTANCE="coeff_calc_0" PORT="s02_axis_aclk"/>
             <CONNECTION INSTANCE="coeff_calc_0" PORT="s03_axis_aclk"/>
             <CONNECTION INSTANCE="coeff_calc_0" PORT="m00_axis_aclk"/>
+            <CONNECTION INSTANCE="coeff_calc_0" PORT="s01_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -2554,7 +2554,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="3" FULLNAME="/coeff_calc_0" HWVERSION="1.0" INSTANCE="coeff_calc_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="coeff_calc" VLNV="user.org:user:coeff_calc:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/coeff_calc_0" HWVERSION="1.0" INSTANCE="coeff_calc_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="coeff_calc" VLNV="user.org:user:coeff_calc:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
@@ -2563,7 +2563,7 @@
         <PARAMETER NAME="C_S01_AXIS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S02_AXIS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S03_AXIS_TDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_coeff_calc_0_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_coeff_calc_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>

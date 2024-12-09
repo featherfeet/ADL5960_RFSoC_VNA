@@ -42,14 +42,14 @@
       "spi_control_w_2": "",
       "fir_0": "",
       "cordic_0": "",
-      "coeff_calc_0": "",
       "fir_1": "",
       "fir_2": "",
       "fir_3": "",
       "cordic_1": "",
       "cordic_2": "",
       "cordic_3": "",
-      "xlconstant_0": ""
+      "xlconstant_0": "",
+      "coeff_calc_0": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -2624,13 +2624,6 @@
         "xci_path": "ip/design_1_cordic_0_0/design_1_cordic_0_0.xci",
         "inst_hier_path": "cordic_0"
       },
-      "coeff_calc_0": {
-        "vlnv": "user.org:user:coeff_calc:1.0",
-        "ip_revision": "3",
-        "xci_name": "design_1_coeff_calc_0_1",
-        "xci_path": "ip/design_1_coeff_calc_0_1/design_1_coeff_calc_0_1.xci",
-        "inst_hier_path": "coeff_calc_0"
-      },
       "fir_1": {
         "vlnv": "user.org:user:fir:1.0",
         "ip_revision": "2",
@@ -2685,6 +2678,18 @@
           },
           "CONST_WIDTH": {
             "value": "16"
+          }
+        }
+      },
+      "coeff_calc_0": {
+        "vlnv": "user.org:user:coeff_calc:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_coeff_calc_0_2",
+        "xci_path": "ip/design_1_coeff_calc_0_2/design_1_coeff_calc_0_2.xci",
+        "inst_hier_path": "coeff_calc_0",
+        "parameters": {
+          "C_M00_AXIS_START_COUNT": {
+            "value": "32"
           }
         }
       }
@@ -2957,10 +2962,10 @@
           "cordic_3/s00_axis_aclk",
           "cordic_3/m00_axis_aclk",
           "coeff_calc_0/s00_axis_aclk",
-          "coeff_calc_0/s01_axis_aclk",
           "coeff_calc_0/s02_axis_aclk",
           "coeff_calc_0/s03_axis_aclk",
-          "coeff_calc_0/m00_axis_aclk"
+          "coeff_calc_0/m00_axis_aclk",
+          "coeff_calc_0/s01_axis_aclk"
         ]
       },
       "clk_wiz_0_locked": {

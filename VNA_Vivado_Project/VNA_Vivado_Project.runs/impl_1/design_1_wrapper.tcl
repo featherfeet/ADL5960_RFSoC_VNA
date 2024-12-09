@@ -105,8 +105,12 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 6
   set_param bd.open.in_stealth_mode 1
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu48dr-ffvg1517-2-e
@@ -118,6 +122,7 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/wt [current_project]
   set_property parent.project_path /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr [current_project]
   set_property ip_repo_paths {
+  /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
   /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
   /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0
   /home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0

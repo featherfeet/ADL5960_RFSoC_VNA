@@ -123,9 +123,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_fi
 # IP: bd/design_1/ip/design_1_cordic_0_0/design_1_cordic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_cordic_0_0 || ORIG_REF_NAME==design_1_cordic_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_coeff_calc_0_1/design_1_coeff_calc_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_coeff_calc_0_1 || ORIG_REF_NAME==design_1_coeff_calc_0_1} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_fir_1_0/design_1_fir_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_fir_1_0 || ORIG_REF_NAME==design_1_fir_1_0} -quiet] -quiet
 
@@ -144,6 +141,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_co
 # IP: bd/design_1/ip/design_1_cordic_3_0/design_1_cordic_3_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_cordic_3_0 || ORIG_REF_NAME==design_1_cordic_3_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_0 || ORIG_REF_NAME==design_1_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_coeff_calc_0_2/design_1_coeff_calc_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_coeff_calc_0_2 || ORIG_REF_NAME==design_1_coeff_calc_0_2} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] -quiet
 
@@ -155,9 +158,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 
 # IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_0 || ORIG_REF_NAME==design_1_xlconstant_0_0} -quiet] -quiet
 
 # XDC: /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_usp_rf_data_converter_0_0 || ORIG_REF_NAME==design_1_usp_rf_data_converter_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet

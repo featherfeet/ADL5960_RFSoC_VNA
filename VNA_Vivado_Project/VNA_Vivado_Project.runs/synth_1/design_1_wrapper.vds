@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Dec  8 16:49:38 2024
-# Process ID: 43024
+# Start of session at: Sun Dec  8 21:01:09 2024
+# Process ID: 726242
 # Current directory: /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/design_1_wrapper.vds
@@ -13,16 +13,18 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
-# CPU Frequency     :3243.427 MHz
+# CPU Frequency     :2605.317 MHz
 # CPU Physical cores:16
 # CPU Logical cores :24
 # Host memory       :33325 MB
 # Swap memory       :8589 MB
 # Total Virtual     :41915 MB
-# Available Virtual :34721 MB
+# Available Virtual :32314 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0' already exists; ignoring attempt to add it again.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0'.
 WARNING: [IP_Flow 19-2207] Repository '/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0' already exists; ignoring attempt to add it again.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/akeirn/Documents/ADL5960_RFSoC_VNA/ip_repo/coeff_calc_1_0'.
@@ -44,9 +46,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu48d
 INFO: [Device 21-403] Loading part xczu48dr-ffvg1517-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 43087
+INFO: [Synth 8-7075] Helper process launched with PID 726294
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2833.836 ; gain = 352.832 ; free physical = 15094 ; free virtual = 31025
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2833.203 ; gain = 351.832 ; free physical = 11947 ; free virtual = 28721
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'sysref_fbrc_edge', assumed default net type 'wire' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_mt_sysref_count.sv:142]
 WARNING: [Synth 8-6901] identifier 'trigger' is used before its declaration [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:241]
@@ -1301,16 +1303,19 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/Vivado/2024.1/scr
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp_diablo.v:2035]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:65]
-INFO: [Synth 8-6157] synthesizing module 'design_1_coeff_calc_0_1' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_coeff_calc_0_1/synth/design_1_coeff_calc_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'coeff_calc' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/6fcd/hdl/coeff_calc.v:4]
-INFO: [Synth 8-6157] synthesizing module 'compute_coeff_averaging' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/6fcd/a11d/compute_coeff_averaging.sv:1]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/6fcd/a11d/compute_coeff_averaging.sv:171]
-INFO: [Synth 8-6155] done synthesizing module 'compute_coeff_averaging' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/6fcd/a11d/compute_coeff_averaging.sv:1]
-WARNING: [Synth 8-689] width (16) of port connection 'm00_axis_tstrb' does not match port width (4) of module 'compute_coeff_averaging' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/6fcd/hdl/coeff_calc.v:123]
-INFO: [Synth 8-6155] done synthesizing module 'coeff_calc' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/6fcd/hdl/coeff_calc.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_coeff_calc_0_1' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_coeff_calc_0_1/synth/design_1_coeff_calc_0_1.v:53]
-WARNING: [Synth 8-7071] port 'm00_axis_tstrb' of module 'design_1_coeff_calc_0_1' is unconnected for instance 'coeff_calc_0' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/synth/design_1.v:540]
-WARNING: [Synth 8-7023] instance 'coeff_calc_0' of module 'design_1_coeff_calc_0_1' has 36 connections declared, but only 35 given [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/synth/design_1.v:540]
+INFO: [Synth 8-6157] synthesizing module 'design_1_coeff_calc_0_2' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_coeff_calc_0_2/synth/design_1_coeff_calc_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'coeff_calc' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/hdl/coeff_calc.v:4]
+INFO: [Synth 8-6157] synthesizing module 'compute_coeff_averaging' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'divider2' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:353]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:380]
+INFO: [Synth 8-6155] done synthesizing module 'divider2' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:353]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:194]
+INFO: [Synth 8-6155] done synthesizing module 'compute_coeff_averaging' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:1]
+WARNING: [Synth 8-689] width (16) of port connection 'm00_axis_tstrb' does not match port width (4) of module 'compute_coeff_averaging' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/hdl/coeff_calc.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'coeff_calc' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/hdl/coeff_calc.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_coeff_calc_0_2' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_coeff_calc_0_2/synth/design_1_coeff_calc_0_2.v:53]
+WARNING: [Synth 8-7071] port 'm00_axis_tstrb' of module 'design_1_coeff_calc_0_2' is unconnected for instance 'coeff_calc_0' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/synth/design_1.v:540]
+WARNING: [Synth 8-7023] instance 'coeff_calc_0' of module 'design_1_coeff_calc_0_2' has 36 connections declared, but only 35 given [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/synth/design_1.v:540]
 INFO: [Synth 8-6157] synthesizing module 'design_1_cordic_0_0' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_cordic_0_0/synth/design_1_cordic_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'cordic' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/539f/hdl/cordic.v:4]
 INFO: [Synth 8-6157] synthesizing module 'cordic_inner' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/539f/a11d/cordic.sv:4]
@@ -1322,16 +1327,14 @@ INFO: [Synth 8-6155] done synthesizing module 'design_1_cordic_1_0' (0#1) [/home
 INFO: [Synth 8-6157] synthesizing module 'design_1_cordic_2_0' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_cordic_2_0/synth/design_1_cordic_2_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_cordic_2_0' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_cordic_2_0/synth/design_1_cordic_2_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'design_1_cordic_3_0' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_cordic_3_0/synth/design_1_cordic_3_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_cordic_3_0' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_cordic_3_0/synth/design_1_cordic_3_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_1_fir_0_1' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_fir_0_1/synth/design_1_fir_0_1.v:53]
 INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'design_1_cordic_3_0' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_cordic_3_0/synth/design_1_cordic_3_0.v:53]
 INFO: [Synth 8-251] DONE! [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/a11d/fir_15.sv:87]
 WARNING: [Synth 8-6090] variable 'txn_count' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/a11d/fir_15.sv:133]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/a11d/fir_15.sv:105]
 INFO: [Synth 8-6155] done synthesizing module 'fir_15' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/a11d/fir_15.sv:4]
 WARNING: [Synth 8-689] width (2) of port connection 's00_axis_tstrb' does not match port width (4) of module 'fir_15' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/hdl/fir.v:61]
 INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/hdl/fir.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_0_1' (0#1) [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_fir_0_1/synth/design_1_fir_0_1.v:53]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-226] default block is never used [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3446]
 INFO: [Synth 8-226] default block is never used [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3608]
@@ -1490,6 +1493,7 @@ WARNING: [Synth 8-3848] Net S03_AXI_awready in module/entity bd_6f02 does not ha
 WARNING: [Synth 8-3848] Net S03_AXI_bresp in module/entity bd_6f02 does not have driver. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/bd_6f02.v:188]
 WARNING: [Synth 8-3848] Net S03_AXI_bvalid in module/entity bd_6f02 does not have driver. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/bd_6f02.v:189]
 WARNING: [Synth 8-3848] Net S03_AXI_wready in module/entity bd_6f02 does not have driver. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/bd_6f02.v:192]
+WARNING: [Synth 8-6014] Unused sequential element quotient_reg was removed.  [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/e880/a11d/compute_coeff_averaging.sv:370]
 WARNING: [Synth 8-6014] Unused sequential element y_regs_reg[14] was removed.  [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/539f/a11d/cordic.sv:112]
 WARNING: [Synth 8-3936] Found unconnected internal register 'final_radius_reg' and it is trimmed from '34' to '16' bits. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/539f/a11d/cordic.sv:66]
 WARNING: [Synth 8-3848] Net s01_axis_tready in module/entity fir does not have driver. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/97ad/hdl/fir.v:41]
@@ -1555,7 +1559,6 @@ WARNING: [Synth 8-6014] Unused sequential element adc21_cal_freeze_reg_reg was r
 WARNING: [Synth 8-6014] Unused sequential element adc21_disable_cal_freeze_input_reg was removed.  [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v:5516]
 WARNING: [Synth 8-6014] Unused sequential element adc23_cal_freeze_reg_reg was removed.  [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v:5541]
 WARNING: [Synth 8-6014] Unused sequential element adc23_disable_cal_freeze_input_reg was removed.  [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v:5542]
-WARNING: [Synth 8-6014] Unused sequential element adc30_cal_freeze_reg_reg was removed.  [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v:6040]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3848] Net adc00_sig_detect in module/entity design_1_usp_rf_data_converter_0_0_block does not have driver. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v:123]
 WARNING: [Synth 8-3848] Net adc02_sig_detect in module/entity design_1_usp_rf_data_converter_0_0_block does not have driver. [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_usp_rf_data_converter_0_0/synth/design_1_usp_rf_data_converter_0_0_block.v:131]
@@ -1674,18 +1677,18 @@ WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_5_3_zy
 WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_5_3_zynq_ultra_ps_e is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3406.055 ; gain = 925.051 ; free physical = 14430 ; free virtual = 30370
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3410.422 ; gain = 929.051 ; free physical = 11342 ; free virtual = 28126
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3406.055 ; gain = 925.051 ; free physical = 14446 ; free virtual = 30386
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3410.422 ; gain = 929.051 ; free physical = 11342 ; free virtual = 28126
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3406.055 ; gain = 925.051 ; free physical = 14446 ; free virtual = 30386
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3410.422 ; gain = 929.051 ; free physical = 11342 ; free virtual = 28126
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.82 . Memory (MB): peak = 3406.055 ; gain = 0.000 ; free physical = 14449 ; free virtual = 30389
+Netlist sorting complete. Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.83 . Memory (MB): peak = 3410.422 ; gain = 0.000 ; free physical = 11327 ; free virtual = 28129
 INFO: [Netlist 29-17] Analyzing 686 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1796,7 +1799,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wra
 INFO: [Project 1-1714] 233 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3752.461 ; gain = 0.000 ; free physical = 14262 ; free virtual = 30206
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3764.859 ; gain = 0.000 ; free physical = 11172 ; free virtual = 27956
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 685 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -1804,9 +1807,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
   SRL16 => SRL16E: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3764.383 ; gain = 0.008 ; free physical = 14249 ; free virtual = 30193
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3776.781 ; gain = 0.000 ; free physical = 11161 ; free virtual = 27946
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 3764.383 ; gain = 1283.379 ; free physical = 13321 ; free virtual = 29266
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 3776.781 ; gain = 1295.410 ; free physical = 10267 ; free virtual = 27073
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -1814,7 +1817,7 @@ Start Loading Part and Timing Information
 Loading part: xczu48dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 3772.387 ; gain = 1291.383 ; free physical = 13321 ; free virtual = 29266
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 3784.785 ; gain = 1303.414 ; free physical = 10267 ; free virtual = 27073
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1851,7 +1854,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/spi_lmx_0. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/spi_control_w_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/cordic_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/coeff_calc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/fir_3. (constraint file  auto generated constraint).
@@ -1859,6 +1861,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/cordic_1. (constraint 
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/cordic_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/cordic_3. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/coeff_calc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
@@ -2093,21 +2096,18 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/s00_nodes
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 3772.387 ; gain = 1291.383 ; free physical = 13034 ; free virtual = 28978
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 3784.785 ; gain = 1303.414 ; free physical = 9946 ; free virtual = 26755
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
-got a mismatch design_1_coeff_calc_0_1
-Is not a child genome
-got a mismatch coeff_calc
-Is not a child genome
-WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 3772.387 ; gain = 1291.383 ; free physical = 12176 ; free virtual = 28131
+Finished Doing Graph Differ : Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 3784.785 ; gain = 1303.414 ; free physical = 9020 ; free virtual = 25814
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Over 50% of partitions are impacted by design changes. Reverting to default synthesis
+WARNING: [Synth 8-6702] IncrSynth : Reverting to default synthesis
 ---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 3772.387 ; gain = 1291.383 ; free physical = 12176 ; free virtual = 28131
+Finished Preparing Guide Design : Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 3784.785 ; gain = 1303.414 ; free physical = 7423 ; free virtual = 24217
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'smpl_cs_reg' in module 'axi_dma_smple_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
@@ -2129,9 +2129,10 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.stat
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_13_decerr_slave'
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divider2'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'compute_coeff_averaging'
-DSP Debug: swapped A/B pins for adder 0x5b390d20
-DSP Debug: swapped A/B pins for adder 0x5c939a40
+DSP Debug: swapped A/B pins for adder 0x8f56b440
+DSP Debug: swapped A/B pins for adder 0x92378180
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
@@ -2301,11 +2302,20 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+                 RESTING |                                0 | 00000000000000000000000000000000
+                DIVIDING |                                1 | 00000000000000000000000000000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'divider2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
               ACCUMULATE |                              000 | 00000000000000000000000000000000
                  AVERAGE |                              001 | 00000000000000000000000000000001
-               CALCULATE |                              010 | 00000000000000000000000000000011
-                    SEND |                              011 | 00000000000000000000000000000100
-                 WAITING |                              100 | 00000000000000000000000000000101
+              DIVIDE_ONE |                              010 | 00000000000000000000000000000010
+              DIVIDE_TWO |                              011 | 00000000000000000000000000000011
+               CALCULATE |                              100 | 00000000000000000000000000000100
+                    SEND |                              101 | 00000000000000000000000000000101
+                 WAITING |                              110 | 00000000000000000000000000000110
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'compute_coeff_averaging'
 INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
@@ -2555,7 +2565,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'access_cs_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'design_1_usp_rf_data_converter_0_0_drp_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3772.387 ; gain = 1291.383 ; free physical = 8459 ; free virtual = 24414
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 3784.785 ; gain = 1303.414 ; free physical = 4477 ; free virtual = 21271
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -2566,7 +2576,7 @@ Incremental Synthesis Report Summary:
 
 1. Incremental synthesis run: no
 
-   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+   Reason for not running incremental synthesis : Change is too high
 
 
 INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
@@ -2657,8 +2667,8 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line46/y_regs_reg[3][9] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line46/y_regs_reg[4][5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line46/y_regs_reg[5][0] )
-DSP Debug: swapped A/B pins for adder 0x6a9234a0
-DSP Debug: swapped A/B pins for adder 0x67924000
+DSP Debug: swapped A/B pins for adder 0x6fac5c20
+DSP Debug: swapped A/B pins for adder 0x6fac2780
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line57/\fir_regs_reg[0][0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line57/\tlast_count_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line57/\state_reg[23] )
@@ -2972,78 +2982,6 @@ INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AX
 INFO: [Synth 8-3332] Sequential element (I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[23]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[22]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[21]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[20]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[19]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[18]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[17]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[16]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[15]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[14]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[13]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[12]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[11]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[10]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[9]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[8]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[7]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[6]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[5]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[4]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[3]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[2]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[1]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[0]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[23]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
@@ -3116,8 +3054,80 @@ CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_1/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[0]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[23]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[22]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[21]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[20]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[19]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[18]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[17]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[16]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[15]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[14]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[13]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[12]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[11]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[10]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[9]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[8]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[7]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[6]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[5]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[4]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[3]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[2]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[1]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'spi_adl_0/inst/spi_adl_slave_lite_v1_0_S00_AXI_inst/command_in_buffer_reg[0]__0/Q' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/5760/hdl/spi_adl_slave_lite_v1_0_S00_AXI.v:436]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:53 . Memory (MB): peak = 3788.398 ; gain = 1307.395 ; free physical = 6020 ; free virtual = 22098
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:00:53 . Memory (MB): peak = 3800.797 ; gain = 1319.426 ; free physical = 2949 ; free virtual = 19838
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -3178,7 +3188,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'i_mts_sysref_count_adc/sy
 INFO: [Synth 8-5578] Moved timing constraint from pin 'i_mts_sysref_count_adc/sysref_freq[9]' to pin '{i_mts_sysref_count_adc/sysref_freq_r_reg[9]/Q}'
 INFO: [Synth 8-5819] Moved 48 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:00:58 . Memory (MB): peak = 4977.109 ; gain = 2496.105 ; free physical = 4713 ; free virtual = 20962
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:00:58 . Memory (MB): peak = 5086.477 ; gain = 2605.105 ; free physical = 1646 ; free virtual = 18614
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -3188,13 +3198,13 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:07 . Memory (MB): peak = 5157.336 ; gain = 2676.332 ; free physical = 4372 ; free virtual = 20837
+Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:01 . Memory (MB): peak = 5239.688 ; gain = 2758.316 ; free physical = 1502 ; free virtual = 18472
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:15 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2612 ; free virtual = 18817
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:09 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 367 ; free virtual = 16654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3414,37 +3424,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/tools/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18823
+Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:01:13 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 284 ; free virtual = 16647
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:19 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18823
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:01:13 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 284 ; free virtual = 16646
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:22 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18824
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:16 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 282 ; free virtual = 16645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:22 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18824
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:16 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 282 ; free virtual = 16645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:23 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18824
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:16 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 282 ; free virtual = 16645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:23 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18824
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:16 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 282 ; free virtual = 16645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3463,15 +3473,15 @@ Report Cell Usage:
 |1     |BUFG       |     1|
 |2     |BUFG_GT    |     2|
 |3     |BUFG_PS    |     1|
-|4     |CARRY8     |  2962|
-|5     |LUT1       |  1801|
-|6     |LUT2       | 13314|
-|7     |LUT3       |  9081|
-|8     |LUT4       |  3826|
-|9     |LUT5       |  3490|
-|10    |LUT6       |  6215|
+|4     |CARRY8     |  2045|
+|5     |LUT1       |  1733|
+|6     |LUT2       |  9290|
+|7     |LUT3       |  8644|
+|8     |LUT4       |  4048|
+|9     |LUT5       |  3521|
+|10    |LUT6       |  6235|
 |11    |MMCME4_ADV |     1|
-|12    |MUXF7      |   142|
+|12    |MUXF7      |   144|
 |13    |MUXF8      |    28|
 |14    |PS8        |     1|
 |15    |RAM16X1D   |     1|
@@ -3488,20 +3498,20 @@ Report Cell Usage:
 |29    |FDCE       |   397|
 |30    |FDPE       |   113|
 |31    |FDR        |   289|
-|32    |FDRE       | 19911|
+|32    |FDRE       | 21114|
 |33    |FDSE       |   716|
 |34    |IBUF       |     2|
 |35    |OBUF       |     9|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:23 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 2533 ; free virtual = 18824
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:16 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 282 ; free virtual = 16645
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 144 critical warnings and 5005 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 5169.262 ; gain = 2329.930 ; free physical = 12788 ; free virtual = 29079
-Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:01:25 . Memory (MB): peak = 5169.262 ; gain = 2688.258 ; free physical = 12814 ; free virtual = 29072
+Synthesis finished with 0 errors, 144 critical warnings and 5077 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 5251.613 ; gain = 2403.883 ; free physical = 10516 ; free virtual = 26879
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 5251.613 ; gain = 2770.242 ; free physical = 10551 ; free virtual = 26880
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.31 . Memory (MB): peak = 5169.262 ; gain = 0.000 ; free physical = 12849 ; free virtual = 29107
-INFO: [Netlist 29-17] Analyzing 3488 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.31 . Memory (MB): peak = 5251.613 ; gain = 0.000 ; free physical = 10570 ; free virtual = 26899
+INFO: [Netlist 29-17] Analyzing 2573 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/clk_wiz_0/inst/clkin1_ibuf 
@@ -3510,7 +3520,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-441] Inserted BUFG_GT_SYNC design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/BUFG_GT_SYNC for BUFG_GT design_1_i/usp_rf_data_converter_0/inst/i_design_1_usp_rf_data_converter_0_0_bufg_gt_ctrl/adc0_bufg_gt
 INFO: [Opt 31-441] Inserted BUFG_GT_SYNC design_1_i/usp_rf_data_converter_0/inst/design_1_usp_rf_data_converter_0_0_rf_wrapper_i/BUFG_GT_SYNC_1 for BUFG_GT design_1_i/usp_rf_data_converter_0/inst/i_design_1_usp_rf_data_converter_0_0_bufg_gt_ctrl/adc2_bufg_gt
 INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance design_1_i/clk_wiz_0/inst/mmcme4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5169.262 ; gain = 0.000 ; free physical = 12865 ; free virtual = 29137
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5251.613 ; gain = 0.000 ; free physical = 10589 ; free virtual = 26918
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 354 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -3522,15 +3532,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 5 instances
   SRL16 => SRL16E: 5 instances
 
-Synth Design complete | Checksum: ae5948b2
+Synth Design complete | Checksum: f8da94f5
 INFO: [Common 17-83] Releasing license: Synthesis
-1123 Infos, 594 Warnings, 144 Critical Warnings and 0 Errors encountered.
+1127 Infos, 596 Warnings, 144 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:37 ; elapsed = 00:01:37 . Memory (MB): peak = 5169.262 ; gain = 3710.488 ; free physical = 12867 ; free virtual = 29139
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 14629.889; main = 4160.696; forked = 10554.106
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 20288.555; main = 5167.070; forked = 15123.211
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:31 . Memory (MB): peak = 5251.613 ; gain = 3792.840 ; free physical = 10591 ; free virtual = 26920
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 14705.297; main = 4235.840; forked = 10549.057
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 20362.855; main = 5249.422; forked = 15115.160
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.06 . Memory (MB): peak = 5191.078 ; gain = 0.000 ; free physical = 12863 ; free virtual = 29140
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.04 . Memory (MB): peak = 5273.430 ; gain = 0.000 ; free physical = 10591 ; free virtual = 26925
 INFO: [Common 17-1381] The checkpoint '/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 16:51:26 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  8 21:02:52 2024...

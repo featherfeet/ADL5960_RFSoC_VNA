@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Sun Dec  8 16:47:18 2024
+//Date        : Sun Dec  8 21:00:38 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -537,7 +537,7 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked),
         .reset(rst_ps8_0_99M_peripheral_reset));
-  design_1_coeff_calc_0_1 coeff_calc_0
+  design_1_coeff_calc_0_2 coeff_calc_0
        (.m00_axis_aclk(clk_wiz_0_clk_out1),
         .m00_axis_aresetn(rst_clk_wiz_0_147M_peripheral_aresetn),
         .m00_axis_tdata(coeff_calc_0_M00_AXIS_TDATA),
