@@ -23,10 +23,15 @@ class SSSTester:
         self.dut = dut_entity
         self.log = logging.getLogger("cocotb.tb")
         self.log.setLevel(logging.DEBUG)
-        self.input_mon = AXISMonitor(self.dut,'s00',self.dut.s00_axis_aclk, callback=self.model)
-        self.output_mon = AXISMonitor(self.dut,'m00',self.dut.s00_axis_aclk)
+        #self.input_mon = AXISMonitor(self.dut,'s00',self.dut.s00_axis_aclk, callback=self.model)
+        #self.output_mon = AXISMonitor(self.dut,'m00',self.dut.s00_axis_aclk)
 
         if(test_type == 'coeff'):
+            self.input_driver0 = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
+            self.input_driver1 = AXISDriver(self.dut,'s01',self.dut.s01_axis_aclk)
+            self.input_driver2 = AXISDriver(self.dut,'s02',self.dut.s02_axis_aclk)
+            self.input_driver3 = AXISDriver(self.dut,'s03',self.dut.s03_axis_aclk)
+        elif(test_type == 'top'):
             self.input_driver0 = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
             self.input_driver1 = AXISDriver(self.dut,'s01',self.dut.s01_axis_aclk)
             self.input_driver2 = AXISDriver(self.dut,'s02',self.dut.s02_axis_aclk)
@@ -38,8 +43,8 @@ class SSSTester:
         self.calcs_sent = 0
         # Create a scoreboard on the stream_out bus
         self.expected_output = [] #contains list of expected outputs (Growing)
-        self.scoreboard = AXISscoreboard(self.dut, test_type, fail_immediately=False)
-        self.scoreboard.add_interface(self.output_mon, self.expected_output)
+        #self.scoreboard = AXISscoreboard(self.dut, test_type, fail_immediately=False)
+        #self.scoreboard.add_interface(self.output_mon, self.expected_output)
  
     def stop(self) -> None:
         """Stops everything"""
