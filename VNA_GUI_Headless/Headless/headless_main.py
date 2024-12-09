@@ -42,7 +42,6 @@ adl2 = ADL5960(ol.spi_adl_1)
 print("Setting up source...")
 source = SigSource(mmio_spi_controller = ol.spi_lmx_0)
 source.set_active()
-source.set_frequency(100e6) # TODO actually sweep
 
 # Set up Python DSP.
 dsp = DSP()
@@ -105,6 +104,14 @@ while True:
     message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
     remote_connection.send_message(message)
 
+    # Check for messages.
+    message = remote_connection.receive_message()
+    if message:
+        print(message)
+        if message["type"] == "parameters":
+            source.update_parameters(start = message["start"], stop = message["stop"], center = message["center"], span = message["span"], resolution = message["resolution"], single_freq = message["single_freq"])
+            source.set_next_freq(start = True)
+
     print(f"Frequency: {freq / 1e6:.3f} MHz")
     print(f"Calculated S11 magnitude is {S11_mag:.2f}.")
     print(f"Calculated S11 phase is {S11_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
@@ -114,6 +121,8 @@ while True:
     print(f"Calculated S21 phase is {S21_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
     print(f"Calculated S22 magnitude is {S22_mag:.2f}.")
     print(f"Calculated S22 phase is {S22_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
+
+    source.set_next_freq()
 
     #np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
 

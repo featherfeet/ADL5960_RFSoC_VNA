@@ -139,7 +139,6 @@ class SigSource:
         
         print("Signal Source with Start Frequency: {} Stop Frequency: {} Resolution: {}".format(self.start, self.stop, self.resolution))
         
-
     def generate_freq_points(self, set_internal = True):
         '''
         Generates a list of frequency points for the start/stop and depending on the number of points requested
