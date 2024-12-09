@@ -127,7 +127,7 @@ class MainWindow(QWidget):
         if self.mode_radio_button_zerospan.isChecked():
             parameter_list = {
                 "type" : "parameters",
-                "single_freq": self.zero_span_frequency_input.text(),
+                "single_freq": float(self.zero_span_frequency_input.text()),
                 "start": None,
                 "stop": None,
                 "center": None,
@@ -138,20 +138,20 @@ class MainWindow(QWidget):
             parameter_list = {
                 "type" : "parameters",
                 "single_freq": None,
-                "start": self.start_frequency_input.text(),
-                "stop": self.stop_frequency_input.text(),
+                "start": float(self.start_frequency_input.text()),
+                "stop": float(self.stop_frequency_input.text()),
                 "center": None,
                 "span": None,
-                "resolution": self.pointspersweep_input.text()
+                "resolution": int(self.pointspersweep_input.text())
             }
         elif self.mode_radio_button_centerspan.isChecked():
             parameter_list = {
                 "type" : "parameters",
                 "start": None,
                 "stop": None,
-                "center": self.center_frequency_input.text(),
-                "span": self.span_frequency_input.text(),
-                "resolution": self.pointspersweep_input.text()
+                "center": float(self.center_frequency_input.text()),
+                "span": float(self.span_frequency_input.text()),
+                "resolution": int(self.pointspersweep_input.text())
             }
         else:
             parameter_list = {

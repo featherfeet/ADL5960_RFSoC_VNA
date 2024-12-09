@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec  6 11:07:20 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  8 21:26:56 2024" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="realdigital.org:rfsoc4x2:part0:1.0" DEVICE="xczu48dr" NAME="design_1" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
@@ -82,11 +82,6 @@
     <PORT DIR="O" NAME="lmx_sdo" SIGIS="undef" SIGNAME="spi_control_w_2_chip_data_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="spi_control_w_2" PORT="chip_data_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="0" NAME="rfswitch" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="sysref_in_diff_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_n">
@@ -4441,15 +4436,15 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_0_147M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_aresetn"/>
-            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_aresetn"/>
             <CONNECTION INSTANCE="adc_combiner_0" PORT="s00_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s01_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s02_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s03_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s04_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s05_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s06_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="s07_axis_aresetn"/>
+            <CONNECTION INSTANCE="adc_combiner_0" PORT="m00_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -7552,30 +7547,6 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
-        <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="41"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlslice_0_0"/>
-        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="40" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="zynq_ultra_ps_e_0_emio_gpio_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="emio_gpio_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rfswitch"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE CONFIGURABLE="TRUE" COREREVISION="3" FULLNAME="/zynq_ultra_ps_e_0" HWVERSION="3.5" INSTANCE="zynq_ultra_ps_e_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="zynq_ultra_ps_e" VLNV="xilinx.com:ip:zynq_ultra_ps_e:3.5">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=zynq_ultra_ps_e;v=v3_5;d=pg201-zynq-ultrascale-plus-processing-system.pdf"/>
@@ -9323,11 +9294,7 @@
       </PARAMETERS>
       <PORTS>
         <PORT DIR="I" LEFT="40" NAME="emio_gpio_i" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="40" NAME="emio_gpio_o" RIGHT="0" SIGIS="undef" SIGNAME="zynq_ultra_ps_e_0_emio_gpio_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="40" NAME="emio_gpio_o" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="40" NAME="emio_gpio_t" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="39" NAME="maxigp0_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_araddr">
           <CONNECTIONS>

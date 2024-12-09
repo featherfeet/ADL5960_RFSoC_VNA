@@ -47,6 +47,9 @@ source.set_active()
 dsp = DSP()
 
 #Main capture and processing loop.
+#filename = "siggen"
+data_out_file = open("bandpass.csv", "w")
+data_out_file.write(f"Freq (Hz),S11_mag,S11_phase,S12_mag,S12_phase,S21_mag,S21_phase,S22_mag,S22_phase\n")
 while True:
     freq = source.get_current_freq()
 
@@ -112,7 +115,7 @@ while True:
             source.update_parameters(start = message["start"], stop = message["stop"], center = message["center"], span = message["span"], resolution = message["resolution"], single_freq = message["single_freq"])
             source.set_next_freq(start = True)
 
-    print(f"Frequency: {freq / 1e6:.3f} MHz")
+    print(f"Frequency: {freq} MHz")
     print(f"Calculated S11 magnitude is {S11_mag:.2f}.")
     print(f"Calculated S11 phase is {S11_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
     print(f"Calculated S12 magnitude is {S12_mag:.2f}.")
@@ -127,5 +130,5 @@ while True:
     #np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
 
     #break
-    #data_out_file.write(f"{freq},{S11_mag},{S12_mag},{S21_mag},{S22_mag}\n")
-    #data_out_file.flush()
+    data_out_file.write(f"{freq},{S11_mag},{S11_phase},{S12_mag},{S12_phase},{S21_mag},{S21_phase},{S22_mag},{S22_phase}\n")
+    data_out_file.flush()

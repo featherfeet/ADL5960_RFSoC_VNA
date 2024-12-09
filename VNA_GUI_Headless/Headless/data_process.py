@@ -23,6 +23,7 @@ class DSP:
         return real + 1j * imag
 
     def filter(self, signal_complex):
+        signal_complex = signal_complex[0:5000]
         return signal.convolve(signal_complex, self.fir_filter, mode = "same")
 
     '''

@@ -18,7 +18,7 @@ class ADCs:
                 for threshold in block.thresholds:
                     threshold.Settings["ThresholdMode"] = xrfdc.TRSHD_OFF
 
-    def read_adcs(self, length = 400024 * 4):
+    def read_adcs(self, length = 10000 * 4):
         # Trigger the DMA transfer and wait for the result
         out_buffer = allocate(length, dtype = np.int32)
         # Trigger the DMA transfer and wait for the result

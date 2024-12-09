@@ -126,7 +126,7 @@ class LMX2595:
         return self._get_register_bits(11, 11, 4).u
     
     def _set_pll_n(self, value):
-        print(f"Setting PLL_N to {value}")
+        #print(f"Setting PLL_N to {value}")
         value = bitstring.BitArray(int = value, length = 19)
         self._set_register_bits(34, 2, 0, value[0:3])
         self._set_register_bits(36, 15, 0, value[3:])
@@ -197,8 +197,8 @@ class LMX2595:
     def _update_n_divider(self):
         Fvco = self.Fvco_FREQ
         Fden = self._get_pll_den()
-        print(f"Fvco: {Fvco}")
-        print(f"Fden: {Fden}")
+        #print(f"Fvco: {Fvco}")
+        #print(f"Fden: {Fden}")
         if Fden < 1:
             Fden = 1
             self._set_pll_den(1)
@@ -209,18 +209,18 @@ class LMX2595:
         #    Fpd=1
 
         PreR = self._get_pll_r_pre()
-        print(f"PreR: {PreR}")
+        #print(f"PreR: {PreR}")
         if PreR < 1:
             PreR = 1
-        print(f"OSC_2x: {self._get_osc_2x()}")
-        print(f"MULT: {self._get_mult()}")
+        #print(f"OSC_2x: {self._get_osc_2x()}")
+        #print(f"MULT: {self._get_mult()}")
         MultOut = self.Fosc_FREQ * (self._get_osc_2x() + 1) * self._get_mult() / PreR
         if MultOut < 0.000001:
             MultOut = self.Fosc_FREQ
-        print(f"MultOut: {MultOut}")
+        #print(f"MultOut: {MultOut}")
 
         Rdiv = self._get_pll_r()
-        print(f"Rdiv: {Rdiv}")
+        #print(f"Rdiv: {Rdiv}")
         if Rdiv < 1:
             Rdiv = 1       
 
