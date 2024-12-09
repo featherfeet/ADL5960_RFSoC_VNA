@@ -307,7 +307,6 @@ if __name__ == "__main__":
 
     while True:
         if len(remote_connection.data.keys()):
-            print("Updating data")
             window.filtered_port1_forward_plot.setData(remote_connection.data["filtered_port1_forward"])
             window.filtered_port2_forward_plot.setData(remote_connection.data["filtered_port2_forward"])
             window.filtered_port1_reverse_plot.setData(remote_connection.data["filtered_port1_reverse"])
