@@ -128,39 +128,39 @@ class MainWindow(QWidget):
             parameter_list = {
                 "type" : "parameters",
                 "single_freq": self.zero_span_frequency_input.text(),
-                "start_freq": 0,
-                "stop_freq": 0,
-                "center_freq": 0,
-                "span": 0,
-                "resolution": 0
+                "start": None,
+                "stop": None,
+                "center": None,
+                "span": None,
+                "resolution": 1
             }
         elif self.mode_radio_button_startend.isChecked():
             parameter_list = {
                 "type" : "parameters",
-                "single_freq": 0,
-                "start_freq": self.start_frequency_input.text(),
-                "stop_freq": self.stop_frequency_input.text(),
-                "center_freq": 0,
-                "span": 0,
+                "single_freq": None,
+                "start": self.start_frequency_input.text(),
+                "stop": self.stop_frequency_input.text(),
+                "center": None,
+                "span": None,
                 "resolution": self.pointspersweep_input.text()
             }
         elif self.mode_radio_button_centerspan.isChecked():
             parameter_list = {
                 "type" : "parameters",
-                "start_freq": 0,
-                "stop_freq": 0,
-                "center_freq": self.center_frequency_input.text(),
+                "start": None,
+                "stop": None,
+                "center": self.center_frequency_input.text(),
                 "span": self.span_frequency_input.text(),
                 "resolution": self.pointspersweep_input.text()
             }
         else:
             parameter_list = {
                 "type" : "parameters",
-                "start_freq": 0,
-                "stop_freq": 0,
-                "center_freq": 0,
-                "span": 0,
-                "resolution": 0
+                "start": None,
+                "stop": None,
+                "center": None,
+                "span": None,
+                "resolution": None
             }
         
         remote_connection.send_parameters(parameter_list)
@@ -219,13 +219,13 @@ class MainWindow(QWidget):
             
             self.start_layout = QtWidgets.QGridLayout()
             self.start_layout.addWidget(self.start_frequency_label, 0, 0)
-            self.start_layout.addWidget(self.start_frequency_label_mhz, 0, 1)
-            self.start_layout.addWidget(self.start_frequency_input, 0, 2)
+            self.start_layout.addWidget(self.start_frequency_input, 0, 1)
+            self.start_layout.addWidget(self.start_frequency_label_mhz, 0, 2)
 
             self.stop_layout = QtWidgets.QGridLayout()
             self.stop_layout.addWidget(self.stop_frequency_label, 0, 0)
-            self.stop_layout.addWidget(self.stop_frequency_label_mhz, 0, 1)
             self.stop_layout.addWidget(self.stop_frequency_input, 0, 2)
+            self.stop_layout.addWidget(self.stop_frequency_label_mhz, 0, 1)
 
             self.pointspersweep_layout = QtWidgets.QGridLayout()
             self.pointspersweep_layout.addWidget(self.pointspersweep_label, 0, 0)
