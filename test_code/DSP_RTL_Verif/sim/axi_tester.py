@@ -57,6 +57,11 @@ class SSSTester:
             self.input_driver1.stop()
             self.input_driver2.stop()
             self.input_driver3.stop()
+        if(self.test_type == 'top'):
+            self.input_driver0.stop()
+            self.input_driver1.stop()
+            self.input_driver2.stop()
+            self.input_driver3.stop()
         else:
             self.input_driver.stop()
  

@@ -88,7 +88,7 @@ module DSP_top_level #
     fir_15  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     fir_1(  .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s00_axis_tready),
+            .s00_axis_tready(s00_axis_tready_fir1),
             .s00_axis_tdata(s00_axis_tdata),
             .s00_axis_tstrb(s00_axis_tstrb),
             .s00_axis_tlast(s00_axis_tlast),
@@ -96,7 +96,7 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_fir1),
+            .m00_axis_tready(m00_axis_tready),
             .m00_axis_tdata(port1_reverse_fir_data),
             .m00_axis_tstrb(m00_axis_tstrb_fir1),
             .m00_axis_tlast(m00_axis_tlast_fir1),
@@ -106,7 +106,7 @@ module DSP_top_level #
     cordic  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     cordic_1(  .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s00_axis_tready_fir1),
+            .s00_axis_tready(s00_axis_tready_cordic1),
             .s00_axis_tdata(port1_reverse_fir_data),
             .s00_axis_tstrb(s00_axis_tstrb_fir1),
             .s00_axis_tlast(s00_axis_tlast_fir1),
@@ -114,7 +114,7 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_cordic1),
+            .m00_axis_tready(m00_axis_tready_fir1),
             .m00_axis_tdata(port1_reverse_cordic_data),
             .m00_axis_tstrb(m00_axis_tstrb_cordic1),
             .m00_axis_tlast(m00_axis_tlast_cordic1),
@@ -153,7 +153,7 @@ module DSP_top_level #
     fir_15  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     fir_2(  .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s01_axis_tready),
+            .s00_axis_tready(s00_axis_tready_fir2),
             .s00_axis_tdata(s01_axis_tdata),
             .s00_axis_tstrb(s01_axis_tstrb),
             .s00_axis_tlast(s01_axis_tlast),
@@ -161,17 +161,18 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_fir2),
+            .m00_axis_tready(m01_axis_tready),
             .m00_axis_tdata(port1_forward_fir_data),
             .m00_axis_tstrb(m00_axis_tstrb_fir2),
             .m00_axis_tlast(m00_axis_tlast_fir2),
             .m00_axis_tvalid(m00_axis_tvalid_fir2)
         );
+       
 
     cordic  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     cordic_2(   .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s00_axis_tready_fir2),
+            .s00_axis_tready(s00_axis_tready_cordic2),
             .s00_axis_tdata(port1_forward_fir_data),
             .s00_axis_tstrb(s00_axis_tstrb_fir2),
             .s00_axis_tlast(s00_axis_tlast_fir2),
@@ -179,13 +180,12 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_cordic2),
+            .m00_axis_tready(m00_axis_tready_fir2),
             .m00_axis_tdata(port1_forward_cordic_data),
             .m00_axis_tstrb(m00_axis_tstrb_cordic2),
             .m00_axis_tlast(m00_axis_tlast_cordic2),
             .m00_axis_tvalid(m00_axis_tvalid_cordic2)
         );
-    
 
     //chain 3
 
@@ -219,7 +219,7 @@ module DSP_top_level #
     fir_15  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     fir_3(  .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s02_axis_tready),
+            .s00_axis_tready(s00_axis_tready_fir3),
             .s00_axis_tdata(s02_axis_tdata),
             .s00_axis_tstrb(s02_axis_tstrb),
             .s00_axis_tlast(s02_axis_tlast),
@@ -227,7 +227,7 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_fir3),
+            .m00_axis_tready(m00_axis_tready),
             .m00_axis_tdata(port2_reverse_fir_data),
             .m00_axis_tstrb(m00_axis_tstrb_fir3),
             .m00_axis_tlast(m00_axis_tlast_fir3),
@@ -236,8 +236,8 @@ module DSP_top_level #
 
     cordic  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     cordic_3(   .s00_axis_aclk(s00_axis_aclk),
-            .s00_axis_aresetn(s00_axis_aclk),
-            .s00_axis_tready(s00_axis_tready_fir3),
+            .s00_axis_aresetn(s00_axis_aresetn),
+            .s00_axis_tready(s00_axis_tready_cordic3),
             .s00_axis_tdata(port2_reverse_fir_data),
             .s00_axis_tstrb(s00_axis_tstrb_fir3),
             .s00_axis_tlast(s00_axis_tlast_fir3),
@@ -245,7 +245,7 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_cordic3),
+            .m00_axis_tready(m00_axis_tready_fir3),
             .m00_axis_tdata(port2_reverse_cordic_data),
             .m00_axis_tstrb(m00_axis_tstrb_cordic3),
             .m00_axis_tlast(m00_axis_tlast_cordic3),
@@ -284,7 +284,7 @@ module DSP_top_level #
     fir_15  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     fir_4(  .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s03_axis_tready),
+            .s00_axis_tready(s00_axis_tready_fir4),
             .s00_axis_tdata(s03_axis_tdata),
             .s00_axis_tstrb(s03_axis_tstrb),
             .s00_axis_tlast(s03_axis_tlast),
@@ -292,7 +292,7 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_fir4),
+            .m00_axis_tready(m00_axis_tready),
             .m00_axis_tdata(port2_forward_fir_data),
             .m00_axis_tstrb(m00_axis_tstrb_fir4),
             .m00_axis_tlast(m00_axis_tlast_fir4),
@@ -302,7 +302,7 @@ module DSP_top_level #
     cordic  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     cordic_4(   .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
-            .s00_axis_tready(s00_axis_tready_fir4),
+            .s00_axis_tready(s00_axis_tready_cordic4),
             .s00_axis_tdata(port2_forward_fir_data),
             .s00_axis_tstrb(s00_axis_tstrb_fir4),
             .s00_axis_tlast(s00_axis_tlast_fir4),
@@ -310,7 +310,7 @@ module DSP_top_level #
  
             .m00_axis_aclk(s00_axis_aclk),
             .m00_axis_aresetn(s00_axis_aresetn),
-            .m00_axis_tready(m00_axis_tready_cordic4),
+            .m00_axis_tready(m00_axis_tready_fir4),
             .m00_axis_tdata(port2_forward_cordic_data),
             .m00_axis_tstrb(m00_axis_tstrb_cordic4),
             .m00_axis_tlast(m00_axis_tlast_cordic4),
@@ -319,14 +319,14 @@ module DSP_top_level #
 
     //final coefficient shit
 
-    compute_coeff  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
+    compute_coeff_averaging  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
     crying( .s00_axis_aclk(s00_axis_aclk), // Ports of Axi Slave Bus Interface S00_AXIS. (a1) forward 1
             .s00_axis_aresetn(s00_axis_aresetn),
             .s00_axis_tlast(s00_axis_tlast_cordic2),
             .s00_axis_tvalid(s00_axis_tvalid_cordic2),
             .s00_axis_tdata(port1_forward_cordic_data),
             .s00_axis_tstrb(s00_axis_tstrb_cordic2),
-            .s00_axis_tready(s00_axis_tready_cordic2),
+            .s00_axis_tready(s00_axis_tready),
 
 
             // Ports of Axi Slave Bus Interface S01_AXIS (b1) reverse 1
@@ -336,7 +336,7 @@ module DSP_top_level #
             .s01_axis_tvalid(s00_axis_tvalid_cordic1),
             .s01_axis_tdata(port1_reverse_cordic_data),
             .s01_axis_tstrb(s00_axis_tstrb_cordic1),
-            .s01_axis_tready(s00_axis_tready_cordic1),
+            .s01_axis_tready(s01_axis_tready),
 
             // Ports of Axi Slave Bus Interface S02_AXIS (a2) forward 2
             .s02_axis_aclk(s00_axis_aclk), 
@@ -345,7 +345,7 @@ module DSP_top_level #
             .s02_axis_tvalid(s00_axis_tvalid_cordic4),
             .s02_axis_tdata(port2_forward_cordic_data),
             .s02_axis_tstrb(s00_axis_tstrb_cordic4),
-            .s02_axis_tready(s00_axis_tready_cordic4),
+            .s02_axis_tready(s02_axis_tready),
 
             // Ports of Axi Slave Bus Interface S03_AXIS (b2) reverse 2
             .s03_axis_aclk(s00_axis_aclk), 
@@ -354,13 +354,13 @@ module DSP_top_level #
             .s03_axis_tvalid(s00_axis_tvalid_cordic3),
             .s03_axis_tdata(port2_reverse_cordic_data),
             .s03_axis_tstrb(s00_axis_tstrb_cordic3),
-            .s03_axis_tready(s00_axis_tready_cordic3),
+            .s03_axis_tready(s03_axis_tready),
 
             // Ports of Axi Master Bus Interface M00_AXIS (S11)
           
             .m00_axis_aclk(s00_axis_aclk),
-            .m00_axis_aresetn(s00_axis_aclk),
-            .m00_axis_tready(m00_axis_tready),
+            .m00_axis_aresetn(s00_axis_aresetn),
+            .m00_axis_tready(m00_axis_tready_cordic2),
             .m00_axis_tdata(m00_axis_tdata),
             .m00_axis_tstrb(m00_axis_tstrb),
             .m00_axis_tlast(m00_axis_tlast),
@@ -369,7 +369,7 @@ module DSP_top_level #
             // Ports of Axi Master Bus Interface M01_AXIS (S12)
             .m01_axis_aclk(s00_axis_aclk),
             .m01_axis_aresetn(s00_axis_aresetn),
-            .m01_axis_tready(m01_axis_tready),
+            .m01_axis_tready(m00_axis_tready_cordic1),
             .m01_axis_tdata(m01_axis_tdata),
             .m01_axis_tstrb(m01_axis_tstrb),
             .m01_axis_tlast(m01_axis_tlast),
@@ -378,7 +378,7 @@ module DSP_top_level #
             // Ports of Axi Master Bus Interface M02_AXIS (S21)
             .m02_axis_aclk(s00_axis_aclk),
             .m02_axis_aresetn(s00_axis_aresetn),
-            .m02_axis_tready(m02_axis_tready),
+            .m02_axis_tready(m00_axis_tready_cordic4),
             .m02_axis_tdata(m02_axis_tdata),
             .m02_axis_tstrb(m02_axis_tstrb),
             .m02_axis_tlast(m02_axis_tlast),
@@ -387,7 +387,7 @@ module DSP_top_level #
             // Ports of Axi Master Bus Interface M03_AXIS (S22)
             .m03_axis_aclk(s00_axis_aclk),
             .m03_axis_aresetn(s00_axis_aresetn),
-            .m03_axis_tready(m03_axis_tready),
+            .m03_axis_tready(m00_axis_tready_cordic3),
             .m03_axis_tdata(m03_axis_tdata),
             .m03_axis_tstrb(m03_axis_tstrb),
             .m03_axis_tlast(m03_axis_tlast),

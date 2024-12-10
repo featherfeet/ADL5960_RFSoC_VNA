@@ -19,12 +19,12 @@ from axi_driver import AXISDriver
 from axi_tester import SSSTester
 
 #set type of test here to test different modules
-test_type = "top"
+test_type = 'top'
  
 async def reset(clk, reset_wire, duration, value):
-    reset_wire.value = ~value
-    await ClockCycles(clk, duration)
     reset_wire.value = value
+    await ClockCycles(clk, duration)
+    reset_wire.value = ~value
 
 async def start_driver(tester, data, driver_num):
     if (driver_num == 0):
@@ -53,8 +53,23 @@ async def test_top(dut):
     cocotb.start_soon(Clock(dut.s00_axis_aclk, 10, units="ns").start())
     await set_ready_4(dut,1)
     await reset(dut.s00_axis_aclk, dut.s00_axis_aresetn,2,0)
-    #dut.num_samples.value = 20
 
+    #dut.num_samples.value = 20
+    '''for i in range(50):
+        # data0 = {'type':'single', "contents":{"data": (random.randint(0,65535)*(2**16) + random.randint(0,65535)),"last":0,"strb":15}}
+        # data1 = {'type':'single', "contents":{"data": (random.randint(0,65535)*(2**16) + random.randint(0,65535)),"last":0,"strb":15}}
+        # data2 = {'type':'single', "contents":{"data": (random.randint(0,65535)*(2**16) + random.randint(0,65535)),"last":0,"strb":15}}
+        # data3 = {'type':'single', "contents":{"data": (random.randint(0,65535)*(2**16) + random.randint(0,65535)),"last":0,"strb":15}}
+        data0 = {'type':'single', "contents":{"data": (1*(2**16) + 1),"last":0,"strb":15}}
+        data1 = {'type':'single', "contents":{"data": (1*(2**16) + 1),"last":0,"strb":15}}
+        data2 = {'type':'single', "contents":{"data": (1*(2**16) + 1),"last":0,"strb":15}}
+        data3 = {'type':'single', "contents":{"data": (1*(2**16) + 1),"last":0,"strb":15}}
+        #data = {'type':'single', "contents":{"data": (25306*(2**16) - 234),"last":0,"strb":15}}
+        tester.input_driver0.append(data0)
+        tester.input_driver1.append(data1)
+        tester.input_driver2.append(data2)
+        tester.input_driver3.append(data3)
+        await ClockCycles(dut.s00_axis_aclk, 20)'''
 
     data0 = {'type':'burst', "contents":{"data": np.array([random.randint(0, 2**32-1) for i in range(100)])}}
     data1 = {'type':'burst', "contents":{"data": np.array([random.randint(0, 2**32-1) for i in range(100)])}}
@@ -91,7 +106,7 @@ def axi_runner():
     sim = os.getenv("SIM", "icarus")
     proj_path = Path(__file__).resolve().parent.parent
     sys.path.append(str(proj_path / "sim" / "model"))
-    sources = [proj_path / "hdl" / "DSP_top_level.sv", proj_path / "hdl" / "fir_15.sv", proj_path / "hdl" / "cordic.sv", proj_path / "hdl" / "compute_coeff.sv"] #grow/modify this as needed.
+    sources = [proj_path / "hdl" / "DSP_top_level.sv", proj_path / "hdl" / "fir_15.sv", proj_path / "hdl" / "cordic.sv", proj_path / "hdl" / "compute_coeff_averaging.sv"] #grow/modify this as needed.
     build_test_args = ["-Wall"]#,"COCOTB_RESOLVE_X=ZEROS"]
     parameters = {}
     sys.path.append(str(proj_path / "sim"))
