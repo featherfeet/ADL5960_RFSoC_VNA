@@ -12,6 +12,7 @@ from networking import RemoteConnection
 import skrf as rf
 from skrf import Network
 
+
 remote_connection = RemoteConnection("0.0.0.0", 1234)
 
 class MainWindow(QWidget):
@@ -75,6 +76,13 @@ class MainWindow(QWidget):
         self.plot_layout.addWidget(self.plot_s_param_widget, 0, 1)
 
         '''
+        Smith Chart Plot Testing
+        '''
+        # fig = go.Figure(go.Scattersmith(imag=[0.5, 1, 2, 3], real=[0.5, 1, 2, 3]))
+        # self.smith_layout = QtWidgets.QGridLayout()
+        # self.smith_layout.addItem(fig)
+
+        '''
         Source Controls
         '''
         self.mode_label = QLabel("Sweep mode:")
@@ -132,6 +140,7 @@ class MainWindow(QWidget):
         '''
         self.layout.addLayout(self.title_layout, 0, 0)
         self.layout.addLayout(self.plot_layout, 1, 0)
+        #self.layout.addLayout(self.smith_layout, 1, 3)
         self.layout.addWidget(update_button, 1, 2)
         self.layout.addLayout(self.cal_layout, 2, 2)
         self.layout.addLayout(self.controls_layout, 2, 0)
