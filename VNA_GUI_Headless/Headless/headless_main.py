@@ -85,6 +85,12 @@ while True:
     S11_mag, S11_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port1_reverse)
     S12_mag, S12_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_forward)
 
+    """
+    if 20 * np.log10(S11_mag) > 0:
+        print(f"Found spike at {freq}")
+        np.savez(f"data/{freq}.npz", filtered_port1_forward = filtered_port1_forward, filtered_port1_reverse = filtered_port1_reverse, filtered_port2_forward = filtered_port2_forward, filtered_port2_reverse = filtered_port2_reverse)
+    """
+
     # If we're in thru-cal mode, calculate forward switch term (a2/b2 with port 1 active).
     if currently_measuring_standard == "thru":
         forward_switch_term_mag, forward_switch_term_phase = dsp.calculate_S_param(filtered_port2_reverse, filtered_port2_forward)
