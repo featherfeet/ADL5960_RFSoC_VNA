@@ -66,24 +66,42 @@ while True:
     switch.setPort1Active()
 
     # Read ADC values from DMA
+    start = time.time()
     port1_reverse_buffer, port1_forward_buffer, port2_reverse_buffer, port2_forward_buffer = adcs.read_adcs()
+    print(f"Reading ADCs takes {time.time() - start} s.")
 
+    start = time.time()
     port2_forward = dsp.binary_to_complex(port2_forward_buffer)
     port2_reverse = dsp.binary_to_complex(port2_reverse_buffer)
     port1_forward = dsp.binary_to_complex(port1_forward_buffer)
     port1_reverse = dsp.binary_to_complex(port1_reverse_buffer)
+    print(f"Binary to complex takes {time.time() - start} s.")
 
     #np.savez(f"{filename}_port1_active_adc_data.npz", port1_forward = port1_forward, port1_reverse = port1_reverse, port2_forward = port2_forward, port2_reverse = port2_reverse)
 
     # Filter out LO spike.
+    start = time.time()
     filtered_port2_forward = dsp.filter(port2_forward)
     filtered_port2_reverse = dsp.filter(port2_reverse)
     filtered_port1_forward = dsp.filter(port1_forward)
     filtered_port1_reverse = dsp.filter(port1_reverse)
+    print(f"Filter takes {time.time() - start} s.")
 
-    # Calculate S-parameters S11 and S12
+    # TODO REMOVE
+    message = {}
+    message["type"] = "data"
+    message["filtered_port1_forward"] = filtered_port1_forward[:500].real.tobytes()
+    message["filtered_port2_forward"] = filtered_port2_forward[:500].real.tobytes()
+    message["filtered_port1_reverse"] = filtered_port1_reverse[:500].real.tobytes()
+    message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
+    message["raw_s_parameters"] = raw_s_parameters
+    remote_connection.send_message(message)
+
+    # Calculate S-parameters S11 and S21
+    start = time.time()
     S11_mag, S11_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port1_reverse)
-    S12_mag, S12_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_forward)
+    S21_mag, S21_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port2_reverse) # TODO fix
+    print(f"Calculating S11, S21 takes {time.time() - start} s.")
 
     """
     if 20 * np.log10(S11_mag) > 0:
@@ -116,8 +134,8 @@ while True:
     filtered_port1_forward = dsp.filter(port1_forward)
     filtered_port1_reverse = dsp.filter(port1_reverse)
 
-    # Calculate S-parameters S21 and S22
-    S21_mag, S21_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_forward)
+    # Calculate S-parameters S12 and S22
+    S12_mag, S12_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_reverse)
     S22_mag, S22_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port2_reverse)
 
     # If we're in thru-cal mode, calculate reverse switch term (a1/b1 with port 2 active).
@@ -133,6 +151,7 @@ while True:
     raw_s_parameters.s[source.get_current_index(), 1, 1] = polar_to_rectangular(S22_mag, S22_phase)
 
     # Send data to network GUI.
+    """
     message = {}
     message["type"] = "data"
     message["filtered_port1_forward"] = filtered_port1_forward[:500].real.tobytes()
@@ -141,6 +160,7 @@ while True:
     message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
     message["raw_s_parameters"] = raw_s_parameters
     remote_connection.send_message(message)
+    """
 
     # Check for messages and modify VNA behavior accordingly.
     message = remote_connection.receive_message()
@@ -180,7 +200,9 @@ while True:
     print(f"Calculated S22 phase is {S22_phase * 180 / math.pi:.2f}\N{DEGREE SIGN}.")
     """
 
+    start = time.time()
     source.set_next_freq()
+    print(f"Setting source takes {time.time() - start} s.")
 
     #np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
 

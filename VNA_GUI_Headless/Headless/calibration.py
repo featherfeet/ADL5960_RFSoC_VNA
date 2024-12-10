@@ -37,5 +37,5 @@ bandpass.f *= 1000000
 
 bandpass_reference.plot_s_db(1, 0)
 bandpass_calibrated.plot_s_db(1, 0)
-bandpass.plot_s_db(1, 0)
+#bandpass.plot_s_db(0, 0)
 plt.show()

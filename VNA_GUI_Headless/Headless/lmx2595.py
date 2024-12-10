@@ -44,7 +44,7 @@ class LMX2595:
     def _spi_transaction(self, command):
         self.mmio_spi_controller.write(MMIO_REGISTERS["SPI_DATA_OUT"], command)  
         self.mmio_spi_controller.write(MMIO_REGISTERS["TRIGGER"], 0x0)
-        time.sleep(0.1)
+        time.sleep(2.5e-3)
         return self.mmio_spi_controller.read(MMIO_REGISTERS["SPI_DATA_IN"])
     
     def _write_register(self, address, data):
