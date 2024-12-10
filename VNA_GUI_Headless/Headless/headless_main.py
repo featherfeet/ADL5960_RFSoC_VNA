@@ -54,6 +54,11 @@ dsp = DSP()
 
 raw_s_parameters = rf.Network(s = np.zeros((len(source.freq_points), 2, 2), dtype = np.float64), f = source.freq_points)
 
+switch_terms = {}
+measured_standards = {}
+
+currently_measuring_standard = None
+
 while True:
     freq = source.get_current_freq()
 
@@ -80,14 +85,11 @@ while True:
     S11_mag, S11_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port1_reverse)
     S12_mag, S12_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_forward)
 
-    # Send data to network GUI.
-    message = {}
-    message["filtered_port1_forward"] = filtered_port1_forward[:500].real.tobytes()
-    message["filtered_port2_forward"] = filtered_port2_forward[:500].real.tobytes()
-    message["filtered_port1_reverse"] = filtered_port1_reverse[:500].real.tobytes()
-    message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
-    message["raw_s_parameters"] = raw_s_parameters
-    remote_connection.send_message(message)
+    # If we're in thru-cal mode, calculate forward switch term (a2/b2 with port 1 active).
+    if currently_measuring_standard == "thru":
+        forward_switch_term_mag, forward_switch_term_phase = dsp.calculate_S_param(filtered_port2_reverse, filtered_port2_forward)
+        forward_switch_term = polar_to_rectangular(forward_switch_term_mag, forward_switch_term_phase)
+        switch_terms["forward"].s[source.get_current_index(), 0, 0] = forward_switch_term
 
     # Set switch
     switch.setPort2Active()
@@ -112,6 +114,12 @@ while True:
     S21_mag, S21_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_forward)
     S22_mag, S22_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port2_reverse)
 
+    # If we're in thru-cal mode, calculate reverse switch term (a1/b1 with port 2 active).
+    if currently_measuring_standard == "thru":
+        reverse_switch_term_mag, reverse_switch_term_phase = dsp.calculate_S_param(filtered_port1_reverse, filtered_port1_forward)
+        reverse_switch_term = polar_to_rectangular(reverse_switch_term_mag, reverse_switch_term_phase)
+        switch_terms["reverse"].s[source.get_current_index(), 0, 0] = reverse_switch_term
+
     # Save raw S-parameters.
     raw_s_parameters.s[source.get_current_index(), 0, 0] = polar_to_rectangular(S11_mag, S11_phase)
     raw_s_parameters.s[source.get_current_index(), 0, 1] = polar_to_rectangular(S12_mag, S12_phase)
@@ -119,25 +127,41 @@ while True:
     raw_s_parameters.s[source.get_current_index(), 1, 1] = polar_to_rectangular(S22_mag, S22_phase)
 
     # Send data to network GUI.
-    """
     message = {}
+    message["type"] = "data"
     message["filtered_port1_forward"] = filtered_port1_forward[:500].real.tobytes()
     message["filtered_port2_forward"] = filtered_port2_forward[:500].real.tobytes()
     message["filtered_port1_reverse"] = filtered_port1_reverse[:500].real.tobytes()
     message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
     message["raw_s_parameters"] = raw_s_parameters
     remote_connection.send_message(message)
-    """
 
-    # Check for messages.
+    # Check for messages and modify VNA behavior accordingly.
     message = remote_connection.receive_message()
     if message:
         print(message)
+        # Parameter update messages change the sweep settings.
         if message["type"] == "parameters":
             source.update_parameters(start = message["start"], stop = message["stop"], center = message["center"], span = message["span"], resolution = message["resolution"], single_freq = message["single_freq"])
             source.set_next_freq(start = True)
             raw_s_parameters = rf.Network(s = np.zeros((len(source.freq_points), 2, 2), dtype = np.complex128), f = source.freq_points)
+        # Calibration messages restart the sweep and save one sweep as a calibration sweep for the specified standard.
+        elif message["type"] == "calibration":
+            source.set_next_freq(start = True)
+            raw_s_parameters = rf.Network(s = np.zeros((len(source.freq_points), 2, 2), dtype = np.complex128), f = source.freq_points)
+            currently_measuring_standard = message["standard"]
+            if currently_measuring_standard == "thru":
+                switch_terms["forward"] = rf.Network(s = np.zeros((len(source.freq_points), 1, 1), dtype = np.complex128), f = source.freq_points)
+                switch_terms["reverse"] = rf.Network(s = np.zeros((len(source.freq_points), 1, 1), dtype = np.complex128), f = source.freq_points)
+            remote_connection.send_message({"type": "status", "status": f"Measuring {currently_measuring_standard} standard..."})
 
+    if currently_measuring_standard and source.get_current_index() == len(source.freq_points) - 1:
+        measured_standards[currently_measuring_standard] = raw_s_parameters.copy()
+        print(measured_standards)
+        print(switch_terms)
+        remote_connection.send_message({"type": "status", "status": f"Finished measuring {currently_measuring_standard} standard."})
+        currently_measuring_standard = None
+        
     """
     print(f"Frequency: {freq} MHz")
     print(f"Calculated S11 magnitude is {S11_mag:.2f}.")

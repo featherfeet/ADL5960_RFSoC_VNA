@@ -13,6 +13,7 @@ class RemoteConnection:
         self.websocket_server_thread_handle.start()
         self.client_connections = []
         self.data = {}
+        self.status = "Status: unknown"
 
     def websocket_server_thread(self):
         self.server.serve_forever()
@@ -28,10 +29,13 @@ class RemoteConnection:
 
         for message in websocket:
             data_unpickled = pickle.loads(message)
-            data_tmp = {}
-            data_tmp["filtered_port1_forward"] = np.frombuffer(data_unpickled["filtered_port1_forward"], dtype = np.float64)
-            data_tmp["filtered_port2_forward"] = np.frombuffer(data_unpickled["filtered_port2_forward"], dtype = np.float64)
-            data_tmp["filtered_port1_reverse"] = np.frombuffer(data_unpickled["filtered_port1_reverse"], dtype = np.float64)
-            data_tmp["filtered_port2_reverse"] = np.frombuffer(data_unpickled["filtered_port2_reverse"], dtype = np.float64)
-            data_tmp["raw_s_parameters"] = data_unpickled["raw_s_parameters"]
-            self.data = data_tmp
+            if data_unpickled["type"] == "data":
+                data_tmp = {}
+                data_tmp["filtered_port1_forward"] = np.frombuffer(data_unpickled["filtered_port1_forward"], dtype = np.float64)
+                data_tmp["filtered_port2_forward"] = np.frombuffer(data_unpickled["filtered_port2_forward"], dtype = np.float64)
+                data_tmp["filtered_port1_reverse"] = np.frombuffer(data_unpickled["filtered_port1_reverse"], dtype = np.float64)
+                data_tmp["filtered_port2_reverse"] = np.frombuffer(data_unpickled["filtered_port2_reverse"], dtype = np.float64)
+                data_tmp["raw_s_parameters"] = data_unpickled["raw_s_parameters"]
+                self.data = data_tmp
+            elif data_unpickled["type"] == "status":
+                self.status = data_unpickled["status"]

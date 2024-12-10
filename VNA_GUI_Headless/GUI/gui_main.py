@@ -89,6 +89,11 @@ class MainWindow(QWidget):
         self.controls_layout.addWidget(self.mode_radio_button_zerospan, 0, 1)
         self.controls_layout.addWidget(self.mode_radio_button_startend, 0, 2)
         self.controls_layout.addWidget(self.mode_radio_button_centerspan, 0, 3)
+
+        '''
+        Status bar
+        '''
+        self.status_bar = QLabel("")
     
         '''
         Cal Controls Layout
@@ -96,14 +101,17 @@ class MainWindow(QWidget):
         self.short_push_button = QtWidgets.QPushButton("Short Calibrate")
         self.open_push_button = QtWidgets.QPushButton("Open Calibrate")
         self.load_push_button = QtWidgets.QPushButton("Load Calibrate")
+        self.thru_push_button = QtWidgets.QPushButton("Thru Calibrate")
         self.short_push_button.clicked.connect(self.cal_short)
         self.open_push_button.clicked.connect(self.cal_open)
         self.load_push_button.clicked.connect(self.cal_load)
+        self.thru_push_button.clicked.connect(self.cal_thru)
 
         self.cal_layout = QtWidgets.QGridLayout()
         self.cal_layout.addWidget(self.short_push_button, 0, 0)
         self.cal_layout.addWidget(self.open_push_button, 1, 0)
         self.cal_layout.addWidget(self.load_push_button, 2, 0)
+        self.cal_layout.addWidget(self.thru_push_button, 3, 0)
 
         '''
         Update Button Layout
@@ -120,6 +128,7 @@ class MainWindow(QWidget):
         self.layout.addWidget(update_button, 1, 2)
         self.layout.addLayout(self.cal_layout, 2, 2)
         self.layout.addLayout(self.controls_layout, 2, 0)
+        self.layout.addWidget(self.status_bar, 3, 0)
 
         self.show()
 
@@ -273,9 +282,7 @@ class MainWindow(QWidget):
         print("Short calibration triggered.")
         parameter_list = {
                 "type" : "calibration",
-                "short": 1,
-                "open": 0,
-                "load": 0
+                "standard": "short"
             }
         remote_connection.send_parameters(parameter_list)
 
@@ -283,9 +290,7 @@ class MainWindow(QWidget):
         print("Open calibration triggered.")
         parameter_list = {
                 "type" : "calibration",
-                "short": 0,
-                "open": 1,
-                "load": 0
+                "standard": "open"
             }
         remote_connection.send_parameters(parameter_list)
 
@@ -293,9 +298,15 @@ class MainWindow(QWidget):
         print("Load calibration triggered.")
         parameter_list = {
                 "type" : "calibration",
-                "short": 0,
-                "open": 0,
-                "load": 1
+                "standard": "load"
+            }
+        remote_connection.send_parameters(parameter_list)
+
+    def cal_thru(self):
+        print("Thru calibration triggered.")
+        parameter_list = {
+                "type" : "calibration",
+                "standard": "thru"
             }
         remote_connection.send_parameters(parameter_list)
 
@@ -323,5 +334,6 @@ if __name__ == "__main__":
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
             window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
+        window.status_bar.setText(remote_connection.status)
 
         app.processEvents()
