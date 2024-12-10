@@ -47,7 +47,7 @@ module DSP_top_level #
     //ports of ADC data in
 
     input wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata, //port 1 reverse
-    input wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] s01_axis_tdata,  //port 1forward
+    input wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] s01_axis_tdata,  //port 1 forward
     input wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] s02_axis_tdata, //port 2 reverse
     input wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] s03_axis_tdata, //port 2 forward
 

@@ -46,6 +46,10 @@ module fir_15 #
     assign m00_axis_tstrb_reg = fir_tstrb[14];
 
     // Doing this so I can see the values in GTKwave for debugging
+    wire [15:0] imag_part;
+    wire [15:0] real_part;
+    assign real_part = s00_axis_tdata[31:16];
+    assign imag_part = s00_axis_tdata[15:0];
     assign zero = fir_regs[0];
     assign one = fir_regs[1];
     assign two = fir_regs[2];

@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Tue Dec 10 23:35:56 2024
+[*]
+[dumpfile] "/home/oliver/Documents/School/Senior Year MIT/6.S965/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/sim/sim_build/DSP_top_level.fst"
+[dumpfile_mtime] "Tue Dec 10 23:35:34 2024"
+[dumpfile_size] 700478
+[savefile] "/home/oliver/Documents/School/Senior Year MIT/6.S965/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/sim/savefile.gtkw"
+[timestart] 0
+[size] 1280 721
+[pos] -1 -1
+*-23.858675 31330000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] DSP_top_level.
+[sst_width] 273
+[signals_width] 258
+[sst_expanded] 1
+[sst_vpaned_height] 182
+@22
+DSP_top_level.fir_1.s00_axis_tdata[31:0]
+@8420
+DSP_top_level.fir_1.imag_part[15:0]
+@20000
+-
+-
+@8421
+DSP_top_level.fir_1.real_part[15:0]
+@20000
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0
