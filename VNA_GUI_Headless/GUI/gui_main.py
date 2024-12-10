@@ -4,12 +4,13 @@ import sys
 import asyncio
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QRadioButton, QHBoxLayout, QVBoxLayout
-from PyQt6.QtGui import QFont
+from PyQt6.QtGui import QFont, QIntValidator
 from PyQt6.QtCore import Qt
 import pyqtgraph as pg
 import numpy as np
 from networking import RemoteConnection
 import skrf as rf
+from skrf import Network
 
 remote_connection = RemoteConnection("0.0.0.0", 1234)
 
@@ -121,6 +122,12 @@ class MainWindow(QWidget):
         update_button.clicked.connect(self.update_call)
         
         '''
+        Setup value validator, only plug in integers 
+        '''
+        self.onlyInt = QIntValidator()
+        self.onlyInt.setRange(0, 1000000) 
+        
+        '''
         Final Layout
         '''
         self.layout.addLayout(self.title_layout, 0, 0)
@@ -202,6 +209,8 @@ class MainWindow(QWidget):
             self.zero_span_frequency_label = QtWidgets.QLabel("Frequency:")
             self.zero_span_frequency_label_mhz = QtWidgets.QLabel("MHz")
             self.zero_span_frequency_input = QtWidgets.QLineEdit()
+            self.zero_span_frequency_input.setText("100")
+            self.zero_span_frequency_input.setValidator(self.onlyInt)
 
             self.zero_span_layout = QtWidgets.QGridLayout()
             self.zero_span_layout.addWidget(self.zero_span_frequency_label, 0, 0)
@@ -218,13 +227,19 @@ class MainWindow(QWidget):
             self.start_frequency_label = QtWidgets.QLabel("Start Freq:")
             self.start_frequency_label_mhz = QtWidgets.QLabel("MHz")
             self.start_frequency_input = QtWidgets.QLineEdit()
+            self.start_frequency_input.setText("100")
+            self.start_frequency_input.setValidator(self.onlyInt)
 
             self.stop_frequency_label = QtWidgets.QLabel("Stop Freq:")
             self.stop_frequency_label_mhz = QtWidgets.QLabel("MHz")
             self.stop_frequency_input = QtWidgets.QLineEdit()
+            self.stop_frequency_input.setText("2000")
+            self.stop_frequency_input.setValidator(self.onlyInt)
 
             self.pointspersweep_label = QtWidgets.QLabel("Points Per Sweep:")
             self.pointspersweep_input = QtWidgets.QLineEdit()
+            self.pointspersweep_input.setText("100")
+            self.pointspersweep_input.setValidator(self.onlyInt)
             
             self.start_layout = QtWidgets.QGridLayout()
             self.start_layout.addWidget(self.start_frequency_label, 0, 0)
@@ -252,13 +267,19 @@ class MainWindow(QWidget):
             self.center_frequency_label = QtWidgets.QLabel("Center Freq:")
             self.center_frequency_label_mhz = QtWidgets.QLabel("MHz")
             self.center_frequency_input = QtWidgets.QLineEdit()
+            self.center_frequency_input.setText("9950")
+            self.center_frequency_input.setValidator(self.onlyInt)
 
             self.span_frequency_label = QtWidgets.QLabel("Span:")
             self.span_frequency_label_mhz = QtWidgets.QLabel("MHz")
             self.span_frequency_input = QtWidgets.QLineEdit()
+            self.span_frequency_input.setText("9950")
+            self.span_frequency_input.setValidator(self.onlyInt)
 
             self.pointspersweep_label = QtWidgets.QLabel("Points Per Sweep:")
             self.pointspersweep_input = QtWidgets.QLineEdit()
+            self.pointspersweep_input.setText("100")
+            self.pointspersweep_input.setValidator(self.onlyInt)
 
             self.center_freq_layout = QtWidgets.QGridLayout()
             self.center_freq_layout.addWidget(self.center_frequency_label, 1, 0)
@@ -320,20 +341,24 @@ def mag_db(s_param):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.resize(1000, 500)
+    window.resize(1500, 800)
 
     while True:
         if len(remote_connection.data.keys()):
+            #ADC Plot
             window.filtered_port1_forward_plot.setData(remote_connection.data["filtered_port1_forward"])
             window.filtered_port2_forward_plot.setData(remote_connection.data["filtered_port2_forward"])
             window.filtered_port1_reverse_plot.setData(remote_connection.data["filtered_port1_reverse"])
             window.filtered_port2_reverse_plot.setData(remote_connection.data["filtered_port2_reverse"])
+            
+            #S-paramters Plot
             raw_s_parameters = remote_connection.data["raw_s_parameters"]
             window.plot_s_param_widget.setXRange(raw_s_parameters.f[0], raw_s_parameters.f[-1])
             window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
             window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
+       
         window.status_bar.setText(remote_connection.status)
 
         app.processEvents()
