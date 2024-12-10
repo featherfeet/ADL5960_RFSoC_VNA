@@ -11,7 +11,9 @@ import numpy as np
 from networking import RemoteConnection
 import skrf as rf
 from skrf import Network
-
+from matplotlib import pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+from matplotlib.figure import Figure
 
 remote_connection = RemoteConnection("0.0.0.0", 1234)
 
@@ -71,16 +73,17 @@ class MainWindow(QWidget):
         self.s21_plot = self.plot_s_param_widget.plot(pen = 'b', name = "S21")
         self.s22_plot = self.plot_s_param_widget.plot(pen = 'w', name = "S22")
 
+        #Smith chart
+        self.smith_chart_fig = self.MplCanvas(self, width=5, height=5, dpi=100) #Initialize figure with matplotlib canvas
+        self.smith_fig_object = rf.plotting.smith(ax = self.smith_chart_fig.axes, draw_labels = True, ref_imm = 50.0, chart_type = 'z')
+        self.smith_layout = QtWidgets.QGridLayout()
+        self.smith_layout.addWidget(self.smith_chart_fig)
+
+        #Plot Layout
         self.plot_layout = QtWidgets.QGridLayout()
         self.plot_layout.addWidget(self.plot_adc_widget, 0, 0)
         self.plot_layout.addWidget(self.plot_s_param_widget, 0, 1)
-
-        '''
-        Smith Chart Plot Testing
-        '''
-        # fig = go.Figure(go.Scattersmith(imag=[0.5, 1, 2, 3], real=[0.5, 1, 2, 3]))
-        # self.smith_layout = QtWidgets.QGridLayout()
-        # self.smith_layout.addItem(fig)
+        #self.plot_layout.addLayout(self.smith_layout, 0, 2)
 
         '''
         Source Controls
@@ -139,11 +142,11 @@ class MainWindow(QWidget):
         Final Layout
         '''
         self.layout.addLayout(self.title_layout, 0, 0)
+        self.layout.addWidget(update_button, 0, 1)
         self.layout.addLayout(self.plot_layout, 1, 0)
-        #self.layout.addLayout(self.smith_layout, 1, 3)
-        self.layout.addWidget(update_button, 1, 2)
-        self.layout.addLayout(self.cal_layout, 2, 2)
+        self.layout.addLayout(self.smith_layout, 1, 1)
         self.layout.addLayout(self.controls_layout, 2, 0)
+        self.layout.addLayout(self.cal_layout, 2, 1)
         self.layout.addWidget(self.status_bar, 3, 0)
 
         self.show()
@@ -340,6 +343,17 @@ class MainWindow(QWidget):
             }
         remote_connection.send_parameters(parameter_list)
 
+    class MplCanvas(FigureCanvasQTAgg):
+        def __init__(self, parent=None, width=5, height=4, dpi=100):
+            fig = Figure(figsize=(width, height), dpi=dpi)
+            self.axes = fig.add_subplot(111)
+            super().__init__(fig)
+
+    def update_smith(self, rf_network_object):
+        self.smith_chart_fig.axes.clear()
+        self.smith_fig_object = rf_network_object.plot_s_smith(ax = self.smith_chart_fig.axes)
+        self.smith_chart_fig.draw() #redraw canvas
+
 def mag_db(s_param):
     values = s_param.s[:,0,0]
     mag_db = np.zeros(values.shape, dtype = np.float64)
@@ -350,7 +364,7 @@ def mag_db(s_param):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.resize(1500, 800)
+    window.resize(1400, 800)
 
     while True:
         if len(remote_connection.data.keys()):
@@ -367,7 +381,11 @@ if __name__ == "__main__":
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
             window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
-       
+
+            #Smith chart
+            #s_network_obj = rf.Network(raw_s_parameters)
+            #window.update_smith(s_network_obj)
+
         window.status_bar.setText(remote_connection.status)
 
         app.processEvents()
