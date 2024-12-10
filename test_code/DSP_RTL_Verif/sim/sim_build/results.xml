@@ -1,8 +1,8 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1733859820" />
-    <testcase name="test_top" classname="top_block_test" file="/Users/biancahanly/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/sim/top_block_test.py" lineno="49" time="0.4740891456604004" sim_time_ns="13990.001" ratio_time="29509.220213240907">
-      <failure message="Test failed with RANDOM_SEED=1733859820" />
+    <property name="random_seed" value="1733860998" />
+    <testcase name="test_top" classname="top_block_test" file="/Users/biancahanly/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/sim/top_block_test.py" lineno="49" time="0.5146639347076416" sim_time_ns="14910.001" ratio_time="28970.362977677323">
+      <failure message="Test failed with RANDOM_SEED=1733860998" />
     </testcase>
   </testsuite>
 </testsuites>

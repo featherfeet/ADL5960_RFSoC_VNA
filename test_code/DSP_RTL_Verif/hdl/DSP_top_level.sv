@@ -8,6 +8,7 @@ module DSP_top_level #
     )
     (
     // Ports of Axi Slave Bus Interface S00_AXIS
+    input wire [15:0] num_samples,
     input wire  s00_axis_aclk, s00_axis_aresetn,
     input wire  s00_axis_tlast, s00_axis_tvalid,
     input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1: 0] s00_axis_tstrb,
@@ -320,7 +321,8 @@ module DSP_top_level #
     //final coefficient shit
 
     compute_coeff_averaging  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH ), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH))
-    crying( .s00_axis_aclk(s00_axis_aclk), // Ports of Axi Slave Bus Interface S00_AXIS. (a1) forward 1
+    crying( .num_samples(num_samples),
+            .s00_axis_aclk(s00_axis_aclk), // Ports of Axi Slave Bus Interface S00_AXIS. (a1) forward 1
             .s00_axis_aresetn(s00_axis_aresetn),
             .s00_axis_tlast(s00_axis_tlast_cordic2),
             .s00_axis_tvalid(s00_axis_tvalid_cordic2),

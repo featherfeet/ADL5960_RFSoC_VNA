@@ -54,7 +54,7 @@ async def test_top(dut):
     await set_ready_4(dut,1)
     await reset(dut.s00_axis_aclk, dut.s00_axis_aresetn,2,0)
 
-    #dut.num_samples.value = 20
+    dut.num_samples.value = 20
     '''for i in range(50):
         # data0 = {'type':'single', "contents":{"data": (random.randint(0,65535)*(2**16) + random.randint(0,65535)),"last":0,"strb":15}}
         # data1 = {'type':'single', "contents":{"data": (random.randint(0,65535)*(2**16) + random.randint(0,65535)),"last":0,"strb":15}}
