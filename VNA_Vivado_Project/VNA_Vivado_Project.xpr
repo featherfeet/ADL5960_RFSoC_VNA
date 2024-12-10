@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="/home/bhanly/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9c0d91ebd3384b95882246c3398d90cf"/>

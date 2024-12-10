@@ -1,6 +1,27 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Mon Dec  9 19:42:35 2024
+| Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu48dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_adc_combiner_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of design_1_adc_combiner_0_0 (user.org:user:adc_combiner:1.0 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
 | Date         : Wed Dec  4 19:36:15 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : upgrade_ip

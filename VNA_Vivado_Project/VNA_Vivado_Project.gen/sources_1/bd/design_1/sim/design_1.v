@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Wed Dec  4 19:44:17 2024
+//Date        : Mon Dec  9 19:42:56 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=19,numNonXlnxBlks=4,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_board_cnt=1,da_clkrst_cnt=53,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=28,numReposBlks=20,numNonXlnxBlks=4,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_board_cnt=1,da_clkrst_cnt=53,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (adc0_clk_clk_n,
     adc0_clk_clk_p,
@@ -28,6 +28,7 @@ module design_1
     lmx_sck,
     lmx_sdi,
     lmx_sdo,
+    rfswitch,
     sysref_in_diff_n,
     sysref_in_diff_p,
     vin0_01_v_n,
@@ -54,6 +55,7 @@ module design_1
   output lmx_sck;
   input lmx_sdi;
   output lmx_sdo;
+  output [0:0]rfswitch;
   (* X_INTERFACE_INFO = "xilinx.com:display_usp_rf_data_converter:diff_pins:1.0 sysref_in diff_n" *) input sysref_in_diff_n;
   (* X_INTERFACE_INFO = "xilinx.com:display_usp_rf_data_converter:diff_pins:1.0 sysref_in diff_p" *) input sysref_in_diff_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vin0_01 V_N" *) input vin0_01_v_n;
@@ -266,6 +268,7 @@ module design_1
   wire vin2_01_1_V_P;
   wire vin2_23_1_V_N;
   wire vin2_23_1_V_P;
+  wire [0:0]xlslice_0_Dout;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE;
@@ -340,6 +343,7 @@ module design_1
   wire zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_WREADY;
   wire [15:0]zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_WSTRB;
   wire zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_WVALID;
+  wire [40:0]zynq_ultra_ps_e_0_emio_gpio_o;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
   assign adc0_clk_1_CLK_N = adc0_clk_clk_n;
@@ -358,6 +362,7 @@ module design_1
   assign lmx_sck = spi_control_w_2_chip_clk_out;
   assign lmx_sdi_1 = lmx_sdi;
   assign lmx_sdo = spi_control_w_2_chip_data_out;
+  assign rfswitch[0] = xlslice_0_Dout;
   assign sysref_in_1_diff_n = sysref_in_diff_n;
   assign sysref_in_1_diff_p = sysref_in_diff_p;
   assign vin0_01_1_V_N = vin0_01_v_n;
@@ -937,8 +942,12 @@ module design_1
         .vin2_01_p(vin2_01_1_V_P),
         .vin2_23_n(vin2_23_1_V_N),
         .vin2_23_p(vin2_23_1_V_P));
+  design_1_xlslice_0_0 xlslice_0
+       (.Din(zynq_ultra_ps_e_0_emio_gpio_o),
+        .Dout(xlslice_0_Dout));
   design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.emio_gpio_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .emio_gpio_o(zynq_ultra_ps_e_0_emio_gpio_o),
         .maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .maxigp0_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),
         .maxigp0_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE),

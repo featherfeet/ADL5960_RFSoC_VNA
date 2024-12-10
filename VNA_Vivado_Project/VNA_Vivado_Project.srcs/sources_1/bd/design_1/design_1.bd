@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x44CC5AF39BCBA409",
+      "boundary_crc": "0x285FB716F65745F5",
       "device": "xczu48dr-ffvg1517-2-e",
       "gen_directory": "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -40,7 +40,8 @@
       "spi_adl_1": "",
       "spi_control_w_1": "",
       "spi_lmx_0": "",
-      "spi_control_w_2": ""
+      "spi_control_w_2": "",
+      "xlslice_0": ""
     },
     "interface_ports": {
       "sysref_in": {
@@ -203,6 +204,11 @@
       },
       "lmx_cs": {
         "direction": "O"
+      },
+      "rfswitch": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -2607,6 +2613,18 @@
             "right": "0"
           }
         }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "design_1_xlslice_0_0",
+        "xci_path": "ip/design_1_xlslice_0_0/design_1_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "41"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2841,15 +2859,15 @@
         "ports": [
           "rst_clk_wiz_0_147M/peripheral_aresetn",
           "axi_smc/aresetn",
-          "adc_combiner_0/m00_axis_aresetn",
-          "adc_combiner_0/s07_axis_aresetn",
-          "adc_combiner_0/s06_axis_aresetn",
-          "adc_combiner_0/s05_axis_aresetn",
-          "adc_combiner_0/s04_axis_aresetn",
-          "adc_combiner_0/s03_axis_aresetn",
-          "adc_combiner_0/s02_axis_aresetn",
+          "adc_combiner_0/s00_axis_aresetn",
           "adc_combiner_0/s01_axis_aresetn",
-          "adc_combiner_0/s00_axis_aresetn"
+          "adc_combiner_0/s02_axis_aresetn",
+          "adc_combiner_0/s03_axis_aresetn",
+          "adc_combiner_0/s04_axis_aresetn",
+          "adc_combiner_0/s05_axis_aresetn",
+          "adc_combiner_0/s06_axis_aresetn",
+          "adc_combiner_0/s07_axis_aresetn",
+          "adc_combiner_0/m00_axis_aresetn"
         ]
       },
       "rst_ps8_0_99M_peripheral_aresetn": {
@@ -3027,6 +3045,18 @@
         "ports": [
           "usp_rf_data_converter_0/clk_adc0",
           "clk_wiz_0/clk_in1"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "rfswitch"
+        ]
+      },
+      "zynq_ultra_ps_e_0_emio_gpio_o": {
+        "ports": [
+          "zynq_ultra_ps_e_0/emio_gpio_o",
+          "xlslice_0/Din"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {

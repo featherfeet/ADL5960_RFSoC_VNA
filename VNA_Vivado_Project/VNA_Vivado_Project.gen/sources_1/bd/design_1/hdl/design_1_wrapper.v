@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-//Date        : Wed Dec  4 19:44:17 2024
+//Date        : Mon Dec  9 19:42:57 2024
 //Host        : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -27,6 +27,7 @@ module design_1_wrapper
     lmx_sck,
     lmx_sdi,
     lmx_sdo,
+    rfswitch,
     sysref_in_diff_n,
     sysref_in_diff_p,
     vin0_01_v_n,
@@ -53,6 +54,7 @@ module design_1_wrapper
   output lmx_sck;
   input lmx_sdi;
   output lmx_sdo;
+  output [0:0]rfswitch;
   input sysref_in_diff_n;
   input sysref_in_diff_p;
   input vin0_01_v_n;
@@ -80,6 +82,7 @@ module design_1_wrapper
   wire lmx_sck;
   wire lmx_sdi;
   wire lmx_sdo;
+  wire [0:0]rfswitch;
   wire sysref_in_diff_n;
   wire sysref_in_diff_p;
   wire vin0_01_v_n;
@@ -108,6 +111,7 @@ module design_1_wrapper
         .lmx_sck(lmx_sck),
         .lmx_sdi(lmx_sdi),
         .lmx_sdo(lmx_sdo),
+        .rfswitch(rfswitch),
         .sysref_in_diff_n(sysref_in_diff_n),
         .sysref_in_diff_p(sysref_in_diff_p),
         .vin0_01_v_n(vin0_01_v_n),

@@ -147,7 +147,7 @@
         end
         else begin
             if (s00_axis_tready && s00_axis_tvalid) begin
-                if (count == 18'd65535) begin
+                if (count == 18'd5000) begin
                     m00_axis_tlast <= 1'b1;
                     count <= 1'b0;
                 end
