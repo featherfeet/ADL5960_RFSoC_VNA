@@ -49,10 +49,10 @@ reverse_magnitude = np.abs(reverse_filtered)
 reverse_phase = np.angle(reverse_filtered)
 
 # Reflection coefficient magnitude comes from the ratios of the magnitudes of the forward and reverse signals.
-gamma_magnitude = np.mean(forward_magnitude) / np.mean(reverse_magnitude)
+gamma_magnitude = np.mean(reverse_magnitude) / np.mean(forward_magnitude)
 
 # Reflection coefficient phase comes from the difference in phase of the forward and reverse signals. Unwrapping performed by subtracting 2pi when we are outside the 180 deg range. Not 100% sure this works under all conditions.
-phase_difference = forward_phase - reverse_phase
+phase_difference = reverse_phase - forward_phase
 phase_difference[phase_difference > math.pi] = phase_difference[phase_difference > math.pi] - 2 * math.pi
 gamma_phase = np.mean(phase_difference)
 

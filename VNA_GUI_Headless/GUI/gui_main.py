@@ -9,6 +9,7 @@ from PyQt6.QtCore import Qt
 import pyqtgraph as pg
 import numpy as np
 from networking import RemoteConnection
+import skrf as rf
 
 remote_connection = RemoteConnection("0.0.0.0", 1234)
 
@@ -45,29 +46,28 @@ class MainWindow(QWidget):
         '''
         self.plot_adc_widget = pg.PlotWidget()
         self.plot_adc_widget.setXRange(0, 500)
-        self.plot_adc_widget.setYRange(-2000, 2000)
+        self.plot_adc_widget.setYRange(-8000, 8000)
         self.plot_adc_widget.setLabel("left", "ADC Value")
         self.plot_adc_widget.setLabel("bottom", "Time")
         self.plot_adc_widget.setTitle("Live ADC Values", size="10pt")
         
         self.plot_s_param_widget = pg.PlotWidget()
-        #self.plot_s_param_widget.setXRange(0, 500) #Need to set frequency range
-        self.plot_s_param_widget.setYRange(-200, 10) #Setting top range
+        self.plot_s_param_widget.setYRange(-80, 20) #Setting top range
         self.plot_s_param_widget.setLabel("left", "S Parameter")
-        self.plot_s_param_widget.setLabel("bottom", "Freq (Hz)")
+        self.plot_s_param_widget.setLabel("bottom", "Freq (MHz)")
         self.plot_s_param_widget.setTitle("Live S-Parameters", size="10pt")
 
-        self.filtered_port1_forward_plot = self.plot_adc_widget.plot(pen = 'r')
-        self.filtered_port2_forward_plot = self.plot_adc_widget.plot(pen = 'g')
-        self.filtered_port1_reverse_plot = self.plot_adc_widget.plot(pen = 'b')
-        self.filtered_port2_reverse_plot = self.plot_adc_widget.plot(pen = 'w')
         self.plot_adc_widget.addLegend()
+        self.filtered_port1_forward_plot = self.plot_adc_widget.plot(pen = 'r', name = "Port 1 Forward")
+        self.filtered_port2_forward_plot = self.plot_adc_widget.plot(pen = 'g', name = "Port 2 Forward")
+        self.filtered_port1_reverse_plot = self.plot_adc_widget.plot(pen = 'b', name = "Port 1 Reverse")
+        self.filtered_port2_reverse_plot = self.plot_adc_widget.plot(pen = 'w', name = "Port 2 Reverse")
 
-        self.s11_plot = self.plot_s_param_widget.plot(pen = 'r')
-        self.s12_plot = self.plot_s_param_widget.plot(pen = 'g')
-        self.s21_plot = self.plot_s_param_widget.plot(pen = 'b')
-        self.s22_plot = self.plot_s_param_widget.plot(pen = 'w')
         self.plot_s_param_widget.addLegend()
+        self.s11_plot = self.plot_s_param_widget.plot(pen = 'r', name = "S11")
+        self.s12_plot = self.plot_s_param_widget.plot(pen = 'g', name = "S12")
+        self.s21_plot = self.plot_s_param_widget.plot(pen = 'b', name = "S21")
+        self.s22_plot = self.plot_s_param_widget.plot(pen = 'w', name = "S22")
 
         self.plot_layout = QtWidgets.QGridLayout()
         self.plot_layout.addWidget(self.plot_adc_widget, 0, 0)
@@ -299,6 +299,12 @@ class MainWindow(QWidget):
             }
         remote_connection.send_parameters(parameter_list)
 
+def mag_db(s_param):
+    values = s_param.s[:,0,0]
+    mag_db = np.zeros(values.shape, dtype = np.float64)
+    mag_db[values == 0] = float("Inf")
+    mag_db[values != 0] = 20 * np.log10(np.abs(values[values != 0]))
+    return mag_db
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -311,6 +317,11 @@ if __name__ == "__main__":
             window.filtered_port2_forward_plot.setData(remote_connection.data["filtered_port2_forward"])
             window.filtered_port1_reverse_plot.setData(remote_connection.data["filtered_port1_reverse"])
             window.filtered_port2_reverse_plot.setData(remote_connection.data["filtered_port2_reverse"])
-
+            raw_s_parameters = remote_connection.data["raw_s_parameters"]
+            window.plot_s_param_widget.setXRange(raw_s_parameters.f[0], raw_s_parameters.f[-1])
+            window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
+            window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
+            window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
+            window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
 
         app.processEvents()

@@ -15,10 +15,10 @@ class ADL5960:
     un_device_shutdown = 0x0002_00
     lo_config = 0x0020_01
     set_IF_filter = 0x0025_00
-    set_rgain = 0x0023_0C
-    set_fgain = 0x0024_0C
+    set_rgain = 0x0023_00
+    set_fgain = 0x0024_00
     
-    def __init__(self, mmio_spi_controller):
+    def __init__(self, mmio_spi_controller, fgain = 12, rgain = 12):
         """
         mmio_spi_controller is a Pynq handle for an MMIO going to our custom SPI controller.
         initial_register_file is a path to a register map file exported from TICS-PRO for the default setup of the chip.
@@ -26,8 +26,14 @@ class ADL5960:
         self.mmio_spi_controller = mmio_spi_controller
         self._spi_transaction(self.lo_config)
         self._spi_transaction(self.set_IF_filter)
-        self._spi_transaction(self.set_rgain)
-        self._spi_transaction(self.set_fgain)
+        if int(fgain) < 0 or int(fgain) > 48:
+            raise ValueError("FGAIN must be between 0 and 48 dB.")
+        if int(rgain) < 0 or int(rgain) > 48:
+            raise ValueError("RGAIN must be between 0 and 48 dB.")
+        self.fgain = fgain
+        self.rgain = rgain
+        self._spi_transaction(self.set_rgain | int(fgain))
+        self._spi_transaction(self.set_fgain | int(rgain))
         
     def _spi_transaction(self, command):
         self.mmio_spi_controller.write(MMIO_REGISTERS["SPI_DATA_OUT"], command)  

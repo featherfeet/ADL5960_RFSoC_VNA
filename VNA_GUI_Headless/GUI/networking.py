@@ -33,4 +33,5 @@ class RemoteConnection:
             data_tmp["filtered_port2_forward"] = np.frombuffer(data_unpickled["filtered_port2_forward"], dtype = np.float64)
             data_tmp["filtered_port1_reverse"] = np.frombuffer(data_unpickled["filtered_port1_reverse"], dtype = np.float64)
             data_tmp["filtered_port2_reverse"] = np.frombuffer(data_unpickled["filtered_port2_reverse"], dtype = np.float64)
+            data_tmp["raw_s_parameters"] = data_unpickled["raw_s_parameters"]
             self.data = data_tmp
