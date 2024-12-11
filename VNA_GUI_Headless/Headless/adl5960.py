@@ -24,6 +24,7 @@ class ADL5960:
         initial_register_file is a path to a register map file exported from TICS-PRO for the default setup of the chip.
         """
         self.mmio_spi_controller = mmio_spi_controller
+        self.softreset()
         self._spi_transaction(self.lo_config)
         self._spi_transaction(self.set_IF_filter)
         if int(fgain) < 0 or int(fgain) > 48:
@@ -32,8 +33,8 @@ class ADL5960:
             raise ValueError("RGAIN must be between 0 and 48 dB.")
         self.fgain = fgain
         self.rgain = rgain
-        self._spi_transaction(self.set_rgain | int(fgain))
-        self._spi_transaction(self.set_fgain | int(rgain))
+        print(self._spi_transaction(self.set_rgain | int(fgain)))
+        print(self._spi_transaction(self.set_fgain | int(rgain)))
         
     def _spi_transaction(self, command):
         self.mmio_spi_controller.write(MMIO_REGISTERS["SPI_DATA_OUT"], command)  

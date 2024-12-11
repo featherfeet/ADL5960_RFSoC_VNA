@@ -70,7 +70,7 @@ class MainWindow(QWidget):
         self.plot_s_param_widget.addLegend()
         self.s11_plot = self.plot_s_param_widget.plot(pen = 'r', name = "S11")
         self.s12_plot = self.plot_s_param_widget.plot(pen = 'g', name = "S12")
-        self.s21_plot = self.plot_s_param_widget.plot(pen = 'b', name = "S21")
+        self.s21_plot = self.plot_s_param_widget.plot(pen = 'y', name = "S21")
         self.s22_plot = self.plot_s_param_widget.plot(pen = 'w', name = "S22")
 
         #Smith chart
@@ -380,10 +380,10 @@ if __name__ == "__main__":
             #S-paramters Plot
             raw_s_parameters = remote_connection.data["raw_s_parameters"]
             window.plot_s_param_widget.setXRange(raw_s_parameters.f[0], raw_s_parameters.f[-1])
-            #window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
+            window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
-            #window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
+            window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
 
             #Smith chart
             window.update_smith(raw_s_parameters)

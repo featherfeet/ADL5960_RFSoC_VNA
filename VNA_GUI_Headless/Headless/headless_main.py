@@ -68,6 +68,7 @@ while True:
     # Read ADC values from DMA
     start = time.time()
     port1_reverse_buffer, port1_forward_buffer, port2_reverse_buffer, port2_forward_buffer = adcs.read_adcs()
+    #np.savez("port1_active.npz", port1_reverse_buffer = port1_reverse_buffer, port1_forward_buffer = port1_forward_buffer, port2_reverse_buffer = port2_reverse_buffer, port2_forward_buffer = port2_forward_buffer)
     print(f"Reading ADCs takes {time.time() - start} s.")
 
     start = time.time()
@@ -120,6 +121,8 @@ while True:
 
     # Read ADC values from DMA
     port1_reverse_buffer, port1_forward_buffer, port2_reverse_buffer, port2_forward_buffer = adcs.read_adcs()
+
+    #np.savez("port2_active.npz", port1_reverse_buffer = port1_reverse_buffer, port1_forward_buffer = port1_forward_buffer, port2_reverse_buffer = port2_reverse_buffer, port2_forward_buffer = port2_forward_buffer)
 
     port2_forward = dsp.binary_to_complex(port2_forward_buffer)
     port2_reverse = dsp.binary_to_complex(port2_reverse_buffer)
@@ -202,6 +205,7 @@ while True:
 
     start = time.time()
     source.set_next_freq()
+    #time.sleep(0.1)
     print(f"Setting source takes {time.time() - start} s.")
 
     #np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
