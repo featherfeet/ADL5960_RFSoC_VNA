@@ -64,6 +64,43 @@
     output logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m03_axis_tstrb
     );
 
+
+    // Doing this so I can see the values in GTKwave for debugging
+    wire [15:0] b1_coeff_angle_in;
+    wire [15:0] b1_coeff_radius_in;
+    assign b1_coeff_angle_in = s01_axis_tdata[31:16];
+    assign b1_coeff_radius_in = s01_axis_tdata[15:0];
+    wire [15:0] a1_coeff_angle_in;
+    wire [15:0] a1_coeff_radius_in;
+    assign a1_coeff_angle_in = s00_axis_tdata[31:16];
+    assign a1_coeff_radius_in = s00_axis_tdata[15:0];
+    wire [15:0] b2_coeff_angle_in;
+    wire [15:0] b2_coeff_radius_in;
+    assign b2_coeff_angle_in = s03_axis_tdata[31:16];
+    assign b2_coeff_radius_in = s03_axis_tdata[15:0];
+    wire [15:0] a2_coeff_angle_in;
+    wire [15:0] a2_coeff_radius_in;
+    assign a2_coeff_angle_in = s02_axis_tdata[31:16];
+    assign a2_coeff_radius_in = s02_axis_tdata[15:0];
+
+    wire [15:0] S11_mag_out;
+    wire [15:0] S11_phase_out;
+    assign S11_phase_out = m00_axis_tdata_reg[31:16];
+    assign S11_mag_out = m00_axis_tdata_reg[15:0];
+    wire [15:0] S12_mag_out;
+    wire [15:0] S12_phase_out;
+    assign S12_phase_out = m01_axis_tdata_reg[31:16];
+    assign S12_mag_out = m01_axis_tdata_reg[15:0];
+    wire [15:0] S21_mag_out;
+    wire [15:0] S21_phase_out;
+    assign S21_phase_out = m02_axis_tdata_reg[31:16];
+    assign S21_mag_out = m02_axis_tdata_reg[15:0];
+    wire [15:0] S22_mag_out;
+    wire [15:0] S22_phase_out;
+    assign S22_phase_out = m03_axis_tdata_reg[31:16];
+    assign S22_mag_out = m03_axis_tdata_reg[15:0];
+   
+
     //Averaging count state machine
     enum {ACCUMULATE, AVERAGE, DIVIDE_ONE, DIVIDE_TWO, CALCULATE, SEND, WAITING} state;
     logic [15:0] count;

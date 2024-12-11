@@ -55,7 +55,7 @@ class AXISDriver(BusDriver):
             await clk_falling_edge
 
             while (index < len(value["contents"]["data"])):
-                print(f"INDEX: {index}")
+                #print(f"INDEX: {index}")
                 # set signals:
                 self.bus.axis_tvalid.value = 1
                 self.bus.axis_tdata.value = int(value["contents"]["data"][index])

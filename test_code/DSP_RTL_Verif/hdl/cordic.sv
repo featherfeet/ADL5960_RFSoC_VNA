@@ -21,6 +21,16 @@ module cordic #
     output logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
     output logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m00_axis_tstrb
     );
+
+    // Doing this so I can see the values in GTKwave for debugging
+    wire [15:0] cordic_imag_part_in;
+    wire [15:0] cordic_real_part_in;
+    assign cordic_real_part_in = s00_axis_tdata[31:16];
+    assign cordic_imag_part_in = s00_axis_tdata[15:0];
+    wire [15:0] cordic_angle_out;
+    wire [15:0] cordic_radius_out;
+    assign cordic_angle_out = m00_axis_tdata_reg[31:16];
+    assign cordic_radius_out = m00_axis_tdata_reg[15:0];
  
     localparam NUM_ITERS = 15;
     localparam K = 34'b00_0000_0000_0000_0001_1010_0101_1001_0010; //1.64676 in 34 bit fixed point (16 bits of decimal)
