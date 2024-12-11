@@ -94,10 +94,10 @@ module DSP_top_level_w #
     input wire [(C_M00_AXIS_TDATA_WIDTH/2)-1 : 0] s07_axis_tdata, //port 2 forward I
     
     
-    output wire [C_M00_AXIS_TDATA_WIDTH+15 : 0] m00_axis_tdata, //S11_out
-    output wire [C_M00_AXIS_TDATA_WIDTH+15 : 0] m01_axis_tdata, //S12_out, 
-    output wire [C_M00_AXIS_TDATA_WIDTH+15 : 0] m02_axis_tdata, //S21_out,
-    output wire [C_M00_AXIS_TDATA_WIDTH+15 : 0] m03_axis_tdata //S22_out
+    output wire [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m00_axis_tdata, //S11_out
+    output wire [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m01_axis_tdata, //S12_out, 
+    output wire [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m02_axis_tdata, //S21_out,
+    output wire [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m03_axis_tdata //S22_out
     
     );
     DSP_top_level #(.C_S00_AXIS_TDATA_WIDTH(32), .C_M00_AXIS_TDATA_WIDTH(32))
