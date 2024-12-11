@@ -6,9 +6,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 bandpass = pickle.load(open("raw_s_parameters_bandpass.pickle", "rb"))
-bandpass_reference = rf.Network("../../example_data_librevna/ZABP-587-S+.s2p")
+bandpass.f *= 1e6
+bandpass_reference = rf.Network("../../data_capture/example_data_librevna/ZABP-587-S+.s2p")
 measured_standards = pickle.load(open("measured_standards.pickle", "rb"))
+for standard in measured_standards.keys():
+    measured_standards[standard].f *= 1e6
 switch_terms = pickle.load(open("switch_terms.pickle", "rb"))
+for standard in switch_terms.keys():
+    switch_terms[standard].f *= 1e6
 freqs = measured_standards["short"].f
 num_pts = len(freqs)
 
@@ -32,10 +37,9 @@ cal = rf.calibration.SOLT(ideals = [ideal_short[1:], ideal_open[1:], ideal_load[
 cal.run()
 
 bandpass_calibrated = cal.apply_cal(bandpass[1:])
-bandpass_calibrated.f *= 1000000
-bandpass.f *= 1000000
 
-bandpass_reference.plot_s_db(1, 0)
-bandpass_calibrated.plot_s_db(1, 0)
-#bandpass.plot_s_db(0, 0)
+#bandpass_reference.plot_s_db(0, 0, label = "Calibrated LibreVNA")
+bandpass_calibrated.plot_s_db(1, 1, label = "Calibrated RFSoC VNA")
+bandpass.plot_s_db(1, 1, label = "Raw RFSoC VNA")
+plt.title("S22 vs Frequency, RFSoC VNA Measuring Cavity Bandpass")
 plt.show()
