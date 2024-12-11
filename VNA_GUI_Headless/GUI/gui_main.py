@@ -155,8 +155,7 @@ class MainWindow(QWidget):
 
         #Smith chart
         self.smith_chart_fig = self.MplCanvas(self, width=5, height=5, dpi=100) #Initialize figure with matplotlib canvas
-        #smithR - Set radius of smith chart to 30, default is 1
-        self.smith_fig_object = rf.plotting.smith(smithR = 30, ax = self.smith_chart_fig.axes, draw_labels = True, ref_imm = 50.0, chart_type = 'z')
+        self.smith_fig_object = rf.plotting.smith(ax = self.smith_chart_fig.axes, draw_labels = True, ref_imm = 50.0, chart_type = 'z')
         self.smith_layout = QtWidgets.QGridLayout()
         self.smith_layout.addWidget(self.smith_chart_fig)
 
