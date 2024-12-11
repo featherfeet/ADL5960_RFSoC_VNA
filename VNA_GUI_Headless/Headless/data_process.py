@@ -46,7 +46,7 @@ class DSP:
         # Reflection coefficient phase comes from the difference in phase of the forward and reverse signals. 
         # Unwrapping performed by subtracting 2pi when we are outside the 180 deg range. Not 100% sure this works under all conditions.
         phase_difference = reverse_phase - forward_phase
-        phase_difference[phase_difference > math.pi] = phase_difference[phase_difference > math.pi] - 2 * math.pi
+        phase_difference[phase_difference > 2 * math.pi] = phase_difference[phase_difference > 2 * math.pi] - 2 * math.pi
         gamma_phase = np.mean(phase_difference)
 
         return gamma_magnitude, gamma_phase

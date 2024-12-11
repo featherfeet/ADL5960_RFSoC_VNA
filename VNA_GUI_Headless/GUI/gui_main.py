@@ -485,25 +485,25 @@ if __name__ == "__main__":
         if len(remote_connection.data.keys()):
             #ADC Plot
             window.filtered_port1_forward_plot.setData(remote_connection.data["filtered_port1_forward"])
-            window.filtered_port1_forward_plot.setData(window.port1_forward_vis.isChecked())
+            window.filtered_port1_forward_plot.setVisible(window.port1_forward_vis.isChecked())
             window.filtered_port2_forward_plot.setData(remote_connection.data["filtered_port2_forward"])
-            window.filtered_port2_forward_plot.setData(window.port2_forward_vis.isChecked())
+            window.filtered_port2_forward_plot.setVisible(window.port2_forward_vis.isChecked())
             window.filtered_port1_reverse_plot.setData(remote_connection.data["filtered_port1_reverse"])
-            window.filtered_port1_reverse_plot.setData(window.port1_reverse_vis.isChecked())
+            window.filtered_port1_reverse_plot.setVisible(window.port1_reverse_vis.isChecked())
             window.filtered_port2_reverse_plot.setData(remote_connection.data["filtered_port2_reverse"])
-            window.filtered_port2_reverse_plot.setData(window.port2_reverse_vis.isChecked())
+            window.filtered_port2_reverse_plot.setVisible(window.port2_reverse_vis.isChecked())
             
             #S-paramters Plot
             raw_s_parameters = remote_connection.data["raw_s_parameters"]
             window.plot_s_param_widget.setXRange(raw_s_parameters.f[0], raw_s_parameters.f[-1])
             window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
-            window.s11_plot.setData(window.s11_vis.isChecked())
+            window.s11_plot.setVisible(window.s11_vis.isChecked())
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
-            window.s12_plot.setData(window.s12_vis.isChecked())
+            window.s12_plot.setVisible(window.s12_vis.isChecked())
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
-            window.s21_plot.setData(window.s21_vis.isChecked())
+            window.s21_plot.setVisible(window.s21_vis.isChecked())
             window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
-            window.s22_plot.setData(window.s22_vis.isChecked())
+            window.s22_plot.setVisible(window.s22_vis.isChecked())
 
             #Smith chart
             window.update_smith(raw_s_parameters)
