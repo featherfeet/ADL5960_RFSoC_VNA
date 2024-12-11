@@ -38,8 +38,8 @@ adcs = ADCs(ol.usp_rf_data_converter_0, ol.axi_dma_0)
 
 # Set up SPI devices
 print("Setting up VNA frontends...")
-adl1 = ADL5960(ol.spi_adl_0, fgain = 30, rgain = 36)
-adl2 = ADL5960(ol.spi_adl_1, fgain = 30, rgain = 36)
+adl1 = ADL5960(ol.spi_adl_0, fgain = 30, rgain = 30)
+adl2 = ADL5960(ol.spi_adl_1, fgain = 30, rgain = 30)
 print("Setting up source...")
 source = SigSource(mmio_spi_controller = ol.spi_lmx_0)
 source.set_active()
