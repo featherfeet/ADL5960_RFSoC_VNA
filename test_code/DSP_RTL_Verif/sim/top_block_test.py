@@ -73,7 +73,7 @@ async def test_top(dut):
         tester.input_driver3.append(data3)
         await ClockCycles(dut.s00_axis_aclk, 20)'''
     
-    example_adc_data = np.load("../../../../example_adc_data/both_ports_open_port1_active.npz")
+    example_adc_data = np.load("../../../../example_adc_data/ports_connected_port1_active.npz")
     print(example_adc_data.keys())
     print(len(example_adc_data["port1_forward_buffer"]))
     port1_forward_raw_data = example_adc_data["port1_forward_buffer"][:5000]#.real.astype(np.int16).astype(np.uint32) | (example_adc_data["port1_forward"].imag.astype(np.int16).astype(np.uint32) << 16)

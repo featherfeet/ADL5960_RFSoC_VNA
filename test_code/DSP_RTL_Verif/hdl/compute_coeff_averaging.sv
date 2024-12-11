@@ -372,6 +372,10 @@
                         m01_axis_tvalid_reg <= 0;
                         m02_axis_tvalid_reg <= 0;
                         m03_axis_tvalid_reg <= 0;
+                        m00_axis_tlast_reg <= 0;
+                        m01_axis_tlast_reg <= 0;
+                        m02_axis_tlast_reg <= 0;
+                        m03_axis_tlast_reg <= 0;
 
                         //reset to restart
                         count <= 0;

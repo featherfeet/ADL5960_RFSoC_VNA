@@ -33,9 +33,9 @@ class SSSTester:
             self.input_driver3 = AXISDriver(self.dut,'s03',self.dut.s03_axis_aclk)
         elif(test_type == 'top'):
             self.input_driver0 = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
-            self.input_driver1 = AXISDriver(self.dut,'s01',self.dut.s01_axis_aclk)
-            self.input_driver2 = AXISDriver(self.dut,'s02',self.dut.s02_axis_aclk)
-            self.input_driver3 = AXISDriver(self.dut,'s03',self.dut.s03_axis_aclk)
+            self.input_driver1 = AXISDriver(self.dut,'s01',self.dut.s00_axis_aclk)
+            self.input_driver2 = AXISDriver(self.dut,'s02',self.dut.s00_axis_aclk)
+            self.input_driver3 = AXISDriver(self.dut,'s03',self.dut.s00_axis_aclk)
         else:
             self.input_driver = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
 
