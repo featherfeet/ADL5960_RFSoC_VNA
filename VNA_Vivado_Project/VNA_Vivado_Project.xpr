@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="/home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/home/akeirn/Documents/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9c0d91ebd3384b95882246c3398d90cf"/>
@@ -47,6 +47,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/cordic_combiner_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/cordic_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/fir_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/spi_lmx_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/adc_combiner_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/spi_adl_1_0"/>
@@ -106,6 +109,41 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../SPI_controller/hdl/spi_control_w.v"/>
           <Attr Name="ImportTime" Val="1733187281"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test_code/DSP_RTL_Verif/hdl/DSP_top_level.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test_code/DSP_RTL_Verif/hdl/compute_coeff_averaging.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test_code/DSP_RTL_Verif/hdl/cordic.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test_code/DSP_RTL_Verif/hdl/fir_15.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/DSP_top_level_w.v">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
