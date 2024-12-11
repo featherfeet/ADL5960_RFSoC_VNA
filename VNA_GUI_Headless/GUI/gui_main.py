@@ -345,6 +345,7 @@ class MainWindow(QWidget):
 
     class MplCanvas(FigureCanvasQTAgg):
         def __init__(self, parent=None, width=5, height=4, dpi=100):
+            plt.style.use('dark_background')
             fig = Figure(figsize=(width, height), dpi=dpi)
             self.axes = fig.add_subplot(111)
             super().__init__(fig)
