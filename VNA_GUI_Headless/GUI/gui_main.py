@@ -351,7 +351,10 @@ class MainWindow(QWidget):
 
     def update_smith(self, rf_network_object):
         self.smith_chart_fig.axes.clear()
-        self.smith_fig_object = rf_network_object.plot_s_smith(ax = self.smith_chart_fig.axes)
+        #self.smith_fig_object = rf_network_object.plot_s_smith(ax = self.smith_chart_fig.axes)
+        #self.smith_chart_fig.draw() #redraw canvas
+        rf.plotting.plot_smith(rf_network_object.s11.s[:,0], ax = self.smith_chart_fig.axes)
+        rf.plotting.plot_smith(rf_network_object.s22.s[:,0], ax = self.smith_chart_fig.axes)
         self.smith_chart_fig.draw() #redraw canvas
 
 def mag_db(s_param):
@@ -377,14 +380,13 @@ if __name__ == "__main__":
             #S-paramters Plot
             raw_s_parameters = remote_connection.data["raw_s_parameters"]
             window.plot_s_param_widget.setXRange(raw_s_parameters.f[0], raw_s_parameters.f[-1])
-            window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
+            #window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
-            window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
+            #window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
 
             #Smith chart
-            #s_network_obj = rf.Network(raw_s_parameters)
-            #window.update_smith(s_network_obj)
+            window.update_smith(raw_s_parameters)
 
         window.status_bar.setText(remote_connection.status)
 
