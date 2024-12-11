@@ -48,6 +48,7 @@ class MainWindow(QWidget):
         '''
         Plot Layout
         '''
+        #ADC Plot
         self.plot_adc_widget = pg.PlotWidget()
         self.plot_adc_widget.setXRange(0, 500)
         self.plot_adc_widget.setYRange(-8000, 8000)
@@ -55,17 +56,58 @@ class MainWindow(QWidget):
         self.plot_adc_widget.setLabel("bottom", "Time")
         self.plot_adc_widget.setTitle("Live ADC Values", size="10pt")
         
-        self.plot_s_param_widget = pg.PlotWidget()
-        self.plot_s_param_widget.setYRange(-80, 20) #Setting top range
-        self.plot_s_param_widget.setLabel("left", "S Parameter")
-        self.plot_s_param_widget.setLabel("bottom", "Freq (MHz)")
-        self.plot_s_param_widget.setTitle("Live S-Parameters", size="10pt")
 
         self.plot_adc_widget.addLegend()
         self.filtered_port1_forward_plot = self.plot_adc_widget.plot(pen = 'r', name = "Port 1 Forward")
         self.filtered_port2_forward_plot = self.plot_adc_widget.plot(pen = 'g', name = "Port 2 Forward")
-        self.filtered_port1_reverse_plot = self.plot_adc_widget.plot(pen = 'b', name = "Port 1 Reverse")
+        self.filtered_port1_reverse_plot = self.plot_adc_widget.plot(pen = 'y', name = "Port 1 Reverse")
         self.filtered_port2_reverse_plot = self.plot_adc_widget.plot(pen = 'w', name = "Port 2 Reverse")
+
+        self.port1_forward_vis = QtWidgets.QCheckBox("Port 1 Forward")
+        self.port1_forward_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: red; }
+            QCheckBox::indicator:checked { background-color: red; border: 1px white; }
+        """)
+        self.port1_forward_vis.setChecked(True)
+        self.port2_forward_vis = QtWidgets.QCheckBox("Port 2 Forward")
+        self.port2_forward_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: green; }
+            QCheckBox::indicator:checked { background-color: green; border: 1px white; }
+        """)
+        self.port2_forward_vis.setChecked(True)
+        self.port1_reverse_vis = QtWidgets.QCheckBox("Port 1 Reverse")
+        self.port1_reverse_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: yellow; }
+            QCheckBox::indicator:checked { background-color: yellow; border: 1px white; }
+        """)
+        self.port1_reverse_vis.setChecked(True)
+        self.port2_reverse_vis = QtWidgets.QCheckBox("Port 2 Reverse")
+        self.port2_reverse_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: white; }
+            QCheckBox::indicator:checked { background-color: white; border: 1px white; }
+        """)
+        self.port2_reverse_vis.setChecked(True)
+        self.adc_vis_layout = QtWidgets.QGridLayout()
+        self.adc_vis_layout.addWidget(self.port1_forward_vis, 0, 0)
+        self.adc_vis_layout.addWidget(self.port2_forward_vis, 0, 1)
+        self.adc_vis_layout.addWidget(self.port1_reverse_vis, 0, 2)
+        self.adc_vis_layout.addWidget(self.port2_reverse_vis, 0, 3)
+
+
+        #S-Parameter plot
+        self.plot_s_param_widget = pg.PlotWidget()
+        self.plot_s_param_widget.setYRange(-50, 20) #Setting S-parameter display range
+        self.plot_s_param_widget.setLabel("left", "S Parameter")
+        self.plot_s_param_widget.setLabel("bottom", "Freq (MHz)")
+        self.plot_s_param_widget.setTitle("Live S-Parameters", size="10pt")
 
         self.plot_s_param_widget.addLegend()
         self.s11_plot = self.plot_s_param_widget.plot(pen = 'r', name = "S11")
@@ -73,17 +115,57 @@ class MainWindow(QWidget):
         self.s21_plot = self.plot_s_param_widget.plot(pen = 'y', name = "S21")
         self.s22_plot = self.plot_s_param_widget.plot(pen = 'w', name = "S22")
 
+        self.s11_vis = QtWidgets.QCheckBox("S11")
+        self.s11_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: red; }
+            QCheckBox::indicator:checked { background-color: red; border: 1px white; }
+        """)
+        self.s11_vis.setChecked(True)
+        self.s12_vis = QtWidgets.QCheckBox("S12")
+        self.s12_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: green; }
+            QCheckBox::indicator:checked { background-color: green; border: 1px white; }
+        """)
+        self.s12_vis.setChecked(True)
+        self.s21_vis = QtWidgets.QCheckBox("S21")
+        self.s21_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: yellow; }
+            QCheckBox::indicator:checked { background-color: yellow; border: 1px white; }
+        """)
+        self.s21_vis.setChecked(True)
+        self.s22_vis = QtWidgets.QCheckBox("S22")
+        self.s22_vis.setStyleSheet("""
+            QCheckBox { color: lightgray; }
+            QCheckBox::indicator:unchecked { background-color: gray; border: 1px white; }
+            QCheckBox:checked { color: white; }
+            QCheckBox::indicator:checked { background-color: white; border: 1px white; }
+        """)
+        self.s22_vis.setChecked(True)
+        self.sparam_vis_layout = QtWidgets.QGridLayout()
+        self.sparam_vis_layout.addWidget(self.s11_vis, 0, 0)
+        self.sparam_vis_layout.addWidget(self.s12_vis, 0, 1)
+        self.sparam_vis_layout.addWidget(self.s21_vis, 0, 2)
+        self.sparam_vis_layout.addWidget(self.s22_vis, 0, 3)
+
         #Smith chart
         self.smith_chart_fig = self.MplCanvas(self, width=5, height=5, dpi=100) #Initialize figure with matplotlib canvas
-        self.smith_fig_object = rf.plotting.smith(ax = self.smith_chart_fig.axes, draw_labels = True, ref_imm = 50.0, chart_type = 'z')
+        #smithR - Set radius of smith chart to 30, default is 1
+        self.smith_fig_object = rf.plotting.smith(smithR = 30, ax = self.smith_chart_fig.axes, draw_labels = True, ref_imm = 50.0, chart_type = 'z')
         self.smith_layout = QtWidgets.QGridLayout()
         self.smith_layout.addWidget(self.smith_chart_fig)
 
         #Plot Layout
         self.plot_layout = QtWidgets.QGridLayout()
         self.plot_layout.addWidget(self.plot_adc_widget, 0, 0)
+        self.plot_layout.addLayout(self.adc_vis_layout, 1, 0)
         self.plot_layout.addWidget(self.plot_s_param_widget, 0, 1)
-        #self.plot_layout.addLayout(self.smith_layout, 0, 2)
+        self.plot_layout.addLayout(self.sparam_vis_layout, 1, 1)
 
         '''
         Source Controls
@@ -93,8 +175,38 @@ class MainWindow(QWidget):
         self.mode_radio_button_startend = QtWidgets.QRadioButton("Start/End")
         self.mode_radio_button_centerspan = QtWidgets.QRadioButton("Center/Span")
         self.mode_radio_button_zerospan.toggled.connect(self.mode_zerospan)
+        self.mode_radio_button_zerospan.setStyleSheet("""
+            QRadioButton::indicator:checked {
+                background-color: white;
+                border: 1px solid gray;
+            }
+            QRadioButton::indicator:unchecked {
+                background-color: gray;
+                border: 1px solid gray;
+            }
+        """)
         self.mode_radio_button_startend.toggled.connect(self.mode_startend)
+        self.mode_radio_button_startend.setStyleSheet("""
+            QRadioButton::indicator:checked {
+                background-color: white;
+                border: 1px solid gray;
+            }
+            QRadioButton::indicator:unchecked {
+                background-color: gray;
+                border: 1px solid gray;
+            }
+        """)
         self.mode_radio_button_centerspan.toggled.connect(self.mode_centerspan)
+        self.mode_radio_button_centerspan.setStyleSheet("""
+            QRadioButton::indicator:checked {
+                background-color: white;
+                border: 1px solid gray;
+            }
+            QRadioButton::indicator:unchecked {
+                background-color: gray;
+                border: 1px solid gray;
+            }
+        """)
 
         self.controls_layout = QtWidgets.QGridLayout()
         self.controls_layout.addWidget(self.mode_label, 0, 0)
@@ -374,17 +486,25 @@ if __name__ == "__main__":
         if len(remote_connection.data.keys()):
             #ADC Plot
             window.filtered_port1_forward_plot.setData(remote_connection.data["filtered_port1_forward"])
+            window.filtered_port1_forward_plot.setData(window.port1_forward_vis.isChecked())
             window.filtered_port2_forward_plot.setData(remote_connection.data["filtered_port2_forward"])
+            window.filtered_port2_forward_plot.setData(window.port2_forward_vis.isChecked())
             window.filtered_port1_reverse_plot.setData(remote_connection.data["filtered_port1_reverse"])
+            window.filtered_port1_reverse_plot.setData(window.port1_reverse_vis.isChecked())
             window.filtered_port2_reverse_plot.setData(remote_connection.data["filtered_port2_reverse"])
+            window.filtered_port2_reverse_plot.setData(window.port2_reverse_vis.isChecked())
             
             #S-paramters Plot
             raw_s_parameters = remote_connection.data["raw_s_parameters"]
             window.plot_s_param_widget.setXRange(raw_s_parameters.f[0], raw_s_parameters.f[-1])
             window.s11_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s11))
+            window.s11_plot.setData(window.s11_vis.isChecked())
             window.s12_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s12))
+            window.s12_plot.setData(window.s12_vis.isChecked())
             window.s21_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s21))
+            window.s21_plot.setData(window.s21_vis.isChecked())
             window.s22_plot.setData(raw_s_parameters.f, mag_db(raw_s_parameters.s22))
+            window.s22_plot.setData(window.s22_vis.isChecked())
 
             #Smith chart
             window.update_smith(raw_s_parameters)
