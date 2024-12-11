@@ -17,9 +17,12 @@ from cocotb_bus.monitors import BusMonitor
 from axi_monitor import AXISMonitor
 from axi_driver import AXISDriver
 from axi_tester import SSSTester
+from data_process import DSP
 
 #set type of test here to test different modules
 test_type = 'top'
+# Set up Python DSP.
+dsp = DSP()
  
 async def reset(clk, reset_wire, duration, value):
     reset_wire.value = value
@@ -42,9 +45,6 @@ async def set_ready(dut, value):
 
 async def set_ready_4(dut, value):
     dut.m00_axis_tready.value = value
-    dut.m01_axis_tready.value = value
-    dut.m02_axis_tready.value = value
-    dut.m03_axis_tready.value = value
 
 @cocotb.test()
 async def test_top(dut):
@@ -73,21 +73,46 @@ async def test_top(dut):
         tester.input_driver3.append(data3)
         await ClockCycles(dut.s00_axis_aclk, 20)'''
     
-    example_adc_data = np.load("../../../../example_adc_data/ports_connected_port1_active.npz")
+    example_adc_data = np.load("../../../../data_capture/example_adc_data/ports_connected_port1_active.npz")
     print(example_adc_data.keys())
     print(len(example_adc_data["port1_forward_buffer"]))
     port1_forward_raw_data = example_adc_data["port1_forward_buffer"][:5000]#.real.astype(np.int16).astype(np.uint32) | (example_adc_data["port1_forward"].imag.astype(np.int16).astype(np.uint32) << 16)
     port1_reverse_raw_data = example_adc_data["port1_reverse_buffer"][:5000]#.real.astype(np.int16).astype(np.uint32) | (example_adc_data["port1_reverse"].imag.astype(np.int16).astype(np.uint32) << 16)
     port2_forward_raw_data = example_adc_data["port2_forward_buffer"][:5000]#.real.astype(np.int16).astype(np.uint32) | (example_adc_data["port2_forward"].imag.astype(np.int16).astype(np.uint32) << 16)
     port2_reverse_raw_data = example_adc_data["port2_reverse_buffer"][:5000]#.real.astype(np.int16).astype(np.uint32) | (example_adc_data["port2_reverse"].imag.astype(np.int16).astype(np.uint32) << 16)
-    data0 = {'type': 'burst', "contents": {"data": port1_reverse_raw_data}}
-    data1 = {'type': 'burst', "contents": {"data": port1_forward_raw_data}}
-    data2 = {'type': 'burst', "contents": {"data": port2_reverse_raw_data}}
-    data3 = {'type': 'burst', "contents": {"data": port2_forward_raw_data}}
+    
+    port1_forward_raw_data_I = example_adc_data["port1_forward_buffer"][:5000] >> 16
+    port1_forward_raw_data_Q = example_adc_data["port1_forward_buffer"][:5000] & 0x0000FFFF
+    port1_reverse_raw_data_I = example_adc_data["port1_reverse_buffer"][:5000] >> 16
+    port1_reverse_raw_data_Q = example_adc_data["port1_reverse_buffer"][:5000] & 0x0000FFFF
+    port2_forward_raw_data_I = example_adc_data["port2_forward_buffer"][:5000] >> 16
+    port2_forward_raw_data_Q = example_adc_data["port2_forward_buffer"][:5000] & 0x0000FFFF
+    port2_reverse_raw_data_I = example_adc_data["port2_reverse_buffer"][:5000] >> 16
+    port2_reverse_raw_data_Q = example_adc_data["port2_reverse_buffer"][:5000] & 0x0000FFFF
+
+    print(port1_forward_raw_data_Q)
+    print(port1_forward_raw_data)
+
+    data0 = {'type': 'burst', "contents": {"data": port1_reverse_raw_data_Q}}
+    data1 = {'type': 'burst', "contents": {"data": port1_reverse_raw_data_I}}
+
+    data2 = {'type': 'burst', "contents": {"data": port1_forward_raw_data_Q}}
+    data3 = {'type': 'burst', "contents": {"data": port1_forward_raw_data_I}}
+
+    data4 = {'type': 'burst', "contents": {"data": port2_reverse_raw_data_Q}}
+    data5 = {'type': 'burst', "contents": {"data": port2_reverse_raw_data_I}}
+
+    data6 = {'type': 'burst', "contents": {"data": port2_forward_raw_data_Q}}
+    data7 = {'type': 'burst', "contents": {"data": port2_forward_raw_data_I}}
+
     tester.input_driver0.append(data0)
     tester.input_driver1.append(data1)
     tester.input_driver2.append(data2)
     tester.input_driver3.append(data3)
+    tester.input_driver4.append(data4)
+    tester.input_driver5.append(data5)
+    tester.input_driver6.append(data6)
+    tester.input_driver7.append(data7)
 
     await ClockCycles(dut.s00_axis_aclk, 7000)
 
@@ -103,6 +128,25 @@ async def test_top(dut):
     await set_ready_4(dut,1)
     await ClockCycles(dut.s00_axis_aclk, random.randint(1000, 1350))
     """
+    port2_forward = dsp.binary_to_complex(port2_forward_raw_data)
+    port2_reverse = dsp.binary_to_complex(port2_reverse_raw_data)
+    port1_forward = dsp.binary_to_complex(port1_forward_raw_data)
+    port1_reverse = dsp.binary_to_complex(port1_reverse_raw_data)
+
+    filtered_port2_forward = dsp.filter(port2_forward)
+    filtered_port2_reverse = dsp.filter(port2_reverse)
+    filtered_port1_forward = dsp.filter(port1_forward)
+    filtered_port1_reverse = dsp.filter(port1_reverse)
+
+    S11_mag, S11_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port1_reverse)
+    S21_mag, S21_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port2_reverse)
+    S12_mag, S12_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port1_reverse)
+    S22_mag, S22_phase = dsp.calculate_S_param(filtered_port2_forward, filtered_port2_reverse)
+
+    print("S11, mag, phase", S11_mag, S11_phase)
+    print("S21, mag, phase", S21_mag, S21_phase)
+    print("S12, mag, phase", S12_mag, S12_phase)
+    print("S22, mag, phase", S22_mag, S22_phase)
 
     #assert tester.input_mon.transactions==tester.output_mon.transactions, f"Transaction Count doesn't match! in {tester.input_mon.transactions} != out {tester.output_mon.transactions}:/"
     #raise tester.scoreboard.result

@@ -36,6 +36,10 @@ class SSSTester:
             self.input_driver1 = AXISDriver(self.dut,'s01',self.dut.s00_axis_aclk)
             self.input_driver2 = AXISDriver(self.dut,'s02',self.dut.s00_axis_aclk)
             self.input_driver3 = AXISDriver(self.dut,'s03',self.dut.s00_axis_aclk)
+            self.input_driver4 = AXISDriver(self.dut,'s04',self.dut.s00_axis_aclk)
+            self.input_driver5 = AXISDriver(self.dut,'s05',self.dut.s00_axis_aclk)
+            self.input_driver6 = AXISDriver(self.dut,'s06',self.dut.s00_axis_aclk)
+            self.input_driver7 = AXISDriver(self.dut,'s07',self.dut.s00_axis_aclk)
         else:
             self.input_driver = AXISDriver(self.dut,'s00',self.dut.s00_axis_aclk)
 

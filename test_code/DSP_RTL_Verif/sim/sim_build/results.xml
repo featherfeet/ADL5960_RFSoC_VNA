@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1733888470" />
-    <testcase name="test_top" classname="top_block_test" file="/Users/biancahanly/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/sim/top_block_test.py" lineno="49" time="4.963510036468506" sim_time_ns="70010.001" ratio_time="14104.937934166344" />
+    <property name="random_seed" value="1733952989" />
+    <testcase name="test_top" classname="top_block_test" file="/home/alyssa/6.s965/final_project/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/sim/top_block_test.py" lineno="49" time="6.7865917682647705" sim_time_ns="70010.001" ratio_time="10315.929319246576" />
   </testsuite>
 </testsuites>

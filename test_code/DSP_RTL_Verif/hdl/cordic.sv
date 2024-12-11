@@ -72,6 +72,39 @@ module cordic #
     assign m00_axis_tvalid_reg = tvalid[NUM_ITERS-1];
     assign m00_axis_tlast_reg = tlast[NUM_ITERS-1];
 
+    logic tlast_0;
+    logic tlast_1;
+    logic tlast_2;
+    logic tlast_3;
+    logic tlast_4;
+    logic tlast_5;
+    logic tlast_6;
+    logic tlast_7;
+    logic tlast_8;
+    logic tlast_9;
+    logic tlast_10;
+    logic tlast_11;
+    logic tlast_12;
+    logic tlast_13;
+    logic tlast_14;
+
+    assign tlast_0 = tlast[0];
+    assign tlast_1 = tlast[1];
+    assign tlast_2 = tlast[2];
+    assign tlast_3 = tlast[3];
+    assign tlast_4 = tlast[4];
+    assign tlast_5 = tlast[5];
+    assign tlast_6 = tlast[6];
+    assign tlast_7 = tlast[7];
+    assign tlast_8 = tlast[8];
+    assign tlast_9 = tlast[9];
+    assign tlast_10 = tlast[10];
+    assign tlast_11 = tlast[11];
+    assign tlast_12 = tlast[12];
+    assign tlast_13 = tlast[13];
+    assign tlast_14 = tlast[14];
+
+    
     //Re-add the quadrant info and take from z. Then truncate x/k so amplitude is 16 bit integer.
     assign m00_axis_tdata_reg = {final_angle, final_radius[15:0]};
 

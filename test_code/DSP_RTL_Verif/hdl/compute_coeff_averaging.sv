@@ -39,28 +39,28 @@
     input wire  m00_axis_aclk, m00_axis_aresetn,
     input wire  m00_axis_tready,
     output logic  m00_axis_tvalid, m00_axis_tlast,
-    output logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
+    output logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m00_axis_tdata,
     output logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m00_axis_tstrb,
 
     // Ports of Axi Master Bus Interface M01_AXIS (S12)
     input wire  m01_axis_aclk, m01_axis_aresetn,
     input wire  m01_axis_tready,
     output logic  m01_axis_tvalid, m01_axis_tlast,
-    output logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m01_axis_tdata,
+    output logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m01_axis_tdata,
     output logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m01_axis_tstrb,
 
     // Ports of Axi Master Bus Interface M02_AXIS (S21)
     input wire  m02_axis_aclk, m02_axis_aresetn,
     input wire  m02_axis_tready,
     output logic  m02_axis_tvalid, m02_axis_tlast,
-    output logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m02_axis_tdata,
+    output logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m02_axis_tdata,
     output logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m02_axis_tstrb,
     
     // Ports of Axi Master Bus Interface M03_AXIS (S22)
     input wire  m03_axis_aclk, m03_axis_aresetn,
     input wire  m03_axis_tready,
     output logic  m03_axis_tvalid, m03_axis_tlast,
-    output logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m03_axis_tdata,
+    output logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m03_axis_tdata,
     output logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m03_axis_tstrb
     );
 
@@ -83,22 +83,22 @@
     assign a2_coeff_angle_in = s02_axis_tdata[31:16];
     assign a2_coeff_radius_in = s02_axis_tdata[15:0];
 
-    wire [15:0] S11_mag_out;
-    wire [15:0] S11_phase_out;
-    assign S11_phase_out = m00_axis_tdata_reg[31:16];
-    assign S11_mag_out = m00_axis_tdata_reg[15:0];
-    wire [15:0] S12_mag_out;
-    wire [15:0] S12_phase_out;
-    assign S12_phase_out = m01_axis_tdata_reg[31:16];
-    assign S12_mag_out = m01_axis_tdata_reg[15:0];
-    wire [15:0] S21_mag_out;
-    wire [15:0] S21_phase_out;
-    assign S21_phase_out = m02_axis_tdata_reg[31:16];
-    assign S21_mag_out = m02_axis_tdata_reg[15:0];
-    wire [15:0] S22_mag_out;
-    wire [15:0] S22_phase_out;
-    assign S22_phase_out = m03_axis_tdata_reg[31:16];
-    assign S22_mag_out = m03_axis_tdata_reg[15:0];
+    wire [32:0] S11_mag_out;
+    wire [32:0] S11_phase_out;
+    assign S11_phase_out = m00_axis_tdata_reg[63:32];
+    assign S11_mag_out = m00_axis_tdata_reg[31:0];
+    wire [32:0] S12_mag_out;
+    wire [32:0] S12_phase_out;
+    assign S12_phase_out = m01_axis_tdata_reg[63:32];
+    assign S12_mag_out = m01_axis_tdata_reg[31:0];
+    wire [32:0] S21_mag_out;
+    wire [32:0] S21_phase_out;
+    assign S21_phase_out = m02_axis_tdata_reg[63:32];
+    assign S21_mag_out = m02_axis_tdata_reg[31:0];
+    wire [32:0] S22_mag_out;
+    wire [32:0] S22_phase_out;
+    assign S22_phase_out = m03_axis_tdata_reg[63:32];
+    assign S22_mag_out = m03_axis_tdata_reg[31:0];
    
 
     //Averaging count state machine
@@ -106,13 +106,16 @@
     logic [15:0] count;
     logic [31:0] phase_accumulator [3:0]; //[s11, s21, s12, s22]
     logic [31:0] mag_accumulator [3:0]; //[a1, b1, a2, b2]
-    logic [15:0] gamma_mag_s11;
-    logic [15:0] gamma_mag_s12;
-    logic [15:0] gamma_mag_s21;
-    logic [15:0] gamma_mag_s22;
+    logic [31:0] gamma_mag_s11;
+    logic [31:0] gamma_mag_s12;
+    logic [31:0] gamma_mag_s21;
+    logic [31:0] gamma_mag_s22;
 
     logic [31:0] ph_check;
     assign ph_check = phase_accumulator[1];
+
+    logic[31:0] mag_check;
+    assign mag_check = mag_accumulator[0];
 
     //Divisor modules
     logic [31:0] dividend [7:0]; 
@@ -142,7 +145,7 @@
     //m00/s00 output
     logic m00_axis_tvalid_reg;
     logic m00_axis_tlast_reg;
-    logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata_reg;
+    logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m00_axis_tdata_reg;
     logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m00_axis_tstrb_reg;
     
     assign m00_axis_tvalid = m00_axis_tvalid_reg;
@@ -154,7 +157,7 @@
     //m01/s01 output
     logic m01_axis_tvalid_reg;
     logic m01_axis_tlast_reg;
-    logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m01_axis_tdata_reg;
+    logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m01_axis_tdata_reg;
     logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m01_axis_tstrb_reg;
     
     assign m01_axis_tvalid = m01_axis_tvalid_reg;
@@ -166,7 +169,7 @@
     //m02/s02 output
     logic m02_axis_tvalid_reg;
     logic m02_axis_tlast_reg;
-    logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m02_axis_tdata_reg;
+    logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m02_axis_tdata_reg;
     logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m02_axis_tstrb_reg;
     
     assign m02_axis_tvalid = m02_axis_tvalid_reg;
@@ -178,7 +181,7 @@
     //m03/s03 output
     logic m03_axis_tvalid_reg;
     logic m03_axis_tlast_reg;
-    logic [C_M00_AXIS_TDATA_WIDTH-1 : 0] m03_axis_tdata_reg;
+    logic [C_M00_AXIS_TDATA_WIDTH-1+32 : 0] m03_axis_tdata_reg;
     logic [(C_M00_AXIS_TDATA_WIDTH/8)-1: 0] m03_axis_tstrb_reg;
     
     assign m03_axis_tvalid = m03_axis_tvalid_reg;
@@ -298,16 +301,16 @@
                 end
                 DIVIDE_TWO: begin
                     if(busy_out[0] == 0) begin
-                        dividend[0] <= mag_accumulator[1]; //b1
+                        dividend[0] <= mag_accumulator[1] << 16; //b1
                         divisor[0] <= mag_accumulator[0]; //a1
 
-                        dividend[1] <= mag_accumulator[1]; //b1
+                        dividend[1] <= mag_accumulator[1] << 16; //b1
                         divisor[1] <= mag_accumulator[2]; //a2
 
-                        dividend[2] <= mag_accumulator[3]; //b2
+                        dividend[2] <= mag_accumulator[3] << 16; //b2
                         divisor[2] <= mag_accumulator[0]; //a1
 
-                        dividend[3] <= mag_accumulator[3]; //b2
+                        dividend[3] <= mag_accumulator[3] << 16; //b2
                         divisor[3] <= mag_accumulator[2]; //a2
 
                         for(int i = 0; i < 4; i++) begin
@@ -352,16 +355,16 @@
                     m03_axis_tstrb_reg <= 4'hF;
 
                     // S11 calculation (b1/a1)
-                    m00_axis_tdata_reg <= {phase_accumulator[0][15:0], gamma_mag_s11};
+                    m00_axis_tdata_reg <= {16'b0, phase_accumulator[0][15:0], gamma_mag_s11};
                     
                     // S12 calculation (b1/a2)
-                    m01_axis_tdata_reg <= {phase_accumulator[1][15:0], gamma_mag_s12};;
+                    m01_axis_tdata_reg <= {16'b0, phase_accumulator[1][15:0], gamma_mag_s12};;
 
                     // S21 calculation (b2/a1)
-                    m02_axis_tdata_reg <= {phase_accumulator[2][15:0], gamma_mag_s21};
+                    m02_axis_tdata_reg <= {16'b0, phase_accumulator[2][15:0], gamma_mag_s21};
 
                     // S22 calculation (b2/a2)
-                    m03_axis_tdata_reg <= {phase_accumulator[3][15:0], gamma_mag_s22};
+                    m03_axis_tdata_reg <= {16'b0, phase_accumulator[3][15:0], gamma_mag_s22};
 
                     state <= WAITING;
                 end 
