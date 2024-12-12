@@ -341,7 +341,7 @@ module DSP_top_level #
     cordic_3(   .s00_axis_aclk(s00_axis_aclk),
             .s00_axis_aresetn(s00_axis_aresetn),
             .s00_axis_tready(s00_axis_tready_fir3),
-            .s00_axis_tdata({port1_reverse_fir_data_I, port1_reverse_fir_data_Q}),
+            .s00_axis_tdata({port2_reverse_fir_data_I, port2_reverse_fir_data_Q}),
             .s00_axis_tstrb(s00_axis_tstrb_fir3),
             .s00_axis_tlast(s00_axis_tlast_fir3),
             .s00_axis_tvalid(s00_axis_tvalid_fir3),
