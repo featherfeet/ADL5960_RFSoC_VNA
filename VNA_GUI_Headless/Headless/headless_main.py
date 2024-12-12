@@ -14,6 +14,7 @@ from adl5960 import ADL5960
 from switch import Switch
 from adcs import ADCs
 from sig_source import SigSource
+from dsp_accelerator import DSPAccelerator
 
 from pynq import PL, Overlay, GPIO
 
@@ -33,8 +34,14 @@ print("Setting up RF switch...")
 switch = Switch(GPIO(GPIO.get_gpio_pin(0), "out"))
 
 # Set up ADCs
-print("Setting up RFSoC ADCs...")
-adcs = ADCs(ol.usp_rf_data_converter_0, ol.axi_dma_0)
+#print("Setting up RFSoC ADCs...")
+#adcs = ADCs(ol.usp_rf_data_converter_0, ol.axi_dma_0)
+
+# Set up DMA for reading S-parameters
+s11_accelerator = DSPAccelerator(ol.axi_dma_1, name = "S11")
+s12_accelerator = DSPAccelerator(ol.axi_dma_2, name = "S12")
+s21_accelerator = DSPAccelerator(ol.axi_dma_3, name = "S21")
+s22_accelerator = DSPAccelerator(ol.axi_dma_4, name = "S22")
 
 # Set up SPI devices
 print("Setting up VNA frontends...")
@@ -45,13 +52,9 @@ source = SigSource(mmio_spi_controller = ol.spi_lmx_0)
 source.set_active()
 
 # Set up Python DSP.
-dsp = DSP()
+#dsp = DSP()
 
 #Main capture and processing loop.
-#filename = "siggen"
-#data_out_file = open("bandpass.csv", "w")
-#data_out_file.write(f"Freq (Hz),S11_mag,S11_phase,S12_mag,S12_phase,S21_mag,S21_phase,S22_mag,S22_phase\n")
-
 raw_s_parameters = rf.Network(s = np.zeros((len(source.freq_points), 2, 2), dtype = np.float64), f = source.freq_points)
 
 switch_terms = {}
@@ -64,7 +67,13 @@ while True:
 
     # Set switch
     switch.setPort1Active()
+    #switch.setPort2Active() # TODO REMOVE
 
+    # Read in S-parameters S11, S21
+    S11_mag, S11_phase = s11_accelerator.read_s_parameters()
+    S21_mag, S21_phase = s21_accelerator.read_s_parameters()
+
+    """
     # Read ADC values from DMA
     start = time.time()
     port1_reverse_buffer, port1_forward_buffer, port2_reverse_buffer, port2_forward_buffer = adcs.read_adcs()
@@ -104,21 +113,22 @@ while True:
     S21_mag, S21_phase = dsp.calculate_S_param(filtered_port1_forward, filtered_port2_reverse) # TODO fix
     print(f"Calculating S11, S21 takes {time.time() - start} s.")
 
-    """
-    if 20 * np.log10(S11_mag) > 0:
-        print(f"Found spike at {freq}")
-        np.savez(f"data/{freq}.npz", filtered_port1_forward = filtered_port1_forward, filtered_port1_reverse = filtered_port1_reverse, filtered_port2_forward = filtered_port2_forward, filtered_port2_reverse = filtered_port2_reverse)
-    """
-
     # If we're in thru-cal mode, calculate forward switch term (a2/b2 with port 1 active).
     if currently_measuring_standard == "thru":
         forward_switch_term_mag, forward_switch_term_phase = dsp.calculate_S_param(filtered_port2_reverse, filtered_port2_forward)
         forward_switch_term = polar_to_rectangular(forward_switch_term_mag, forward_switch_term_phase)
         switch_terms["forward"].s[source.get_current_index(), 0, 0] = forward_switch_term
+    """
 
     # Set switch
     switch.setPort2Active()
+    #switch.setPort1Active() # TODO REMOVE
 
+    # Read in S-parameters S22, S12
+    S22_mag, S22_phase = s22_accelerator.read_s_parameters()
+    S12_mag, S12_phase = s12_accelerator.read_s_parameters()
+
+    """
     # Read ADC values from DMA
     port1_reverse_buffer, port1_forward_buffer, port2_reverse_buffer, port2_forward_buffer = adcs.read_adcs()
 
@@ -147,6 +157,7 @@ while True:
         reverse_switch_term = polar_to_rectangular(reverse_switch_term_mag, reverse_switch_term_phase)
         switch_terms["reverse"].s[source.get_current_index(), 0, 0] = reverse_switch_term
 
+    """
     # Save raw S-parameters.
     raw_s_parameters.s[source.get_current_index(), 0, 0] = polar_to_rectangular(S11_mag, S11_phase)
     raw_s_parameters.s[source.get_current_index(), 0, 1] = polar_to_rectangular(S12_mag, S12_phase)
@@ -154,16 +165,14 @@ while True:
     raw_s_parameters.s[source.get_current_index(), 1, 1] = polar_to_rectangular(S22_mag, S22_phase)
 
     # Send data to network GUI.
-    """
     message = {}
     message["type"] = "data"
-    message["filtered_port1_forward"] = filtered_port1_forward[:500].real.tobytes()
-    message["filtered_port2_forward"] = filtered_port2_forward[:500].real.tobytes()
-    message["filtered_port1_reverse"] = filtered_port1_reverse[:500].real.tobytes()
-    message["filtered_port2_reverse"] = filtered_port2_reverse[:500].real.tobytes()
+    message["filtered_port1_forward"] = np.zeros(5000)
+    message["filtered_port2_forward"] = np.zeros(5000)
+    message["filtered_port1_reverse"] = np.zeros(5000)
+    message["filtered_port2_reverse"] = np.zeros(5000)
     message["raw_s_parameters"] = raw_s_parameters
     remote_connection.send_message(message)
-    """
 
     # Check for messages and modify VNA behavior accordingly.
     message = remote_connection.receive_message()
@@ -207,9 +216,3 @@ while True:
     source.set_next_freq()
     #time.sleep(0.1)
     print(f"Setting source takes {time.time() - start} s.")
-
-    #np.savez(f"{filename}_s_parameters.npz", S11_mag = S11_mag, S11_phase = S11_phase, S12_mag = S12_mag, S12_phase = S12_phase, S21_mag = S21_mag, S21_phase = S21_phase, S22_mag = S22_mag, S22_phase = S22_phase)
-
-    #break
-    #data_out_file.write(f"{freq},{S11_mag},{S11_phase},{S12_mag},{S12_phase},{S21_mag},{S21_phase},{S22_mag},{S22_phase}\n")
-    #data_out_file.flush()
