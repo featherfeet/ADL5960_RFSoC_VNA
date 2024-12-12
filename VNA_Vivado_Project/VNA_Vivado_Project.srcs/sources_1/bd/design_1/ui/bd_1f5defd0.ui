@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.626966",
-   "Default View_TopLeft":"520,656",
+   "Default View_ScaleFactor":"0.385943",
+   "Default View_TopLeft":"-41,130",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
@@ -12,19 +12,19 @@ preplace port vin0_23 -pg 1 -lvl 0 -x -590 -y 520 -defaultsOSRD
 preplace port adc2_clk -pg 1 -lvl 0 -x -590 -y 460 -defaultsOSRD
 preplace port vin2_01 -pg 1 -lvl 0 -x -590 -y 550 -defaultsOSRD
 preplace port vin2_23 -pg 1 -lvl 0 -x -590 -y 580 -defaultsOSRD
-preplace port port-id_adl1_sck -pg 1 -lvl 11 -x 4620 -y 330 -defaultsOSRD
-preplace port port-id_adl1_sdo -pg 1 -lvl 11 -x 4620 -y 300 -defaultsOSRD
-preplace port port-id_adl1_cs -pg 1 -lvl 11 -x 4620 -y 360 -defaultsOSRD
+preplace port port-id_adl1_sck -pg 1 -lvl 11 -x 4630 -y 330 -defaultsOSRD
+preplace port port-id_adl1_sdo -pg 1 -lvl 11 -x 4630 -y 300 -defaultsOSRD
+preplace port port-id_adl1_cs -pg 1 -lvl 11 -x 4630 -y 360 -defaultsOSRD
 preplace port port-id_adl1_sdi -pg 1 -lvl 10 -x 4420 -y -1150 -defaultsOSRD -top
 preplace port port-id_adl2_sdi -pg 1 -lvl 10 -x 4500 -y -1150 -defaultsOSRD -top
-preplace port port-id_adl2_sdo -pg 1 -lvl 11 -x 4620 -y 580 -defaultsOSRD
-preplace port port-id_adl2_sck -pg 1 -lvl 11 -x 4620 -y 610 -defaultsOSRD
-preplace port port-id_adl2_cs -pg 1 -lvl 11 -x 4620 -y 640 -defaultsOSRD
+preplace port port-id_adl2_sdo -pg 1 -lvl 11 -x 4630 -y 580 -defaultsOSRD
+preplace port port-id_adl2_sck -pg 1 -lvl 11 -x 4630 -y 610 -defaultsOSRD
+preplace port port-id_adl2_cs -pg 1 -lvl 11 -x 4630 -y 640 -defaultsOSRD
 preplace port port-id_lmx_sdi -pg 1 -lvl 10 -x 4310 -y -1150 -defaultsOSRD -top
-preplace port port-id_lmx_sdo -pg 1 -lvl 11 -x 4620 -y 800 -defaultsOSRD
-preplace port port-id_lmx_sck -pg 1 -lvl 11 -x 4620 -y 830 -defaultsOSRD
-preplace port port-id_lmx_cs -pg 1 -lvl 11 -x 4620 -y 870 -defaultsOSRD
-preplace portBus rfswitch -pg 1 -lvl 11 -x 4620 -y 730 -defaultsOSRD
+preplace port port-id_lmx_sdo -pg 1 -lvl 11 -x 4630 -y 800 -defaultsOSRD
+preplace port port-id_lmx_sck -pg 1 -lvl 11 -x 4630 -y 830 -defaultsOSRD
+preplace port port-id_lmx_cs -pg 1 -lvl 11 -x 4630 -y 870 -defaultsOSRD
+preplace portBus rfswitch -pg 1 -lvl 11 -x 4630 -y 730 -defaultsOSRD
 preplace inst usp_rf_data_converter_0 -pg 1 -lvl 2 -x 480 -y 420 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 7 -x 3090 -y 540 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 480 -y 1420 -defaultsOSRD
@@ -45,13 +45,13 @@ preplace inst axi_dma_1 -pg 1 -lvl 5 -x 2220 -y 1010 -defaultsOSRD
 preplace inst axi_dma_2 -pg 1 -lvl 5 -x 2220 -y 1190 -defaultsOSRD
 preplace inst axi_dma_3 -pg 1 -lvl 5 -x 2220 -y 1370 -defaultsOSRD
 preplace inst axi_dma_4 -pg 1 -lvl 5 -x 2220 -y 1560 -defaultsOSRD
-preplace netloc Net 1 1 9 270 620 720 600 N 600 1980J 620 2460 510 2790 650 3430 50 3790 500 4230
+preplace netloc Net 1 1 9 270 620 690 600 N 600 1980J 620 2460 510 2790 650 3430 50 3790 500 4230
 preplace netloc adl1_sdi_1 1 9 1 4270 -1130n
 preplace netloc adl2_sdi_1 1 9 1 4280 -1120n
-preplace netloc clk_wiz_0_clk_out1 1 1 5 300 630 1000 620 N 620 1970 670 N
+preplace netloc clk_wiz_0_clk_out1 1 1 5 300 630 1030 620 N 620 1970 670 N
 preplace netloc clk_wiz_0_locked 1 2 3 740 580 1370 510 2000
 preplace netloc lmx_sdi_1 1 9 1 4260 -1140n
-preplace netloc reset_rtl_1 1 2 3 700J 570 1360 500 1440
+preplace netloc reset_rtl_1 1 2 3 670J 570 1360 500 1440
 preplace netloc rst_clk_wiz_0_147M_peripheral_aresetn 1 2 4 1040 610 N 610 N 610 2410J
 preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 9 280 1490 680 1380 N 1380 2000J 530 NJ 530 2760J 660 3410 40 3800 470 4240
 preplace netloc rst_ps8_0_99M_peripheral_reset 1 1 2 220 1500 660
@@ -80,16 +80,20 @@ preplace netloc spi_control_w_2_data_valid_out 1 8 3 3830 980 NJ 980 4590
 preplace netloc spi_lmx_0_command_out 1 9 1 N 850
 preplace netloc spi_lmx_0_trigger_out 1 9 1 N 870
 preplace netloc usp_rf_data_converter_0_clk_adc0 1 1 2 300 650 660J
-preplace netloc xlconstant_0_dout 1 2 1 750 840n
+preplace netloc xlconstant_0_dout 1 2 1 780 840n
 preplace netloc xlslice_0_Dout 1 8 3 3770 740 N 740 4600
 preplace netloc zynq_ultra_ps_e_0_emio_gpio_o 1 7 1 3400 550n
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 7 290 640 710J 590 1380 520 NJ 520 NJ 520 2770J 670 3390
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 7 290 640 680J 590 1380 520 NJ 520 NJ 520 2770J 670 3390
 preplace netloc DSP_top_level_w_0_m00_axis 1 3 2 NJ 970 2010
 preplace netloc DSP_top_level_w_0_m01_axis 1 3 2 NJ 990 1990
 preplace netloc DSP_top_level_w_0_m02_axis 1 3 2 NJ 1010 1440
 preplace netloc DSP_top_level_w_0_m03_axis 1 3 2 NJ 1030 1430
 preplace netloc adc0_clk_1 1 0 2 NJ 430 -530
 preplace netloc adc2_clk_1 1 0 2 NJ 460 -520
+preplace netloc axi_dma_1_M_AXI_S2MM 1 5 1 2400 590n
+preplace netloc axi_dma_2_M_AXI_S2MM 1 5 1 2420 610n
+preplace netloc axi_dma_3_M_AXI_S2MM 1 5 1 2470 630n
+preplace netloc axi_dma_4_M_AXI_S2MM 1 5 1 2480 650n
 preplace netloc axi_smc_M00_AXI 1 6 1 2780 490n
 preplace netloc ps8_0_axi_periph_M01_AXI 1 8 1 3820 290n
 preplace netloc ps8_0_axi_periph_M02_AXI 1 8 1 3810 320n
@@ -106,19 +110,15 @@ preplace netloc vin2_01_1 1 0 2 NJ 550 -490
 preplace netloc vin2_23_1 1 0 2 NJ 580 -480
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 7 1 3390 110n
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 7 1 3420 130n
-preplace netloc usp_rf_data_converter_0_m00_axis 1 2 1 1030 320n
-preplace netloc usp_rf_data_converter_0_m01_axis 1 2 1 1020 340n
-preplace netloc usp_rf_data_converter_0_m02_axis 1 2 1 1010 360n
-preplace netloc usp_rf_data_converter_0_m03_axis 1 2 1 750 380n
-preplace netloc usp_rf_data_converter_0_m20_axis 1 2 1 730 400n
-preplace netloc usp_rf_data_converter_0_m21_axis 1 2 1 690 420n
-preplace netloc usp_rf_data_converter_0_m22_axis 1 2 1 680 440n
-preplace netloc usp_rf_data_converter_0_m23_axis 1 2 1 670 460n
-preplace netloc axi_dma_1_M_AXI_S2MM 1 5 1 2400 590n
-preplace netloc axi_dma_2_M_AXI_S2MM 1 5 1 2420 610n
-preplace netloc axi_dma_3_M_AXI_S2MM 1 5 1 2470 630n
-preplace netloc axi_dma_4_M_AXI_S2MM 1 5 1 2480 650n
-levelinfo -pg 1 -590 -550 480 1200 1410 2220 2620 3090 3580 4010 4420 4620
+preplace netloc usp_rf_data_converter_0_m00_axis 1 2 1 780 320n
+preplace netloc usp_rf_data_converter_0_m01_axis 1 2 1 730 340n
+preplace netloc usp_rf_data_converter_0_m02_axis 1 2 1 770 360n
+preplace netloc usp_rf_data_converter_0_m03_axis 1 2 1 720 380n
+preplace netloc usp_rf_data_converter_0_m20_axis 1 2 1 760 400n
+preplace netloc usp_rf_data_converter_0_m21_axis 1 2 1 710 420n
+preplace netloc usp_rf_data_converter_0_m22_axis 1 2 1 750 440n
+preplace netloc usp_rf_data_converter_0_m23_axis 1 2 1 700 460n
+levelinfo -pg 1 -590 -550 480 1200 1410 2220 2620 3090 3580 4010 4420 4630
 pagesize -pg 1 -db -bbox -sgen -710 -1250 4800 2600
 "
 }

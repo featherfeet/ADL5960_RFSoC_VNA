@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date             : Wed Dec 11 20:25:27 2024
+| Date             : Wed Dec 11 20:57:43 2024
 | Host             : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.104 |       13 |       --- |             --- |
-| CLB Logic                |     0.131 |    64925 |       --- |             --- |
-|   LUT as Logic           |     0.082 |    24799 |    425280 |            5.83 |
+| CLB Logic                |     0.131 |    64938 |       --- |             --- |
+|   LUT as Logic           |     0.083 |    24755 |    425280 |            5.82 |
 |   LUT as Distributed RAM |     0.034 |      912 |    213600 |            0.43 |
 |   CARRY8                 |     0.008 |     1189 |     53160 |            2.24 |
-|   Register               |     0.005 |    28108 |    850560 |            3.30 |
-|   LUT as Shift Register  |     0.001 |      503 |    213600 |            0.24 |
+|   Register               |     0.005 |    28120 |    850560 |            3.31 |
+|   LUT as Shift Register  |     0.002 |      503 |    213600 |            0.24 |
 |   BUFG                   |    <0.001 |        2 |        64 |            3.13 |
 |   Others                 |     0.000 |     1706 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      172 |    425280 |            0.04 |
-| Signals                  |     0.089 |    51759 |       --- |             --- |
+| Signals                  |     0.090 |    51792 |       --- |             --- |
 | Block RAM                |     0.009 |       16 |      1080 |            1.48 |
 | RFAMS                    |     1.870 |        8 |       --- |             --- |
 |   RFADC                  |     1.870 |        4 |         4 |          100.00 |
@@ -181,9 +181,9 @@ Table of Contents
 | Name                        | Power (W) |
 +-----------------------------+-----------+
 | design_1_wrapper            |     4.631 |
-|   design_1_i                |     4.627 |
-|     DSP_top_level_w_0       |     0.187 |
-|       inst                  |     0.187 |
+|   design_1_i                |     4.628 |
+|     DSP_top_level_w_0       |     0.186 |
+|       inst                  |     0.186 |
 |     axi_dma_1               |     0.012 |
 |       U0                    |     0.012 |
 |     axi_dma_2               |     0.012 |
@@ -192,16 +192,16 @@ Table of Contents
 |       U0                    |     0.012 |
 |     axi_dma_4               |     0.012 |
 |       U0                    |     0.012 |
-|     axi_smc                 |     0.076 |
-|       inst                  |     0.076 |
+|     axi_smc                 |     0.075 |
+|       inst                  |     0.075 |
 |     ps8_0_axi_periph        |     0.022 |
 |       s00_couplers          |     0.009 |
 |       s01_couplers          |     0.008 |
-|       xbar                  |     0.005 |
+|       xbar                  |     0.004 |
 |     usp_rf_data_converter_0 |     1.907 |
 |       inst                  |     1.907 |
-|     zynq_ultra_ps_e_0       |     2.384 |
-|       inst                  |     2.384 |
+|     zynq_ultra_ps_e_0       |     2.385 |
+|       inst                  |     2.385 |
 +-----------------------------+-----------+
 
 

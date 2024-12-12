@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Wed Dec 11 20:20:54 2024
+| Date         : Wed Dec 11 20:53:38 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -32,8 +32,8 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 27972 |     0 |          0 |    425280 |  6.58 |
-|   LUT as Logic             | 26321 |     0 |          0 |    425280 |  6.19 |
+| CLB LUTs*                  | 27975 |     0 |          0 |    425280 |  6.58 |
+|   LUT as Logic             | 26324 |     0 |          0 |    425280 |  6.19 |
 |   LUT as Memory            |  1651 |     0 |          0 |    213600 |  0.77 |
 |     LUT as Distributed RAM |   920 |     0 |            |           |       |
 |     LUT as Shift Register  |   731 |     0 |            |           |       |
@@ -170,11 +170,11 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 |   Ref Name   |  Used | Functional Category |
 +--------------+-------+---------------------+
 | FDRE         | 27317 |            Register |
-| LUT3         |  9296 |                 CLB |
+| LUT3         |  9297 |                 CLB |
 | LUT6         |  6997 |                 CLB |
-| LUT2         |  5759 |                 CLB |
+| LUT2         |  5758 |                 CLB |
 | LUT4         |  4724 |                 CLB |
-| LUT5         |  4074 |                 CLB |
+| LUT5         |  4073 |                 CLB |
 | RAMD32       |  1580 |                 CLB |
 | LUT1         |  1397 |                 CLB |
 | CARRY8       |  1189 |                 CLB |
