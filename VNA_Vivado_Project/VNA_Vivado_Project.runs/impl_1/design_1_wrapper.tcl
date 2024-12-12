@@ -117,6 +117,9 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.cache/wt [current_project]
   set_property parent.project_path /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.xpr [current_project]
   set_property ip_repo_paths {
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/cordic_combiner_1_0
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/fir_1_0
   /home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0
   /home/olt/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0
   /home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0

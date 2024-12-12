@@ -71,6 +71,9 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part realdigital.org:rfsoc4x2:part0:1.0 [current_project]
 set_property ip_repo_paths {
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/cordic_combiner_1_0
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/cordic_1_0
+  /home/olt/ADL5960_RFSoC_VNA/ip_repo/fir_1_0
   /home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_lmx_1_0
   /home/olt/ADL5960_RFSoC_VNA/ip_repo/adc_combiner_1_0
   /home/olt/ADL5960_RFSoC_VNA/ip_repo/spi_adl_1_0
@@ -80,9 +83,16 @@ set_property ip_output_repo /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_V
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/imports/hdl/spi_control.sv
+read_verilog -library xil_defaultlib -sv {
+  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/imports/hdl/spi_control.sv
+  /home/olt/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/DSP_top_level.sv
+  /home/olt/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/compute_coeff_averaging.sv
+  /home/olt/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/cordic.sv
+  /home/olt/ADL5960_RFSoC_VNA/test_code/DSP_RTL_Verif/hdl/fir_15.sv
+}
 read_verilog -library xil_defaultlib {
   /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/imports/hdl/spi_control_w.v
+  /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/new/DSP_top_level_w.v
   /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 }
 add_files /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.srcs/sources_1/bd/design_1/design_1.bd
@@ -118,15 +128,51 @@ set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSo
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/bd_6f02_swn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/bd_6f02_sbn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/bd_6f02_sbn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_16/bd_6f02_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/bd_6f02_m00awn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/bd_6f02_m00wn_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_m00bn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/bd_6f02_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_20/bd_6f02_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_20/bd_6f02_sawn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_21/bd_6f02_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_21/bd_6f02_swn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_22/bd_6f02_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_22/bd_6f02_sbn_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_26/bd_6f02_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_27/bd_6f02_sawn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_27/bd_6f02_sawn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_28/bd_6f02_swn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_28/bd_6f02_swn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_29/bd_6f02_sbn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_29/bd_6f02_sbn_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_33/bd_6f02_s03a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_34/bd_6f02_sawn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_34/bd_6f02_sawn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_35/bd_6f02_swn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_35/bd_6f02_swn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_36/bd_6f02_sbn_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_36/bd_6f02_sbn_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_40/bd_6f02_s04a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_41/bd_6f02_sawn_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_41/bd_6f02_sawn_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_42/bd_6f02_swn_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_42/bd_6f02_swn_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_43/bd_6f02_sbn_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_43/bd_6f02_sbn_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_44/bd_6f02_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_45/bd_6f02_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_45/bd_6f02_m00awn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_46/bd_6f02_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_46/bd_6f02_m00wn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_47/bd_6f02_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_47/bd_6f02_m00bn_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_0/design_1_axi_dma_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_1/design_1_axi_dma_1_1.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_1/design_1_axi_dma_1_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_2/design_1_axi_dma_1_2.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_2/design_1_axi_dma_1_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_3/design_1_axi_dma_1_3.xdc]
+set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_3/design_1_axi_dma_1_3_clocks.xdc]
 set_property used_in_synthesis false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/olt/ADL5960_RFSoC_VNA/VNA_Vivado_Project/VNA_Vivado_Project.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
