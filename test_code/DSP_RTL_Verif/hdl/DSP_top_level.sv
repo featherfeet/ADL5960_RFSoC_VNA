@@ -77,8 +77,6 @@ module DSP_top_level #
     output logic [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m01_axis_tdata, //S12_out, 
     output logic [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m02_axis_tdata, //S21_out,
     output logic [(C_M00_AXIS_TDATA_WIDTH*2)-1 : 0] m03_axis_tdata //S22_out
-
-
     
     );
 
@@ -113,10 +111,6 @@ module DSP_top_level #
     assign m00_axis_tready_cordic1 = s00_axis_tready_cordic1;
     assign s00_axis_tvalid_cordic1 = m00_axis_tvalid_cordic1;
     assign s00_axis_tlast_cordic1 = m00_axis_tlast_cordic1;
-
-
-
-    
 
     fir_15  #(.C_S00_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH/2), .C_M00_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH/2))
     fir_1_I(  .s00_axis_aclk(s00_axis_aclk),

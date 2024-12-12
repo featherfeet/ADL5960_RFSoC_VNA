@@ -22,6 +22,7 @@ vlib modelsim_lib/msim/axi_data_fifo_v2_1_30
 vlib modelsim_lib/msim/axi_crossbar_v2_1_32
 vlib modelsim_lib/msim/xlconstant_v1_1_9
 vlib modelsim_lib/msim/smartconnect_v1_0
+vlib modelsim_lib/msim/xlslice_v1_0_4
 vlib modelsim_lib/msim/axi_protocol_converter_v2_1_31
 vlib modelsim_lib/msim/axi_clock_converter_v2_1_30
 vlib modelsim_lib/msim/blk_mem_gen_v8_4_8
@@ -48,6 +49,7 @@ vmap axi_data_fifo_v2_1_30 modelsim_lib/msim/axi_data_fifo_v2_1_30
 vmap axi_crossbar_v2_1_32 modelsim_lib/msim/axi_crossbar_v2_1_32
 vmap xlconstant_v1_1_9 modelsim_lib/msim/xlconstant_v1_1_9
 vmap smartconnect_v1_0 modelsim_lib/msim/smartconnect_v1_0
+vmap xlslice_v1_0_4 modelsim_lib/msim/xlslice_v1_0_4
 vmap axi_protocol_converter_v2_1_31 modelsim_lib/msim/axi_protocol_converter_v2_1_31
 vmap axi_clock_converter_v2_1_30 modelsim_lib/msim/axi_clock_converter_v2_1_30
 vmap blk_mem_gen_v8_4_8 modelsim_lib/msim/blk_mem_gen_v8_4_8
@@ -243,21 +245,49 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnec
 "../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_13/sim/bd_6f02_sawn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_14/sim/bd_6f02_swn_0.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_15/sim/bd_6f02_sbn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_16/sim/bd_6f02_s01mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/sim/bd_6f02_s01tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/sim/bd_6f02_s01sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/sim/bd_6f02_s01a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_20/sim/bd_6f02_sawn_1.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_21/sim/bd_6f02_swn_1.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_22/sim/bd_6f02_sbn_1.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_23/sim/bd_6f02_s02mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_24/sim/bd_6f02_s02tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_25/sim/bd_6f02_s02sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_26/sim/bd_6f02_s02a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_27/sim/bd_6f02_sawn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_28/sim/bd_6f02_swn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_29/sim/bd_6f02_sbn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_30/sim/bd_6f02_s03mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_31/sim/bd_6f02_s03tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_32/sim/bd_6f02_s03sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_33/sim/bd_6f02_s03a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_34/sim/bd_6f02_sawn_3.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_35/sim/bd_6f02_swn_3.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_36/sim/bd_6f02_sbn_3.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_37/sim/bd_6f02_s04mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_38/sim/bd_6f02_s04tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_39/sim/bd_6f02_s04sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_40/sim/bd_6f02_s04a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_41/sim/bd_6f02_sawn_4.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_42/sim/bd_6f02_swn_4.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_43/sim/bd_6f02_sbn_4.sv" \
 
 vlog -work smartconnect_v1_0 -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/7f4f/hdl/sc_sc2axi_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_16/sim/bd_6f02_m00s2a_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_17/sim/bd_6f02_m00awn_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_18/sim/bd_6f02_m00wn_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_19/sim/bd_6f02_m00bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_44/sim/bd_6f02_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_45/sim/bd_6f02_m00awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_46/sim/bd_6f02_m00wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_47/sim/bd_6f02_m00bn_0.sv" \
 
 vlog -work smartconnect_v1_0 -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/1f04/hdl/sc_exit_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_17 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_17 -L xilinx_vip "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_20/sim/bd_6f02_m00e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_48/sim/bd_6f02_m00e_0.sv" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_1/sim/design_1_axi_smc_1.v" \
@@ -272,7 +302,21 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Proje
 "../../../bd/design_1/ipshared/7b63/hdl/spi_lmx_slave_lite_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/7b63/hdl/spi_lmx.v" \
 "../../../bd/design_1/ip/design_1_spi_lmx_0_0/sim/design_1_spi_lmx_0_0.v" \
-"../../../bd/design_1/ip/design_1_spi_lmx_control_w_0_0/sim/design_1_spi_lmx_control_w_0_0.v" \
+"../../../bd/design_1/ip/design_1_spi_control_w_2_0/sim/design_1_spi_control_w_2_0.v" \
+
+vlog -work xlslice_v1_0_4 -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" \
+"../../../bd/design_1/ip/design_1_DSP_top_level_w_0_1/sim/design_1_DSP_top_level_w_0_1.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/design_1/ip/design_1_axi_dma_1_0/sim/design_1_axi_dma_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_dma_1_1/sim/design_1_axi_dma_1_1.vhd" \
+"../../../bd/design_1/ip/design_1_axi_dma_1_2/sim/design_1_axi_dma_1_2.vhd" \
+"../../../bd/design_1/ip/design_1_axi_dma_1_3/sim/design_1_axi_dma_1_3.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_31 -64 -incr -mfcu  "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/a317/hdl" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3242" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/c783/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../VNA_Vivado_Project.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

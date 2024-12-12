@@ -19,8 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-       
-      
+
 module DSP_top_level_w #
     (
         parameter integer C_S00_AXIS_TDATA_WIDTH  = 32,
@@ -198,4 +197,3 @@ module DSP_top_level_w #
 
        
 endmodule
-

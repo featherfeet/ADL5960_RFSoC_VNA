@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Wed Dec 11 17:20:13 2024
+| Date         : Wed Dec 11 20:25:13 2024
 | Host         : eecs-digital-27 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 115
+             Violations found: 151
 +-----------+----------+-------------------------+------------+
 | Rule      | Severity | Description             | Violations |
 +-----------+----------+-------------------------+------------+
-| DPIP-2    | Warning  | Input pipelining        | 90         |
-| DPOP-3    | Warning  | PREG Output pipelining  | 6          |
-| DPOP-4    | Warning  | MREG Output pipelining  | 12         |
+| DPIP-2    | Warning  | Input pipelining        | 120        |
+| DPOP-3    | Warning  | PREG Output pipelining  | 8          |
+| DPOP-4    | Warning  | MREG Output pipelining  | 16         |
 | PDCN-1569 | Warning  | LUT equation term check | 6          |
 | RTSTAT-10 | Warning  | No routable loads       | 1          |
 +-----------+----------+-------------------------+------------+
@@ -339,150 +339,300 @@ Related violations: <none>
 
 DPIP-2#61 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[10] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[10]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[10] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[10]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#62 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[11] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[11]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[11] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[11]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#63 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[12] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[12]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[12] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[12]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#64 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[13] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[13]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[13] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[13]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#65 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[14] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[14]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#66 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[1] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[1] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#67 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[2] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[2]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[2] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[2]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#68 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[3] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[3]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[3] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[3]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#69 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[4] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[4]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[4] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[4]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#70 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[5] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[5]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[5] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[5]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#71 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[6] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[6]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[6] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[6]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#72 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[7] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[7]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[7] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[7]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#73 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[8] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[8]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[8] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[8]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#74 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[9] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[9]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[9] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[9]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#75 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/p_0_out input design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#76 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[10] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[10]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[10] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[10]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#77 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[11] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[11]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[11] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[11]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#78 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[12] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[12]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[12] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[12]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#79 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[13] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[13]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[13] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[13]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#80 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[14] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[14]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#81 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[1] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[1] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#82 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[2] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[2]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[2] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[2]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#83 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[3] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[3]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[3] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[3]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#84 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[4] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[4]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[4] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[4]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#85 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[5] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[5]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[5] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[5]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#86 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[6] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[6]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[6] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[6]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#87 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[7] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[7]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[7] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[7]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#88 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[8] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[8]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[8] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[8]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#89 Warning
 Input pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[9] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[9]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[9] input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[9]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#90 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/p_0_out input design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#91 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[10] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[10]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#92 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[11] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[11]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#93 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[12] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[12]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#94 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[13] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[13]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#95 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#96 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[1] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#97 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[2] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[2]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#98 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[3] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[3]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#99 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[4] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[4]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#100 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[5] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[5]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#101 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[6] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[6]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#102 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[7] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[7]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#103 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[8] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[8]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#104 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[9] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[9]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#105 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out input design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#106 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[10] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[10]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#107 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[11] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[11]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#108 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[12] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[12]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#109 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[13] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[13]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#110 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#111 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[1] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[1]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#112 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[2] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[2]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#113 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[3] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[3]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#114 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[4] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[4]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#115 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[5] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[5]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#116 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[6] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[6]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#117 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[7] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[7]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#118 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[8] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[8]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#119 Warning
+Input pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[9] input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[9]/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#120 Warning
 Input pipelining  
 DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/p_0_out input design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
@@ -509,10 +659,20 @@ Related violations: <none>
 
 DPOP-3#5 Warning
 PREG Output pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out output design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/p_0_out output design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#6 Warning
+PREG Output pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/p_0_out output design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out output design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
 PREG Output pipelining  
 DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/p_0_out output design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
@@ -559,52 +719,72 @@ Related violations: <none>
 
 DPOP-4#9 Warning
 MREG Output pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14] multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[14] multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/fir_regs_reg[14]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#10 Warning
 MREG Output pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/p_0_out multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_3_I/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#11 Warning
 MREG Output pipelining  
-DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14] multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[14] multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/fir_regs_reg[14]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#12 Warning
+MREG Output pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/p_0_out multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_3_Q/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14] multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/fir_regs_reg[14]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_I/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#15 Warning
+MREG Output pipelining  
+DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14] multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/fir_regs_reg[14]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#16 Warning
 MREG Output pipelining  
 DSP design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/p_0_out multiplier stage design_1_i/DSP_top_level_w_0/inst/top/fir_4_Q/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 PDCN-1569#1 Warning
 LUT equation term check  
-Used physical LUT pin 'A1' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A5)+((~A5)*(~A2)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#2 Warning
 LUT equation term check  
-Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A1)+((~A1)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#3 Warning
 LUT equation term check  
-Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A4)+((~A4)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A4)+((~A4)*(~A3)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#4 Warning
 LUT equation term check  
-Used physical LUT pin 'A2' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A5)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A3' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A4)+((~A4)*(~A5)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#5 Warning
 LUT equation term check  
-Used physical LUT pin 'A3' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A5)+((~A5)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A5' of cell design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#6 Warning
 LUT equation term check  
-Used physical LUT pin 'A3' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A5)+((~A5)*(~A1)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A5' of cell design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O5=(A3)+((~A3)*(~A4)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
